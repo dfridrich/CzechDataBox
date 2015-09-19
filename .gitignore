@@ -4,4 +4,3 @@ vendor/
 .git/
 .idea/
 config.ini
-phpunit.xml
