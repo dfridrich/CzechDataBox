@@ -1,0 +1,204 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  *********************************************************************
+     WSDL pro služby
+        1. Vytvoření/odeslání datové zprávy - CreateMessage
+        2. stažení kompletní přijaté zprávy v čitelné podobě - MessageDownload
+        3. stažení podepsané přijaté zprávy - SignedMessageDownload
+        4. stažení podepsané odeslané zprávy - SignedSentMessageDownload
+        5. vytvoření hromadné zprávy (oběžníku) - CreateMultipleMessage   
+        6. ověření zprávy - AuthenticateMessage 
+     
+                         verze 2.12  
+
+   Změny:  
+     4.2.2009 verze 0.1
+    20.3.2009 verze 1.0  - formální úpravy vyhovující WS-I Basic Profile
+     8.4.2009 verze 1.2  - změna názvů WSDL, rozložení operací mezi WSDL
+    16.4.2009 verze 1.3  - přidána DummyOperation pro navazování a udržování spojení
+     3.6.2009 verze 2.0  - novela
+    1.10.2009 verze 2.5  - přidána WS CreateMultipleMessage
+    1.11.2009 verze 2.6  - komerční provoz
+    14.4.2010 verze 2.9  - přidána WS AuthenticateMessage                              
+    18.9.2010 verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
+************************************************************************ -->
+
+<definitions name="ISDS_dmOperations" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20">
+                                
+  <types>
+    <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
+      <xs:include schemaLocation="dmBaseTypes.xsd" />
+    </xs:schema>
+  </types>
+  
+  <!-- ******************************************************************* -->
+  <message name="MessageCreateRequest">
+    <part name="parameter" element="tns:CreateMessage" />        
+  </message>
+  <message name="MessageCreateResponse">
+    <part name="parameter" element="tns:CreateMessageResponse" />        
+  </message>
+
+  <message name="MessageDownloadRequest">
+    <part name="parameter" element="tns:MessageDownload" />        
+  </message>
+  <message name="MessageDownloadResponse">
+    <part name="parameter" element="tns:MessageDownloadResponse" />        
+  </message>
+
+  <message name="SignedMessageDownloadRequest">
+    <part name="parameter" element="tns:SignedMessageDownload" />        
+  </message>
+  <message name="SignedMessageDownloadResponse">
+    <part name="parameter" element="tns:SignedMessageDownloadResponse" />        
+  </message>
+
+  <message name="SignedSentMessageDownloadRequest">
+    <part name="parameter" element="tns:SignedSentMessageDownload" />        
+  </message>                            
+  <message name="SignedSentMessageDownloadResponse">
+    <part name="parameter" element="tns:SignedSentMessageDownloadResponse" />        
+  </message>
+
+  <message name="DummyOperationRequest">
+    <part name="parameter" element="tns:DummyOperation" />        
+  </message>                            
+
+  <message name="MultipleMessageCreateRequest">
+    <part name="parameter" element="tns:CreateMultipleMessage" />        
+  </message>
+  <message name="MultipleMessageCreateResponse">
+    <part name="parameter" element="tns:CreateMultipleMessageResponse" />        
+  </message>
+
+  <message name="AuthenticateMessageRequest">
+    <part name="parameter" element="tns:AuthenticateMessage" />        
+  </message>
+  <message name="AuthenticateMessageResponse">
+    <part name="parameter" element="tns:AuthenticateMessageResponse" />        
+  </message>
+
+  <!-- ******************************************************************* -->
+  <portType name="dmOperationsPortType">
+
+    <operation name="CreateMessage">
+      <input message="tns:MessageCreateRequest"/>
+      <output message="tns:MessageCreateResponse"/>
+    </operation>
+
+    <operation name="MessageDownload">
+      <input  message="tns:MessageDownloadRequest"/>
+      <output message="tns:MessageDownloadResponse"/>
+    </operation>
+
+    <operation name="SignedMessageDownload">
+      <input  message="tns:SignedMessageDownloadRequest"/>
+      <output message="tns:SignedMessageDownloadResponse"/>
+    </operation>
+
+    <operation  name="SignedSentMessageDownload">
+      <input  message="tns:SignedSentMessageDownloadRequest"/>
+      <output message="tns:SignedSentMessageDownloadResponse"/>
+    </operation>
+
+    <operation  name="DummyOperation">
+      <input  message="tns:DummyOperationRequest"/>
+    </operation>
+
+    <operation name="CreateMultipleMessage">
+      <input message="tns:MultipleMessageCreateRequest"/>
+      <output message="tns:MultipleMessageCreateResponse"/>
+    </operation>
+
+    <operation name="AuthenticateMessage">
+      <input message="tns:AuthenticateMessageRequest"/>
+      <output message="tns:AuthenticateMessageResponse"/>
+    </operation>
+
+  </portType>
+
+  <!-- ******************************************************************* -->
+ <binding name="dmOperationsBinding" type="tns:dmOperationsPortType">
+
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CreateMessage">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output >
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="MessageDownload">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="SignedMessageDownload">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="SignedSentMessageDownload">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="DummyOperation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+
+    <operation name="CreateMultipleMessage">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output >
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="AuthenticateMessage">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output >
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+  </binding>
+
+  <!-- ******************************************************************* -->
+  <service name="dmOperationsWebService">
+    <port name="dmOperationsPortType" binding="tns:dmOperationsBinding">
+      <soap:address location="https://ws1.mojedatovaschranka.cz/DS/dz"/>
+    </port>
+  </service>
+
+</definitions>
+

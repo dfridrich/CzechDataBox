@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  *********************************************************************
+     WSDL pro služby související s vyhledáváním DS 
+     
+                          verze 2.14 
+      *********************************************************************                    
+Seznam služeb: 
+==============
+  FindDataBox                         
+  CheckDataBox
+  GetDataBoxList
+  PDZInfo
+
+                          
+ změny:
+  28.4.2009 verze 1.0    
+   3.6.2009 verze 2.0  - novela   
+  1.11.2009 verze 2.6  - komerční provoz                     
+  18.9.2010 verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
+                       - přidána WS GetDataBoxList
+  25.8.2010 verze 2.14 - novela zákona 300/2008 Sb.
+                       - přidání WS PDZInfo                                  
+************************************************************************ -->
+
+<definitions name="ISDS_db" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20">
+                                
+  <types>
+    <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
+      <xs:include schemaLocation="dbTypes.xsd" />
+    </xs:schema>
+  </types>
+  
+  <!-- ******************************************************************* -->
+  <message name="FindDataBoxRequest">
+    <part name="parameter" element="tns:FindDataBox" />        
+  </message>
+  <message name="FindDataBoxResponse">
+    <part name="parameter" element="tns:FindDataBoxResponse" />        
+  </message>
+
+  <message name="CheckDataBoxRequest">
+    <part name="parameter" element="tns:CheckDataBox" />        
+  </message>
+  <message name="CheckDataBoxResponse">
+    <part name="parameter" element="tns:CheckDataBoxResponse" />        
+  </message>
+
+  <message name="GetDataBoxListRequest">
+    <part name="parameter" element="tns:GetDataBoxList" />        
+  </message>
+  <message name="GetDataBoxListResponse">
+    <part name="parameter" element="tns:GetDataBoxListResponse" />        
+  </message>
+
+  <message name="PDZInfoRequest">
+    <part name="parameter" element="tns:PDZInfo" />        
+  </message>
+  <message name="PDZInfoResponse">
+    <part name="parameter" element="tns:PDZInfoResponse" />        
+  </message>
+
+  <!-- ******************************************************************* -->
+  <portType name="DataBoxSearchPortType">
+    <operation name="FindDataBox">
+      <input  message="tns:FindDataBoxRequest"/>
+      <output message="tns:FindDataBoxResponse"/>
+    </operation>
+
+    <operation name="CheckDataBox">
+      <input  message="tns:CheckDataBoxRequest"/>
+      <output message="tns:CheckDataBoxResponse"/>
+    </operation>
+  
+    <operation name="GetDataBoxList">
+      <input  message="tns:GetDataBoxListRequest"/>
+      <output message="tns:GetDataBoxListResponse"/>
+    </operation>
+
+    <operation name="PDZInfo">
+     <input  message="tns:PDZInfoRequest"/>
+     <output message="tns:PDZInfoResponse"/>
+   </operation>
+
+  </portType>
+
+  <!-- ******************************************************************* -->
+  <binding name="DataBoxSearchBinding" type="tns:DataBoxSearchPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="FindDataBox">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="CheckDataBox">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="GetDataBoxList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="PDZInfo">
+     <soap:operation soapAction="" />
+     <input>
+       <soap:body use="literal" />
+     </input>
+     <output>
+       <soap:body use="literal" />
+     </output>
+   </operation>
+
+  </binding>
+
+  <!-- ******************************************************************* -->
+  <service name="DataBoxSearch">
+    <port name="DataBoxSearchPortType" binding="tns:DataBoxSearchBinding">
+      <soap:address location="https://ws1.mojedatovaschranka.cz/DS/df"/>
+    </port>
+  </service>
+
+</definitions>
+

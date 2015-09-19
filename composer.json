@@ -1,0 +1,31 @@
+{
+  "name": "dfridrich/czech-data-box",
+  "type": "library",
+  "description": "Knihovna pro komunikaci s datovou schránkou v PHP.",
+  "keywords": [
+    "php",
+    "library",
+    "ISDS",
+    "Datové schránky"
+  ],
+  "homepage": "https://github.com/dfridrich/CzechDataBox",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dennis Fridrich",
+      "email": "fridrich.dennis@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-soap": "*"
+  },
+  "require-dev": {
+    "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Defr\\CzechDataBox\\": "src/"
+    }
+  }
+}

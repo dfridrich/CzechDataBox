@@ -1,0 +1,93 @@
+<?php
+
+namespace Defr\CzechDataBox\Api;
+
+class tNewAccDataOutput
+{
+    /**
+     * @var tUserID
+     */
+    protected $dbUserID = null;
+
+    /**
+     * @var tDbAccessDataId
+     */
+    protected $dbAccessDataId = null;
+
+    /**
+     * @var tDbReqStatus
+     */
+    protected $dbStatus = null;
+
+    /**
+     * @param tUserID         $dbUserID
+     * @param tDbAccessDataId $dbAccessDataId
+     * @param tDbReqStatus    $dbStatus
+     */
+    public function __construct($dbUserID = null, $dbAccessDataId = null, $dbStatus = null)
+    {
+        $this->dbUserID = $dbUserID;
+        $this->dbAccessDataId = $dbAccessDataId;
+        $this->dbStatus = $dbStatus;
+    }
+
+    /**
+     * @return tUserID
+     */
+    public function getDbUserID()
+    {
+        return $this->dbUserID;
+    }
+
+    /**
+     * @param tUserID $dbUserID
+     *
+     * @return \Defr\CzechDataBox\Api\tNewAccDataOutput
+     */
+    public function setDbUserID($dbUserID)
+    {
+        $this->dbUserID = $dbUserID;
+
+        return $this;
+    }
+
+    /**
+     * @return tDbAccessDataId
+     */
+    public function getDbAccessDataId()
+    {
+        return $this->dbAccessDataId;
+    }
+
+    /**
+     * @param tDbAccessDataId $dbAccessDataId
+     *
+     * @return \Defr\CzechDataBox\Api\tNewAccDataOutput
+     */
+    public function setDbAccessDataId($dbAccessDataId)
+    {
+        $this->dbAccessDataId = $dbAccessDataId;
+
+        return $this;
+    }
+
+    /**
+     * @return tDbReqStatus
+     */
+    public function getDbStatus()
+    {
+        return $this->dbStatus;
+    }
+
+    /**
+     * @param tDbReqStatus $dbStatus
+     *
+     * @return \Defr\CzechDataBox\Api\tNewAccDataOutput
+     */
+    public function setDbStatus($dbStatus)
+    {
+        $this->dbStatus = $dbStatus;
+
+        return $this;
+    }
+}

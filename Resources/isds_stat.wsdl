@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  *********************************************************************
+     WSDL pro služby související se statistikou 
+     
+                          verze 0.1 
+      *********************************************************************                    
+Seznam služeb: 
+==============
+  NumOfMessages                        
+                          
+ změny:
+  29.6.2011 verze 0.1    
+************************************************************************ -->
+
+<definitions name="ISDS_db" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20">
+                                
+  <types>
+    <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
+      <xs:include schemaLocation="IsdsStat.xsd" />
+    </xs:schema>
+  </types>
+  
+  <!-- ******************************************************************* -->
+  <message name="NumOfMessagesRequest">
+    <part name="parameter" element="tns:NumOfMessages" />        
+  </message>
+  <message name="NumOfMessagesResponse">
+    <part name="parameter" element="tns:NumOfMessagesResponse" />        
+  </message>
+
+  <!-- ******************************************************************* -->
+  <portType name="IsdsStatPortType">
+    <operation name="NumOfMessages">
+      <input  message="tns:NumOfMessagesRequest"/>
+      <output message="tns:NumOfMessagesResponse"/>
+    </operation>
+
+   </portType>
+
+  <!-- ******************************************************************* -->
+  <binding name="IsdsStatSearchBinding" type="tns:IsdsStatPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="NumOfMessages">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+  </binding>
+
+  <!-- ******************************************************************* -->
+  <service name="IsdsStat">
+    <port name="IsdsStatPortType" binding="tns:IsdsStatSearchBinding">
+      <soap:address location="https://ws1.mojedatovaschranka.cz/DS/DsManage"/>
+    </port>
+  </service>
+
+</definitions>
+

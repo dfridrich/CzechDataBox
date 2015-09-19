@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  *********************************************************************
+     WSDL pro doplňkové služby související s přihlašováním 
+     
+                       verze 2.12
+      *********************************************************************                    
+Seznam služeb: 
+==============
+  GetOwnerInfoFromLogin
+  GetUserInfoFromLogin
+  ChangeISDSPassword
+  GetPasswordInfo
+
+  Změny:  
+    9.12.2009  verze 2.7
+    18.9.2010  verze 2.10  - změna URL v důsledku přechodu na Basic autentizaci
+************************************************************************ -->
+
+<definitions name="ISDS_db_suppl" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20">
+                                
+  <types>
+    <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
+      <xs:include schemaLocation="dbTypes.xsd" />
+    </xs:schema>
+  </types>
+  
+  <!-- ******************************************************************* -->
+  <message name="GetOwnerInfoFromLoginRequest">
+    <part name="parameter" element="tns:GetOwnerInfoFromLogin" />        
+  </message>
+  <message name="GetOwnerInfoFromLoginResponse">
+    <part name="parameter" element="tns:GetOwnerInfoFromLoginResponse" />        
+  </message>
+
+  <message name="GetUserInfoFromLoginRequest">
+    <part name="parameter" element="tns:GetUserInfoFromLogin" />        
+  </message>
+  <message name="GetUserInfoFromLoginResponse">
+    <part name="parameter" element="tns:GetUserInfoFromLoginResponse" />        
+  </message>
+ 
+  <message name="ChangeISDSPasswordRequest">
+    <part name="parameter" element="tns:ChangeISDSPassword" />        
+  </message>
+  <message name="ChangeISDSPasswordResponse">
+    <part name="parameter" element="tns:ChangeISDSPasswordResponse" />        
+  </message>
+
+  <message name="GetPasswordInfoRequest">
+    <part name="parameter" element="tns:GetPasswordInfo" />        
+  </message>
+  <message name="GetPasswordInfoResponse">
+    <part name="parameter" element="tns:GetPasswordInfoResponse" />        
+  </message>
+
+  <!-- ******************************************************************* -->
+  <portType name="DataBoxAccessPortType">
+
+    <operation name="GetOwnerInfoFromLogin"> 
+      <input   message="tns:GetOwnerInfoFromLoginRequest"/>
+      <output  message="tns:GetOwnerInfoFromLoginResponse"/>
+    </operation>
+  
+    <operation name="GetUserInfoFromLogin"> 
+      <input   message="tns:GetUserInfoFromLoginRequest"/>
+      <output  message="tns:GetUserInfoFromLoginResponse"/>
+    </operation>
+  
+    <operation name="ChangeISDSPassword"> 
+      <input   message="tns:ChangeISDSPasswordRequest"/>
+      <output  message="tns:ChangeISDSPasswordResponse"/>
+    </operation>
+  
+    <operation name="GetPasswordInfo"> 
+      <input   message="tns:GetPasswordInfoRequest"/>
+      <output  message="tns:GetPasswordInfoResponse"/>
+    </operation>
+  
+  </portType>
+
+  <!-- ******************************************************************* -->
+  <binding name="DataBoxAccessBinding" type="tns:DataBoxAccessPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+    <operation name="GetOwnerInfoFromLogin">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="GetUserInfoFromLogin">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="ChangeISDSPassword">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="GetPasswordInfo">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+  </binding>
+
+  <!-- ******************************************************************* -->
+  <service name="DataBoxAccess">
+    <port name="DataBoxAccessPortType" binding="tns:DataBoxAccessBinding">
+      <soap:address location="https://ws1.mojedatovaschranka.cz/DS/DsManage"/>
+    </port>
+  </service>
+
+</definitions>
+

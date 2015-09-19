@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ************************************************************************
+   XSD schema typů použitých ve WSDL 
+      verze 0.1    
+
+ změny:
+  29.6.2011  verze 0.1
+**************************************************************************** -->
+<xs:schema xmlns:tns="http://isds.czechpoint.cz/v20" elementFormDefault="qualified" targetNamespace="http://isds.czechpoint.cz/v20" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="NumOfMessages" type="tns:tNumOfMessagesInput" />
+  <xs:complexType name="tNumOfMessagesInput">
+    <xs:sequence>
+      <xs:element name="statType" nillable="true" type="xs:nonNegativeInteger" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NumOfMessagesResponse" type="tns:tNumOfMessagesOutput" />
+  <xs:complexType name="tNumOfMessagesOutput">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="statResult" nillable="true" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="statTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dbStatus" type="tns:tStatReqStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tStatReqStatus">
+    <xs:annotation>
+      <xs:documentation>návratový typ WS</xs:documentation>
+    </xs:annotation>
+    <xs:group ref="tns:gDbSReqStatus" />
+  </xs:complexType>
+  <xs:group name="gDbSReqStatus">
+    <xs:sequence>
+      <xs:element name="dbStatusCode" type="xs:string" />
+      <xs:element name="dbStatusMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

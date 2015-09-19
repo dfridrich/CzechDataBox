@@ -1,0 +1,7 @@
+[DataBox]
+
+login = 'login'
+password = 'password'
+
+; 1 = real DataBox, 0 = testing DataBox
+production = 0
