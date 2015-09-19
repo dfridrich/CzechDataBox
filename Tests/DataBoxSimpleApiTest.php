@@ -16,7 +16,7 @@ class DataBoxSimpleApiTest extends PHPUnit_Framework_TestCase
     private function __getDataBox()
     {
         $dataBox = new DataBox();
-        $dataBox->loginWithUsernameAndPassword(DATABOX_LOGIN, DATABOX_PASSWORD, DATABOX_PRODUCTION);
+        $dataBox->loginWithUsernameAndPassword($_ENV['DATABOX_LOGIN'], $_ENV['DATABOX_PASSWORD'], $_ENV['DATABOX_PRODUCTION']);
 
         return $dataBox;
     }
