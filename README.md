@@ -129,6 +129,10 @@ Jakmile přístupové údaje budete mít, vytvořte config.ini (z config.ini.dis
 - Ostré prostředí datových schránek - https://www.mojedatovaschranka.cz/
 - 602 XML Filler (pro formát ZFO) - http://www.602.cz/602xml_filler/download
 
+## Contributing
+
+Budu rád za každý návrh na vylepšení :-)
+
 ## @TODO
 
 - Odeslání datové zprávy
