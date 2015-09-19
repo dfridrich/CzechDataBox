@@ -12,6 +12,9 @@ matrix:
     - php: 7.0
     - php: hhvm
 
+before_install:
+  - php /home/travis/.phpenv/versions/5.3.26/bin/composer.phar self-update
+
 before_script:
   - composer self-update
   - composer install --no-interaction --prefer-source
