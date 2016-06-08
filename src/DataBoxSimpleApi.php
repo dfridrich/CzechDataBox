@@ -11,6 +11,8 @@ use Defr\CzechDataBox\Api\tFindDBInput;
 use Defr\CzechDataBox\Api\tIDMessInput;
 use Defr\CzechDataBox\Api\tListOfFReceivedInput;
 use Defr\CzechDataBox\Api\tListOfSentInput;
+use Defr\CzechDataBox\Api\tMessageCreateInput;
+use Defr\CzechDataBox\Api\tMessageCreateOutput;
 use Defr\CzechDataBox\Api\tNumOfMessagesInput;
 use Defr\CzechDataBox\Api\tRecord;
 
@@ -231,11 +233,14 @@ class DataBoxSimpleApi
     /**
      * Pošle datovou zprávu.
      *
+     * @param tMessageCreateInput $messageToSent
+     *
+     * @return tMessageCreateOutput
      * @throws DataBoxException
      */
-    public function sendDataMessage()
+    public function sendDataMessage(tMessageCreateInput $messageToSent)
     {
-        throw new DataBoxException('Not implemented yet.');
+        return $this->dataBox->DmOperationsWebService()->CreateMessage($messageToSent);
     }
 
     /**
