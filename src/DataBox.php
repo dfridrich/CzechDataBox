@@ -67,6 +67,8 @@ class DataBox
     {
         if ($directory === null) {
             $this->directory = sys_get_temp_dir() . '/DataBox';
+        } else {
+            $this->directory = $directory;
         }
         $this->simpleApi = new DataBoxSimpleApi($this);
     }
