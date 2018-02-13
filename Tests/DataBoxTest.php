@@ -15,7 +15,7 @@ class DataBoxTest extends PHPUnit_Framework_TestCase
     private function __getDataBox()
     {
         $dataBox = new DataBox();
-        $dataBox->loginWithUsernameAndPassword($_SERVER['DATABOX_LOGIN'], $_SERVER['DATABOX_PASSWORD'], $_SERVER['DATABOX_PRODUCTION']);
+        $dataBox->loginWithUsernameAndPassword(getenv('DATABOX_LOGIN'), getenv('DATABOX_PASSWORD'), getenv('DATABOX_PRODUCTION'));
 
         return $dataBox;
     }

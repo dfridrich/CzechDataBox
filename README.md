@@ -1,6 +1,11 @@
 # CzechDataBox
 
 [![Build Status](https://travis-ci.org/dfridrich/CzechDataBox.svg)](https://travis-ci.org/dfridrich/CzechDataBox)
+[![Latest Stable Version](https://poser.pugx.org/dfridrich/czech-data-box/v/stable)](https://packagist.org/packages/dfridrich/czech-data-box) 
+[![Total Downloads](https://poser.pugx.org/dfridrich/czech-data-box/downloads)](https://packagist.org/packages/dfridrich/czech-data-box)
+[![Monthly Downloads](https://poser.pugx.org/dfridrich/czech-data-box/d/monthly)](https://packagist.org/packages/dfridrich/czech-data-box)
+[![License](https://poser.pugx.org/dfridrich/czech-data-box/license)](https://packagist.org/packages/dfridrich/czech-data-box)
+
 
 Knihovna pro komunikaci s datovou schránkou v PHP.
 
@@ -8,23 +13,15 @@ Knihovna pro komunikaci s datovou schránkou v PHP.
 
 ## Instalace pomocí Composeru
 
-`composer require dfridrich/CzechDataBox:1.*`
-
-nebo composer.json:
-
-```json
-{
-  "require": {
-    "dfridrich/CzechDataBox": "1.*"
-  }
-}
-```
+`composer require dfridrich/czech-data-box`
 
 ## Příklady
 
 Níže uvedené příklady používají `Defr\CzechDataBox\DataBoxSimpleApi`, které nabízí jednodušší přístup k datové schránce. Pokud chcete použít standardní přístup, můžete využít tyto web services:
 
 ```php
+<?php
+
 $dataBox->DmOperationsWebService();
 $dataBox->DmInfoWebService();
 $dataBox->DataBoxSearch();
@@ -137,4 +134,3 @@ Budu rád za každý návrh na vylepšení :-)
 
 - Odeslání datové zprávy
 - Jednoduché hledání na základě jména, příjmení nebo názvu firmy nebo úřadu
-- Symfony bundle

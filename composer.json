@@ -21,7 +21,8 @@
     "ext-soap": "*"
   },
   "require-dev": {
-    "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2"
+    "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2",
+    "phpunit/phpunit": "^5"
   },
   "autoload": {
     "psr-4": {
