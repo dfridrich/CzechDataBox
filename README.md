@@ -113,6 +113,23 @@ foreach ($messages as $message) {
 $simpleApi->findDataBoxById('wucb4dd');
 ```
 
+
+### Odeslání datové zprávy včetně přílohy
+
+Datová schránka nepřijímá všechny typy souborů, testováno na pdf, jpg, png (Většina binary typů by měla projít).
+TXT soubory lze odeslat pouze, kdyz se 2x base64 encodují, výsledkem je přijatá datová zpráva s base64 encodovaným contentem uvnitř txt souboru
+
+```php
+$files = [
+    '/path/to/a/file.pdf',
+];
+$message = $simpleApi->createBasicDataMessage('wucb4dd', 'Test', $files);
+$sentMessage = $simpleApi->sendDataMessage($message);
+if ($sentMessage->getDmStatus()->getDmStatusCode() !== "0000") {
+    // Handle errors
+}
+```
+
 ## Závěrem
 
 Všechny příklady nejdete ve složce examples. Pro připojení k datové schránce budete potřebovat login a heslo nebo testovací přístup, který lze získat na základě vyplnění [tohoto formuláře](https://www.datoveschranky.info/documents/1744842/1746073/zadost_zrizeni_testovaci_ds.zfo/4b75d5bf-0272-4305-9cef-8ec8f019e9d3).
