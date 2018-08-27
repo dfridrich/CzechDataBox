@@ -2,19 +2,21 @@
 
 namespace Defr\CzechDataBox;
 
-use Defr\CzechDataBox\Api\dmFile;
 use Defr\CzechDataBox\Api\tDbOwnerInfo;
 use Defr\CzechDataBox\Api\tDbOwnersArray;
 use Defr\CzechDataBox\Api\tDbUserInfo;
 use Defr\CzechDataBox\Api\tDummyInput;
+use Defr\CzechDataBox\Api\tFilesArray;
 use Defr\CzechDataBox\Api\tFindDBInput;
 use Defr\CzechDataBox\Api\tIDMessInput;
 use Defr\CzechDataBox\Api\tListOfFReceivedInput;
 use Defr\CzechDataBox\Api\tListOfSentInput;
 use Defr\CzechDataBox\Api\tMessageCreateInput;
 use Defr\CzechDataBox\Api\tMessageCreateOutput;
+use Defr\CzechDataBox\Api\tMessageEnvelopeSub;
 use Defr\CzechDataBox\Api\tNumOfMessagesInput;
 use Defr\CzechDataBox\Api\tRecord;
+use Defr\CzechDataBox\ApiExtensions\dmFile;
 
 /**
  * Class DataBoxSimpleApi
@@ -228,6 +230,64 @@ class DataBoxSimpleApi
         }
 
         return $files;
+    }
+
+    /**
+     * Vytvoří základní zprávu k odeslání
+     *
+     * @param string $recipient     Recipient's DataBox ID
+     * @param string $subject       Message annotation
+     * @param array  $attachments   Paths to files attached to the message
+     *
+     * @return tMessageCreateInput
+     * @throws DataBoxException
+     */
+    public function createBasicDataMessage($recipient, $subject, array $attachments = [])
+    {
+        if (!is_string($recipient)) {
+            throw new DataBoxException("Invalid recipient data type provided");
+        } elseif (!is_string($subject)) {
+            throw new DataBoxException("Invalid subject data type provided");
+        }
+
+        // Create an envelope, for some reason the dmEnvelope is not processed
+        // properly and returns an internal error
+        $envelope = new tMessageEnvelopeSub(
+            null,
+            null,
+            $recipient,
+            null,
+            null,
+            null,
+            $subject
+        );
+
+        // Make sure the attachments exist. If you have files stored in the memory
+        // just do not pass any attachments and create the dmFile object yourself,
+        // then set it as an array to dmFiles
+        $attachments = \array_filter($attachments, '\file_exists');
+
+        // Creates the dmFile object for each of the attachments, gets mime
+        // type and file name from the file
+        $attachments = \array_map(
+            function ($filePath) {
+                $file = new dmFile();
+                $file->setDmMimeType(\mime_content_type($filePath));
+                $file->setDmFileDescr(\basename($filePath));
+                $file->setDmEncodedContent(\file_get_contents($filePath));
+
+                return $file;
+            }, $attachments
+        );
+
+
+        $dmFiles = new tFilesArray();
+        if (!empty($attachments)) {
+            // tFilesArray is not properly generated, it should accept an array of dmFile objects
+            $dmFiles->setDmFile($attachments);
+        }
+
+        return new tMessageCreateInput($envelope, $dmFiles);
     }
 
     /**
