@@ -149,5 +149,4 @@ Budu rád za každý návrh na vylepšení :-)
 
 ## @TODO
 
-- Odeslání datové zprávy
 - Jednoduché hledání na základě jména, příjmení nebo názvu firmy nebo úřadu
