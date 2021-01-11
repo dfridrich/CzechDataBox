@@ -4,13 +4,14 @@ namespace Defr\CzechDataBox\Api;
 
 class tStatus
 {
+
     /**
-     * @var string
+     * @var string $dmStatusCode
      */
     protected $dmStatusCode = null;
 
     /**
-     * @var string
+     * @var string $dmStatusMessage
      */
     protected $dmStatusMessage = null;
 
@@ -20,8 +21,8 @@ class tStatus
      */
     public function __construct($dmStatusCode = null, $dmStatusMessage = null)
     {
-        $this->dmStatusCode = $dmStatusCode;
-        $this->dmStatusMessage = $dmStatusMessage;
+      $this->dmStatusCode = $dmStatusCode;
+      $this->dmStatusMessage = $dmStatusMessage;
     }
 
     /**
@@ -29,19 +30,17 @@ class tStatus
      */
     public function getDmStatusCode()
     {
-        return $this->dmStatusCode;
+      return $this->dmStatusCode;
     }
 
     /**
      * @param string $dmStatusCode
-     *
      * @return \Defr\CzechDataBox\Api\tStatus
      */
     public function setDmStatusCode($dmStatusCode)
     {
-        $this->dmStatusCode = $dmStatusCode;
-
-        return $this;
+      $this->dmStatusCode = $dmStatusCode;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tStatus
      */
     public function getDmStatusMessage()
     {
-        return $this->dmStatusMessage;
+      return $this->dmStatusMessage;
     }
 
     /**
      * @param string $dmStatusMessage
-     *
      * @return \Defr\CzechDataBox\Api\tStatus
      */
     public function setDmStatusMessage($dmStatusMessage)
     {
-        $this->dmStatusMessage = $dmStatusMessage;
-
-        return $this;
+      $this->dmStatusMessage = $dmStatusMessage;
+      return $this;
     }
+
 }

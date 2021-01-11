@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tMessageVerifyOutput
 {
+
     /**
-     * @var tHash
+     * @var tHash $dmHash
      */
     protected $dmHash = null;
 
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
     /**
-     * @param tHash   $dmHash
+     * @param tHash $dmHash
      * @param tStatus $dmStatus
      */
     public function __construct($dmHash = null, $dmStatus = null)
     {
-        $this->dmHash = $dmHash;
-        $this->dmStatus = $dmStatus;
+      $this->dmHash = $dmHash;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tMessageVerifyOutput
      */
     public function getDmHash()
     {
-        return $this->dmHash;
+      return $this->dmHash;
     }
 
     /**
      * @param tHash $dmHash
-     *
      * @return \Defr\CzechDataBox\Api\tMessageVerifyOutput
      */
     public function setDmHash($dmHash)
     {
-        $this->dmHash = $dmHash;
-
-        return $this;
+      $this->dmHash = $dmHash;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tMessageVerifyOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tMessageVerifyOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

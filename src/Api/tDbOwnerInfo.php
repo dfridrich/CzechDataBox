@@ -4,192 +4,193 @@ namespace Defr\CzechDataBox\Api;
 
 class tDbOwnerInfo
 {
+
     /**
-     * @var tIdDb
+     * @var tIdDb $dbID
      */
     protected $dbID = null;
 
     /**
-     * @var tDbType
+     * @var tDbType $dbType
      */
     protected $dbType = null;
 
     /**
-     * @var tIdentificationNumber
+     * @var tIdentificationNumber $ic
      */
     protected $ic = null;
 
     /**
-     * @var string
+     * @var string $pnFirstName
      */
     protected $pnFirstName = null;
 
     /**
-     * @var string
+     * @var string $pnMiddleName
      */
     protected $pnMiddleName = null;
 
     /**
-     * @var string
+     * @var string $pnLastName
      */
     protected $pnLastName = null;
 
     /**
-     * @var string
+     * @var string $pnLastNameAtBirth
      */
     protected $pnLastNameAtBirth = null;
 
     /**
-     * @var string
+     * @var string $firmName
      */
     protected $firmName = null;
 
     /**
-     * @var date
+     * @var date $biDate
      */
     protected $biDate = null;
 
     /**
-     * @var string
+     * @var string $biCity
      */
     protected $biCity = null;
 
     /**
-     * @var string
+     * @var string $biCounty
      */
     protected $biCounty = null;
 
     /**
-     * @var string
+     * @var string $biState
      */
     protected $biState = null;
 
     /**
-     * @var string
+     * @var string $adCity
      */
     protected $adCity = null;
 
     /**
-     * @var string
+     * @var string $adStreet
      */
     protected $adStreet = null;
 
     /**
-     * @var string
+     * @var string $adNumberInStreet
      */
     protected $adNumberInStreet = null;
 
     /**
-     * @var string
+     * @var string $adNumberInMunicipality
      */
     protected $adNumberInMunicipality = null;
 
     /**
-     * @var string
+     * @var string $adZipCode
      */
     protected $adZipCode = null;
 
     /**
-     * @var string
+     * @var string $adState
      */
     protected $adState = null;
 
     /**
-     * @var string
+     * @var string $nationality
      */
     protected $nationality = null;
 
     /**
-     * @var string
+     * @var string $email
      */
     protected $email = null;
 
     /**
-     * @var string
+     * @var string $telNumber
      */
     protected $telNumber = null;
 
     /**
-     * @var identifier
+     * @var identifier $identifier
      */
     protected $identifier = null;
 
     /**
-     * @var registryCode
+     * @var registryCode $registryCode
      */
     protected $registryCode = null;
 
     /**
-     * @var int
+     * @var int $dbState
      */
     protected $dbState = null;
 
     /**
-     * @var bool
+     * @var boolean $dbEffectiveOVM
      */
     protected $dbEffectiveOVM = null;
 
     /**
-     * @var bool
+     * @var boolean $dbOpenAddressing
      */
     protected $dbOpenAddressing = null;
 
     /**
-     * @param tIdDb                 $dbID
-     * @param tDbType               $dbType
+     * @param tIdDb $dbID
+     * @param tDbType $dbType
      * @param tIdentificationNumber $ic
-     * @param string                $pnFirstName
-     * @param string                $pnMiddleName
-     * @param string                $pnLastName
-     * @param string                $pnLastNameAtBirth
-     * @param string                $firmName
-     * @param date                  $biDate
-     * @param string                $biCity
-     * @param string                $biCounty
-     * @param string                $biState
-     * @param string                $adCity
-     * @param string                $adStreet
-     * @param string                $adNumberInStreet
-     * @param string                $adNumberInMunicipality
-     * @param string                $adZipCode
-     * @param string                $adState
-     * @param string                $nationality
-     * @param string                $email
-     * @param string                $telNumber
-     * @param identifier            $identifier
-     * @param registryCode          $registryCode
-     * @param int                   $dbState
-     * @param bool                  $dbEffectiveOVM
-     * @param bool                  $dbOpenAddressing
+     * @param string $pnFirstName
+     * @param string $pnMiddleName
+     * @param string $pnLastName
+     * @param string $pnLastNameAtBirth
+     * @param string $firmName
+     * @param date $biDate
+     * @param string $biCity
+     * @param string $biCounty
+     * @param string $biState
+     * @param string $adCity
+     * @param string $adStreet
+     * @param string $adNumberInStreet
+     * @param string $adNumberInMunicipality
+     * @param string $adZipCode
+     * @param string $adState
+     * @param string $nationality
+     * @param string $email
+     * @param string $telNumber
+     * @param identifier $identifier
+     * @param registryCode $registryCode
+     * @param int $dbState
+     * @param boolean $dbEffectiveOVM
+     * @param boolean $dbOpenAddressing
      */
     public function __construct($dbID = null, $dbType = null, $ic = null, $pnFirstName = null, $pnMiddleName = null, $pnLastName = null, $pnLastNameAtBirth = null, $firmName = null, $biDate = null, $biCity = null, $biCounty = null, $biState = null, $adCity = null, $adStreet = null, $adNumberInStreet = null, $adNumberInMunicipality = null, $adZipCode = null, $adState = null, $nationality = null, $email = null, $telNumber = null, $identifier = null, $registryCode = null, $dbState = null, $dbEffectiveOVM = null, $dbOpenAddressing = null)
     {
-        $this->dbID = $dbID;
-        $this->dbType = $dbType;
-        $this->ic = $ic;
-        $this->pnFirstName = $pnFirstName;
-        $this->pnMiddleName = $pnMiddleName;
-        $this->pnLastName = $pnLastName;
-        $this->pnLastNameAtBirth = $pnLastNameAtBirth;
-        $this->firmName = $firmName;
-        $this->biDate = $biDate;
-        $this->biCity = $biCity;
-        $this->biCounty = $biCounty;
-        $this->biState = $biState;
-        $this->adCity = $adCity;
-        $this->adStreet = $adStreet;
-        $this->adNumberInStreet = $adNumberInStreet;
-        $this->adNumberInMunicipality = $adNumberInMunicipality;
-        $this->adZipCode = $adZipCode;
-        $this->adState = $adState;
-        $this->nationality = $nationality;
-        $this->email = $email;
-        $this->telNumber = $telNumber;
-        $this->identifier = $identifier;
-        $this->registryCode = $registryCode;
-        $this->dbState = $dbState;
-        $this->dbEffectiveOVM = $dbEffectiveOVM;
-        $this->dbOpenAddressing = $dbOpenAddressing;
+      $this->dbID = $dbID;
+      $this->dbType = $dbType;
+      $this->ic = $ic;
+      $this->pnFirstName = $pnFirstName;
+      $this->pnMiddleName = $pnMiddleName;
+      $this->pnLastName = $pnLastName;
+      $this->pnLastNameAtBirth = $pnLastNameAtBirth;
+      $this->firmName = $firmName;
+      $this->biDate = $biDate;
+      $this->biCity = $biCity;
+      $this->biCounty = $biCounty;
+      $this->biState = $biState;
+      $this->adCity = $adCity;
+      $this->adStreet = $adStreet;
+      $this->adNumberInStreet = $adNumberInStreet;
+      $this->adNumberInMunicipality = $adNumberInMunicipality;
+      $this->adZipCode = $adZipCode;
+      $this->adState = $adState;
+      $this->nationality = $nationality;
+      $this->email = $email;
+      $this->telNumber = $telNumber;
+      $this->identifier = $identifier;
+      $this->registryCode = $registryCode;
+      $this->dbState = $dbState;
+      $this->dbEffectiveOVM = $dbEffectiveOVM;
+      $this->dbOpenAddressing = $dbOpenAddressing;
     }
 
     /**
@@ -197,19 +198,17 @@ class tDbOwnerInfo
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
      * @param tIdDb $dbID
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -217,19 +216,17 @@ class tDbOwnerInfo
      */
     public function getDbType()
     {
-        return $this->dbType;
+      return $this->dbType;
     }
 
     /**
      * @param tDbType $dbType
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setDbType($dbType)
     {
-        $this->dbType = $dbType;
-
-        return $this;
+      $this->dbType = $dbType;
+      return $this;
     }
 
     /**
@@ -237,19 +234,17 @@ class tDbOwnerInfo
      */
     public function getIc()
     {
-        return $this->ic;
+      return $this->ic;
     }
 
     /**
      * @param tIdentificationNumber $ic
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setIc($ic)
     {
-        $this->ic = $ic;
-
-        return $this;
+      $this->ic = $ic;
+      return $this;
     }
 
     /**
@@ -257,19 +252,17 @@ class tDbOwnerInfo
      */
     public function getPnFirstName()
     {
-        return $this->pnFirstName;
+      return $this->pnFirstName;
     }
 
     /**
      * @param string $pnFirstName
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setPnFirstName($pnFirstName)
     {
-        $this->pnFirstName = $pnFirstName;
-
-        return $this;
+      $this->pnFirstName = $pnFirstName;
+      return $this;
     }
 
     /**
@@ -277,19 +270,17 @@ class tDbOwnerInfo
      */
     public function getPnMiddleName()
     {
-        return $this->pnMiddleName;
+      return $this->pnMiddleName;
     }
 
     /**
      * @param string $pnMiddleName
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setPnMiddleName($pnMiddleName)
     {
-        $this->pnMiddleName = $pnMiddleName;
-
-        return $this;
+      $this->pnMiddleName = $pnMiddleName;
+      return $this;
     }
 
     /**
@@ -297,19 +288,17 @@ class tDbOwnerInfo
      */
     public function getPnLastName()
     {
-        return $this->pnLastName;
+      return $this->pnLastName;
     }
 
     /**
      * @param string $pnLastName
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setPnLastName($pnLastName)
     {
-        $this->pnLastName = $pnLastName;
-
-        return $this;
+      $this->pnLastName = $pnLastName;
+      return $this;
     }
 
     /**
@@ -317,19 +306,17 @@ class tDbOwnerInfo
      */
     public function getPnLastNameAtBirth()
     {
-        return $this->pnLastNameAtBirth;
+      return $this->pnLastNameAtBirth;
     }
 
     /**
      * @param string $pnLastNameAtBirth
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setPnLastNameAtBirth($pnLastNameAtBirth)
     {
-        $this->pnLastNameAtBirth = $pnLastNameAtBirth;
-
-        return $this;
+      $this->pnLastNameAtBirth = $pnLastNameAtBirth;
+      return $this;
     }
 
     /**
@@ -337,19 +324,17 @@ class tDbOwnerInfo
      */
     public function getFirmName()
     {
-        return $this->firmName;
+      return $this->firmName;
     }
 
     /**
      * @param string $firmName
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setFirmName($firmName)
     {
-        $this->firmName = $firmName;
-
-        return $this;
+      $this->firmName = $firmName;
+      return $this;
     }
 
     /**
@@ -357,19 +342,17 @@ class tDbOwnerInfo
      */
     public function getBiDate()
     {
-        return $this->biDate;
+      return $this->biDate;
     }
 
     /**
      * @param date $biDate
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setBiDate($biDate)
     {
-        $this->biDate = $biDate;
-
-        return $this;
+      $this->biDate = $biDate;
+      return $this;
     }
 
     /**
@@ -377,19 +360,17 @@ class tDbOwnerInfo
      */
     public function getBiCity()
     {
-        return $this->biCity;
+      return $this->biCity;
     }
 
     /**
      * @param string $biCity
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setBiCity($biCity)
     {
-        $this->biCity = $biCity;
-
-        return $this;
+      $this->biCity = $biCity;
+      return $this;
     }
 
     /**
@@ -397,19 +378,17 @@ class tDbOwnerInfo
      */
     public function getBiCounty()
     {
-        return $this->biCounty;
+      return $this->biCounty;
     }
 
     /**
      * @param string $biCounty
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setBiCounty($biCounty)
     {
-        $this->biCounty = $biCounty;
-
-        return $this;
+      $this->biCounty = $biCounty;
+      return $this;
     }
 
     /**
@@ -417,19 +396,17 @@ class tDbOwnerInfo
      */
     public function getBiState()
     {
-        return $this->biState;
+      return $this->biState;
     }
 
     /**
      * @param string $biState
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setBiState($biState)
     {
-        $this->biState = $biState;
-
-        return $this;
+      $this->biState = $biState;
+      return $this;
     }
 
     /**
@@ -437,19 +414,17 @@ class tDbOwnerInfo
      */
     public function getAdCity()
     {
-        return $this->adCity;
+      return $this->adCity;
     }
 
     /**
      * @param string $adCity
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setAdCity($adCity)
     {
-        $this->adCity = $adCity;
-
-        return $this;
+      $this->adCity = $adCity;
+      return $this;
     }
 
     /**
@@ -457,19 +432,17 @@ class tDbOwnerInfo
      */
     public function getAdStreet()
     {
-        return $this->adStreet;
+      return $this->adStreet;
     }
 
     /**
      * @param string $adStreet
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setAdStreet($adStreet)
     {
-        $this->adStreet = $adStreet;
-
-        return $this;
+      $this->adStreet = $adStreet;
+      return $this;
     }
 
     /**
@@ -477,19 +450,17 @@ class tDbOwnerInfo
      */
     public function getAdNumberInStreet()
     {
-        return $this->adNumberInStreet;
+      return $this->adNumberInStreet;
     }
 
     /**
      * @param string $adNumberInStreet
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setAdNumberInStreet($adNumberInStreet)
     {
-        $this->adNumberInStreet = $adNumberInStreet;
-
-        return $this;
+      $this->adNumberInStreet = $adNumberInStreet;
+      return $this;
     }
 
     /**
@@ -497,19 +468,17 @@ class tDbOwnerInfo
      */
     public function getAdNumberInMunicipality()
     {
-        return $this->adNumberInMunicipality;
+      return $this->adNumberInMunicipality;
     }
 
     /**
      * @param string $adNumberInMunicipality
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setAdNumberInMunicipality($adNumberInMunicipality)
     {
-        $this->adNumberInMunicipality = $adNumberInMunicipality;
-
-        return $this;
+      $this->adNumberInMunicipality = $adNumberInMunicipality;
+      return $this;
     }
 
     /**
@@ -517,19 +486,17 @@ class tDbOwnerInfo
      */
     public function getAdZipCode()
     {
-        return $this->adZipCode;
+      return $this->adZipCode;
     }
 
     /**
      * @param string $adZipCode
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setAdZipCode($adZipCode)
     {
-        $this->adZipCode = $adZipCode;
-
-        return $this;
+      $this->adZipCode = $adZipCode;
+      return $this;
     }
 
     /**
@@ -537,19 +504,17 @@ class tDbOwnerInfo
      */
     public function getAdState()
     {
-        return $this->adState;
+      return $this->adState;
     }
 
     /**
      * @param string $adState
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setAdState($adState)
     {
-        $this->adState = $adState;
-
-        return $this;
+      $this->adState = $adState;
+      return $this;
     }
 
     /**
@@ -557,19 +522,17 @@ class tDbOwnerInfo
      */
     public function getNationality()
     {
-        return $this->nationality;
+      return $this->nationality;
     }
 
     /**
      * @param string $nationality
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setNationality($nationality)
     {
-        $this->nationality = $nationality;
-
-        return $this;
+      $this->nationality = $nationality;
+      return $this;
     }
 
     /**
@@ -577,19 +540,17 @@ class tDbOwnerInfo
      */
     public function getEmail()
     {
-        return $this->email;
+      return $this->email;
     }
 
     /**
      * @param string $email
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setEmail($email)
     {
-        $this->email = $email;
-
-        return $this;
+      $this->email = $email;
+      return $this;
     }
 
     /**
@@ -597,19 +558,17 @@ class tDbOwnerInfo
      */
     public function getTelNumber()
     {
-        return $this->telNumber;
+      return $this->telNumber;
     }
 
     /**
      * @param string $telNumber
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setTelNumber($telNumber)
     {
-        $this->telNumber = $telNumber;
-
-        return $this;
+      $this->telNumber = $telNumber;
+      return $this;
     }
 
     /**
@@ -617,19 +576,17 @@ class tDbOwnerInfo
      */
     public function getIdentifier()
     {
-        return $this->identifier;
+      return $this->identifier;
     }
 
     /**
      * @param identifier $identifier
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setIdentifier($identifier)
     {
-        $this->identifier = $identifier;
-
-        return $this;
+      $this->identifier = $identifier;
+      return $this;
     }
 
     /**
@@ -637,19 +594,17 @@ class tDbOwnerInfo
      */
     public function getRegistryCode()
     {
-        return $this->registryCode;
+      return $this->registryCode;
     }
 
     /**
      * @param registryCode $registryCode
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setRegistryCode($registryCode)
     {
-        $this->registryCode = $registryCode;
-
-        return $this;
+      $this->registryCode = $registryCode;
+      return $this;
     }
 
     /**
@@ -657,58 +612,53 @@ class tDbOwnerInfo
      */
     public function getDbState()
     {
-        return $this->dbState;
+      return $this->dbState;
     }
 
     /**
      * @param int $dbState
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setDbState($dbState)
     {
-        $this->dbState = $dbState;
-
-        return $this;
+      $this->dbState = $dbState;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbEffectiveOVM()
     {
-        return $this->dbEffectiveOVM;
+      return $this->dbEffectiveOVM;
     }
 
     /**
-     * @param bool $dbEffectiveOVM
-     *
+     * @param boolean $dbEffectiveOVM
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setDbEffectiveOVM($dbEffectiveOVM)
     {
-        $this->dbEffectiveOVM = $dbEffectiveOVM;
-
-        return $this;
+      $this->dbEffectiveOVM = $dbEffectiveOVM;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbOpenAddressing()
     {
-        return $this->dbOpenAddressing;
+      return $this->dbOpenAddressing;
     }
 
     /**
-     * @param bool $dbOpenAddressing
-     *
+     * @param boolean $dbOpenAddressing
      * @return \Defr\CzechDataBox\Api\tDbOwnerInfo
      */
     public function setDbOpenAddressing($dbOpenAddressing)
     {
-        $this->dbOpenAddressing = $dbOpenAddressing;
-
-        return $this;
+      $this->dbOpenAddressing = $dbOpenAddressing;
+      return $this;
     }
+
 }

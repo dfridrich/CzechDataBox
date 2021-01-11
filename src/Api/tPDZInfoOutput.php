@@ -4,13 +4,14 @@ namespace Defr\CzechDataBox\Api;
 
 class tPDZInfoOutput
 {
+
     /**
-     * @var tPDZRecArray
+     * @var tPDZRecArray $dbPDZRecords
      */
     protected $dbPDZRecords = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
@@ -20,8 +21,8 @@ class tPDZInfoOutput
      */
     public function __construct($dbPDZRecords = null, $dbStatus = null)
     {
-        $this->dbPDZRecords = $dbPDZRecords;
-        $this->dbStatus = $dbStatus;
+      $this->dbPDZRecords = $dbPDZRecords;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tPDZInfoOutput
      */
     public function getDbPDZRecords()
     {
-        return $this->dbPDZRecords;
+      return $this->dbPDZRecords;
     }
 
     /**
      * @param tPDZRecArray $dbPDZRecords
-     *
      * @return \Defr\CzechDataBox\Api\tPDZInfoOutput
      */
     public function setDbPDZRecords($dbPDZRecords)
     {
-        $this->dbPDZRecords = $dbPDZRecords;
-
-        return $this;
+      $this->dbPDZRecords = $dbPDZRecords;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tPDZInfoOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tPDZInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

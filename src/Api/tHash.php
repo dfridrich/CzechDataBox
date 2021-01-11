@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tHash
 {
+
     /**
-     * @var base64Binary
+     * @var base64Binary $_
      */
     protected $_ = null;
 
     /**
-     * @var string
+     * @var string $algorithm
      */
     protected $algorithm = null;
 
     /**
      * @param base64Binary $_
-     * @param string       $algorithm
+     * @param string $algorithm
      */
     public function __construct($_ = null, $algorithm = null)
     {
-        $this->_ = $_;
-        $this->algorithm = $algorithm;
+      $this->_ = $_;
+      $this->algorithm = $algorithm;
     }
 
     /**
@@ -29,19 +30,17 @@ class tHash
      */
     public function get_()
     {
-        return $this->_;
+      return $this->_;
     }
 
     /**
      * @param base64Binary $_
-     *
      * @return \Defr\CzechDataBox\Api\tHash
      */
     public function set_($_)
     {
-        $this->_ = $_;
-
-        return $this;
+      $this->_ = $_;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tHash
      */
     public function getAlgorithm()
     {
-        return $this->algorithm;
+      return $this->algorithm;
     }
 
     /**
      * @param string $algorithm
-     *
      * @return \Defr\CzechDataBox\Api\tHash
      */
     public function setAlgorithm($algorithm)
     {
-        $this->algorithm = $algorithm;
-
-        return $this;
+      $this->algorithm = $algorithm;
+      return $this;
     }
+
 }

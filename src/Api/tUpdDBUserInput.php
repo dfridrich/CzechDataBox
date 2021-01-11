@@ -4,45 +4,46 @@ namespace Defr\CzechDataBox\Api;
 
 class tUpdDBUserInput
 {
+
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfo $dbOwnerInfo
      */
     protected $dbOwnerInfo = null;
 
     /**
-     * @var tDbUserInfo
+     * @var tDbUserInfo $dbOldUserInfo
      */
     protected $dbOldUserInfo = null;
 
     /**
-     * @var tDbUserInfo
+     * @var tDbUserInfo $dbNewUserInfo
      */
     protected $dbNewUserInfo = null;
 
     /**
-     * @var bool
+     * @var boolean $dbApproved
      */
     protected $dbApproved = null;
 
     /**
-     * @var string
+     * @var string $dbExternRefNumber
      */
     protected $dbExternRefNumber = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     * @param tDbUserInfo  $dbOldUserInfo
-     * @param tDbUserInfo  $dbNewUserInfo
-     * @param bool         $dbApproved
-     * @param string       $dbExternRefNumber
+     * @param tDbUserInfo $dbOldUserInfo
+     * @param tDbUserInfo $dbNewUserInfo
+     * @param boolean $dbApproved
+     * @param string $dbExternRefNumber
      */
     public function __construct($dbOwnerInfo = null, $dbOldUserInfo = null, $dbNewUserInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbOldUserInfo = $dbOldUserInfo;
-        $this->dbNewUserInfo = $dbNewUserInfo;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbOldUserInfo = $dbOldUserInfo;
+      $this->dbNewUserInfo = $dbNewUserInfo;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -50,19 +51,17 @@ class tUpdDBUserInput
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     *
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
@@ -70,19 +69,17 @@ class tUpdDBUserInput
      */
     public function getDbOldUserInfo()
     {
-        return $this->dbOldUserInfo;
+      return $this->dbOldUserInfo;
     }
 
     /**
      * @param tDbUserInfo $dbOldUserInfo
-     *
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbOldUserInfo($dbOldUserInfo)
     {
-        $this->dbOldUserInfo = $dbOldUserInfo;
-
-        return $this;
+      $this->dbOldUserInfo = $dbOldUserInfo;
+      return $this;
     }
 
     /**
@@ -90,39 +87,35 @@ class tUpdDBUserInput
      */
     public function getDbNewUserInfo()
     {
-        return $this->dbNewUserInfo;
+      return $this->dbNewUserInfo;
     }
 
     /**
      * @param tDbUserInfo $dbNewUserInfo
-     *
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbNewUserInfo($dbNewUserInfo)
     {
-        $this->dbNewUserInfo = $dbNewUserInfo;
-
-        return $this;
+      $this->dbNewUserInfo = $dbNewUserInfo;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
-     * @param bool $dbApproved
-     *
+     * @param boolean $dbApproved
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -130,18 +123,17 @@ class tUpdDBUserInput
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
      * @param string $dbExternRefNumber
-     *
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

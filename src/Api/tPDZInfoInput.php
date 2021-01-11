@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tPDZInfoInput
 {
+
     /**
-     * @var tIdDb
+     * @var tIdDb $PDZSender
      */
     protected $PDZSender = null;
 
@@ -14,7 +15,7 @@ class tPDZInfoInput
      */
     public function __construct($PDZSender = null)
     {
-        $this->PDZSender = $PDZSender;
+      $this->PDZSender = $PDZSender;
     }
 
     /**
@@ -22,18 +23,17 @@ class tPDZInfoInput
      */
     public function getPDZSender()
     {
-        return $this->PDZSender;
+      return $this->PDZSender;
     }
 
     /**
      * @param tIdDb $PDZSender
-     *
      * @return \Defr\CzechDataBox\Api\tPDZInfoInput
      */
     public function setPDZSender($PDZSender)
     {
-        $this->PDZSender = $PDZSender;
-
-        return $this;
+      $this->PDZSender = $PDZSender;
+      return $this;
     }
+
 }

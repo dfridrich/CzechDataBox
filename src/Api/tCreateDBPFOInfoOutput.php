@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tCreateDBPFOInfoOutput
 {
+
     /**
-     * @var tIdDb
+     * @var tIdDb $dbID
      */
     protected $dbID = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
     /**
-     * @param tIdDb        $dbID
+     * @param tIdDb $dbID
      * @param tDbReqStatus $dbStatus
      */
     public function __construct($dbID = null, $dbStatus = null)
     {
-        $this->dbID = $dbID;
-        $this->dbStatus = $dbStatus;
+      $this->dbID = $dbID;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tCreateDBPFOInfoOutput
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
      * @param tIdDb $dbID
-     *
      * @return \Defr\CzechDataBox\Api\tCreateDBPFOInfoOutput
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tCreateDBPFOInfoOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tCreateDBPFOInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

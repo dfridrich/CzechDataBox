@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tMessEnvelDownOutput
 {
+
     /**
-     * @var tReturnedMessageEnvelope
+     * @var tReturnedMessageEnvelope $dmReturnedMessageEnvelope
      */
     protected $dmReturnedMessageEnvelope = null;
 
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
     /**
      * @param tReturnedMessageEnvelope $dmReturnedMessageEnvelope
-     * @param tStatus                  $dmStatus
+     * @param tStatus $dmStatus
      */
     public function __construct($dmReturnedMessageEnvelope = null, $dmStatus = null)
     {
-        $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
-        $this->dmStatus = $dmStatus;
+      $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tMessEnvelDownOutput
      */
     public function getDmReturnedMessageEnvelope()
     {
-        return $this->dmReturnedMessageEnvelope;
+      return $this->dmReturnedMessageEnvelope;
     }
 
     /**
      * @param tReturnedMessageEnvelope $dmReturnedMessageEnvelope
-     *
      * @return \Defr\CzechDataBox\Api\tMessEnvelDownOutput
      */
     public function setDmReturnedMessageEnvelope($dmReturnedMessageEnvelope)
     {
-        $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
-
-        return $this;
+      $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tMessEnvelDownOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tMessEnvelDownOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

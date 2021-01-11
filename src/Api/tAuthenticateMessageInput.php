@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tAuthenticateMessageInput
 {
+
     /**
-     * @var base64Binary
+     * @var base64Binary $dmMessage
      */
     protected $dmMessage = null;
 
@@ -14,7 +15,7 @@ class tAuthenticateMessageInput
      */
     public function __construct($dmMessage = null)
     {
-        $this->dmMessage = $dmMessage;
+      $this->dmMessage = $dmMessage;
     }
 
     /**
@@ -22,18 +23,17 @@ class tAuthenticateMessageInput
      */
     public function getDmMessage()
     {
-        return $this->dmMessage;
+      return $this->dmMessage;
     }
 
     /**
      * @param base64Binary $dmMessage
-     *
      * @return \Defr\CzechDataBox\Api\tAuthenticateMessageInput
      */
     public function setDmMessage($dmMessage)
     {
-        $this->dmMessage = $dmMessage;
-
-        return $this;
+      $this->dmMessage = $dmMessage;
+      return $this;
     }
+
 }

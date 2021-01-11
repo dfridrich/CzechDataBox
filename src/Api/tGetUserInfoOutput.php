@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tGetUserInfoOutput
 {
+
     /**
-     * @var tDbUserInfo
+     * @var tDbUserInfo $dbUserInfo
      */
     protected $dbUserInfo = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
     /**
-     * @param tDbUserInfo  $dbUserInfo
+     * @param tDbUserInfo $dbUserInfo
      * @param tDbReqStatus $dbStatus
      */
     public function __construct($dbUserInfo = null, $dbStatus = null)
     {
-        $this->dbUserInfo = $dbUserInfo;
-        $this->dbStatus = $dbStatus;
+      $this->dbUserInfo = $dbUserInfo;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tGetUserInfoOutput
      */
     public function getDbUserInfo()
     {
-        return $this->dbUserInfo;
+      return $this->dbUserInfo;
     }
 
     /**
      * @param tDbUserInfo $dbUserInfo
-     *
      * @return \Defr\CzechDataBox\Api\tGetUserInfoOutput
      */
     public function setDbUserInfo($dbUserInfo)
     {
-        $this->dbUserInfo = $dbUserInfo;
-
-        return $this;
+      $this->dbUserInfo = $dbUserInfo;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tGetUserInfoOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tGetUserInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

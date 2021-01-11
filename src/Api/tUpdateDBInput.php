@@ -4,38 +4,39 @@ namespace Defr\CzechDataBox\Api;
 
 class tUpdateDBInput
 {
+
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfo $dbOldOwnerInfo
      */
     protected $dbOldOwnerInfo = null;
 
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfo $dbNewOwnerInfo
      */
     protected $dbNewOwnerInfo = null;
 
     /**
-     * @var bool
+     * @var boolean $dbApproved
      */
     protected $dbApproved = null;
 
     /**
-     * @var string
+     * @var string $dbExternRefNumber
      */
     protected $dbExternRefNumber = null;
 
     /**
      * @param tDbOwnerInfo $dbOldOwnerInfo
      * @param tDbOwnerInfo $dbNewOwnerInfo
-     * @param bool         $dbApproved
-     * @param string       $dbExternRefNumber
+     * @param boolean $dbApproved
+     * @param string $dbExternRefNumber
      */
     public function __construct($dbOldOwnerInfo = null, $dbNewOwnerInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOldOwnerInfo = $dbOldOwnerInfo;
-        $this->dbNewOwnerInfo = $dbNewOwnerInfo;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOldOwnerInfo = $dbOldOwnerInfo;
+      $this->dbNewOwnerInfo = $dbNewOwnerInfo;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -43,19 +44,17 @@ class tUpdateDBInput
      */
     public function getDbOldOwnerInfo()
     {
-        return $this->dbOldOwnerInfo;
+      return $this->dbOldOwnerInfo;
     }
 
     /**
      * @param tDbOwnerInfo $dbOldOwnerInfo
-     *
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbOldOwnerInfo($dbOldOwnerInfo)
     {
-        $this->dbOldOwnerInfo = $dbOldOwnerInfo;
-
-        return $this;
+      $this->dbOldOwnerInfo = $dbOldOwnerInfo;
+      return $this;
     }
 
     /**
@@ -63,39 +62,35 @@ class tUpdateDBInput
      */
     public function getDbNewOwnerInfo()
     {
-        return $this->dbNewOwnerInfo;
+      return $this->dbNewOwnerInfo;
     }
 
     /**
      * @param tDbOwnerInfo $dbNewOwnerInfo
-     *
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbNewOwnerInfo($dbNewOwnerInfo)
     {
-        $this->dbNewOwnerInfo = $dbNewOwnerInfo;
-
-        return $this;
+      $this->dbNewOwnerInfo = $dbNewOwnerInfo;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
-     * @param bool $dbApproved
-     *
+     * @param boolean $dbApproved
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -103,18 +98,17 @@ class tUpdateDBInput
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
      * @param string $dbExternRefNumber
-     *
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

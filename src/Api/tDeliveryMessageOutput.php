@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tDeliveryMessageOutput
 {
+
     /**
-     * @var tDelivery
+     * @var tDelivery $dmDelivery
      */
     protected $dmDelivery = null;
 
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
     /**
      * @param tDelivery $dmDelivery
-     * @param tStatus   $dmStatus
+     * @param tStatus $dmStatus
      */
     public function __construct($dmDelivery = null, $dmStatus = null)
     {
-        $this->dmDelivery = $dmDelivery;
-        $this->dmStatus = $dmStatus;
+      $this->dmDelivery = $dmDelivery;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tDeliveryMessageOutput
      */
     public function getDmDelivery()
     {
-        return $this->dmDelivery;
+      return $this->dmDelivery;
     }
 
     /**
      * @param tDelivery $dmDelivery
-     *
      * @return \Defr\CzechDataBox\Api\tDeliveryMessageOutput
      */
     public function setDmDelivery($dmDelivery)
     {
-        $this->dmDelivery = $dmDelivery;
-
-        return $this;
+      $this->dmDelivery = $dmDelivery;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tDeliveryMessageOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tDeliveryMessageOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

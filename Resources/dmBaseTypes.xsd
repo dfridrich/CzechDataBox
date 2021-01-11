@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- ************************************************************************
    XSD schema typů použitých ve WSDL pro manipulaci s datovými zprávami
-                       verze 2.15      
-                       
- Změny:  
+
+   verze: 2.31
+   klasifikace: Veřejný dokument
+
+ Změny:
      5.2.2009  verze 0.1   základní verze
     24.2.2009  verze 0.5   - změněn základní namespace na http://isds.czechpoint.cz
     20.3.2009  verze 1.0   - přidány elementy (na první úrovni) k jednotlivým typům pro použití jako parametry ve WSDL (document/literal)+komplexní typy pro tyto elementy popisující jednotlivé parametry operací
                            - podle požadavku MV upraveny v grupě gMessageEnvelopeSub elementy pro Číslo jednací a Spisovou značku: zdvojeny (1x pro odesílatel, 1x pro příjemce), u původních změněno jméno, nově tedy jsou: dmRecipientRefNumber, dmSenderRefNumber, dmRecipientIdent, dmSenderIdent
      3.6.2009  verze 2.0   - novela zákona 300/2008 Sb. a ChangeRequesty
-                           - do obálky stažené zprávy (a tudíž do všech struktur pracujících se zprávou) přibyl element dmSenderType typu int pro typ DS odesílatele 
+                           - do obálky stažené zprávy (a tudíž do všech struktur pracujících se zprávou) přibyl element dmSenderType typu int pro typ DS odesílatele
                            - do stažené zprávy (tReturnedMessage), stažené obálky zprávy (tReturnedMessageEnvelope) a do staženého seznamu zpráv (tRecord) přibyl element dmAttachmentSize typu int pro velikost přílohy v DS
                            - na vstup služby CreateMessage (element CreateMessage) přibyl nepovinný element dmOVM pro příznak, je-li DZ odesílána v režimu OVM (pro DS typu OVM nepodstatný)
-     9.6.2009 verze 2.1    - do obálky zprávy přibyl nepovinný element dmAmbiguousRecipient  
-                           - změna namespace pro verzi ISDS 2                     
+     9.6.2009 verze 2.1    - do obálky zprávy přibyl nepovinný element dmAmbiguousRecipient
+                           - změna namespace pro verzi ISDS 2
     1.10.2009 verze 2.5    - přidány typy pro WS CreateMultipleMessage (oběžník = DZ pro více adresátů)
     1.11.2009 verze 2.6    - přidány nepovinné atributy dmType do obálky zprávy a seznamu zpráv (rozlišení komerční zprávy)
                            - přidány typy pro WS ConfirmDelivery (potvrzení doručení komerční zprávy)
-    2.3.2010 verze 2.9     - u elementu dmQTimestamp povolena nil hodnota 
+    2.3.2010 verze 2.9     - u elementu dmQTimestamp povolena nil hodnota
                            - přidán nepovinný atribut dmType k elementu dmEnvelope u CreateMessage
                            - nová WS AuthenticateMessage
                            - formální změny v umistění nepovinných atributů dmType u obálky a seznamu; beze změny v XML
     11.10.2010 verze 2.10  - přidání typů pro WS GetMessageStateChanges
     10.11.2010 verze 2.11  - přidání typů pro WS GetMessageAuthor
-                           - přidání nepovinného elementu dmPublishOwnID do  CreateMessage a CreateMultipleMessage                        
+                           - přidání nepovinného elementu dmPublishOwnID do  CreateMessage a CreateMultipleMessage
   	25.09.2011 verze 2.15  - novela zákona 300/2008 Sb.
                            - přidání dalších typů zprávy (různé podtypy PDZ)
                        	   - Create[Multiple]Message - nepovinný atribut dmType pro označení Iniciační poštovní zprávy pro Odpovědní DZ resp. Odpovědní DZ
+    12.04.2012  verze 2.16 - přidání typů pro WS EraseMessage
+    27.07.2012  verze 2.17 - přidání typů pro WS Re-signISDSDocument
+    05.12.2013  verze 2.18a - drobná oprava u dmXMLContent
+	  17.04.2014  verze 2.18b - pouze opravy komentářů u atributů elementu dmFile
+    12.09.2015  verze 2.20 - sjednocení verzí
+    14.10.2015  verze 2.22 - sjednocení verzí
+     31.1.2017  verze 2.26 - sjednocení verzí
+    21.11.2017  verze 2.27 - sjednocení verzí
+    2.9.2018  verze 2.30 - sjednocení verzí
+    4.9.2018  verze 2.31 - sjednocení verzí
     ******************************************************************* -->
 <xs:schema xmlns:tns="http://isds.czechpoint.cz/v20" elementFormDefault="qualified" targetNamespace="http://isds.czechpoint.cz/v20" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:simpleType name="tIdDm">
@@ -58,7 +70,7 @@
         </xs:annotation>
         <xs:complexType>
           <xs:sequence>
-            <xs:any />
+            <xs:any processContents="skip" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -80,7 +92,7 @@
               </xs:attribute>
               <xs:attribute name="dmFileMetaType" use="required">
                 <xs:annotation>
-                  <xs:documentation>výčet typů písemností, main je pouze jedna</xs:documentation>
+                  <xs:documentation>typ přílohy, první by měla být "main"</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -103,12 +115,12 @@
               </xs:attribute>
               <xs:attribute name="dmFileDescr" type="xs:string" use="required">
                 <xs:annotation>
-                  <xs:documentation>může obsahovat jméno souboru, příp. jiný popis. Objeví se v seznamu příloh na portále</xs:documentation>
+                  <xs:documentation>Název souboru</xs:documentation>
                 </xs:annotation>
               </xs:attribute>
               <xs:attribute name="dmFormat" type="xs:string" use="optional">
                 <xs:annotation>
-                  <xs:documentation>nepovinný údaj - odkaz na definici formuláře</xs:documentation>
+                  <xs:documentation>nepovinný údaj, nepoužívá se v současné verzi</xs:documentation>
                 </xs:annotation>
               </xs:attribute>
             </xs:extension>
@@ -857,9 +869,9 @@
   <xs:simpleType name="tDmType">
     <xs:annotation>
       <xs:documentation>typ DZ: na vstupu CreateMessage:
-K = komerční DZ, O = vynucení odpovědní DZ, I = iniciační pro ODZ, V = veřejná DZ; nepoužitý atribut = veřejná DZ
-Na výstupu: 
-K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně dotovaná, D - externě dotovaná, E - EPZ, I - iniciační k ODZ, Y - iniciační k ODZ zkonzumovaná, X - iniciační k ODZ expirovaná, A - iniciační k ODZ dotovaná, B - dotovaná iniciační k ODZ zkonzumovaná, C - dotovaná iniciační k ODZ expirovaná, neuvedeno = veřejná DZ</xs:documentation>
+        K = komerční DZ, O = vynucení odpovědní DZ, I = iniciační pro ODZ, V = veřejná DZ; nepoužitý atribut = veřejná DZ
+        Na výstupu:
+        K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně dotovaná, D - externě dotovaná, E - EPZ, I - iniciační k ODZ, Y - iniciační k ODZ zkonzumovaná, X - iniciační k ODZ expirovaná, A - iniciační k ODZ dotovaná, B - dotovaná iniciační k ODZ zkonzumovaná, C - dotovaná iniciační k ODZ expirovaná, neuvedeno = veřejná DZ</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:length value="1" />
@@ -949,4 +961,31 @@ K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně do
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GetMessageAuthorResponse" type="tns:tGetAuthorOutput" />
+  <xs:element name="EraseMessage" type="tns:tEraseMessageIntput" />
+  <xs:complexType name="tEraseMessageIntput">
+    <xs:sequence>
+      <xs:element name="dmID" type="tns:tIdDm" />
+      <xs:element minOccurs="1" maxOccurs="1" name="dmIncoming" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EraseMessageResponse" type="tns:tEraseMessageOutput" />
+  <xs:complexType name="tEraseMessageOutput">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="dmStatus" type="tns:tStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Re-signISDSDocument" type="tns:tResignDocInput" />
+  <xs:complexType name="tResignDocInput">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="dmDoc" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Re-signISDSDocumentResponse" type="tns:tResignDocOutput" />
+  <xs:complexType name="tResignDocOutput">
+    <xs:sequence>
+      <xs:element name="dmResultDoc" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" maxOccurs="1" name="dmValidTo" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="dmStatus" type="tns:tStatus" />
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>

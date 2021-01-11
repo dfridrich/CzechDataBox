@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tGetDBListInput
 {
+
     /**
-     * @var string
+     * @var string $dblType
      */
     protected $dblType = null;
 
@@ -14,7 +15,7 @@ class tGetDBListInput
      */
     public function __construct($dblType = null)
     {
-        $this->dblType = $dblType;
+      $this->dblType = $dblType;
     }
 
     /**
@@ -22,18 +23,17 @@ class tGetDBListInput
      */
     public function getDblType()
     {
-        return $this->dblType;
+      return $this->dblType;
     }
 
     /**
      * @param string $dblType
-     *
      * @return \Defr\CzechDataBox\Api\tGetDBListInput
      */
     public function setDblType($dblType)
     {
-        $this->dblType = $dblType;
-
-        return $this;
+      $this->dblType = $dblType;
+      return $this;
     }
+
 }

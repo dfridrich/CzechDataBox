@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tGetDBUsersOutput
 {
+
     /**
-     * @var tDbUsersArray
+     * @var tDbUsersArray $dbUsers
      */
     protected $dbUsers = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
     /**
      * @param tDbUsersArray $dbUsers
-     * @param tDbReqStatus  $dbStatus
+     * @param tDbReqStatus $dbStatus
      */
     public function __construct($dbUsers = null, $dbStatus = null)
     {
-        $this->dbUsers = $dbUsers;
-        $this->dbStatus = $dbStatus;
+      $this->dbUsers = $dbUsers;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tGetDBUsersOutput
      */
     public function getDbUsers()
     {
-        return $this->dbUsers;
+      return $this->dbUsers;
     }
 
     /**
      * @param tDbUsersArray $dbUsers
-     *
      * @return \Defr\CzechDataBox\Api\tGetDBUsersOutput
      */
     public function setDbUsers($dbUsers)
     {
-        $this->dbUsers = $dbUsers;
-
-        return $this;
+      $this->dbUsers = $dbUsers;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tGetDBUsersOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tGetDBUsersOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

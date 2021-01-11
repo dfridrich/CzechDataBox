@@ -8,7 +8,7 @@ use Wsdl2PhpGenerator\Generator;
 $generator = new Generator();
 $classesLocation = __DIR__ . '/../src/Api/';
 
-if (count(@scandir($classesLocation)) > 1) {
+if (count(@scandir($classesLocation)) > 2) {
     throw new \Exception('Classes are already generated.');
 }
 

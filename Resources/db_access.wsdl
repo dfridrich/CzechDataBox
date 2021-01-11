@@ -1,85 +1,117 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <!--  *********************************************************************
      WSDL pro doplňkové služby související s přihlašováním 
-     
-                       verze 2.12
-      *********************************************************************                    
-Seznam služeb: 
+
+     verze: 2.31
+     klasifikace: Veřejný dokument
+      *********************************************************************
+Seznam služeb:
 ==============
   GetOwnerInfoFromLogin
+  GetOwnerInfoFromLogin2
   GetUserInfoFromLogin
+  GetUserInfoFromLogin2
   ChangeISDSPassword
   GetPasswordInfo
 
-  Změny:  
+  Změny:
     9.12.2009  verze 2.7
-    18.9.2010  verze 2.10  - změna URL v důsledku přechodu na Basic autentizaci
+    18.9.2010  verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
+    18.9.2015  verze 2.21 - sjednocení verzí
+    14.10.2015 verze 2.22 - sjednocení verzí
+    31.1.2017  verze 2.26 - sjednocení verzí
+    21.11.2017 verze 2.27 - sjednocení verzí
+    4.9.2018  verze 2.31 - přidány "dvojkové" verze GetOwnerInfoFromLogin2 a GetUserInfoFromLogin2
 ************************************************************************ -->
 
-<definitions name="ISDS_db_suppl" targetNamespace="http://isds.czechpoint.cz/v20" 
-                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
-                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
-                                  xmlns:tns="http://isds.czechpoint.cz/v20">
-                                
+<definitions name="ISDS_db_suppl" targetNamespace="http://isds.czechpoint.cz/v20"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://isds.czechpoint.cz/v20">
+
   <types>
     <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
       <xs:include schemaLocation="dbTypes.xsd" />
     </xs:schema>
   </types>
-  
+
   <!-- ******************************************************************* -->
   <message name="GetOwnerInfoFromLoginRequest">
-    <part name="parameter" element="tns:GetOwnerInfoFromLogin" />        
+    <part name="parameter" element="tns:GetOwnerInfoFromLogin" />
   </message>
   <message name="GetOwnerInfoFromLoginResponse">
-    <part name="parameter" element="tns:GetOwnerInfoFromLoginResponse" />        
+    <part name="parameter" element="tns:GetOwnerInfoFromLoginResponse" />
+  </message>
+
+  <message name="GetOwnerInfoFromLogin2Request">
+    <part name="parameter" element="tns:GetOwnerInfoFromLogin2" />
+  </message>
+  <message name="GetOwnerInfoFromLogin2Response">
+    <part name="parameter" element="tns:GetOwnerInfoFromLogin2Response" />
   </message>
 
   <message name="GetUserInfoFromLoginRequest">
-    <part name="parameter" element="tns:GetUserInfoFromLogin" />        
+    <part name="parameter" element="tns:GetUserInfoFromLogin" />
   </message>
   <message name="GetUserInfoFromLoginResponse">
-    <part name="parameter" element="tns:GetUserInfoFromLoginResponse" />        
+    <part name="parameter" element="tns:GetUserInfoFromLoginResponse" />
   </message>
- 
+
+  <message name="GetUserInfoFromLogin2Request">
+    <part name="parameter" element="tns:GetUserInfoFromLogin2" />
+  </message>
+  <message name="GetUserInfoFromLogin2Response">
+    <part name="parameter" element="tns:GetUserInfoFromLogin2Response" />
+  </message>
+
   <message name="ChangeISDSPasswordRequest">
-    <part name="parameter" element="tns:ChangeISDSPassword" />        
+    <part name="parameter" element="tns:ChangeISDSPassword" />
   </message>
   <message name="ChangeISDSPasswordResponse">
-    <part name="parameter" element="tns:ChangeISDSPasswordResponse" />        
+    <part name="parameter" element="tns:ChangeISDSPasswordResponse" />
   </message>
 
   <message name="GetPasswordInfoRequest">
-    <part name="parameter" element="tns:GetPasswordInfo" />        
+    <part name="parameter" element="tns:GetPasswordInfo" />
   </message>
   <message name="GetPasswordInfoResponse">
-    <part name="parameter" element="tns:GetPasswordInfoResponse" />        
+    <part name="parameter" element="tns:GetPasswordInfoResponse" />
   </message>
 
   <!-- ******************************************************************* -->
   <portType name="DataBoxAccessPortType">
 
-    <operation name="GetOwnerInfoFromLogin"> 
+    <operation name="GetOwnerInfoFromLogin">
       <input   message="tns:GetOwnerInfoFromLoginRequest"/>
       <output  message="tns:GetOwnerInfoFromLoginResponse"/>
     </operation>
-  
-    <operation name="GetUserInfoFromLogin"> 
+
+    <operation name="GetOwnerInfoFromLogin2">
+      <input   message="tns:GetOwnerInfoFromLogin2Request"/>
+      <output  message="tns:GetOwnerInfoFromLogin2Response"/>
+    </operation>
+
+    <operation name="GetUserInfoFromLogin">
       <input   message="tns:GetUserInfoFromLoginRequest"/>
       <output  message="tns:GetUserInfoFromLoginResponse"/>
     </operation>
-  
-    <operation name="ChangeISDSPassword"> 
+
+    <operation name="GetUserInfoFromLogin2">
+      <input   message="tns:GetUserInfoFromLogin2Request"/>
+      <output  message="tns:GetUserInfoFromLogin2Response"/>
+    </operation>
+
+    <operation name="ChangeISDSPassword">
       <input   message="tns:ChangeISDSPasswordRequest"/>
       <output  message="tns:ChangeISDSPasswordResponse"/>
     </operation>
-  
-    <operation name="GetPasswordInfo"> 
+
+    <operation name="GetPasswordInfo">
       <input   message="tns:GetPasswordInfoRequest"/>
       <output  message="tns:GetPasswordInfoResponse"/>
     </operation>
-  
+
   </portType>
 
   <!-- ******************************************************************* -->
@@ -96,7 +128,27 @@ Seznam služeb:
       </output>
     </operation>
 
+    <operation name="GetOwnerInfoFromLogin2">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
     <operation name="GetUserInfoFromLogin">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+    <operation name="GetUserInfoFromLogin2">
       <soap:operation soapAction=""  />
       <input>
         <soap:body use="literal" />

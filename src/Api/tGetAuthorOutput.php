@@ -4,31 +4,32 @@ namespace Defr\CzechDataBox\Api;
 
 class tGetAuthorOutput
 {
+
     /**
-     * @var string
+     * @var string $userType
      */
     protected $userType = null;
 
     /**
-     * @var string
+     * @var string $authorName
      */
     protected $authorName = null;
 
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
     /**
-     * @param string  $userType
-     * @param string  $authorName
+     * @param string $userType
+     * @param string $authorName
      * @param tStatus $dmStatus
      */
     public function __construct($userType = null, $authorName = null, $dmStatus = null)
     {
-        $this->userType = $userType;
-        $this->authorName = $authorName;
-        $this->dmStatus = $dmStatus;
+      $this->userType = $userType;
+      $this->authorName = $authorName;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -36,19 +37,17 @@ class tGetAuthorOutput
      */
     public function getUserType()
     {
-        return $this->userType;
+      return $this->userType;
     }
 
     /**
      * @param string $userType
-     *
      * @return \Defr\CzechDataBox\Api\tGetAuthorOutput
      */
     public function setUserType($userType)
     {
-        $this->userType = $userType;
-
-        return $this;
+      $this->userType = $userType;
+      return $this;
     }
 
     /**
@@ -56,19 +55,17 @@ class tGetAuthorOutput
      */
     public function getAuthorName()
     {
-        return $this->authorName;
+      return $this->authorName;
     }
 
     /**
      * @param string $authorName
-     *
      * @return \Defr\CzechDataBox\Api\tGetAuthorOutput
      */
     public function setAuthorName($authorName)
     {
-        $this->authorName = $authorName;
-
-        return $this;
+      $this->authorName = $authorName;
+      return $this;
     }
 
     /**
@@ -76,18 +73,17 @@ class tGetAuthorOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tGetAuthorOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

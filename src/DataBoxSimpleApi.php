@@ -85,7 +85,7 @@ class DataBoxSimpleApi
 
         $params = new tListOfFReceivedInput();
         $params->setDmToTime(new \DateTime())
-            ->setDmFromTime((new \DateTime())->sub(new \DateInterval('P' . $days . 'D')))
+            ->setDmFromTime((new \DateTime())->sub(new \DateInterval('P'.$days.'D')))
             ->setDmLimit($limit)
             ->setDmOffset(0)
             ->setDmRecipientOrgUnitNum(null)
@@ -115,7 +115,7 @@ class DataBoxSimpleApi
 
         $params = new tListOfSentInput();
         $params->setDmToTime(new \DateTime())
-            ->setDmFromTime((new \DateTime())->sub(new \DateInterval('P' . $days . 'D')))
+            ->setDmFromTime((new \DateTime())->sub(new \DateInterval('P'.$days.'D')))
             ->setDmLimit($limit)
             ->setDmOffset(0)
             ->setDmSenderOrgUnitNum(null)
@@ -157,7 +157,9 @@ class DataBoxSimpleApi
     {
         $file = $this->getLocationForMessage($dataMessageId, 'r');
         if (false === $file->getIsExist()) {
-            $content = $this->dataBox->DmOperationsWebService()->SignedMessageDownload((new tIDMessInput())->setDmID($dataMessageId))->getDmSignature();
+            $content = $this->dataBox->DmOperationsWebService()->SignedMessageDownload(
+                (new tIDMessInput())->setDmID($dataMessageId)
+            )->getDmSignature();
             $file->save($content);
         }
 
@@ -177,7 +179,9 @@ class DataBoxSimpleApi
     {
         $file = $this->getLocationForMessage($dataMessageId, 's');
         if (false === $file->getIsExist()) {
-            $content = $this->dataBox->DmOperationsWebService()->SignedSentMessageDownload((new tIDMessInput())->setDmID($dataMessageId))->getDmSignature();
+            $content = $this->dataBox->DmOperationsWebService()->SignedSentMessageDownload(
+                (new tIDMessInput())->setDmID($dataMessageId)
+            )->getDmSignature();
             $file->save($content);
         }
 
@@ -197,7 +201,9 @@ class DataBoxSimpleApi
     {
         $file = $this->getLocationForMessage($dataMessageId, 'di');
         if (false === $file->getIsExist()) {
-            $content = $this->dataBox->DmInfoWebService()->GetSignedDeliveryInfo((new tIDMessInput())->setDmID($dataMessageId))->getDmSignature();
+            $content = $this->dataBox->DmInfoWebService()->GetSignedDeliveryInfo(
+                (new tIDMessInput())->setDmID($dataMessageId)
+            )->getDmSignature();
             $file->save($content);
         }
 
@@ -217,7 +223,9 @@ class DataBoxSimpleApi
     {
 
         /** @var dmFile[] $attachments */
-        $attachments = $this->dataBox->DmOperationsWebService()->MessageDownload(new tIDMessInput($dataMessageId))->getDmReturnedMessage()->getDmDm()->dmFiles->getDmFile();
+        $attachments = $this->dataBox->DmOperationsWebService()->MessageDownload(
+            new tIDMessInput($dataMessageId)
+        )->getDmReturnedMessage()->getDmDm()->dmFiles->getDmFile();
         $files = [];
 
         foreach ($attachments as $attachment) {
@@ -235,9 +243,9 @@ class DataBoxSimpleApi
     /**
      * Vytvoří základní zprávu k odeslání
      *
-     * @param string $recipient     Recipient's DataBox ID
-     * @param string $subject       Message annotation
-     * @param array  $attachments   Paths to files attached to the message
+     * @param string $recipient Recipient's DataBox ID
+     * @param string $subject Message annotation
+     * @param array $attachments Paths to files attached to the message
      *
      * @return tMessageCreateInput
      * @throws DataBoxException
@@ -277,7 +285,8 @@ class DataBoxSimpleApi
                 $file->setDmEncodedContent(\file_get_contents($filePath));
 
                 return $file;
-            }, $attachments
+            },
+            $attachments
         );
 
 
@@ -338,12 +347,12 @@ class DataBoxSimpleApi
     private function getLocationForMessage($messageId, $suffix = null)
     {
         if ($suffix !== null && substr($suffix, 1, 1) != '_') {
-            $suffix = '_' . $suffix;
+            $suffix = '_'.$suffix;
         }
 
         $hash = md5($messageId);
-        $subFolder = substr($hash, 0, 2) . '/' . substr($hash, 2, 2) . '/' . substr($hash, 4, 2);
-        $location = $this->dataBox->getDirectory() . '/' . $subFolder . '/' . $messageId . strtoupper($suffix) . '.zfo';
+        $subFolder = substr($hash, 0, 2).'/'.substr($hash, 2, 2).'/'.substr($hash, 4, 2);
+        $location = $this->dataBox->getDirectory().'/'.$subFolder.'/'.$messageId.strtoupper($suffix).'.zfo';
 
         return new DataBoxMessageFile($location);
     }
@@ -357,8 +366,8 @@ class DataBoxSimpleApi
     private function getLocationForAttachment($messageId, $fileName)
     {
         $hash = md5($messageId);
-        $subFolder = substr($hash, 0, 2) . '/' . substr($hash, 2, 2) . '/' . substr($hash, 4, 2);
-        $location = $this->dataBox->getDirectory() . '/' . $subFolder . '/' . $messageId . '/' . $fileName;
+        $subFolder = substr($hash, 0, 2).'/'.substr($hash, 2, 2).'/'.substr($hash, 4, 2);
+        $location = $this->dataBox->getDirectory().'/'.$subFolder.'/'.$messageId.'/'.$fileName;
 
         return new DataBoxMessageAttachment($location);
     }

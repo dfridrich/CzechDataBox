@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tStateChangesArray
 {
+
     /**
-     * @var tStateChangesRecord
+     * @var tStateChangesRecord $dmRecord
      */
     protected $dmRecord = null;
 
@@ -14,7 +15,7 @@ class tStateChangesArray
      */
     public function __construct($dmRecord = null)
     {
-        $this->dmRecord = $dmRecord;
+      $this->dmRecord = $dmRecord;
     }
 
     /**
@@ -22,18 +23,17 @@ class tStateChangesArray
      */
     public function getDmRecord()
     {
-        return $this->dmRecord;
+      return $this->dmRecord;
     }
 
     /**
      * @param tStateChangesRecord $dmRecord
-     *
      * @return \Defr\CzechDataBox\Api\tStateChangesArray
      */
     public function setDmRecord($dmRecord)
     {
-        $this->dmRecord = $dmRecord;
-
-        return $this;
+      $this->dmRecord = $dmRecord;
+      return $this;
     }
+
 }

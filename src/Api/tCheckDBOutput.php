@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tCheckDBOutput
 {
+
     /**
-     * @var int
+     * @var int $dbState
      */
     protected $dbState = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
     /**
-     * @param int          $dbState
+     * @param int $dbState
      * @param tDbReqStatus $dbStatus
      */
     public function __construct($dbState = null, $dbStatus = null)
     {
-        $this->dbState = $dbState;
-        $this->dbStatus = $dbStatus;
+      $this->dbState = $dbState;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tCheckDBOutput
      */
     public function getDbState()
     {
-        return $this->dbState;
+      return $this->dbState;
     }
 
     /**
      * @param int $dbState
-     *
      * @return \Defr\CzechDataBox\Api\tCheckDBOutput
      */
     public function setDbState($dbState)
     {
-        $this->dbState = $dbState;
-
-        return $this;
+      $this->dbState = $dbState;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tCheckDBOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tCheckDBOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

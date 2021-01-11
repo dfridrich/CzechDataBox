@@ -4,31 +4,32 @@ namespace Defr\CzechDataBox\Api;
 
 class tActivateOutput
 {
+
     /**
-     * @var tUserID
+     * @var tUserID $userId
      */
     protected $userId = null;
 
     /**
-     * @var string
+     * @var string $password
      */
     protected $password = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
     /**
-     * @param tUserID      $userId
-     * @param string       $password
+     * @param tUserID $userId
+     * @param string $password
      * @param tDbReqStatus $dbStatus
      */
     public function __construct($userId = null, $password = null, $dbStatus = null)
     {
-        $this->userId = $userId;
-        $this->password = $password;
-        $this->dbStatus = $dbStatus;
+      $this->userId = $userId;
+      $this->password = $password;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -36,19 +37,17 @@ class tActivateOutput
      */
     public function getUserId()
     {
-        return $this->userId;
+      return $this->userId;
     }
 
     /**
      * @param tUserID $userId
-     *
      * @return \Defr\CzechDataBox\Api\tActivateOutput
      */
     public function setUserId($userId)
     {
-        $this->userId = $userId;
-
-        return $this;
+      $this->userId = $userId;
+      return $this;
     }
 
     /**
@@ -56,19 +55,17 @@ class tActivateOutput
      */
     public function getPassword()
     {
-        return $this->password;
+      return $this->password;
     }
 
     /**
      * @param string $password
-     *
      * @return \Defr\CzechDataBox\Api\tActivateOutput
      */
     public function setPassword($password)
     {
-        $this->password = $password;
-
-        return $this;
+      $this->password = $password;
+      return $this;
     }
 
     /**
@@ -76,18 +73,17 @@ class tActivateOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tActivateOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

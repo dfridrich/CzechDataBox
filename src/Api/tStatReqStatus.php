@@ -4,13 +4,14 @@ namespace Defr\CzechDataBox\Api;
 
 class tStatReqStatus
 {
+
     /**
-     * @var string
+     * @var string $dbStatusCode
      */
     protected $dbStatusCode = null;
 
     /**
-     * @var string
+     * @var string $dbStatusMessage
      */
     protected $dbStatusMessage = null;
 
@@ -20,8 +21,8 @@ class tStatReqStatus
      */
     public function __construct($dbStatusCode = null, $dbStatusMessage = null)
     {
-        $this->dbStatusCode = $dbStatusCode;
-        $this->dbStatusMessage = $dbStatusMessage;
+      $this->dbStatusCode = $dbStatusCode;
+      $this->dbStatusMessage = $dbStatusMessage;
     }
 
     /**
@@ -29,19 +30,17 @@ class tStatReqStatus
      */
     public function getDbStatusCode()
     {
-        return $this->dbStatusCode;
+      return $this->dbStatusCode;
     }
 
     /**
      * @param string $dbStatusCode
-     *
      * @return \Defr\CzechDataBox\Api\tStatReqStatus
      */
     public function setDbStatusCode($dbStatusCode)
     {
-        $this->dbStatusCode = $dbStatusCode;
-
-        return $this;
+      $this->dbStatusCode = $dbStatusCode;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tStatReqStatus
      */
     public function getDbStatusMessage()
     {
-        return $this->dbStatusMessage;
+      return $this->dbStatusMessage;
     }
 
     /**
      * @param string $dbStatusMessage
-     *
      * @return \Defr\CzechDataBox\Api\tStatReqStatus
      */
     public function setDbStatusMessage($dbStatusMessage)
     {
-        $this->dbStatusMessage = $dbStatusMessage;
-
-        return $this;
+      $this->dbStatusMessage = $dbStatusMessage;
+      return $this;
     }
+
 }

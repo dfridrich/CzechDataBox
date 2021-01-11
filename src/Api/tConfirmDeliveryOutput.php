@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tConfirmDeliveryOutput
 {
+
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
@@ -14,7 +15,7 @@ class tConfirmDeliveryOutput
      */
     public function __construct($dmStatus = null)
     {
-        $this->dmStatus = $dmStatus;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -22,18 +23,17 @@ class tConfirmDeliveryOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tConfirmDeliveryOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

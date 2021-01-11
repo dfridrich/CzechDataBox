@@ -4,38 +4,39 @@ namespace Defr\CzechDataBox\Api;
 
 class tDelDBUserInput
 {
+
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfo $dbOwnerInfo
      */
     protected $dbOwnerInfo = null;
 
     /**
-     * @var tDbUserInfo
+     * @var tDbUserInfo $dbUserInfo
      */
     protected $dbUserInfo = null;
 
     /**
-     * @var bool
+     * @var boolean $dbApproved
      */
     protected $dbApproved = null;
 
     /**
-     * @var string
+     * @var string $dbExternRefNumber
      */
     protected $dbExternRefNumber = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     * @param tDbUserInfo  $dbUserInfo
-     * @param bool         $dbApproved
-     * @param string       $dbExternRefNumber
+     * @param tDbUserInfo $dbUserInfo
+     * @param boolean $dbApproved
+     * @param string $dbExternRefNumber
      */
     public function __construct($dbOwnerInfo = null, $dbUserInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbUserInfo = $dbUserInfo;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbUserInfo = $dbUserInfo;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -43,19 +44,17 @@ class tDelDBUserInput
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     *
      * @return \Defr\CzechDataBox\Api\tDelDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
@@ -63,39 +62,35 @@ class tDelDBUserInput
      */
     public function getDbUserInfo()
     {
-        return $this->dbUserInfo;
+      return $this->dbUserInfo;
     }
 
     /**
      * @param tDbUserInfo $dbUserInfo
-     *
      * @return \Defr\CzechDataBox\Api\tDelDBUserInput
      */
     public function setDbUserInfo($dbUserInfo)
     {
-        $this->dbUserInfo = $dbUserInfo;
-
-        return $this;
+      $this->dbUserInfo = $dbUserInfo;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
-     * @param bool $dbApproved
-     *
+     * @param boolean $dbApproved
      * @return \Defr\CzechDataBox\Api\tDelDBUserInput
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -103,18 +98,17 @@ class tDelDBUserInput
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
      * @param string $dbExternRefNumber
-     *
      * @return \Defr\CzechDataBox\Api\tDelDBUserInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

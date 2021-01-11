@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tReqStatusOutput
 {
+
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
@@ -14,7 +15,7 @@ class tReqStatusOutput
      */
     public function __construct($dbStatus = null)
     {
-        $this->dbStatus = $dbStatus;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -22,18 +23,17 @@ class tReqStatusOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tReqStatusOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

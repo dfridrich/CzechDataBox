@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tMessageCreateInput
 {
+
     /**
-     * @var dmEnvelope
+     * @var dmEnvelope $dmEnvelope
      */
     protected $dmEnvelope = null;
 
     /**
-     * @var tFilesArray
+     * @var tFilesArray $dmFiles
      */
     protected $dmFiles = null;
 
     /**
-     * @param dmEnvelope  $dmEnvelope
+     * @param dmEnvelope $dmEnvelope
      * @param tFilesArray $dmFiles
      */
     public function __construct($dmEnvelope = null, $dmFiles = null)
     {
-        $this->dmEnvelope = $dmEnvelope;
-        $this->dmFiles = $dmFiles;
+      $this->dmEnvelope = $dmEnvelope;
+      $this->dmFiles = $dmFiles;
     }
 
     /**
@@ -29,19 +30,17 @@ class tMessageCreateInput
      */
     public function getDmEnvelope()
     {
-        return $this->dmEnvelope;
+      return $this->dmEnvelope;
     }
 
     /**
      * @param dmEnvelope $dmEnvelope
-     *
      * @return \Defr\CzechDataBox\Api\tMessageCreateInput
      */
     public function setDmEnvelope($dmEnvelope)
     {
-        $this->dmEnvelope = $dmEnvelope;
-
-        return $this;
+      $this->dmEnvelope = $dmEnvelope;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tMessageCreateInput
      */
     public function getDmFiles()
     {
-        return $this->dmFiles;
+      return $this->dmFiles;
     }
 
     /**
      * @param tFilesArray $dmFiles
-     *
      * @return \Defr\CzechDataBox\Api\tMessageCreateInput
      */
     public function setDmFiles($dmFiles)
     {
-        $this->dmFiles = $dmFiles;
-
-        return $this;
+      $this->dmFiles = $dmFiles;
+      return $this;
     }
+
 }

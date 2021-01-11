@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tDbUsersArray
 {
+
     /**
-     * @var tDbUserInfo
+     * @var tDbUserInfo $dbUserInfo
      */
     protected $dbUserInfo = null;
 
@@ -14,7 +15,7 @@ class tDbUsersArray
      */
     public function __construct($dbUserInfo = null)
     {
-        $this->dbUserInfo = $dbUserInfo;
+      $this->dbUserInfo = $dbUserInfo;
     }
 
     /**
@@ -22,18 +23,17 @@ class tDbUsersArray
      */
     public function getDbUserInfo()
     {
-        return $this->dbUserInfo;
+      return $this->dbUserInfo;
     }
 
     /**
      * @param tDbUserInfo $dbUserInfo
-     *
      * @return \Defr\CzechDataBox\Api\tDbUsersArray
      */
     public function setDbUserInfo($dbUserInfo)
     {
-        $this->dbUserInfo = $dbUserInfo;
-
-        return $this;
+      $this->dbUserInfo = $dbUserInfo;
+      return $this;
     }
+
 }

@@ -2,7 +2,7 @@
 
 namespace Defr\CzechDataBox\Api;
 
-class tMarkMessOutput
+class tEraseMessageOutput
 {
 
     /**
@@ -28,7 +28,7 @@ class tMarkMessOutput
 
     /**
      * @param tStatus $dmStatus
-     * @return \Defr\CzechDataBox\Api\tMarkMessOutput
+     * @return \Defr\CzechDataBox\Api\tEraseMessageOutput
      */
     public function setDmStatus($dmStatus)
     {

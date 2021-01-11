@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tListOfMessOutput
 {
+
     /**
-     * @var tRecordsArray
+     * @var tRecordsArray $dmRecords
      */
     protected $dmRecords = null;
 
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
     /**
      * @param tRecordsArray $dmRecords
-     * @param tStatus       $dmStatus
+     * @param tStatus $dmStatus
      */
     public function __construct($dmRecords = null, $dmStatus = null)
     {
-        $this->dmRecords = $dmRecords;
-        $this->dmStatus = $dmStatus;
+      $this->dmRecords = $dmRecords;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tListOfMessOutput
      */
     public function getDmRecords()
     {
-        return $this->dmRecords;
+      return $this->dmRecords;
     }
 
     /**
      * @param tRecordsArray $dmRecords
-     *
      * @return \Defr\CzechDataBox\Api\tListOfMessOutput
      */
     public function setDmRecords($dmRecords)
     {
-        $this->dmRecords = $dmRecords;
-
-        return $this;
+      $this->dmRecords = $dmRecords;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tListOfMessOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tListOfMessOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

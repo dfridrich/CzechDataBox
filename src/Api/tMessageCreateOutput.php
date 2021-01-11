@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tMessageCreateOutput
 {
+
     /**
-     * @var tIdDm
+     * @var tIdDm $dmID
      */
     protected $dmID = null;
 
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
     /**
-     * @param tIdDm   $dmID
+     * @param tIdDm $dmID
      * @param tStatus $dmStatus
      */
     public function __construct($dmID = null, $dmStatus = null)
     {
-        $this->dmID = $dmID;
-        $this->dmStatus = $dmStatus;
+      $this->dmID = $dmID;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tMessageCreateOutput
      */
     public function getDmID()
     {
-        return $this->dmID;
+      return $this->dmID;
     }
 
     /**
      * @param tIdDm $dmID
-     *
      * @return \Defr\CzechDataBox\Api\tMessageCreateOutput
      */
     public function setDmID($dmID)
     {
-        $this->dmID = $dmID;
-
-        return $this;
+      $this->dmID = $dmID;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tMessageCreateOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tMessageCreateOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

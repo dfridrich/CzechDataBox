@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tIDMessInput
 {
+
     /**
-     * @var tIdDm
+     * @var tIdDm $dmID
      */
     protected $dmID = null;
 
@@ -14,7 +15,7 @@ class tIDMessInput
      */
     public function __construct($dmID = null)
     {
-        $this->dmID = $dmID;
+      $this->dmID = $dmID;
     }
 
     /**
@@ -22,18 +23,17 @@ class tIDMessInput
      */
     public function getDmID()
     {
-        return $this->dmID;
+      return $this->dmID;
     }
 
     /**
      * @param tIdDm $dmID
-     *
      * @return \Defr\CzechDataBox\Api\tIDMessInput
      */
     public function setDmID($dmID)
     {
-        $this->dmID = $dmID;
-
-        return $this;
+      $this->dmID = $dmID;
+      return $this;
     }
+
 }

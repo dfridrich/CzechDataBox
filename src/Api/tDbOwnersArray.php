@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tDbOwnersArray
 {
+
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfo $dbOwnerInfo
      */
     protected $dbOwnerInfo = null;
 
@@ -14,7 +15,7 @@ class tDbOwnersArray
      */
     public function __construct($dbOwnerInfo = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbOwnerInfo = $dbOwnerInfo;
     }
 
     /**
@@ -22,18 +23,17 @@ class tDbOwnersArray
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     *
      * @return \Defr\CzechDataBox\Api\tDbOwnersArray
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
+
 }

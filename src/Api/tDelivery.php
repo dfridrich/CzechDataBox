@@ -4,59 +4,60 @@ namespace Defr\CzechDataBox\Api;
 
 class tDelivery
 {
+
     /**
-     * @var dmDm
+     * @var dmDm $dmDm
      */
     protected $dmDm = null;
 
     /**
-     * @var tHash
+     * @var tHash $dmHash
      */
     protected $dmHash = null;
 
     /**
-     * @var base64Binary
+     * @var base64Binary $dmQTimestamp
      */
     protected $dmQTimestamp = null;
 
     /**
-     * @var \DateTime
+     * @var \DateTime $dmDeliveryTime
      */
     protected $dmDeliveryTime = null;
 
     /**
-     * @var \DateTime
+     * @var \DateTime $dmAcceptanceTime
      */
     protected $dmAcceptanceTime = null;
 
     /**
-     * @var int
+     * @var int $dmMessageStatus
      */
     protected $dmMessageStatus = null;
 
     /**
-     * @var tEventsArray
+     * @var tEventsArray $dmEvents
      */
     protected $dmEvents = null;
 
     /**
-     * @param dmDm         $dmDm
-     * @param tHash        $dmHash
+     * @param dmDm $dmDm
+     * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
-     * @param \DateTime    $dmDeliveryTime
-     * @param \DateTime    $dmAcceptanceTime
-     * @param int          $dmMessageStatus
+     * @param \DateTime $dmDeliveryTime
+     * @param \DateTime $dmAcceptanceTime
+     * @param int $dmMessageStatus
      * @param tEventsArray $dmEvents
      */
     public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmEvents = null)
     {
-        $this->dmDm = $dmDm;
-        $this->dmHash = $dmHash;
-        $this->dmQTimestamp = $dmQTimestamp;
-        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
-        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
-        $this->dmMessageStatus = $dmMessageStatus;
-        $this->dmEvents = $dmEvents;
+      $this->dmDm = $dmDm;
+      $this->dmHash = $dmHash;
+      $this->dmQTimestamp = $dmQTimestamp;
+      $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+      $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
+      $this->dmMessageStatus = $dmMessageStatus;
+      $this->dmEvents = $dmEvents;
     }
 
     /**
@@ -64,19 +65,17 @@ class tDelivery
      */
     public function getDmDm()
     {
-        return $this->dmDm;
+      return $this->dmDm;
     }
 
     /**
      * @param dmDm $dmDm
-     *
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmDm($dmDm)
     {
-        $this->dmDm = $dmDm;
-
-        return $this;
+      $this->dmDm = $dmDm;
+      return $this;
     }
 
     /**
@@ -84,19 +83,17 @@ class tDelivery
      */
     public function getDmHash()
     {
-        return $this->dmHash;
+      return $this->dmHash;
     }
 
     /**
      * @param tHash $dmHash
-     *
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmHash($dmHash)
     {
-        $this->dmHash = $dmHash;
-
-        return $this;
+      $this->dmHash = $dmHash;
+      return $this;
     }
 
     /**
@@ -104,19 +101,17 @@ class tDelivery
      */
     public function getDmQTimestamp()
     {
-        return $this->dmQTimestamp;
+      return $this->dmQTimestamp;
     }
 
     /**
      * @param base64Binary $dmQTimestamp
-     *
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmQTimestamp($dmQTimestamp)
     {
-        $this->dmQTimestamp = $dmQTimestamp;
-
-        return $this;
+      $this->dmQTimestamp = $dmQTimestamp;
+      return $this;
     }
 
     /**
@@ -124,27 +119,25 @@ class tDelivery
      */
     public function getDmDeliveryTime()
     {
-        if ($this->dmDeliveryTime == null) {
-            return;
-        } else {
-            try {
-                return new \DateTime($this->dmDeliveryTime);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->dmDeliveryTime == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->dmDeliveryTime);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
      * @param \DateTime $dmDeliveryTime
-     *
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
-
-        return $this;
+      $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -152,27 +145,25 @@ class tDelivery
      */
     public function getDmAcceptanceTime()
     {
-        if ($this->dmAcceptanceTime == null) {
-            return;
-        } else {
-            try {
-                return new \DateTime($this->dmAcceptanceTime);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->dmAcceptanceTime == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->dmAcceptanceTime);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
      * @param \DateTime $dmAcceptanceTime
-     *
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
-
-        return $this;
+      $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -180,19 +171,17 @@ class tDelivery
      */
     public function getDmMessageStatus()
     {
-        return $this->dmMessageStatus;
+      return $this->dmMessageStatus;
     }
 
     /**
      * @param int $dmMessageStatus
-     *
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmMessageStatus($dmMessageStatus)
     {
-        $this->dmMessageStatus = $dmMessageStatus;
-
-        return $this;
+      $this->dmMessageStatus = $dmMessageStatus;
+      return $this;
     }
 
     /**
@@ -200,18 +189,17 @@ class tDelivery
      */
     public function getDmEvents()
     {
-        return $this->dmEvents;
+      return $this->dmEvents;
     }
 
     /**
      * @param tEventsArray $dmEvents
-     *
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmEvents($dmEvents)
     {
-        $this->dmEvents = $dmEvents;
-
-        return $this;
+      $this->dmEvents = $dmEvents;
+      return $this;
     }
+
 }

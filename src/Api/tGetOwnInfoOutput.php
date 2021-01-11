@@ -4,13 +4,14 @@ namespace Defr\CzechDataBox\Api;
 
 class tGetOwnInfoOutput
 {
+
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfo $dbOwnerInfo
      */
     protected $dbOwnerInfo = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
@@ -20,8 +21,8 @@ class tGetOwnInfoOutput
      */
     public function __construct($dbOwnerInfo = null, $dbStatus = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbStatus = $dbStatus;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tGetOwnInfoOutput
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     *
      * @return \Defr\CzechDataBox\Api\tGetOwnInfoOutput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tGetOwnInfoOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tGetOwnInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

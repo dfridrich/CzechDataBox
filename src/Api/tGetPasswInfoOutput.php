@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tGetPasswInfoOutput
 {
+
     /**
-     * @var \DateTime
+     * @var \DateTime $pswExpDate
      */
     protected $pswExpDate = null;
 
     /**
-     * @var tDbReqStatus
+     * @var tDbReqStatus $dbStatus
      */
     protected $dbStatus = null;
 
     /**
-     * @param \DateTime    $pswExpDate
+     * @param \DateTime $pswExpDate
      * @param tDbReqStatus $dbStatus
      */
     public function __construct(\DateTime $pswExpDate = null, $dbStatus = null)
     {
-        $this->pswExpDate = $pswExpDate ? $pswExpDate->format(\DateTime::ATOM) : null;
-        $this->dbStatus = $dbStatus;
+      $this->pswExpDate = $pswExpDate ? $pswExpDate->format(\DateTime::ATOM) : null;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -29,27 +30,25 @@ class tGetPasswInfoOutput
      */
     public function getPswExpDate()
     {
-        if ($this->pswExpDate == null) {
-            return;
-        } else {
-            try {
-                return new \DateTime($this->pswExpDate);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->pswExpDate == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->pswExpDate);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
      * @param \DateTime $pswExpDate
-     *
      * @return \Defr\CzechDataBox\Api\tGetPasswInfoOutput
      */
     public function setPswExpDate(\DateTime $pswExpDate)
     {
-        $this->pswExpDate = $pswExpDate->format(\DateTime::ATOM);
-
-        return $this;
+      $this->pswExpDate = $pswExpDate->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -57,18 +56,17 @@ class tGetPasswInfoOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
      * @param tDbReqStatus $dbStatus
-     *
      * @return \Defr\CzechDataBox\Api\tGetPasswInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

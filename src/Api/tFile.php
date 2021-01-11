@@ -4,13 +4,14 @@ namespace Defr\CzechDataBox\Api;
 
 class tFile
 {
+
     /**
-     * @var base64Binary
+     * @var base64Binary $dmEncodedContent
      */
     protected $dmEncodedContent = null;
 
     /**
-     * @var dmXMLContent
+     * @var dmXMLContent $dmXMLContent
      */
     protected $dmXMLContent = null;
 
@@ -20,8 +21,8 @@ class tFile
      */
     public function __construct($dmEncodedContent = null, $dmXMLContent = null)
     {
-        $this->dmEncodedContent = $dmEncodedContent;
-        $this->dmXMLContent = $dmXMLContent;
+      $this->dmEncodedContent = $dmEncodedContent;
+      $this->dmXMLContent = $dmXMLContent;
     }
 
     /**
@@ -29,19 +30,17 @@ class tFile
      */
     public function getDmEncodedContent()
     {
-        return $this->dmEncodedContent;
+      return $this->dmEncodedContent;
     }
 
     /**
      * @param base64Binary $dmEncodedContent
-     *
      * @return \Defr\CzechDataBox\Api\tFile
      */
     public function setDmEncodedContent($dmEncodedContent)
     {
-        $this->dmEncodedContent = $dmEncodedContent;
-
-        return $this;
+      $this->dmEncodedContent = $dmEncodedContent;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tFile
      */
     public function getDmXMLContent()
     {
-        return $this->dmXMLContent;
+      return $this->dmXMLContent;
     }
 
     /**
      * @param dmXMLContent $dmXMLContent
-     *
      * @return \Defr\CzechDataBox\Api\tFile
      */
     public function setDmXMLContent($dmXMLContent)
     {
-        $this->dmXMLContent = $dmXMLContent;
-
-        return $this;
+      $this->dmXMLContent = $dmXMLContent;
+      return $this;
     }
+
 }

@@ -4,31 +4,32 @@ namespace Defr\CzechDataBox\Api;
 
 class tOwnerInfoInput
 {
+
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfo $dbOwnerInfo
      */
     protected $dbOwnerInfo = null;
 
     /**
-     * @var bool
+     * @var boolean $dbApproved
      */
     protected $dbApproved = null;
 
     /**
-     * @var string
+     * @var string $dbExternRefNumber
      */
     protected $dbExternRefNumber = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     * @param bool         $dbApproved
-     * @param string       $dbExternRefNumber
+     * @param boolean $dbApproved
+     * @param string $dbExternRefNumber
      */
     public function __construct($dbOwnerInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -36,39 +37,35 @@ class tOwnerInfoInput
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
-     *
      * @return \Defr\CzechDataBox\Api\tOwnerInfoInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
-     * @param bool $dbApproved
-     *
+     * @param boolean $dbApproved
      * @return \Defr\CzechDataBox\Api\tOwnerInfoInput
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -76,18 +73,17 @@ class tOwnerInfoInput
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
      * @param string $dbExternRefNumber
-     *
      * @return \Defr\CzechDataBox\Api\tOwnerInfoInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

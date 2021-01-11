@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tEventsArray
 {
+
     /**
-     * @var tEvent
+     * @var tEvent $dmEvent
      */
     protected $dmEvent = null;
 
@@ -14,7 +15,7 @@ class tEventsArray
      */
     public function __construct($dmEvent = null)
     {
-        $this->dmEvent = $dmEvent;
+      $this->dmEvent = $dmEvent;
     }
 
     /**
@@ -22,18 +23,17 @@ class tEventsArray
      */
     public function getDmEvent()
     {
-        return $this->dmEvent;
+      return $this->dmEvent;
     }
 
     /**
      * @param tEvent $dmEvent
-     *
      * @return \Defr\CzechDataBox\Api\tEventsArray
      */
     public function setDmEvent($dmEvent)
     {
-        $this->dmEvent = $dmEvent;
-
-        return $this;
+      $this->dmEvent = $dmEvent;
+      return $this;
     }
+
 }

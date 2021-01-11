@@ -4,24 +4,25 @@ namespace Defr\CzechDataBox\Api;
 
 class tMultipleMessageCreateOutput
 {
+
     /**
-     * @var tMultipleStatus
+     * @var tMultipleStatus $dmMultipleStatus
      */
     protected $dmMultipleStatus = null;
 
     /**
-     * @var tStatus
+     * @var tStatus $dmStatus
      */
     protected $dmStatus = null;
 
     /**
      * @param tMultipleStatus $dmMultipleStatus
-     * @param tStatus         $dmStatus
+     * @param tStatus $dmStatus
      */
     public function __construct($dmMultipleStatus = null, $dmStatus = null)
     {
-        $this->dmMultipleStatus = $dmMultipleStatus;
-        $this->dmStatus = $dmStatus;
+      $this->dmMultipleStatus = $dmMultipleStatus;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -29,19 +30,17 @@ class tMultipleMessageCreateOutput
      */
     public function getDmMultipleStatus()
     {
-        return $this->dmMultipleStatus;
+      return $this->dmMultipleStatus;
     }
 
     /**
      * @param tMultipleStatus $dmMultipleStatus
-     *
      * @return \Defr\CzechDataBox\Api\tMultipleMessageCreateOutput
      */
     public function setDmMultipleStatus($dmMultipleStatus)
     {
-        $this->dmMultipleStatus = $dmMultipleStatus;
-
-        return $this;
+      $this->dmMultipleStatus = $dmMultipleStatus;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tMultipleMessageCreateOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
      * @param tStatus $dmStatus
-     *
      * @return \Defr\CzechDataBox\Api\tMultipleMessageCreateOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

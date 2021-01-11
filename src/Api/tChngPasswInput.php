@@ -4,13 +4,14 @@ namespace Defr\CzechDataBox\Api;
 
 class tChngPasswInput
 {
+
     /**
-     * @var string
+     * @var string $dbOldPassword
      */
     protected $dbOldPassword = null;
 
     /**
-     * @var string
+     * @var string $dbNewPassword
      */
     protected $dbNewPassword = null;
 
@@ -20,8 +21,8 @@ class tChngPasswInput
      */
     public function __construct($dbOldPassword = null, $dbNewPassword = null)
     {
-        $this->dbOldPassword = $dbOldPassword;
-        $this->dbNewPassword = $dbNewPassword;
+      $this->dbOldPassword = $dbOldPassword;
+      $this->dbNewPassword = $dbNewPassword;
     }
 
     /**
@@ -29,19 +30,17 @@ class tChngPasswInput
      */
     public function getDbOldPassword()
     {
-        return $this->dbOldPassword;
+      return $this->dbOldPassword;
     }
 
     /**
      * @param string $dbOldPassword
-     *
      * @return \Defr\CzechDataBox\Api\tChngPasswInput
      */
     public function setDbOldPassword($dbOldPassword)
     {
-        $this->dbOldPassword = $dbOldPassword;
-
-        return $this;
+      $this->dbOldPassword = $dbOldPassword;
+      return $this;
     }
 
     /**
@@ -49,18 +48,17 @@ class tChngPasswInput
      */
     public function getDbNewPassword()
     {
-        return $this->dbNewPassword;
+      return $this->dbNewPassword;
     }
 
     /**
      * @param string $dbNewPassword
-     *
      * @return \Defr\CzechDataBox\Api\tChngPasswInput
      */
     public function setDbNewPassword($dbNewPassword)
     {
-        $this->dbNewPassword = $dbNewPassword;
-
-        return $this;
+      $this->dbNewPassword = $dbNewPassword;
+      return $this;
     }
+
 }

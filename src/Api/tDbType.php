@@ -17,4 +17,6 @@ class tDbType
     const OVM_NOTAR = 'OVM_NOTAR';
     const OVM_EXEKUT = 'OVM_EXEKUT';
     const OVM_REQ = 'OVM_REQ';
+
+
 }

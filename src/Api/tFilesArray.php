@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tFilesArray
 {
+
     /**
-     * @var dmFile
+     * @var dmFile $dmFile
      */
     protected $dmFile = null;
 
@@ -14,7 +15,7 @@ class tFilesArray
      */
     public function __construct($dmFile = null)
     {
-        $this->dmFile = $dmFile;
+      $this->dmFile = $dmFile;
     }
 
     /**
@@ -22,18 +23,17 @@ class tFilesArray
      */
     public function getDmFile()
     {
-        return $this->dmFile;
+      return $this->dmFile;
     }
 
     /**
      * @param dmFile $dmFile
-     *
      * @return \Defr\CzechDataBox\Api\tFilesArray
      */
     public function setDmFile($dmFile)
     {
-        $this->dmFile = $dmFile;
-
-        return $this;
+      $this->dmFile = $dmFile;
+      return $this;
     }
+
 }

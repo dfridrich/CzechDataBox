@@ -4,8 +4,9 @@ namespace Defr\CzechDataBox\Api;
 
 class tDummyInput
 {
+
     /**
-     * @var string
+     * @var string $dbDummy
      */
     protected $dbDummy = null;
 
@@ -14,7 +15,7 @@ class tDummyInput
      */
     public function __construct($dbDummy = null)
     {
-        $this->dbDummy = $dbDummy;
+      $this->dbDummy = $dbDummy;
     }
 
     /**
@@ -22,18 +23,17 @@ class tDummyInput
      */
     public function getDbDummy()
     {
-        return $this->dbDummy;
+      return $this->dbDummy;
     }
 
     /**
      * @param string $dbDummy
-     *
      * @return \Defr\CzechDataBox\Api\tDummyInput
      */
     public function setDbDummy($dbDummy)
     {
-        $this->dbDummy = $dbDummy;
-
-        return $this;
+      $this->dbDummy = $dbDummy;
+      return $this;
     }
+
 }

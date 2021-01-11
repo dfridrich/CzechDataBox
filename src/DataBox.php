@@ -196,8 +196,6 @@ class DataBox
                 $res = $res . 'df';
                 break;
             case DataBoxHelper::ACCESS_WS:
-                $res = $res . 'DsManage';
-                break;
             case DataBoxHelper::STAT_WS:
                 $res = $res . 'DsManage';
                 break;

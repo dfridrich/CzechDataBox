@@ -1,0 +1,592 @@
+﻿<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  *********************************************************************
+     WSDL pro služby manipulujícími s datovými schránkami 
+
+     verze: 2.31
+     klasifikace: Veřejný dokument    
+      *********************************************************************                    
+Seznam služeb: 
+==============
+  CreateDataBox
+  CreateDataBox2
+  DeleteDataBox
+  DeleteDataBox2
+  UpdateDataBoxDescr
+  UpdateDataBoxDescr2                     
+  AddDataBoxUser
+  AddDataBoxUser2
+  DeleteDataBoxUser
+  DeleteDataBoxUser2
+  UpdateDataBoxUser
+  UpdateDataBoxUser2
+  NewAccessData                                                                           
+  NewAccessData2                                                                           
+  DisableDataBoxExternally
+  DisableDataBoxExternally2
+  DisableOwnDataBox
+  DisableOwnDataBox2
+  EnableOwnDataBox
+  EnableOwnDataBox2
+  SetOpenAddressing
+  ClearOpenAddressing
+  GetDataBoxUsers2
+  
+                          
+ změny:
+   3.2.2009  verze 0.1
+  20.3.2009  verze 1.0  - formální úpravy vyhovující WS-I Basic Profile    
+  28.4.2009  verze 1.1  - přidána WS CheckDataBox    
+   3.6.2009  verze 2.0  - novela  
+                        - přidána dvojice služeb [Set|Clear]OpenAddressing                  
+                        - přidána dvojice služeb [Set|Clear]EffectiveOVM
+  11.6.2009  verze 2.1  - přidána WS CreateDataBoxPFOInfo
+  1.1.2010   verze 2.7  - přesunuta WS GetDataBoxUsers ze zrušeného db_supplementary.wsdl                     
+ 11.10.2010  verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
+                        - přidána WS GetDataBoxList
+ 06.03.2012  verze 2.16 - přidána WS ChangeBoxesType   
+  31.1.2017  verze 2.26 - odebrány CreateDataBoxPFOInfo a ChangeBoxesType
+   2.5.2017  verze 2.27 - sjednocení verzí 
+  23.4.2018  verze 2.28 - přidána služba GetDataBoxUsers2, odstraněny WS Activate, SetEffectiveOVM, ClearEffectiveOVM 
+  24.7.2018  verze 2.29 - sjednocení verzí
+   4.9.2018  verze 2.31 - změna formátů UserInfo a OwnerInfo, přidání idOVM, odebráno GetDataBoxUsers, FindDataBox a CheckDataBox přesunuty do db_search; "dvojkové" verze služeb
+************************************************************************ -->
+
+<definitions name="ISDS_db" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20">
+                                
+  <types>
+    <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
+      <xs:include schemaLocation="dbTypes.xsd" />
+    </xs:schema>
+  </types>
+  
+  <!-- ******************************************************************* -->
+
+  <message name="CreateDataBoxRequest">
+    <part name="parameter" element="tns:CreateDataBox" />        
+  </message>
+  <message name="CreateDataBoxResponse">
+    <part name="parameter" element="tns:CreateDataBoxResponse" />        
+  </message>
+
+  <message name="CreateDataBox2Request">
+    <part name="parameter" element="tns:CreateDataBox2" />        
+  </message>
+  <message name="CreateDataBox2Response">
+    <part name="parameter" element="tns:CreateDataBox2Response" />        
+  </message>
+
+  <message name="DeleteDataBoxRequest">
+    <part name="parameter" element="tns:DeleteDataBox" />        
+  </message>
+  <message name="DeleteDataBoxResponse">
+    <part name="parameter" element="tns:DeleteDataBoxResponse" />        
+  </message>
+  
+  <message name="DeleteDataBox2Request">
+    <part name="parameter" element="tns:DeleteDataBox2" />        
+  </message>
+  <message name="DeleteDataBox2Response">
+    <part name="parameter" element="tns:DeleteDataBox2Response" />        
+  </message>
+  
+  <message name="UpdateDataBoxDescrRequest">
+    <part name="parameter" element="tns:UpdateDataBoxDescr" />        
+  </message>
+  <message name="UpdateDataBoxDescrResponse">
+    <part name="parameter" element="tns:UpdateDataBoxDescrResponse" />        
+  </message>
+
+  <message name="UpdateDataBoxDescr2Request">
+    <part name="parameter" element="tns:UpdateDataBoxDescr2" />        
+  </message>
+  <message name="UpdateDataBoxDescr2Response">
+    <part name="parameter" element="tns:UpdateDataBoxDescr2Response" />        
+  </message>
+
+  <message name="AddDataBoxUserRequest">
+    <part name="parameter" element="tns:AddDataBoxUser" />        
+  </message>
+  <message name="AddDataBoxUserResponse">
+    <part name="parameter" element="tns:AddDataBoxUserResponse" />        
+  </message>
+
+  <message name="AddDataBoxUser2Request">
+    <part name="parameter" element="tns:AddDataBoxUser2" />        
+  </message>
+  <message name="AddDataBoxUser2Response">
+    <part name="parameter" element="tns:AddDataBoxUser2Response" />        
+  </message>
+
+  <message name="DeleteDataBoxUserRequest">
+    <part name="parameter" element="tns:DeleteDataBoxUser" />        
+  </message>
+  <message name="DeleteDataBoxUserResponse">
+    <part name="parameter" element="tns:DeleteDataBoxUserResponse" />        
+  </message>
+
+  <message name="DeleteDataBoxUser2Request">
+    <part name="parameter" element="tns:DeleteDataBoxUser2" />        
+  </message>
+  <message name="DeleteDataBoxUser2Response">
+    <part name="parameter" element="tns:DeleteDataBoxUser2Response" />        
+  </message>
+
+  <message name="UpdateDataBoxUserRequest">
+    <part name="parameter" element="tns:UpdateDataBoxUser" />        
+  </message>
+  <message name="UpdateDataBoxUserResponse">
+    <part name="parameter" element="tns:UpdateDataBoxUserResponse" />        
+  </message>
+
+  <message name="UpdateDataBoxUser2Request">
+    <part name="parameter" element="tns:UpdateDataBoxUser2" />        
+  </message>
+  <message name="UpdateDataBoxUser2Response">
+    <part name="parameter" element="tns:UpdateDataBoxUser2Response" />        
+  </message>
+
+  <message name="NewAccessDataRequest">
+    <part name="parameter" element="tns:NewAccessData" />        
+  </message>
+  <message name="NewAccessDataResponse">
+    <part name="parameter" element="tns:NewAccessDataResponse" />        
+  </message>
+
+  <message name="NewAccessData2Request">
+    <part name="parameter" element="tns:NewAccessData2" />        
+  </message>
+  <message name="NewAccessData2Response">
+    <part name="parameter" element="tns:NewAccessData2Response" />        
+  </message>
+
+  <message name="DisableDataBoxExternallyRequest">
+    <part name="parameter" element="tns:DisableDataBoxExternally" />        
+  </message>
+  <message name="DisableDataBoxExternallyResponse">
+    <part name="parameter" element="tns:DisableDataBoxExternallyResponse" />        
+  </message>
+
+  <message name="DisableDataBoxExternally2Request">
+    <part name="parameter" element="tns:DisableDataBoxExternally2" />        
+  </message>
+  <message name="DisableDataBoxExternally2Response">
+    <part name="parameter" element="tns:DisableDataBoxExternally2Response" />        
+  </message>
+
+  <message name="DisableOwnDataBoxRequest">
+    <part name="parameter" element="tns:DisableOwnDataBox" />        
+  </message>
+  <message name="DisableOwnDataBoxResponse">
+    <part name="parameter" element="tns:DisableOwnDataBoxResponse" />        
+  </message>
+
+  <message name="DisableOwnDataBox2Request">
+    <part name="parameter" element="tns:DisableOwnDataBox2" />        
+  </message>
+  <message name="DisableOwnDataBox2Response">
+    <part name="parameter" element="tns:DisableOwnDataBox2Response" />        
+  </message>
+
+  <message name="EnableOwnDataBoxRequest">
+    <part name="parameter" element="tns:EnableOwnDataBox" />        
+  </message>
+  <message name="EnableOwnDataBoxResponse">
+    <part name="parameter" element="tns:EnableOwnDataBoxResponse" />        
+  </message>
+
+  <message name="EnableOwnDataBox2Request">
+    <part name="parameter" element="tns:EnableOwnDataBox2" />        
+  </message>
+  <message name="EnableOwnDataBox2Response">
+    <part name="parameter" element="tns:EnableOwnDataBox2Response" />        
+  </message>
+
+  <message name="SetOpenAddressingRequest">
+    <part name="parameter" element="tns:SetOpenAddressing" />        
+  </message>
+  <message name="SetOpenAddressingResponse">
+    <part name="parameter" element="tns:SetOpenAddressingResponse" />        
+  </message>
+
+  <message name="ClearOpenAddressingRequest">
+    <part name="parameter" element="tns:ClearOpenAddressing" />        
+  </message>
+  <message name="ClearOpenAddressingResponse">
+    <part name="parameter" element="tns:ClearOpenAddressingResponse" />        
+  </message>
+
+  <message name="GetDataBoxUsers2Request">
+    <part name="parameter" element="tns:GetDataBoxUsers2" />        
+  </message>
+  <message name="GetDataBoxUsers2Response">
+    <part name="parameter" element="tns:GetDataBoxUsers2Response" />        
+  </message>
+
+ <!-- ******************************************************************* -->
+  <portType name="DataBoxManipulationPortType">
+    <operation name="CreateDataBox">
+      <input  message="tns:CreateDataBoxRequest"/>
+      <output message="tns:CreateDataBoxResponse"/>
+    </operation>
+  
+    <operation name="CreateDataBox2">
+      <input  message="tns:CreateDataBox2Request"/>
+      <output message="tns:CreateDataBox2Response"/>
+    </operation>
+
+    <operation name="DeleteDataBox">
+      <input  message="tns:DeleteDataBoxRequest"/>
+      <output message="tns:DeleteDataBoxResponse"/>
+    </operation>
+  
+    <operation name="DeleteDataBox2">
+      <input  message="tns:DeleteDataBox2Request"/>
+      <output message="tns:DeleteDataBox2Response"/>
+    </operation>
+  
+    <operation name="UpdateDataBoxDescr">
+      <input  message="tns:UpdateDataBoxDescrRequest"/>
+      <output message="tns:UpdateDataBoxDescrResponse"/>
+    </operation>
+  
+    <operation name="UpdateDataBoxDescr2">
+      <input  message="tns:UpdateDataBoxDescr2Request"/>
+      <output message="tns:UpdateDataBoxDescr2Response"/>
+    </operation>
+  
+    <operation name="AddDataBoxUser">
+      <input  message="tns:AddDataBoxUserRequest"/>
+      <output message="tns:AddDataBoxUserResponse"/>
+    </operation>
+  
+    <operation name="AddDataBoxUser2">
+      <input  message="tns:AddDataBoxUser2Request"/>
+      <output message="tns:AddDataBoxUser2Response"/>
+    </operation>
+  
+    <operation name="DeleteDataBoxUser">
+      <input  message="tns:DeleteDataBoxUserRequest"/>
+      <output message="tns:DeleteDataBoxUserResponse"/>
+    </operation>
+
+    <operation name="DeleteDataBoxUser2">
+      <input  message="tns:DeleteDataBoxUser2Request"/>
+      <output message="tns:DeleteDataBoxUser2Response"/>
+    </operation>
+
+    <operation name="UpdateDataBoxUser">
+      <input  message="tns:UpdateDataBoxUserRequest"/>
+      <output message="tns:UpdateDataBoxUserResponse"/>
+    </operation>
+
+    <operation name="UpdateDataBoxUser2">
+      <input  message="tns:UpdateDataBoxUser2Request"/>
+      <output message="tns:UpdateDataBoxUser2Response"/>
+    </operation>
+
+    <operation name="NewAccessData">
+      <input  message="tns:NewAccessDataRequest"/>
+      <output message="tns:NewAccessDataResponse"/>
+    </operation>
+
+    <operation name="NewAccessData2">
+      <input  message="tns:NewAccessData2Request"/>
+      <output message="tns:NewAccessData2Response"/>
+    </operation>
+
+    <operation name="DisableDataBoxExternally">
+      <input  message="tns:DisableDataBoxExternallyRequest"/>
+      <output message="tns:DisableDataBoxExternallyResponse"/>
+    </operation>
+
+    <operation name="DisableDataBoxExternally2">
+      <input  message="tns:DisableDataBoxExternally2Request"/>
+      <output message="tns:DisableDataBoxExternally2Response"/>
+    </operation>
+
+    <operation name="DisableOwnDataBox">
+      <input  message="tns:DisableOwnDataBoxRequest"/>
+      <output message="tns:DisableOwnDataBoxResponse"/>
+    </operation>
+
+    <operation name="DisableOwnDataBox2">
+      <input  message="tns:DisableOwnDataBox2Request"/>
+      <output message="tns:DisableOwnDataBox2Response"/>
+    </operation>
+
+    <operation name="EnableOwnDataBox">
+      <input  message="tns:EnableOwnDataBoxRequest"/>
+      <output message="tns:EnableOwnDataBoxResponse"/>
+    </operation>
+
+    <operation name="EnableOwnDataBox2">
+      <input  message="tns:EnableOwnDataBox2Request"/>
+      <output message="tns:EnableOwnDataBox2Response"/>
+    </operation>
+
+    <operation name="SetOpenAddressing">
+      <input  message="tns:SetOpenAddressingRequest"/>
+      <output message="tns:SetOpenAddressingResponse"/>
+    </operation>
+
+    <operation name="ClearOpenAddressing">
+      <input  message="tns:ClearOpenAddressingRequest"/>
+      <output message="tns:ClearOpenAddressingResponse"/>
+    </operation>
+
+    <operation name="GetDataBoxUsers2">
+      <input  message="tns:GetDataBoxUsers2Request"/>
+      <output message="tns:GetDataBoxUsers2Response"/>
+    </operation>
+
+  </portType>
+
+  <!-- ******************************************************************* -->
+  <binding name="DataBoxManipulationBinding" type="tns:DataBoxManipulationPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+    <operation name="CreateDataBox">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="CreateDataBox2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="DeleteDataBox">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="DeleteDataBox2">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="UpdateDataBoxDescr">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="UpdateDataBoxDescr2">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="AddDataBoxUser">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="AddDataBoxUser2">
+      <soap:operation soapAction=""  />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="DeleteDataBoxUser2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="DeleteDataBoxUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="UpdateDataBoxUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="UpdateDataBoxUser2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="NewAccessData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="NewAccessData2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="DisableDataBoxExternally">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="DisableDataBoxExternally2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="DisableOwnDataBox">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="DisableOwnDataBox2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="EnableOwnDataBox">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="EnableOwnDataBox2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+ 
+    <operation name="SetOpenAddressing">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="ClearOpenAddressing">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+
+    <operation name="GetDataBoxUsers2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+
+  </binding>
+
+  <!-- ******************************************************************* -->
+  <service name="DataBoxManipulation">
+    <port name="DataBoxManipulationPortType" binding="tns:DataBoxManipulationBinding">
+      <soap:address location="https://ws1.mojedatovaschranka.cz/DS/DsManage"/>
+    </port>
+  </service>
+
+</definitions>
+

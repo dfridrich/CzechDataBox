@@ -4,52 +4,53 @@ namespace Defr\CzechDataBox\Api;
 
 class dmFile
 {
+
     /**
-     * @var string
+     * @var string $dmMimeType
      */
     protected $dmMimeType = null;
 
     /**
-     * @var anonymous6
+     * @var anonymous6 $dmFileMetaType
      */
     protected $dmFileMetaType = null;
 
     /**
-     * @var string
+     * @var string $dmFileGuid
      */
     protected $dmFileGuid = null;
 
     /**
-     * @var string
+     * @var string $dmUpFileGuid
      */
     protected $dmUpFileGuid = null;
 
     /**
-     * @var string
+     * @var string $dmFileDescr
      */
     protected $dmFileDescr = null;
 
     /**
-     * @var string
+     * @var string $dmFormat
      */
     protected $dmFormat = null;
 
     /**
-     * @param string     $dmMimeType
+     * @param string $dmMimeType
      * @param anonymous6 $dmFileMetaType
-     * @param string     $dmFileGuid
-     * @param string     $dmUpFileGuid
-     * @param string     $dmFileDescr
-     * @param string     $dmFormat
+     * @param string $dmFileGuid
+     * @param string $dmUpFileGuid
+     * @param string $dmFileDescr
+     * @param string $dmFormat
      */
     public function __construct($dmMimeType = null, $dmFileMetaType = null, $dmFileGuid = null, $dmUpFileGuid = null, $dmFileDescr = null, $dmFormat = null)
     {
-        $this->dmMimeType = $dmMimeType;
-        $this->dmFileMetaType = $dmFileMetaType;
-        $this->dmFileGuid = $dmFileGuid;
-        $this->dmUpFileGuid = $dmUpFileGuid;
-        $this->dmFileDescr = $dmFileDescr;
-        $this->dmFormat = $dmFormat;
+      $this->dmMimeType = $dmMimeType;
+      $this->dmFileMetaType = $dmFileMetaType;
+      $this->dmFileGuid = $dmFileGuid;
+      $this->dmUpFileGuid = $dmUpFileGuid;
+      $this->dmFileDescr = $dmFileDescr;
+      $this->dmFormat = $dmFormat;
     }
 
     /**
@@ -57,19 +58,17 @@ class dmFile
      */
     public function getDmMimeType()
     {
-        return $this->dmMimeType;
+      return $this->dmMimeType;
     }
 
     /**
      * @param string $dmMimeType
-     *
      * @return \Defr\CzechDataBox\Api\dmFile
      */
     public function setDmMimeType($dmMimeType)
     {
-        $this->dmMimeType = $dmMimeType;
-
-        return $this;
+      $this->dmMimeType = $dmMimeType;
+      return $this;
     }
 
     /**
@@ -77,19 +76,17 @@ class dmFile
      */
     public function getDmFileMetaType()
     {
-        return $this->dmFileMetaType;
+      return $this->dmFileMetaType;
     }
 
     /**
      * @param anonymous6 $dmFileMetaType
-     *
      * @return \Defr\CzechDataBox\Api\dmFile
      */
     public function setDmFileMetaType($dmFileMetaType)
     {
-        $this->dmFileMetaType = $dmFileMetaType;
-
-        return $this;
+      $this->dmFileMetaType = $dmFileMetaType;
+      return $this;
     }
 
     /**
@@ -97,19 +94,17 @@ class dmFile
      */
     public function getDmFileGuid()
     {
-        return $this->dmFileGuid;
+      return $this->dmFileGuid;
     }
 
     /**
      * @param string $dmFileGuid
-     *
      * @return \Defr\CzechDataBox\Api\dmFile
      */
     public function setDmFileGuid($dmFileGuid)
     {
-        $this->dmFileGuid = $dmFileGuid;
-
-        return $this;
+      $this->dmFileGuid = $dmFileGuid;
+      return $this;
     }
 
     /**
@@ -117,19 +112,17 @@ class dmFile
      */
     public function getDmUpFileGuid()
     {
-        return $this->dmUpFileGuid;
+      return $this->dmUpFileGuid;
     }
 
     /**
      * @param string $dmUpFileGuid
-     *
      * @return \Defr\CzechDataBox\Api\dmFile
      */
     public function setDmUpFileGuid($dmUpFileGuid)
     {
-        $this->dmUpFileGuid = $dmUpFileGuid;
-
-        return $this;
+      $this->dmUpFileGuid = $dmUpFileGuid;
+      return $this;
     }
 
     /**
@@ -137,19 +130,17 @@ class dmFile
      */
     public function getDmFileDescr()
     {
-        return $this->dmFileDescr;
+      return $this->dmFileDescr;
     }
 
     /**
      * @param string $dmFileDescr
-     *
      * @return \Defr\CzechDataBox\Api\dmFile
      */
     public function setDmFileDescr($dmFileDescr)
     {
-        $this->dmFileDescr = $dmFileDescr;
-
-        return $this;
+      $this->dmFileDescr = $dmFileDescr;
+      return $this;
     }
 
     /**
@@ -157,18 +148,17 @@ class dmFile
      */
     public function getDmFormat()
     {
-        return $this->dmFormat;
+      return $this->dmFormat;
     }
 
     /**
      * @param string $dmFormat
-     *
      * @return \Defr\CzechDataBox\Api\dmFile
      */
     public function setDmFormat($dmFormat)
     {
-        $this->dmFormat = $dmFormat;
-
-        return $this;
+      $this->dmFormat = $dmFormat;
+      return $this;
     }
+
 }
