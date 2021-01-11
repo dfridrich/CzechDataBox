@@ -23,7 +23,7 @@ class DataBox
 
     /**
      * 0 = Heslo
-     * 1 = Certifikát (zatim neni dodelano).
+     * 1 = Certifikát
      *
      * @var int
      */
@@ -118,6 +118,26 @@ class DataBox
     }
 
     /**
+     * Prihlaseni do DS pomoci certifikatu a hesla (neni povinne).
+     * Tato medota neudela prihlaseni, ale do instance tridy ulozi potrebne informace.
+     *
+     * @param $certificate Cesta k CER souboru
+     * @param $password
+     * @param bool|true $productionMode
+     *
+     * @return $this
+     */
+    public function loginWithCertificateAndPassword($certFileName, $password, $productionMode = true)
+    {
+        $this->productionMode = $productionMode;
+        $this->loginType = 1;
+        $this->certFileName = $certFileName;
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
      * Vyzkousi spojeni s ISDS.
      *
      * @return bool
@@ -144,7 +164,7 @@ class DataBox
     private function getServiceURL($serviceType)
     {
         $res = 'https://ws1';
-        if ($this->loginType > 0) {
+        if (0 !== $this->loginType) {
             $res = $res . 'c';
         }
 
@@ -157,17 +177,11 @@ class DataBox
                 break;
         }
 
-//        switch ($this->loginType) {
-//            case 1:
-//                $res = $res . 'cert/';
-//                break;
-//            case 2:
-//                $res = $res . 'hspis/';
-//                break;
-//            case 2:
-//                $res = $res . 'certds/';
-//                break;
-//        }
+        switch ($this->loginType) {
+            case 1:
+                $res = $res . 'cert/';
+                break;
+        }
 
         $res = $res . 'DS/';
 
@@ -238,13 +252,13 @@ class DataBox
     {
         return [
             'login'          => $this->loginName,
+            'local_cert'     => $this->certFileName,
             'password'       => $this->password,
             'proxy_host'     => $this->proxyAddress,
             'proxy_port'     => $this->proxyPort,
             'proxy_login'    => $this->proxyLogin,
             'proxy_password' => $this->proxyPassword,
             'location'       => $this->getServiceURL($service),
-            //            'cache_wsdl'     => WSDL_CACHE_NONE
         ];
     }
 

@@ -41,6 +41,7 @@ use Defr\CzechDataBox\DataBox;
 $dataBox = new DataBox();
 $dataBox->loginWithUsernameAndPassword("login", "heslo", true); // Pro ostrou verzi
 $dataBox->loginWithUsernameAndPassword("login", "heslo", false); // Pro verzi s testovacím přístupem
+$dataBox->loginWithCertificateAndPassword("certifikat.cer"); // Nebo pouzijte prihlaseni certifikatem
 
 /** @var \Defr\CzechDataBox\DataBoxSimpleApi $simpleApi */
 $simpleApi = $dataBox->getSimpleApi();
