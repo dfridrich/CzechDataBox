@@ -1,13 +1,14 @@
 <?php
 
 use Defr\CzechDataBox\DataBox;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tested on my personal data box.
  *
  * Class DataBoxTest
  */
-class DataBoxTest extends PHPUnit_Framework_TestCase
+class DataBoxTest extends TestCase
 {
     /**
      * @return DataBox
