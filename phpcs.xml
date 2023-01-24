@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<ruleset name="SymfonyProject">
+    <file>src/</file>
+    <file>tests/</file>
+
+    <arg name="basepath" value="."/>
+    <arg name="cache" value=".phpcs-cache" />
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+    <rule ref="PSR2">
+        <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
+        <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody" />
+        <exclude name="Generic.Files.LineLength.TooLong" />
+    </rule>
+    <rule ref="PSR2.Methods.FunctionCallSignature"/>
+    <rule ref="PSR2.Methods.MethodDeclaration"/>
+    <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
+    <rule ref="PSR2.Namespaces.UseDeclaration"/>
+    <rule ref="PSR2.ControlStructures.ControlStructureSpacing"/>
+<!--    <rule ref="Squiz.Commenting.FunctionComment">-->
+<!--        <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/> &lt;!&ndash; we use params only when typehint is not possible &ndash;&gt;-->
+<!--        <exclude name="Squiz.Commenting.FunctionComment.ParamNameNoMatch"/> &lt;!&ndash; we use params only when typehint is not possible &ndash;&gt;-->
+<!--    </rule>-->
+<!--    <rule ref="../vendor/consistence-community/coding-standard/Consistence/ruleset.xml">-->
+<!--        &lt;!&ndash; we don't want to have FQCN &ndash;&gt;-->
+<!--        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>-->
+<!--        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions"/>-->
+<!--        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>-->
+<!--    </rule>-->
+
+    <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
+        <properties>
+            <property name="rootNamespaces" type="array">
+<!--                <element key="etc" value="Nps"/>-->
+                <element key="src" value="Defr\CzechDataBox"/>
+                <element key="migrations" value="DoctrineMigrations"/>
+<!--                <element key="tests" value="Nps"/>-->
+<!--                <element key="data" value="Nps"/>-->
+<!--                <element key="qa/phpstan/Rules" value="Nps\Build\Phpstan"/>-->
+<!--                <element key="tests/Fixtures/DatabaseFixtures" value="Nps\Fixtures"/>-->
+<!--                <element key="tests/Fixtures/StaticFixtures" value="Nps\Fixtures"/>-->
+<!--                <element key="tests/Controller" value="Nps"/>-->
+<!--                <element key="tests/Unit" value="Nps"/>-->
+<!--                <element key="tests/Integration" value="Nps"/>-->
+<!--                <element key="tests/Remote" value="Nps"/>-->
+<!--                <element key="tests/Tools" value="Nps"/>-->
+<!--                <element key="tests/Builder" value="Nps"/>-->
+<!--                <element key="tests/CompositeBuilder" value="Nps"/>-->
+            </property>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
+        <properties>
+            <property name="caseSensitive" value="false"/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
+        <properties>
+            <property name="namespacesRequiredToUse" type="null" /><!-- necessary hotfix after upgrading coding standards for php8 -->
+            <property name="allowFullyQualifiedExceptions" value="false" />
+            <property name="allowFallbackGlobalFunctions" value="false" />
+            <property name="allowFallbackGlobalConstants" value="true" />
+        </properties>
+    </rule>
+<!--    <rule ref="Consistence.Exceptions.ExceptionDeclaration.NotChainable">-->
+<!--        &lt;!&ndash; False positive https://github.com/consistence/coding-standard/issues/47 &ndash;&gt;-->
+<!--        <exclude-pattern>*/Api/Controller/Exception/UnprocessableEntityHttpException.php</exclude-pattern>-->
+<!--        <exclude-pattern>*/Request/Exception/ConstraintViolationsException.php</exclude-pattern>-->
+<!--        <exclude-pattern>*/GtsAlive/Exception/GtsAliveVerificationException.php</exclude-pattern>-->
+<!--        <exclude-pattern>*/Helios/Exception/HeliosResultException.php</exclude-pattern>-->
+<!--        <exclude-pattern>*/Symfony/Exception/WithReasonException.php</exclude-pattern>-->
+<!--    </rule>-->
+<!--    <rule ref="Consistence.Exceptions.ExceptionDeclaration">-->
+<!--        <properties>-->
+<!--            <property name="exceptionsDirectoryName" value="Exception"/>-->
+<!--        </properties>-->
+<!--    </rule>-->
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+        <properties>
+            <property name="usefulAnnotations" type="array" value="
+                @Assert\,
+                @Route,
+                @dataProvider,
+                @see
+            "/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
+    <rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
+        <properties>
+            <property name="forbiddenAnnotations" type="array" value="
+                @author,
+                @created,
+                @version,
+                @package,
+                @copyright,
+                @license,
+                @internal,
+            "/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing.After">
+        <severity>5</severity><!-- turned off by Consistence Coding Standard -->
+    </rule>
+    <rule ref="Squiz.Classes.ClassDeclaration">
+        <exclude name="Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace"/>
+    </rule>
+    <!--rule ref="Squiz.Commenting.FunctionComment">
+        <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag"/>
+        <exclude name="Squiz.Commenting.FunctionComment.MissingReturn"/>
+    </rule-->
+    <rule ref="Squiz.Classes.ClassFileName"/>
+    <rule ref="Squiz.Classes.SelfMemberReference"/>
+    <rule ref="Squiz.Classes.DuplicateProperty"/>
+    <rule ref="Squiz.Classes.LowercaseClassKeywords"/>
+    <rule ref="Squiz.Classes.ValidClassName"/>
+
+    <rule ref="Squiz.Functions.FunctionDeclaration"/>
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration"/>
+
+    <rule ref="Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps"/>
+    <rule ref="Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps"/>
+
+    <!--rule ref="Squiz.Operators.ComparisonOperatorUsage"/-->
+    <rule ref="Squiz.Operators.IncrementDecrementUsage"/>
+    <rule ref="Squiz.Operators.ValidLogicalOperators"/>
+
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
+    <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
+    <!--rule ref="Squiz.PHP.CommentedOutCode"/-->
+    <rule ref="Squiz.PHP.DisallowMultipleAssignments"/>
+    <rule ref="Squiz.PHP.DiscouragedFunctions"/>
+    <rule ref="Squiz.Scope.MemberVarScope"/>
+    <rule ref="Squiz.Scope.MethodScope"/>
+    <rule ref="Squiz.Scope.StaticThisUsage"/>
+    <rule ref="Squiz.Strings.ConcatenationSpacing"/>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
+
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Generic.Classes.DuplicateClassName"/>
+    <rule ref="Generic.PHP.BacktickOperator"/>
+    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <!--element key="json_encode" value="Nps\Json\Json::encode"/-->
+                <!--element key="json_decode" value="Nps\Json\Json::decode"/-->
+                <element key="sizeof" value="count"/>
+                <element key="delete" value="unset"/>
+                <element key="print" value="echo"/>
+                <element key="is_null" value="null"/>
+                <!--element key="empty" value="null"/-->
+                <element key="create_function" value="null"/>
+            </property>
+        </properties>
+    </rule>
+    <!--rule ref="Generic.Strings.UnnecessaryStringConcat"/-->
+    <rule ref="Generic.Functions.CallTimePassByReference"/>
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="nestingLevel" value="3"/>
+            <property name="absoluteNestingLevel" value="4"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="16"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+<!--    <rule ref="Generic.Files.LineLength">-->
+<!--        <properties>-->
+<!--            <property name="lineLimit" value="200"/>-->
+<!--            <property name="absoluteLineLimit" value="250"/>-->
+<!--        </properties>-->
+<!--    </rule>-->
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+
+    <rule ref="MySource.Objects.AssignThis"/>
+    <rule ref="PEAR.ControlStructures.MultiLineCondition"/>
+    <rule ref="PEAR.Files.IncludingFile"/>
+
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInCall"/>
+    <rule ref="SlevomatCodingStandard.Functions.RequireTrailingCommaInDeclaration"/>
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
+    <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
+
+    <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName.NoMatchBetweenTypeNameAndFileName">
+        <exclude-pattern>/etc/*</exclude-pattern>
+        <exclude-pattern>/qa/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Files.LineLength.MaxExceeded">
+        <exclude-pattern>/etc/*</exclude-pattern>
+    </rule>
+
+    <!-- TODO -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Metrics.NestingLevel.MaxExceeded">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Metrics.NestingLevel.TooHigh">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Metrics.CyclomaticComplexity.MaxExceeded">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Metrics.CyclomaticComplexity.TooHigh">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.PHP.DisallowMultipleAssignments.Found">
+        <exclude-pattern>/src/*</exclude-pattern>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName.NoMatchBetweenTypeNameAndFileName">
+        <exclude-pattern>/migrations/*</exclude-pattern>
+    </rule>
+
+</ruleset>

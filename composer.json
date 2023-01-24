@@ -24,7 +24,9 @@
         "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2",
         "phpunit/phpunit": "^9",
         "symfony/var-dumper": "^6.2",
-        "phpstan/phpstan": "^1.9"
+        "phpstan/phpstan": "^1.9",
+        "squizlabs/php_codesniffer": "^3.7",
+        "slevomat/coding-standard": "^8.8"
     },
     "autoload": {
         "psr-4": {
@@ -32,6 +34,21 @@
         }
     },
     "scripts": {
-        "phpstan": "phpstan analyse -c phpstan.neon"
+        "phpcs": "@php -d memor_limit=2G vendor/bin/phpcs -sp",
+        "phpcbf": "@php -d memor_limit=2G vendor/bin/phpcbf -sp",
+        "phpstan": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php -d memory_limit=2G vendor/bin/phpstan analyse -c phpstan.neon"
+        ],
+        "check": [
+            "@phpcs",
+            "@phpstan"
+        ]
+
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
