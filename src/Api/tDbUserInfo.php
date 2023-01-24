@@ -5,105 +5,13 @@ namespace Defr\CzechDataBox\Api;
 class tDbUserInfo
 {
 
-    /**
-     * @var string $pnFirstName
-     */
-    protected $pnFirstName = null;
+    protected date $biDate = null;
 
-    /**
-     * @var string $pnMiddleName
-     */
-    protected $pnMiddleName = null;
+    protected tUserID $userID = null;
 
-    /**
-     * @var string $pnLastName
-     */
-    protected $pnLastName = null;
+    protected ic $ic = null;
 
-    /**
-     * @var string $pnLastNameAtBirth
-     */
-    protected $pnLastNameAtBirth = null;
-
-    /**
-     * @var string $adCity
-     */
-    protected $adCity = null;
-
-    /**
-     * @var string $adStreet
-     */
-    protected $adStreet = null;
-
-    /**
-     * @var string $adNumberInStreet
-     */
-    protected $adNumberInStreet = null;
-
-    /**
-     * @var string $adNumberInMunicipality
-     */
-    protected $adNumberInMunicipality = null;
-
-    /**
-     * @var string $adZipCode
-     */
-    protected $adZipCode = null;
-
-    /**
-     * @var string $adState
-     */
-    protected $adState = null;
-
-    /**
-     * @var date $biDate
-     */
-    protected $biDate = null;
-
-    /**
-     * @var tUserID $userID
-     */
-    protected $userID = null;
-
-    /**
-     * @var tUserType $userType
-     */
-    protected $userType = null;
-
-    /**
-     * @var int $userPrivils
-     */
-    protected $userPrivils = null;
-
-    /**
-     * @var ic $ic
-     */
-    protected $ic = null;
-
-    /**
-     * @var firmName $firmName
-     */
-    protected $firmName = null;
-
-    /**
-     * @var string $caStreet
-     */
-    protected $caStreet = null;
-
-    /**
-     * @var string $caCity
-     */
-    protected $caCity = null;
-
-    /**
-     * @var string $caZipCode
-     */
-    protected $caZipCode = null;
-
-    /**
-     * @var string $caState
-     */
-    protected $caState = null;
+    protected firmName $firmName = null;
 
     /**
      * @param string $pnFirstName
@@ -127,37 +35,23 @@ class tDbUserInfo
      * @param string $caZipCode
      * @param string $caState
      */
-    public function __construct($pnFirstName = null, $pnMiddleName = null, $pnLastName = null, $pnLastNameAtBirth = null, $adCity = null, $adStreet = null, $adNumberInStreet = null, $adNumberInMunicipality = null, $adZipCode = null, $adState = null, $biDate = null, $userID = null, $userType = null, $userPrivils = null, $ic = null, $firmName = null, $caStreet = null, $caCity = null, $caZipCode = null, $caState = null)
+    public function __construct(protected $pnFirstName = null, protected $pnMiddleName = null, protected $pnLastName = null, protected $pnLastNameAtBirth = null, protected $adCity = null, protected $adStreet = null, protected $adNumberInStreet = null, protected $adNumberInMunicipality = null, protected $adZipCode = null, protected $adState = null, $biDate = null, $userID = null, protected $userType = null, protected $userPrivils = null, $ic = null, $firmName = null, protected $caStreet = null, protected $caCity = null, protected $caZipCode = null, protected $caState = null)
     {
-      $this->pnFirstName = $pnFirstName;
-      $this->pnMiddleName = $pnMiddleName;
-      $this->pnLastName = $pnLastName;
-      $this->pnLastNameAtBirth = $pnLastNameAtBirth;
-      $this->adCity = $adCity;
-      $this->adStreet = $adStreet;
-      $this->adNumberInStreet = $adNumberInStreet;
-      $this->adNumberInMunicipality = $adNumberInMunicipality;
-      $this->adZipCode = $adZipCode;
-      $this->adState = $adState;
-      $this->biDate = $biDate;
-      $this->userID = $userID;
-      $this->userType = $userType;
-      $this->userPrivils = $userPrivils;
-      $this->ic = $ic;
-      $this->firmName = $firmName;
-      $this->caStreet = $caStreet;
-      $this->caCity = $caCity;
-      $this->caZipCode = $caZipCode;
-      $this->caState = $caState;
+        $this->biDate = $biDate;
+        $this->userID = $userID;
+        $this->ic = $ic;
+        $this->firmName = $firmName;
     }
+
 
     /**
      * @return string
      */
     public function getPnFirstName()
     {
-      return $this->pnFirstName;
+        return $this->pnFirstName;
     }
+
 
     /**
      * @param string $pnFirstName
@@ -165,17 +59,19 @@ class tDbUserInfo
      */
     public function setPnFirstName($pnFirstName)
     {
-      $this->pnFirstName = $pnFirstName;
-      return $this;
+        $this->pnFirstName = $pnFirstName;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getPnMiddleName()
     {
-      return $this->pnMiddleName;
+        return $this->pnMiddleName;
     }
+
 
     /**
      * @param string $pnMiddleName
@@ -183,17 +79,19 @@ class tDbUserInfo
      */
     public function setPnMiddleName($pnMiddleName)
     {
-      $this->pnMiddleName = $pnMiddleName;
-      return $this;
+        $this->pnMiddleName = $pnMiddleName;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getPnLastName()
     {
-      return $this->pnLastName;
+        return $this->pnLastName;
     }
+
 
     /**
      * @param string $pnLastName
@@ -201,17 +99,19 @@ class tDbUserInfo
      */
     public function setPnLastName($pnLastName)
     {
-      $this->pnLastName = $pnLastName;
-      return $this;
+        $this->pnLastName = $pnLastName;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getPnLastNameAtBirth()
     {
-      return $this->pnLastNameAtBirth;
+        return $this->pnLastNameAtBirth;
     }
+
 
     /**
      * @param string $pnLastNameAtBirth
@@ -219,17 +119,19 @@ class tDbUserInfo
      */
     public function setPnLastNameAtBirth($pnLastNameAtBirth)
     {
-      $this->pnLastNameAtBirth = $pnLastNameAtBirth;
-      return $this;
+        $this->pnLastNameAtBirth = $pnLastNameAtBirth;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getAdCity()
     {
-      return $this->adCity;
+        return $this->adCity;
     }
+
 
     /**
      * @param string $adCity
@@ -237,17 +139,19 @@ class tDbUserInfo
      */
     public function setAdCity($adCity)
     {
-      $this->adCity = $adCity;
-      return $this;
+        $this->adCity = $adCity;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getAdStreet()
     {
-      return $this->adStreet;
+        return $this->adStreet;
     }
+
 
     /**
      * @param string $adStreet
@@ -255,17 +159,19 @@ class tDbUserInfo
      */
     public function setAdStreet($adStreet)
     {
-      $this->adStreet = $adStreet;
-      return $this;
+        $this->adStreet = $adStreet;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getAdNumberInStreet()
     {
-      return $this->adNumberInStreet;
+        return $this->adNumberInStreet;
     }
+
 
     /**
      * @param string $adNumberInStreet
@@ -273,17 +179,19 @@ class tDbUserInfo
      */
     public function setAdNumberInStreet($adNumberInStreet)
     {
-      $this->adNumberInStreet = $adNumberInStreet;
-      return $this;
+        $this->adNumberInStreet = $adNumberInStreet;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getAdNumberInMunicipality()
     {
-      return $this->adNumberInMunicipality;
+        return $this->adNumberInMunicipality;
     }
+
 
     /**
      * @param string $adNumberInMunicipality
@@ -291,17 +199,19 @@ class tDbUserInfo
      */
     public function setAdNumberInMunicipality($adNumberInMunicipality)
     {
-      $this->adNumberInMunicipality = $adNumberInMunicipality;
-      return $this;
+        $this->adNumberInMunicipality = $adNumberInMunicipality;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getAdZipCode()
     {
-      return $this->adZipCode;
+        return $this->adZipCode;
     }
+
 
     /**
      * @param string $adZipCode
@@ -309,17 +219,19 @@ class tDbUserInfo
      */
     public function setAdZipCode($adZipCode)
     {
-      $this->adZipCode = $adZipCode;
-      return $this;
+        $this->adZipCode = $adZipCode;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getAdState()
     {
-      return $this->adState;
+        return $this->adState;
     }
+
 
     /**
      * @param string $adState
@@ -327,17 +239,19 @@ class tDbUserInfo
      */
     public function setAdState($adState)
     {
-      $this->adState = $adState;
-      return $this;
+        $this->adState = $adState;
+        return $this;
     }
+
 
     /**
      * @return date
      */
     public function getBiDate()
     {
-      return $this->biDate;
+        return $this->biDate;
     }
+
 
     /**
      * @param date $biDate
@@ -345,17 +259,19 @@ class tDbUserInfo
      */
     public function setBiDate($biDate)
     {
-      $this->biDate = $biDate;
-      return $this;
+        $this->biDate = $biDate;
+        return $this;
     }
+
 
     /**
      * @return tUserID
      */
     public function getUserID()
     {
-      return $this->userID;
+        return $this->userID;
     }
+
 
     /**
      * @param tUserID $userID
@@ -363,17 +279,19 @@ class tDbUserInfo
      */
     public function setUserID($userID)
     {
-      $this->userID = $userID;
-      return $this;
+        $this->userID = $userID;
+        return $this;
     }
+
 
     /**
      * @return tUserType
      */
     public function getUserType()
     {
-      return $this->userType;
+        return $this->userType;
     }
+
 
     /**
      * @param tUserType $userType
@@ -381,17 +299,19 @@ class tDbUserInfo
      */
     public function setUserType($userType)
     {
-      $this->userType = $userType;
-      return $this;
+        $this->userType = $userType;
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getUserPrivils()
     {
-      return $this->userPrivils;
+        return $this->userPrivils;
     }
+
 
     /**
      * @param int $userPrivils
@@ -399,17 +319,19 @@ class tDbUserInfo
      */
     public function setUserPrivils($userPrivils)
     {
-      $this->userPrivils = $userPrivils;
-      return $this;
+        $this->userPrivils = $userPrivils;
+        return $this;
     }
+
 
     /**
      * @return ic
      */
     public function getIc()
     {
-      return $this->ic;
+        return $this->ic;
     }
+
 
     /**
      * @param ic $ic
@@ -417,17 +339,19 @@ class tDbUserInfo
      */
     public function setIc($ic)
     {
-      $this->ic = $ic;
-      return $this;
+        $this->ic = $ic;
+        return $this;
     }
+
 
     /**
      * @return firmName
      */
     public function getFirmName()
     {
-      return $this->firmName;
+        return $this->firmName;
     }
+
 
     /**
      * @param firmName $firmName
@@ -435,17 +359,19 @@ class tDbUserInfo
      */
     public function setFirmName($firmName)
     {
-      $this->firmName = $firmName;
-      return $this;
+        $this->firmName = $firmName;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getCaStreet()
     {
-      return $this->caStreet;
+        return $this->caStreet;
     }
+
 
     /**
      * @param string $caStreet
@@ -453,17 +379,19 @@ class tDbUserInfo
      */
     public function setCaStreet($caStreet)
     {
-      $this->caStreet = $caStreet;
-      return $this;
+        $this->caStreet = $caStreet;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getCaCity()
     {
-      return $this->caCity;
+        return $this->caCity;
     }
+
 
     /**
      * @param string $caCity
@@ -471,17 +399,19 @@ class tDbUserInfo
      */
     public function setCaCity($caCity)
     {
-      $this->caCity = $caCity;
-      return $this;
+        $this->caCity = $caCity;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getCaZipCode()
     {
-      return $this->caZipCode;
+        return $this->caZipCode;
     }
+
 
     /**
      * @param string $caZipCode
@@ -489,17 +419,19 @@ class tDbUserInfo
      */
     public function setCaZipCode($caZipCode)
     {
-      $this->caZipCode = $caZipCode;
-      return $this;
+        $this->caZipCode = $caZipCode;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getCaState()
     {
-      return $this->caState;
+        return $this->caState;
     }
+
 
     /**
      * @param string $caState
@@ -507,8 +439,8 @@ class tDbUserInfo
      */
     public function setCaState($caState)
     {
-      $this->caState = $caState;
-      return $this;
+        $this->caState = $caState;
+        return $this;
     }
 
 }

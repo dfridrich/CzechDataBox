@@ -6,32 +6,22 @@ class tStatReqStatus
 {
 
     /**
-     * @var string $dbStatusCode
-     */
-    protected $dbStatusCode = null;
-
-    /**
-     * @var string $dbStatusMessage
-     */
-    protected $dbStatusMessage = null;
-
-    /**
      * @param string $dbStatusCode
      * @param string $dbStatusMessage
      */
-    public function __construct($dbStatusCode = null, $dbStatusMessage = null)
+    public function __construct(protected $dbStatusCode = null, protected $dbStatusMessage = null)
     {
-      $this->dbStatusCode = $dbStatusCode;
-      $this->dbStatusMessage = $dbStatusMessage;
     }
+
 
     /**
      * @return string
      */
     public function getDbStatusCode()
     {
-      return $this->dbStatusCode;
+        return $this->dbStatusCode;
     }
+
 
     /**
      * @param string $dbStatusCode
@@ -39,17 +29,19 @@ class tStatReqStatus
      */
     public function setDbStatusCode($dbStatusCode)
     {
-      $this->dbStatusCode = $dbStatusCode;
-      return $this;
+        $this->dbStatusCode = $dbStatusCode;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbStatusMessage()
     {
-      return $this->dbStatusMessage;
+        return $this->dbStatusMessage;
     }
+
 
     /**
      * @param string $dbStatusMessage
@@ -57,8 +49,8 @@ class tStatReqStatus
      */
     public function setDbStatusMessage($dbStatusMessage)
     {
-      $this->dbStatusMessage = $dbStatusMessage;
-      return $this;
+        $this->dbStatusMessage = $dbStatusMessage;
+        return $this;
     }
 
 }

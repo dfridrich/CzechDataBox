@@ -6,39 +6,23 @@ class tGetAuthorOutput
 {
 
     /**
-     * @var string $userType
-     */
-    protected $userType = null;
-
-    /**
-     * @var string $authorName
-     */
-    protected $authorName = null;
-
-    /**
-     * @var tStatus $dmStatus
-     */
-    protected $dmStatus = null;
-
-    /**
      * @param string $userType
      * @param string $authorName
      * @param tStatus $dmStatus
      */
-    public function __construct($userType = null, $authorName = null, $dmStatus = null)
+    public function __construct(protected $userType = null, protected $authorName = null, protected $dmStatus = null)
     {
-      $this->userType = $userType;
-      $this->authorName = $authorName;
-      $this->dmStatus = $dmStatus;
     }
+
 
     /**
      * @return string
      */
     public function getUserType()
     {
-      return $this->userType;
+        return $this->userType;
     }
+
 
     /**
      * @param string $userType
@@ -46,17 +30,19 @@ class tGetAuthorOutput
      */
     public function setUserType($userType)
     {
-      $this->userType = $userType;
-      return $this;
+        $this->userType = $userType;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getAuthorName()
     {
-      return $this->authorName;
+        return $this->authorName;
     }
+
 
     /**
      * @param string $authorName
@@ -64,17 +50,19 @@ class tGetAuthorOutput
      */
     public function setAuthorName($authorName)
     {
-      $this->authorName = $authorName;
-      return $this;
+        $this->authorName = $authorName;
+        return $this;
     }
+
 
     /**
      * @return tStatus
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
+
 
     /**
      * @param tStatus $dmStatus
@@ -82,8 +70,8 @@ class tGetAuthorOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
 
 }

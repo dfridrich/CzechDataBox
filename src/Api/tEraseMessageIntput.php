@@ -5,33 +5,26 @@ namespace Defr\CzechDataBox\Api;
 class tEraseMessageIntput
 {
 
-    /**
-     * @var tIdDm $dmID
-     */
-    protected $dmID = null;
-
-    /**
-     * @var boolean $dmIncoming
-     */
-    protected $dmIncoming = null;
+    protected tIdDm $dmID = null;
 
     /**
      * @param tIdDm $dmID
      * @param boolean $dmIncoming
      */
-    public function __construct($dmID = null, $dmIncoming = null)
+    public function __construct($dmID = null, protected $dmIncoming = null)
     {
-      $this->dmID = $dmID;
-      $this->dmIncoming = $dmIncoming;
+        $this->dmID = $dmID;
     }
+
 
     /**
      * @return tIdDm
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
+
 
     /**
      * @param tIdDm $dmID
@@ -39,17 +32,19 @@ class tEraseMessageIntput
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDmIncoming()
     {
-      return $this->dmIncoming;
+        return $this->dmIncoming;
     }
+
 
     /**
      * @param boolean $dmIncoming
@@ -57,8 +52,8 @@ class tEraseMessageIntput
      */
     public function setDmIncoming($dmIncoming)
     {
-      $this->dmIncoming = $dmIncoming;
-      return $this;
+        $this->dmIncoming = $dmIncoming;
+        return $this;
     }
 
 }

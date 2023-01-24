@@ -5,40 +5,30 @@ namespace Defr\CzechDataBox\Api;
 class tAddDBUserOutput
 {
 
-    /**
-     * @var tIdDb $dbID
-     */
-    protected $dbID = null;
+    protected tIdDb $dbID = null;
 
-    /**
-     * @var tDbAccessDataId $dbAccessDataId
-     */
-    protected $dbAccessDataId = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
+    protected tDbAccessDataId $dbAccessDataId = null;
 
     /**
      * @param tIdDb $dbID
      * @param tDbAccessDataId $dbAccessDataId
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbID = null, $dbAccessDataId = null, $dbStatus = null)
+    public function __construct($dbID = null, $dbAccessDataId = null, protected $dbStatus = null)
     {
-      $this->dbID = $dbID;
-      $this->dbAccessDataId = $dbAccessDataId;
-      $this->dbStatus = $dbStatus;
+        $this->dbID = $dbID;
+        $this->dbAccessDataId = $dbAccessDataId;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getDbID()
     {
-      return $this->dbID;
+        return $this->dbID;
     }
+
 
     /**
      * @param tIdDb $dbID
@@ -46,17 +36,19 @@ class tAddDBUserOutput
      */
     public function setDbID($dbID)
     {
-      $this->dbID = $dbID;
-      return $this;
+        $this->dbID = $dbID;
+        return $this;
     }
+
 
     /**
      * @return tDbAccessDataId
      */
     public function getDbAccessDataId()
     {
-      return $this->dbAccessDataId;
+        return $this->dbAccessDataId;
     }
+
 
     /**
      * @param tDbAccessDataId $dbAccessDataId
@@ -64,17 +56,19 @@ class tAddDBUserOutput
      */
     public function setDbAccessDataId($dbAccessDataId)
     {
-      $this->dbAccessDataId = $dbAccessDataId;
-      return $this;
+        $this->dbAccessDataId = $dbAccessDataId;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -82,8 +76,8 @@ class tAddDBUserOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

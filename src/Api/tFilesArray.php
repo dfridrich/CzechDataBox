@@ -6,25 +6,21 @@ class tFilesArray
 {
 
     /**
-     * @var dmFile $dmFile
-     */
-    protected $dmFile = null;
-
-    /**
      * @param dmFile $dmFile
      */
-    public function __construct($dmFile = null)
+    public function __construct(protected $dmFile = null)
     {
-      $this->dmFile = $dmFile;
     }
+
 
     /**
      * @return dmFile
      */
     public function getDmFile()
     {
-      return $this->dmFile;
+        return $this->dmFile;
     }
+
 
     /**
      * @param dmFile $dmFile
@@ -32,8 +28,8 @@ class tFilesArray
      */
     public function setDmFile($dmFile)
     {
-      $this->dmFile = $dmFile;
-      return $this;
+        $this->dmFile = $dmFile;
+        return $this;
     }
 
 }

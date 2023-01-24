@@ -6,32 +6,22 @@ class tStatus
 {
 
     /**
-     * @var string $dmStatusCode
-     */
-    protected $dmStatusCode = null;
-
-    /**
-     * @var string $dmStatusMessage
-     */
-    protected $dmStatusMessage = null;
-
-    /**
      * @param string $dmStatusCode
      * @param string $dmStatusMessage
      */
-    public function __construct($dmStatusCode = null, $dmStatusMessage = null)
+    public function __construct(protected $dmStatusCode = null, protected $dmStatusMessage = null)
     {
-      $this->dmStatusCode = $dmStatusCode;
-      $this->dmStatusMessage = $dmStatusMessage;
     }
+
 
     /**
      * @return string
      */
     public function getDmStatusCode()
     {
-      return $this->dmStatusCode;
+        return $this->dmStatusCode;
     }
+
 
     /**
      * @param string $dmStatusCode
@@ -39,17 +29,19 @@ class tStatus
      */
     public function setDmStatusCode($dmStatusCode)
     {
-      $this->dmStatusCode = $dmStatusCode;
-      return $this;
+        $this->dmStatusCode = $dmStatusCode;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmStatusMessage()
     {
-      return $this->dmStatusMessage;
+        return $this->dmStatusMessage;
     }
+
 
     /**
      * @param string $dmStatusMessage
@@ -57,8 +49,8 @@ class tStatus
      */
     public function setDmStatusMessage($dmStatusMessage)
     {
-      $this->dmStatusMessage = $dmStatusMessage;
-      return $this;
+        $this->dmStatusMessage = $dmStatusMessage;
+        return $this;
     }
 
 }

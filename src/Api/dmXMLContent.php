@@ -6,25 +6,21 @@ class dmXMLContent
 {
 
     /**
-     * @var string $any
-     */
-    protected $any = null;
-
-    /**
      * @param string $any
      */
-    public function __construct($any = null)
+    public function __construct(protected $any = null)
     {
-      $this->any = $any;
     }
+
 
     /**
      * @return string
      */
     public function getAny()
     {
-      return $this->any;
+        return $this->any;
     }
+
 
     /**
      * @param string $any
@@ -32,8 +28,8 @@ class dmXMLContent
      */
     public function setAny($any)
     {
-      $this->any = $any;
-      return $this;
+        $this->any = $any;
+        return $this;
     }
 
 }

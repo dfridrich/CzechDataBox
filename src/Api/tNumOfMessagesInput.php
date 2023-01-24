@@ -5,24 +5,17 @@ namespace Defr\CzechDataBox\Api;
 class tNumOfMessagesInput
 {
 
-    /**
-     * @var int $statType
-     */
-    protected $statType = null;
+    protected int $statType = null;
 
-    
-    public function __construct()
-    {
-    
-    }
 
     /**
      * @return int
      */
     public function getStatType()
     {
-      return $this->statType;
+        return $this->statType;
     }
+
 
     /**
      * @param int $statType
@@ -30,8 +23,8 @@ class tNumOfMessagesInput
      */
     public function setStatType($statType)
     {
-      $this->statType = $statType;
-      return $this;
+        $this->statType = $statType;
+        return $this;
     }
 
 }

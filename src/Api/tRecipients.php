@@ -5,25 +5,7 @@ namespace Defr\CzechDataBox\Api;
 class tRecipients
 {
 
-    /**
-     * @var tIdDb $dbIDRecipient
-     */
-    protected $dbIDRecipient = null;
-
-    /**
-     * @var string $dmRecipientOrgUnit
-     */
-    protected $dmRecipientOrgUnit = null;
-
-    /**
-     * @var int $dmRecipientOrgUnitNum
-     */
-    protected $dmRecipientOrgUnitNum = null;
-
-    /**
-     * @var string $dmToHands
-     */
-    protected $dmToHands = null;
+    protected tIdDb $dbIDRecipient = null;
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -31,21 +13,20 @@ class tRecipients
      * @param int $dmRecipientOrgUnitNum
      * @param string $dmToHands
      */
-    public function __construct($dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null)
+    public function __construct($dbIDRecipient = null, protected $dmRecipientOrgUnit = null, protected $dmRecipientOrgUnitNum = null, protected $dmToHands = null)
     {
-      $this->dbIDRecipient = $dbIDRecipient;
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      $this->dmToHands = $dmToHands;
+        $this->dbIDRecipient = $dbIDRecipient;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getDbIDRecipient()
     {
-      return $this->dbIDRecipient;
+        return $this->dbIDRecipient;
     }
+
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -53,17 +34,19 @@ class tRecipients
      */
     public function setDbIDRecipient($dbIDRecipient)
     {
-      $this->dbIDRecipient = $dbIDRecipient;
-      return $this;
+        $this->dbIDRecipient = $dbIDRecipient;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmRecipientOrgUnit()
     {
-      return $this->dmRecipientOrgUnit;
+        return $this->dmRecipientOrgUnit;
     }
+
 
     /**
      * @param string $dmRecipientOrgUnit
@@ -71,17 +54,19 @@ class tRecipients
      */
     public function setDmRecipientOrgUnit($dmRecipientOrgUnit)
     {
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      return $this;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getDmRecipientOrgUnitNum()
     {
-      return $this->dmRecipientOrgUnitNum;
+        return $this->dmRecipientOrgUnitNum;
     }
+
 
     /**
      * @param int $dmRecipientOrgUnitNum
@@ -89,17 +74,19 @@ class tRecipients
      */
     public function setDmRecipientOrgUnitNum($dmRecipientOrgUnitNum)
     {
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      return $this;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmToHands()
     {
-      return $this->dmToHands;
+        return $this->dmToHands;
     }
+
 
     /**
      * @param string $dmToHands
@@ -107,8 +94,8 @@ class tRecipients
      */
     public function setDmToHands($dmToHands)
     {
-      $this->dmToHands = $dmToHands;
-      return $this;
+        $this->dmToHands = $dmToHands;
+        return $this;
     }
 
 }

@@ -5,40 +5,27 @@ namespace Defr\CzechDataBox\Api;
 class tActivateOutput
 {
 
-    /**
-     * @var tUserID $userId
-     */
-    protected $userId = null;
-
-    /**
-     * @var string $password
-     */
-    protected $password = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
+    protected tUserID $userId = null;
 
     /**
      * @param tUserID $userId
      * @param string $password
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($userId = null, $password = null, $dbStatus = null)
+    public function __construct($userId = null, protected $password = null, protected $dbStatus = null)
     {
-      $this->userId = $userId;
-      $this->password = $password;
-      $this->dbStatus = $dbStatus;
+        $this->userId = $userId;
     }
+
 
     /**
      * @return tUserID
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
+
 
     /**
      * @param tUserID $userId
@@ -46,17 +33,19 @@ class tActivateOutput
      */
     public function setUserId($userId)
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getPassword()
     {
-      return $this->password;
+        return $this->password;
     }
+
 
     /**
      * @param string $password
@@ -64,17 +53,19 @@ class tActivateOutput
      */
     public function setPassword($password)
     {
-      $this->password = $password;
-      return $this;
+        $this->password = $password;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -82,8 +73,8 @@ class tActivateOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

@@ -6,25 +6,21 @@ class tDummyInput
 {
 
     /**
-     * @var string $dbDummy
-     */
-    protected $dbDummy = null;
-
-    /**
      * @param string $dbDummy
      */
-    public function __construct($dbDummy = null)
+    public function __construct(protected $dbDummy = null)
     {
-      $this->dbDummy = $dbDummy;
     }
+
 
     /**
      * @return string
      */
     public function getDbDummy()
     {
-      return $this->dbDummy;
+        return $this->dbDummy;
     }
+
 
     /**
      * @param string $dbDummy
@@ -32,8 +28,8 @@ class tDummyInput
      */
     public function setDbDummy($dbDummy)
     {
-      $this->dbDummy = $dbDummy;
-      return $this;
+        $this->dbDummy = $dbDummy;
+        return $this;
     }
 
 }

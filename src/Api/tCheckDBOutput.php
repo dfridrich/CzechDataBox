@@ -6,32 +6,22 @@ class tCheckDBOutput
 {
 
     /**
-     * @var int $dbState
-     */
-    protected $dbState = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
-
-    /**
      * @param int $dbState
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbState = null, $dbStatus = null)
+    public function __construct(protected $dbState = null, protected $dbStatus = null)
     {
-      $this->dbState = $dbState;
-      $this->dbStatus = $dbStatus;
     }
+
 
     /**
      * @return int
      */
     public function getDbState()
     {
-      return $this->dbState;
+        return $this->dbState;
     }
+
 
     /**
      * @param int $dbState
@@ -39,17 +29,19 @@ class tCheckDBOutput
      */
     public function setDbState($dbState)
     {
-      $this->dbState = $dbState;
-      return $this;
+        $this->dbState = $dbState;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -57,8 +49,8 @@ class tCheckDBOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

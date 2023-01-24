@@ -6,32 +6,22 @@ class tChngPasswInput
 {
 
     /**
-     * @var string $dbOldPassword
-     */
-    protected $dbOldPassword = null;
-
-    /**
-     * @var string $dbNewPassword
-     */
-    protected $dbNewPassword = null;
-
-    /**
      * @param string $dbOldPassword
      * @param string $dbNewPassword
      */
-    public function __construct($dbOldPassword = null, $dbNewPassword = null)
+    public function __construct(protected $dbOldPassword = null, protected $dbNewPassword = null)
     {
-      $this->dbOldPassword = $dbOldPassword;
-      $this->dbNewPassword = $dbNewPassword;
     }
+
 
     /**
      * @return string
      */
     public function getDbOldPassword()
     {
-      return $this->dbOldPassword;
+        return $this->dbOldPassword;
     }
+
 
     /**
      * @param string $dbOldPassword
@@ -39,17 +29,19 @@ class tChngPasswInput
      */
     public function setDbOldPassword($dbOldPassword)
     {
-      $this->dbOldPassword = $dbOldPassword;
-      return $this;
+        $this->dbOldPassword = $dbOldPassword;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbNewPassword()
     {
-      return $this->dbNewPassword;
+        return $this->dbNewPassword;
     }
+
 
     /**
      * @param string $dbNewPassword
@@ -57,8 +49,8 @@ class tChngPasswInput
      */
     public function setDbNewPassword($dbNewPassword)
     {
-      $this->dbNewPassword = $dbNewPassword;
-      return $this;
+        $this->dbNewPassword = $dbNewPassword;
+        return $this;
     }
 
 }

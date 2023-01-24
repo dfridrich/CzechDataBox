@@ -5,25 +5,7 @@ namespace Defr\CzechDataBox\Api;
 class tDeleteDBInput
 {
 
-    /**
-     * @var tDbOwnerInfo $dbOwnerInfo
-     */
-    protected $dbOwnerInfo = null;
-
-    /**
-     * @var date $dbOwnerTerminationDate
-     */
-    protected $dbOwnerTerminationDate = null;
-
-    /**
-     * @var boolean $dbApproved
-     */
-    protected $dbApproved = null;
-
-    /**
-     * @var string $dbExternRefNumber
-     */
-    protected $dbExternRefNumber = null;
+    protected date $dbOwnerTerminationDate = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -31,21 +13,20 @@ class tDeleteDBInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbOwnerInfo = null, $dbOwnerTerminationDate = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct(protected $dbOwnerInfo = null, $dbOwnerTerminationDate = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbOwnerTerminationDate = $dbOwnerTerminationDate;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbOwnerTerminationDate = $dbOwnerTerminationDate;
     }
+
 
     /**
      * @return tDbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
+
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -53,17 +34,19 @@ class tDeleteDBInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
+
 
     /**
      * @return date
      */
     public function getDbOwnerTerminationDate()
     {
-      return $this->dbOwnerTerminationDate;
+        return $this->dbOwnerTerminationDate;
     }
+
 
     /**
      * @param date $dbOwnerTerminationDate
@@ -71,17 +54,19 @@ class tDeleteDBInput
      */
     public function setDbOwnerTerminationDate($dbOwnerTerminationDate)
     {
-      $this->dbOwnerTerminationDate = $dbOwnerTerminationDate;
-      return $this;
+        $this->dbOwnerTerminationDate = $dbOwnerTerminationDate;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
+
 
     /**
      * @param boolean $dbApproved
@@ -89,17 +74,19 @@ class tDeleteDBInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
+
 
     /**
      * @param string $dbExternRefNumber
@@ -107,8 +94,8 @@ class tDeleteDBInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
 
 }

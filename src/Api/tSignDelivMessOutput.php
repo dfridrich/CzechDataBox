@@ -5,33 +5,26 @@ namespace Defr\CzechDataBox\Api;
 class tSignDelivMessOutput
 {
 
-    /**
-     * @var base64Binary $dmSignature
-     */
-    protected $dmSignature = null;
-
-    /**
-     * @var tStatus $dmStatus
-     */
-    protected $dmStatus = null;
+    protected base64Binary $dmSignature = null;
 
     /**
      * @param base64Binary $dmSignature
      * @param tStatus $dmStatus
      */
-    public function __construct($dmSignature = null, $dmStatus = null)
+    public function __construct($dmSignature = null, protected $dmStatus = null)
     {
-      $this->dmSignature = $dmSignature;
-      $this->dmStatus = $dmStatus;
+        $this->dmSignature = $dmSignature;
     }
+
 
     /**
      * @return base64Binary
      */
     public function getDmSignature()
     {
-      return $this->dmSignature;
+        return $this->dmSignature;
     }
+
 
     /**
      * @param base64Binary $dmSignature
@@ -39,17 +32,19 @@ class tSignDelivMessOutput
      */
     public function setDmSignature($dmSignature)
     {
-      $this->dmSignature = $dmSignature;
-      return $this;
+        $this->dmSignature = $dmSignature;
+        return $this;
     }
+
 
     /**
      * @return tStatus
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
+
 
     /**
      * @param tStatus $dmStatus
@@ -57,8 +52,8 @@ class tSignDelivMessOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
 
 }

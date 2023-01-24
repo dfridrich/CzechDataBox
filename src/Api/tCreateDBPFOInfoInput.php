@@ -5,40 +5,7 @@ namespace Defr\CzechDataBox\Api;
 class tCreateDBPFOInfoInput
 {
 
-    /**
-     * @var tDbOwnerInfo $dbOwnerInfo
-     */
-    protected $dbOwnerInfo = null;
-
-    /**
-     * @var tDbUsersArray $dbPrimaryUsers
-     */
-    protected $dbPrimaryUsers = null;
-
-    /**
-     * @var string $dbFormerNames
-     */
-    protected $dbFormerNames = null;
-
-    /**
-     * @var tIdDb $dbUpperDBId
-     */
-    protected $dbUpperDBId = null;
-
-    /**
-     * @var string $dbCEOLabel
-     */
-    protected $dbCEOLabel = null;
-
-    /**
-     * @var boolean $dbApproved
-     */
-    protected $dbApproved = null;
-
-    /**
-     * @var string $dbExternRefNumber
-     */
-    protected $dbExternRefNumber = null;
+    protected tIdDb $dbUpperDBId = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -49,24 +16,20 @@ class tCreateDBPFOInfoInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbOwnerInfo = null, $dbPrimaryUsers = null, $dbFormerNames = null, $dbUpperDBId = null, $dbCEOLabel = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct(protected $dbOwnerInfo = null, protected $dbPrimaryUsers = null, protected $dbFormerNames = null, $dbUpperDBId = null, protected $dbCEOLabel = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbPrimaryUsers = $dbPrimaryUsers;
-      $this->dbFormerNames = $dbFormerNames;
-      $this->dbUpperDBId = $dbUpperDBId;
-      $this->dbCEOLabel = $dbCEOLabel;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbUpperDBId = $dbUpperDBId;
     }
+
 
     /**
      * @return tDbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
+
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -74,17 +37,19 @@ class tCreateDBPFOInfoInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
+
 
     /**
      * @return tDbUsersArray
      */
     public function getDbPrimaryUsers()
     {
-      return $this->dbPrimaryUsers;
+        return $this->dbPrimaryUsers;
     }
+
 
     /**
      * @param tDbUsersArray $dbPrimaryUsers
@@ -92,17 +57,19 @@ class tCreateDBPFOInfoInput
      */
     public function setDbPrimaryUsers($dbPrimaryUsers)
     {
-      $this->dbPrimaryUsers = $dbPrimaryUsers;
-      return $this;
+        $this->dbPrimaryUsers = $dbPrimaryUsers;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbFormerNames()
     {
-      return $this->dbFormerNames;
+        return $this->dbFormerNames;
     }
+
 
     /**
      * @param string $dbFormerNames
@@ -110,17 +77,19 @@ class tCreateDBPFOInfoInput
      */
     public function setDbFormerNames($dbFormerNames)
     {
-      $this->dbFormerNames = $dbFormerNames;
-      return $this;
+        $this->dbFormerNames = $dbFormerNames;
+        return $this;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getDbUpperDBId()
     {
-      return $this->dbUpperDBId;
+        return $this->dbUpperDBId;
     }
+
 
     /**
      * @param tIdDb $dbUpperDBId
@@ -128,17 +97,19 @@ class tCreateDBPFOInfoInput
      */
     public function setDbUpperDBId($dbUpperDBId)
     {
-      $this->dbUpperDBId = $dbUpperDBId;
-      return $this;
+        $this->dbUpperDBId = $dbUpperDBId;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbCEOLabel()
     {
-      return $this->dbCEOLabel;
+        return $this->dbCEOLabel;
     }
+
 
     /**
      * @param string $dbCEOLabel
@@ -146,17 +117,19 @@ class tCreateDBPFOInfoInput
      */
     public function setDbCEOLabel($dbCEOLabel)
     {
-      $this->dbCEOLabel = $dbCEOLabel;
-      return $this;
+        $this->dbCEOLabel = $dbCEOLabel;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
+
 
     /**
      * @param boolean $dbApproved
@@ -164,17 +137,19 @@ class tCreateDBPFOInfoInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
+
 
     /**
      * @param string $dbExternRefNumber
@@ -182,8 +157,8 @@ class tCreateDBPFOInfoInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
 
 }

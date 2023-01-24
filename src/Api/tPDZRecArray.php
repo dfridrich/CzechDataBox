@@ -6,25 +6,21 @@ class tPDZRecArray
 {
 
     /**
-     * @var tPDZRec $dbPDZRecord
-     */
-    protected $dbPDZRecord = null;
-
-    /**
      * @param tPDZRec $dbPDZRecord
      */
-    public function __construct($dbPDZRecord = null)
+    public function __construct(protected $dbPDZRecord = null)
     {
-      $this->dbPDZRecord = $dbPDZRecord;
     }
+
 
     /**
      * @return tPDZRec
      */
     public function getDbPDZRecord()
     {
-      return $this->dbPDZRecord;
+        return $this->dbPDZRecord;
     }
+
 
     /**
      * @param tPDZRec $dbPDZRecord
@@ -32,8 +28,8 @@ class tPDZRecArray
      */
     public function setDbPDZRecord($dbPDZRecord)
     {
-      $this->dbPDZRecord = $dbPDZRecord;
-      return $this;
+        $this->dbPDZRecord = $dbPDZRecord;
+        return $this;
     }
 
 }

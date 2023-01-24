@@ -2,82 +2,127 @@
 
 namespace Defr\CzechDataBox\Api;
 
-class DataBoxSearch extends \SoapClient
+use Defr\CzechDataBox\Api\tActivateInput;
+use Defr\CzechDataBox\Api\tActivateOutput;
+use Defr\CzechDataBox\Api\tAddDBUserInput;
+use Defr\CzechDataBox\Api\tAddDBUserOutput;
+use Defr\CzechDataBox\Api\tCheckDBOutput;
+use Defr\CzechDataBox\Api\tChngPasswInput;
+use Defr\CzechDataBox\Api\tCreateDBInput;
+use Defr\CzechDataBox\Api\tCreateDBOutput;
+use Defr\CzechDataBox\Api\tCreateDBPFOInfoInput;
+use Defr\CzechDataBox\Api\tCreateDBPFOInfoOutput;
+use Defr\CzechDataBox\Api\tDbOwnerInfo;
+use Defr\CzechDataBox\Api\tDbOwnersArray;
+use Defr\CzechDataBox\Api\tDbReqStatus;
+use Defr\CzechDataBox\Api\tDbUserInfo;
+use Defr\CzechDataBox\Api\tDbUsersArray;
+use Defr\CzechDataBox\Api\tDelDBUserInput;
+use Defr\CzechDataBox\Api\tDeleteDBInput;
+use Defr\CzechDataBox\Api\tDeleteDBPromptlyInput;
+use Defr\CzechDataBox\Api\tDisableExternallyInput;
+use Defr\CzechDataBox\Api\tDummyInput;
+use Defr\CzechDataBox\Api\tFindDBInput;
+use Defr\CzechDataBox\Api\tFindDBOuput;
+use Defr\CzechDataBox\Api\tGetDBListInput;
+use Defr\CzechDataBox\Api\tGetDBListOutput;
+use Defr\CzechDataBox\Api\tGetDBUsersOutput;
+use Defr\CzechDataBox\Api\tGetOwnInfoOutput;
+use Defr\CzechDataBox\Api\tGetPasswInfoOutput;
+use Defr\CzechDataBox\Api\tGetUserInfoOutput;
+use Defr\CzechDataBox\Api\tIdDbInput;
+use Defr\CzechDataBox\Api\tNewAccDataInput;
+use Defr\CzechDataBox\Api\tNewAccDataOutput;
+use Defr\CzechDataBox\Api\tOwnerInfoInput;
+use Defr\CzechDataBox\Api\tPDZInfoInput;
+use Defr\CzechDataBox\Api\tPDZInfoOutput;
+use Defr\CzechDataBox\Api\tPDZRec;
+use Defr\CzechDataBox\Api\tPDZRecArray;
+use Defr\CzechDataBox\Api\tReqStatusOutput;
+use Defr\CzechDataBox\Api\tUpdateDBInput;
+use Defr\CzechDataBox\Api\tUpdDBUserInput;
+use SoapClient;
+use function array_merge;
+
+class DataBoxSearch extends SoapClient
 {
 
     /**
      * @var array $classmap The defined classes
      */
-    private static $classmap = array (
-      'tIdDbInput' => 'Defr\\CzechDataBox\\Api\\tIdDbInput',
-      'tReqStatusOutput' => 'Defr\\CzechDataBox\\Api\\tReqStatusOutput',
-      'tDbReqStatus' => 'Defr\\CzechDataBox\\Api\\tDbReqStatus',
-      'tDbOwnerInfo' => 'Defr\\CzechDataBox\\Api\\tDbOwnerInfo',
-      'tDbOwnersArray' => 'Defr\\CzechDataBox\\Api\\tDbOwnersArray',
-      'tDbUserInfo' => 'Defr\\CzechDataBox\\Api\\tDbUserInfo',
-      'tDbUsersArray' => 'Defr\\CzechDataBox\\Api\\tDbUsersArray',
-      'tFindDBInput' => 'Defr\\CzechDataBox\\Api\\tFindDBInput',
-      'tFindDBOuput' => 'Defr\\CzechDataBox\\Api\\tFindDBOuput',
-      'tCreateDBInput' => 'Defr\\CzechDataBox\\Api\\tCreateDBInput',
-      'tCreateDBOutput' => 'Defr\\CzechDataBox\\Api\\tCreateDBOutput',
-      'tDeleteDBInput' => 'Defr\\CzechDataBox\\Api\\tDeleteDBInput',
-      'tUpdateDBInput' => 'Defr\\CzechDataBox\\Api\\tUpdateDBInput',
-      'tAddDBUserInput' => 'Defr\\CzechDataBox\\Api\\tAddDBUserInput',
-      'tAddDBUserOutput' => 'Defr\\CzechDataBox\\Api\\tAddDBUserOutput',
-      'tDelDBUserInput' => 'Defr\\CzechDataBox\\Api\\tDelDBUserInput',
-      'tUpdDBUserInput' => 'Defr\\CzechDataBox\\Api\\tUpdDBUserInput',
-      'tNewAccDataInput' => 'Defr\\CzechDataBox\\Api\\tNewAccDataInput',
-      'tNewAccDataOutput' => 'Defr\\CzechDataBox\\Api\\tNewAccDataOutput',
-      'tOwnerInfoInput' => 'Defr\\CzechDataBox\\Api\\tOwnerInfoInput',
-      'tDisableExternallyInput' => 'Defr\\CzechDataBox\\Api\\tDisableExternallyInput',
-      'tGetDBUsersOutput' => 'Defr\\CzechDataBox\\Api\\tGetDBUsersOutput',
-      'tCheckDBOutput' => 'Defr\\CzechDataBox\\Api\\tCheckDBOutput',
-      'tActivateInput' => 'Defr\\CzechDataBox\\Api\\tActivateInput',
-      'tActivateOutput' => 'Defr\\CzechDataBox\\Api\\tActivateOutput',
-      'tCreateDBPFOInfoInput' => 'Defr\\CzechDataBox\\Api\\tCreateDBPFOInfoInput',
-      'tCreateDBPFOInfoOutput' => 'Defr\\CzechDataBox\\Api\\tCreateDBPFOInfoOutput',
-      'tDummyInput' => 'Defr\\CzechDataBox\\Api\\tDummyInput',
-      'tGetOwnInfoOutput' => 'Defr\\CzechDataBox\\Api\\tGetOwnInfoOutput',
-      'tGetUserInfoOutput' => 'Defr\\CzechDataBox\\Api\\tGetUserInfoOutput',
-      'tGetPasswInfoOutput' => 'Defr\\CzechDataBox\\Api\\tGetPasswInfoOutput',
-      'tChngPasswInput' => 'Defr\\CzechDataBox\\Api\\tChngPasswInput',
-      'tGetDBListInput' => 'Defr\\CzechDataBox\\Api\\tGetDBListInput',
-      'tGetDBListOutput' => 'Defr\\CzechDataBox\\Api\\tGetDBListOutput',
-      'tDeleteDBPromptlyInput' => 'Defr\\CzechDataBox\\Api\\tDeleteDBPromptlyInput',
-      'tPDZInfoInput' => 'Defr\\CzechDataBox\\Api\\tPDZInfoInput',
-      'tPDZRec' => 'Defr\\CzechDataBox\\Api\\tPDZRec',
-      'tPDZRecArray' => 'Defr\\CzechDataBox\\Api\\tPDZRecArray',
-      'tPDZInfoOutput' => 'Defr\\CzechDataBox\\Api\\tPDZInfoOutput',
-    );
+    private static array $classmap =  [
+      'tIdDbInput' => tIdDbInput::class,
+      'tReqStatusOutput' => tReqStatusOutput::class,
+      'tDbReqStatus' => tDbReqStatus::class,
+      'tDbOwnerInfo' => tDbOwnerInfo::class,
+      'tDbOwnersArray' => tDbOwnersArray::class,
+      'tDbUserInfo' => tDbUserInfo::class,
+      'tDbUsersArray' => tDbUsersArray::class,
+      'tFindDBInput' => tFindDBInput::class,
+      'tFindDBOuput' => tFindDBOuput::class,
+      'tCreateDBInput' => tCreateDBInput::class,
+      'tCreateDBOutput' => tCreateDBOutput::class,
+      'tDeleteDBInput' => tDeleteDBInput::class,
+      'tUpdateDBInput' => tUpdateDBInput::class,
+      'tAddDBUserInput' => tAddDBUserInput::class,
+      'tAddDBUserOutput' => tAddDBUserOutput::class,
+      'tDelDBUserInput' => tDelDBUserInput::class,
+      'tUpdDBUserInput' => tUpdDBUserInput::class,
+      'tNewAccDataInput' => tNewAccDataInput::class,
+      'tNewAccDataOutput' => tNewAccDataOutput::class,
+      'tOwnerInfoInput' => tOwnerInfoInput::class,
+      'tDisableExternallyInput' => tDisableExternallyInput::class,
+      'tGetDBUsersOutput' => tGetDBUsersOutput::class,
+      'tCheckDBOutput' => tCheckDBOutput::class,
+      'tActivateInput' => tActivateInput::class,
+      'tActivateOutput' => tActivateOutput::class,
+      'tCreateDBPFOInfoInput' => tCreateDBPFOInfoInput::class,
+      'tCreateDBPFOInfoOutput' => tCreateDBPFOInfoOutput::class,
+      'tDummyInput' => tDummyInput::class,
+      'tGetOwnInfoOutput' => tGetOwnInfoOutput::class,
+      'tGetUserInfoOutput' => tGetUserInfoOutput::class,
+      'tGetPasswInfoOutput' => tGetPasswInfoOutput::class,
+      'tChngPasswInput' => tChngPasswInput::class,
+      'tGetDBListInput' => tGetDBListInput::class,
+      'tGetDBListOutput' => tGetDBListOutput::class,
+      'tDeleteDBPromptlyInput' => tDeleteDBPromptlyInput::class,
+      'tPDZInfoInput' => tPDZInfoInput::class,
+      'tPDZRec' => tPDZRec::class,
+      'tPDZRecArray' => tPDZRecArray::class,
+      'tPDZInfoOutput' => tPDZInfoOutput::class,
+    ];
 
     /**
      * @param array $options A array of config values
      * @param string $wsdl The wsdl file to use
      */
-    public function __construct(array $options = array(), $wsdl = null)
+    public function __construct(array $options = [], $wsdl = null)
     {
-      foreach (self::$classmap as $key => $value) {
-        if (!isset($options['classmap'][$key])) {
-          $options['classmap'][$key] = $value;
+        foreach (self::$classmap as $key => $value) {
+            if (!isset($options['classmap'][$key])) {
+                $options['classmap'][$key] = $value;
+            }
         }
-      }
-      $options = array_merge(array (
-      'features' => 1,
-    ), $options);
-      if (!$wsdl) {
-        $wsdl = '/Users/dennis/sites/isas/vendor/dfridrich/czech-data-box/Resources/db_search.wsdl';
-      }
-      parent::__construct($wsdl, $options);
+
+        $options = array_merge([
+        'features' => 1,
+        ], $options);
+        if (!$wsdl) {
+            $wsdl = '/Users/dennis/sites/isas/vendor/dfridrich/czech-data-box/Resources/db_search.wsdl';
+        }
+
+        parent::__construct($wsdl, $options);
     }
 
+
     /**
-     * @param tFindDBInput $parameter
      * @return tFindDBOuput
      */
     public function FindDataBox(tFindDBInput $parameter)
     {
-      return $this->__soapCall('FindDataBox', array($parameter));
+        return $this->soapCall('FindDataBox', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -85,35 +130,36 @@ class DataBoxSearch extends \SoapClient
      */
     public function FindDataBox2($parameter)
     {
-      return $this->__soapCall('FindDataBox2', array($parameter));
+        return $this->soapCall('FindDataBox2', [$parameter]);
     }
 
+
     /**
-     * @param tIdDbInput $parameter
      * @return tCheckDBOutput
      */
     public function CheckDataBox(tIdDbInput $parameter)
     {
-      return $this->__soapCall('CheckDataBox', array($parameter));
+        return $this->soapCall('CheckDataBox', [$parameter]);
     }
 
+
     /**
-     * @param tGetDBListInput $parameter
      * @return tGetDBListOutput
      */
     public function GetDataBoxList(tGetDBListInput $parameter)
     {
-      return $this->__soapCall('GetDataBoxList', array($parameter));
+        return $this->soapCall('GetDataBoxList', [$parameter]);
     }
 
+
     /**
-     * @param tPDZInfoInput $parameter
      * @return tPDZInfoOutput
      */
     public function PDZInfo(tPDZInfoInput $parameter)
     {
-      return $this->__soapCall('PDZInfo', array($parameter));
+        return $this->soapCall('PDZInfo', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -121,8 +167,9 @@ class DataBoxSearch extends \SoapClient
      */
     public function DataBoxCreditInfo($parameter)
     {
-      return $this->__soapCall('DataBoxCreditInfo', array($parameter));
+        return $this->soapCall('DataBoxCreditInfo', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -130,8 +177,9 @@ class DataBoxSearch extends \SoapClient
      */
     public function ISDSSearch2($parameter)
     {
-      return $this->__soapCall('ISDSSearch2', array($parameter));
+        return $this->soapCall('ISDSSearch2', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -139,8 +187,9 @@ class DataBoxSearch extends \SoapClient
      */
     public function ISDSSearch3($parameter)
     {
-      return $this->__soapCall('ISDSSearch3', array($parameter));
+        return $this->soapCall('ISDSSearch3', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -148,8 +197,9 @@ class DataBoxSearch extends \SoapClient
      */
     public function GetDataBoxActivityStatus($parameter)
     {
-      return $this->__soapCall('GetDataBoxActivityStatus', array($parameter));
+        return $this->soapCall('GetDataBoxActivityStatus', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -157,8 +207,9 @@ class DataBoxSearch extends \SoapClient
      */
     public function FindPersonalDataBox($parameter)
     {
-      return $this->__soapCall('FindPersonalDataBox', array($parameter));
+        return $this->soapCall('FindPersonalDataBox', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -166,8 +217,9 @@ class DataBoxSearch extends \SoapClient
      */
     public function DTInfo($parameter)
     {
-      return $this->__soapCall('DTInfo', array($parameter));
+        return $this->soapCall('DTInfo', [$parameter]);
     }
+
 
     /**
      * @param UNKNOWN $parameter
@@ -175,7 +227,7 @@ class DataBoxSearch extends \SoapClient
      */
     public function PDZSendInfo($parameter)
     {
-      return $this->__soapCall('PDZSendInfo', array($parameter));
+        return $this->soapCall('PDZSendInfo', [$parameter]);
     }
 
 }

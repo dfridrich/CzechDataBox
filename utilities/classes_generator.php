@@ -8,6 +8,8 @@ use Wsdl2PhpGenerator\Generator;
 $generator = new Generator();
 $classesLocation = __DIR__ . '/../src/Api/';
 
+dd(DataBoxHelper::getServiceWSDLList());
+
 if (count(@scandir($classesLocation)) > 2) {
     throw new \Exception('Classes are already generated.');
 }

@@ -6,25 +6,21 @@ class tConfirmDeliveryOutput
 {
 
     /**
-     * @var tStatus $dmStatus
-     */
-    protected $dmStatus = null;
-
-    /**
      * @param tStatus $dmStatus
      */
-    public function __construct($dmStatus = null)
+    public function __construct(protected $dmStatus = null)
     {
-      $this->dmStatus = $dmStatus;
     }
+
 
     /**
      * @return tStatus
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
+
 
     /**
      * @param tStatus $dmStatus
@@ -32,8 +28,8 @@ class tConfirmDeliveryOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
 
 }

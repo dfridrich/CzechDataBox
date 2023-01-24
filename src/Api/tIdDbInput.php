@@ -5,40 +5,27 @@ namespace Defr\CzechDataBox\Api;
 class tIdDbInput
 {
 
-    /**
-     * @var tIdDb $dbID
-     */
-    protected $dbID = null;
-
-    /**
-     * @var boolean $dbApproved
-     */
-    protected $dbApproved = null;
-
-    /**
-     * @var string $dbExternRefNumber
-     */
-    protected $dbExternRefNumber = null;
+    protected tIdDb $dbID = null;
 
     /**
      * @param tIdDb $dbID
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbID = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct($dbID = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
     {
-      $this->dbID = $dbID;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbID = $dbID;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getDbID()
     {
-      return $this->dbID;
+        return $this->dbID;
     }
+
 
     /**
      * @param tIdDb $dbID
@@ -46,17 +33,19 @@ class tIdDbInput
      */
     public function setDbID($dbID)
     {
-      $this->dbID = $dbID;
-      return $this;
+        $this->dbID = $dbID;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
+
 
     /**
      * @param boolean $dbApproved
@@ -64,17 +53,19 @@ class tIdDbInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
+
 
     /**
      * @param string $dbExternRefNumber
@@ -82,8 +73,8 @@ class tIdDbInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
 
 }

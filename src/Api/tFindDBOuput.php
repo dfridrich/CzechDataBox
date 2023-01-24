@@ -6,32 +6,22 @@ class tFindDBOuput
 {
 
     /**
-     * @var tDbOwnersArray $dbResults
-     */
-    protected $dbResults = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
-
-    /**
      * @param tDbOwnersArray $dbResults
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbResults = null, $dbStatus = null)
+    public function __construct(protected $dbResults = null, protected $dbStatus = null)
     {
-      $this->dbResults = $dbResults;
-      $this->dbStatus = $dbStatus;
     }
+
 
     /**
      * @return tDbOwnersArray
      */
     public function getDbResults()
     {
-      return $this->dbResults;
+        return $this->dbResults;
     }
+
 
     /**
      * @param tDbOwnersArray $dbResults
@@ -39,17 +29,19 @@ class tFindDBOuput
      */
     public function setDbResults($dbResults)
     {
-      $this->dbResults = $dbResults;
-      return $this;
+        $this->dbResults = $dbResults;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -57,8 +49,8 @@ class tFindDBOuput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

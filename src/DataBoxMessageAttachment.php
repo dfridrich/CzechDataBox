@@ -2,38 +2,38 @@
 
 namespace Defr\CzechDataBox;
 
+use function file_exists;
+use function file_get_contents;
+use function file_put_contents;
+use function mkdir;
+use function pathinfo;
+
 /**
  * Class DataBoxMessageAttachment
- * @package Defr\CzechDataBox
  */
 class DataBoxMessageAttachment
 {
-    /**
-     * @var string
-     */
-    private $location;
+    public $path;
 
-    /**
-     * @var string
-     */
-    private $filename;
+    private string $filename;
 
     /**
      * @param $location
      */
-    public function __construct($location)
+    public function __construct(private $location)
     {
-        $this->location = $location;
         $this->filename = pathinfo($location)['basename'];
     }
+
 
     /**
      * @return string
      */
-    public function get()
+    public function get(): string|bool
     {
         return file_get_contents($this->location);
     }
+
 
     /**
      * @param $content
@@ -45,13 +45,15 @@ class DataBoxMessageAttachment
         if (empty($content)) {
             throw new DataBoxException('Content of file is empty.');
         }
-        if (false === $this->getIsExist()) {
+
+        if (!$this->getIsExist()) {
             @mkdir(pathinfo($this->location)['dirname'], 0777, true);
             file_put_contents($this->location, $content);
         } else {
             throw new DataBoxException('Data message attachment already exists.');
         }
     }
+
 
     /**
      * @return mixed
@@ -61,6 +63,7 @@ class DataBoxMessageAttachment
         return $this->location;
     }
 
+
     /**
      * @return mixed
      */
@@ -68,6 +71,7 @@ class DataBoxMessageAttachment
     {
         return $this->filename;
     }
+
 
     /**
      * @return mixed
@@ -77,10 +81,11 @@ class DataBoxMessageAttachment
         return $this->path;
     }
 
+
     /**
      * @return mixed
      */
-    public function getIsExist()
+    public function getIsExist(): bool
     {
         return file_exists($this->location);
     }

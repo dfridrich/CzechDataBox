@@ -6,32 +6,22 @@ class tGetDBUsersOutput
 {
 
     /**
-     * @var tDbUsersArray $dbUsers
-     */
-    protected $dbUsers = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
-
-    /**
      * @param tDbUsersArray $dbUsers
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbUsers = null, $dbStatus = null)
+    public function __construct(protected $dbUsers = null, protected $dbStatus = null)
     {
-      $this->dbUsers = $dbUsers;
-      $this->dbStatus = $dbStatus;
     }
+
 
     /**
      * @return tDbUsersArray
      */
     public function getDbUsers()
     {
-      return $this->dbUsers;
+        return $this->dbUsers;
     }
+
 
     /**
      * @param tDbUsersArray $dbUsers
@@ -39,17 +29,19 @@ class tGetDBUsersOutput
      */
     public function setDbUsers($dbUsers)
     {
-      $this->dbUsers = $dbUsers;
-      return $this;
+        $this->dbUsers = $dbUsers;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -57,8 +49,8 @@ class tGetDBUsersOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

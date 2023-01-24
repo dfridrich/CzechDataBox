@@ -6,46 +6,24 @@ class tDelDBUserInput
 {
 
     /**
-     * @var tDbOwnerInfo $dbOwnerInfo
-     */
-    protected $dbOwnerInfo = null;
-
-    /**
-     * @var tDbUserInfo $dbUserInfo
-     */
-    protected $dbUserInfo = null;
-
-    /**
-     * @var boolean $dbApproved
-     */
-    protected $dbApproved = null;
-
-    /**
-     * @var string $dbExternRefNumber
-     */
-    protected $dbExternRefNumber = null;
-
-    /**
      * @param tDbOwnerInfo $dbOwnerInfo
      * @param tDbUserInfo $dbUserInfo
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbOwnerInfo = null, $dbUserInfo = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct(protected $dbOwnerInfo = null, protected $dbUserInfo = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbUserInfo = $dbUserInfo;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
     }
+
 
     /**
      * @return tDbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
+
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -53,17 +31,19 @@ class tDelDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
+
 
     /**
      * @return tDbUserInfo
      */
     public function getDbUserInfo()
     {
-      return $this->dbUserInfo;
+        return $this->dbUserInfo;
     }
+
 
     /**
      * @param tDbUserInfo $dbUserInfo
@@ -71,17 +51,19 @@ class tDelDBUserInput
      */
     public function setDbUserInfo($dbUserInfo)
     {
-      $this->dbUserInfo = $dbUserInfo;
-      return $this;
+        $this->dbUserInfo = $dbUserInfo;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
+
 
     /**
      * @param boolean $dbApproved
@@ -89,17 +71,19 @@ class tDelDBUserInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
+
 
     /**
      * @param string $dbExternRefNumber
@@ -107,8 +91,8 @@ class tDelDBUserInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
 
 }

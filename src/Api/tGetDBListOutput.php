@@ -5,33 +5,26 @@ namespace Defr\CzechDataBox\Api;
 class tGetDBListOutput
 {
 
-    /**
-     * @var base64Binary $dblData
-     */
-    protected $dblData = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
+    protected base64Binary $dblData = null;
 
     /**
      * @param base64Binary $dblData
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dblData = null, $dbStatus = null)
+    public function __construct($dblData = null, protected $dbStatus = null)
     {
-      $this->dblData = $dblData;
-      $this->dbStatus = $dbStatus;
+        $this->dblData = $dblData;
     }
+
 
     /**
      * @return base64Binary
      */
     public function getDblData()
     {
-      return $this->dblData;
+        return $this->dblData;
     }
+
 
     /**
      * @param base64Binary $dblData
@@ -39,17 +32,19 @@ class tGetDBListOutput
      */
     public function setDblData($dblData)
     {
-      $this->dblData = $dblData;
-      return $this;
+        $this->dblData = $dblData;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -57,8 +52,8 @@ class tGetDBListOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

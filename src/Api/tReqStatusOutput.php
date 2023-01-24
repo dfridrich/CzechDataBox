@@ -6,25 +6,21 @@ class tReqStatusOutput
 {
 
     /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
-
-    /**
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbStatus = null)
+    public function __construct(protected $dbStatus = null)
     {
-      $this->dbStatus = $dbStatus;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -32,8 +28,8 @@ class tReqStatusOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

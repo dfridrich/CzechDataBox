@@ -2,64 +2,41 @@
 
 namespace Defr\CzechDataBox\Api;
 
+use DateTime;
+use Exception;
+
 class tPDZRec
 {
 
-    /**
-     * @var string $PDZType
-     */
-    protected $PDZType = null;
+    protected tIdDb $PDZRecip = null;
 
-    /**
-     * @var tIdDb $PDZRecip
-     */
-    protected $PDZRecip = null;
+    protected tIdDb $PDZPayer = null;
 
-    /**
-     * @var tIdDb $PDZPayer
-     */
-    protected $PDZPayer = null;
-
-    /**
-     * @var \DateTime $PDZExpire
-     */
-    protected $PDZExpire = null;
-
-    /**
-     * @var int $PDZCnt
-     */
-    protected $PDZCnt = null;
-
-    /**
-     * @var string $ODZIdent
-     */
-    protected $ODZIdent = null;
+    protected DateTime $PDZExpire = null;
 
     /**
      * @param string $PDZType
      * @param tIdDb $PDZRecip
      * @param tIdDb $PDZPayer
-     * @param \DateTime $PDZExpire
      * @param int $PDZCnt
      * @param string $ODZIdent
      */
-    public function __construct($PDZType = null, $PDZRecip = null, $PDZPayer = null, \DateTime $PDZExpire = null, $PDZCnt = null, $ODZIdent = null)
+    public function __construct(protected $PDZType = null, $PDZRecip = null, $PDZPayer = null, DateTime $PDZExpire = null, protected $PDZCnt = null, protected $ODZIdent = null)
     {
-      $this->PDZType = $PDZType;
-      $this->PDZRecip = $PDZRecip;
-      $this->PDZPayer = $PDZPayer;
-      $this->PDZExpire = $PDZExpire ? $PDZExpire->format(\DateTime::ATOM) : null;
-      $this->PDZCnt = $PDZCnt;
-      $this->ODZIdent = $ODZIdent;
+        $this->PDZRecip = $PDZRecip;
+        $this->PDZPayer = $PDZPayer;
+        $this->PDZExpire = $PDZExpire !== null ? $PDZExpire->format(DateTime::ATOM) : null;
     }
+
 
     /**
      * @return string
      */
     public function getPDZType()
     {
-      return $this->PDZType;
+        return $this->PDZType;
     }
+
 
     /**
      * @param string $PDZType
@@ -67,17 +44,19 @@ class tPDZRec
      */
     public function setPDZType($PDZType)
     {
-      $this->PDZType = $PDZType;
-      return $this;
+        $this->PDZType = $PDZType;
+        return $this;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getPDZRecip()
     {
-      return $this->PDZRecip;
+        return $this->PDZRecip;
     }
+
 
     /**
      * @param tIdDb $PDZRecip
@@ -85,17 +64,19 @@ class tPDZRec
      */
     public function setPDZRecip($PDZRecip)
     {
-      $this->PDZRecip = $PDZRecip;
-      return $this;
+        $this->PDZRecip = $PDZRecip;
+        return $this;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getPDZPayer()
     {
-      return $this->PDZPayer;
+        return $this->PDZPayer;
     }
+
 
     /**
      * @param tIdDb $PDZPayer
@@ -103,43 +84,46 @@ class tPDZRec
      */
     public function setPDZPayer($PDZPayer)
     {
-      $this->PDZPayer = $PDZPayer;
-      return $this;
+        $this->PDZPayer = $PDZPayer;
+        return $this;
     }
+
 
     /**
      * @return \DateTime
      */
     public function getPDZExpire()
     {
-      if ($this->PDZExpire == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->PDZExpire);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->PDZExpire == null) {
+            return null;
+        } else {
+            try {
+                return new DateTime($this->PDZExpire);
+            } catch (Exception) {
+                return false;
+            }
         }
-      }
     }
 
+
     /**
-     * @param \DateTime $PDZExpire
      * @return \Defr\CzechDataBox\Api\tPDZRec
      */
-    public function setPDZExpire(\DateTime $PDZExpire)
+    public function setPDZExpire(DateTime $PDZExpire)
     {
-      $this->PDZExpire = $PDZExpire->format(\DateTime::ATOM);
-      return $this;
+        $this->PDZExpire = $PDZExpire->format(DateTime::ATOM);
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getPDZCnt()
     {
-      return $this->PDZCnt;
+        return $this->PDZCnt;
     }
+
 
     /**
      * @param int $PDZCnt
@@ -147,17 +131,19 @@ class tPDZRec
      */
     public function setPDZCnt($PDZCnt)
     {
-      $this->PDZCnt = $PDZCnt;
-      return $this;
+        $this->PDZCnt = $PDZCnt;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getODZIdent()
     {
-      return $this->ODZIdent;
+        return $this->ODZIdent;
     }
+
 
     /**
      * @param string $ODZIdent
@@ -165,8 +151,8 @@ class tPDZRec
      */
     public function setODZIdent($ODZIdent)
     {
-      $this->ODZIdent = $ODZIdent;
-      return $this;
+        $this->ODZIdent = $ODZIdent;
+        return $this;
     }
 
 }

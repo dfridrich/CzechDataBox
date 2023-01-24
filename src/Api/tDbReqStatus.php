@@ -6,39 +6,23 @@ class tDbReqStatus
 {
 
     /**
-     * @var string $dbStatusCode
-     */
-    protected $dbStatusCode = null;
-
-    /**
-     * @var string $dbStatusMessage
-     */
-    protected $dbStatusMessage = null;
-
-    /**
-     * @var string $dbStatusRefNumber
-     */
-    protected $dbStatusRefNumber = null;
-
-    /**
      * @param string $dbStatusCode
      * @param string $dbStatusMessage
      * @param string $dbStatusRefNumber
      */
-    public function __construct($dbStatusCode = null, $dbStatusMessage = null, $dbStatusRefNumber = null)
+    public function __construct(protected $dbStatusCode = null, protected $dbStatusMessage = null, protected $dbStatusRefNumber = null)
     {
-      $this->dbStatusCode = $dbStatusCode;
-      $this->dbStatusMessage = $dbStatusMessage;
-      $this->dbStatusRefNumber = $dbStatusRefNumber;
     }
+
 
     /**
      * @return string
      */
     public function getDbStatusCode()
     {
-      return $this->dbStatusCode;
+        return $this->dbStatusCode;
     }
+
 
     /**
      * @param string $dbStatusCode
@@ -46,17 +30,19 @@ class tDbReqStatus
      */
     public function setDbStatusCode($dbStatusCode)
     {
-      $this->dbStatusCode = $dbStatusCode;
-      return $this;
+        $this->dbStatusCode = $dbStatusCode;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbStatusMessage()
     {
-      return $this->dbStatusMessage;
+        return $this->dbStatusMessage;
     }
+
 
     /**
      * @param string $dbStatusMessage
@@ -64,17 +50,19 @@ class tDbReqStatus
      */
     public function setDbStatusMessage($dbStatusMessage)
     {
-      $this->dbStatusMessage = $dbStatusMessage;
-      return $this;
+        $this->dbStatusMessage = $dbStatusMessage;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbStatusRefNumber()
     {
-      return $this->dbStatusRefNumber;
+        return $this->dbStatusRefNumber;
     }
+
 
     /**
      * @param string $dbStatusRefNumber
@@ -82,8 +70,8 @@ class tDbReqStatus
      */
     public function setDbStatusRefNumber($dbStatusRefNumber)
     {
-      $this->dbStatusRefNumber = $dbStatusRefNumber;
-      return $this;
+        $this->dbStatusRefNumber = $dbStatusRefNumber;
+        return $this;
     }
 
 }

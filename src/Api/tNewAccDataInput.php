@@ -6,41 +6,6 @@ class tNewAccDataInput
 {
 
     /**
-     * @var tDbOwnerInfo $dbOwnerInfo
-     */
-    protected $dbOwnerInfo = null;
-
-    /**
-     * @var tDbUserInfo $dbUserInfo
-     */
-    protected $dbUserInfo = null;
-
-    /**
-     * @var boolean $dbFeePaid
-     */
-    protected $dbFeePaid = null;
-
-    /**
-     * @var boolean $dbVirtual
-     */
-    protected $dbVirtual = null;
-
-    /**
-     * @var string $email
-     */
-    protected $email = null;
-
-    /**
-     * @var boolean $dbApproved
-     */
-    protected $dbApproved = null;
-
-    /**
-     * @var string $dbExternRefNumber
-     */
-    protected $dbExternRefNumber = null;
-
-    /**
      * @param tDbOwnerInfo $dbOwnerInfo
      * @param tDbUserInfo $dbUserInfo
      * @param boolean $dbFeePaid
@@ -49,24 +14,19 @@ class tNewAccDataInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbOwnerInfo = null, $dbUserInfo = null, $dbFeePaid = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct(protected $dbOwnerInfo = null, protected $dbUserInfo = null, protected $dbFeePaid = null, protected $dbVirtual = null, protected $email = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbUserInfo = $dbUserInfo;
-      $this->dbFeePaid = $dbFeePaid;
-      $this->dbVirtual = $dbVirtual;
-      $this->email = $email;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
     }
+
 
     /**
      * @return tDbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
+
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -74,17 +34,19 @@ class tNewAccDataInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
+
 
     /**
      * @return tDbUserInfo
      */
     public function getDbUserInfo()
     {
-      return $this->dbUserInfo;
+        return $this->dbUserInfo;
     }
+
 
     /**
      * @param tDbUserInfo $dbUserInfo
@@ -92,17 +54,19 @@ class tNewAccDataInput
      */
     public function setDbUserInfo($dbUserInfo)
     {
-      $this->dbUserInfo = $dbUserInfo;
-      return $this;
+        $this->dbUserInfo = $dbUserInfo;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbFeePaid()
     {
-      return $this->dbFeePaid;
+        return $this->dbFeePaid;
     }
+
 
     /**
      * @param boolean $dbFeePaid
@@ -110,17 +74,19 @@ class tNewAccDataInput
      */
     public function setDbFeePaid($dbFeePaid)
     {
-      $this->dbFeePaid = $dbFeePaid;
-      return $this;
+        $this->dbFeePaid = $dbFeePaid;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbVirtual()
     {
-      return $this->dbVirtual;
+        return $this->dbVirtual;
     }
+
 
     /**
      * @param boolean $dbVirtual
@@ -128,17 +94,19 @@ class tNewAccDataInput
      */
     public function setDbVirtual($dbVirtual)
     {
-      $this->dbVirtual = $dbVirtual;
-      return $this;
+        $this->dbVirtual = $dbVirtual;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getEmail()
     {
-      return $this->email;
+        return $this->email;
     }
+
 
     /**
      * @param string $email
@@ -146,17 +114,19 @@ class tNewAccDataInput
      */
     public function setEmail($email)
     {
-      $this->email = $email;
-      return $this;
+        $this->email = $email;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
+
 
     /**
      * @param boolean $dbApproved
@@ -164,17 +134,19 @@ class tNewAccDataInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
+
 
     /**
      * @param string $dbExternRefNumber
@@ -182,8 +154,8 @@ class tNewAccDataInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
 
 }

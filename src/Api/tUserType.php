@@ -4,13 +4,40 @@ namespace Defr\CzechDataBox\Api;
 
 class tUserType
 {
-    const __default = 'PRIMARY_USER';
-    const PRIMARY_USER = 'PRIMARY_USER';
-    const ENTRUSTED_USER = 'ENTRUSTED_USER';
-    const ADMINISTRATOR = 'ADMINISTRATOR';
-    const OFFICIAL = 'OFFICIAL';
-    const OFFICIAL_CERT = 'OFFICIAL_CERT';
-    const LIQUIDATOR = 'LIQUIDATOR';
+    /**
+     * @var string
+     */
+    public const __DEFAULT = 'PRIMARY_USER';
+
+    /**
+     * @var string
+     */
+    public const PRIMARY_USER = 'PRIMARY_USER';
+
+    /**
+     * @var string
+     */
+    public const ENTRUSTED_USER = 'ENTRUSTED_USER';
+
+    /**
+     * @var string
+     */
+    public const ADMINISTRATOR = 'ADMINISTRATOR';
+
+    /**
+     * @var string
+     */
+    public const OFFICIAL = 'OFFICIAL';
+
+    /**
+     * @var string
+     */
+    public const OFFICIAL_CERT = 'OFFICIAL_CERT';
+
+    /**
+     * @var string
+     */
+    public const LIQUIDATOR = 'LIQUIDATOR';
 
 
 }

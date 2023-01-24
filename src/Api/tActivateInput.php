@@ -5,15 +5,9 @@ namespace Defr\CzechDataBox\Api;
 class tActivateInput
 {
 
-    /**
-     * @var tDbAccessDataId $dbAccessDataId
-     */
-    protected $dbAccessDataId = null;
+    protected tDbAccessDataId $dbAccessDataId = null;
 
-    /**
-     * @var tIdDb $dbID
-     */
-    protected $dbID = null;
+    protected tIdDb $dbID = null;
 
     /**
      * @param tDbAccessDataId $dbAccessDataId
@@ -21,17 +15,19 @@ class tActivateInput
      */
     public function __construct($dbAccessDataId = null, $dbID = null)
     {
-      $this->dbAccessDataId = $dbAccessDataId;
-      $this->dbID = $dbID;
+        $this->dbAccessDataId = $dbAccessDataId;
+        $this->dbID = $dbID;
     }
+
 
     /**
      * @return tDbAccessDataId
      */
     public function getDbAccessDataId()
     {
-      return $this->dbAccessDataId;
+        return $this->dbAccessDataId;
     }
+
 
     /**
      * @param tDbAccessDataId $dbAccessDataId
@@ -39,17 +35,19 @@ class tActivateInput
      */
     public function setDbAccessDataId($dbAccessDataId)
     {
-      $this->dbAccessDataId = $dbAccessDataId;
-      return $this;
+        $this->dbAccessDataId = $dbAccessDataId;
+        return $this;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getDbID()
     {
-      return $this->dbID;
+        return $this->dbID;
     }
+
 
     /**
      * @param tIdDb $dbID
@@ -57,8 +55,8 @@ class tActivateInput
      */
     public function setDbID($dbID)
     {
-      $this->dbID = $dbID;
-      return $this;
+        $this->dbID = $dbID;
+        return $this;
     }
 
 }

@@ -6,32 +6,22 @@ class tGetStateChangesOutput
 {
 
     /**
-     * @var tStateChangesArray $dmRecords
-     */
-    protected $dmRecords = null;
-
-    /**
-     * @var tStatus $dmStatus
-     */
-    protected $dmStatus = null;
-
-    /**
      * @param tStateChangesArray $dmRecords
      * @param tStatus $dmStatus
      */
-    public function __construct($dmRecords = null, $dmStatus = null)
+    public function __construct(protected $dmRecords = null, protected $dmStatus = null)
     {
-      $this->dmRecords = $dmRecords;
-      $this->dmStatus = $dmStatus;
     }
+
 
     /**
      * @return tStateChangesArray
      */
     public function getDmRecords()
     {
-      return $this->dmRecords;
+        return $this->dmRecords;
     }
+
 
     /**
      * @param tStateChangesArray $dmRecords
@@ -39,17 +29,19 @@ class tGetStateChangesOutput
      */
     public function setDmRecords($dmRecords)
     {
-      $this->dmRecords = $dmRecords;
-      return $this;
+        $this->dmRecords = $dmRecords;
+        return $this;
     }
+
 
     /**
      * @return tStatus
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
+
 
     /**
      * @param tStatus $dmStatus
@@ -57,8 +49,8 @@ class tGetStateChangesOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
 
 }

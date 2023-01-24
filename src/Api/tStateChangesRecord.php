@@ -2,43 +2,35 @@
 
 namespace Defr\CzechDataBox\Api;
 
+use DateTime;
+use Exception;
+
 class tStateChangesRecord
 {
 
-    /**
-     * @var tIdDm $dmID
-     */
-    protected $dmID = null;
+    protected tIdDm $dmID = null;
 
-    /**
-     * @var \DateTime $dmEventTime
-     */
-    protected $dmEventTime = null;
-
-    /**
-     * @var int $dmMessageStatus
-     */
-    protected $dmMessageStatus = null;
+    protected DateTime $dmEventTime = null;
 
     /**
      * @param tIdDm $dmID
-     * @param \DateTime $dmEventTime
      * @param int $dmMessageStatus
      */
-    public function __construct($dmID = null, \DateTime $dmEventTime = null, $dmMessageStatus = null)
+    public function __construct($dmID = null, DateTime $dmEventTime = null, protected $dmMessageStatus = null)
     {
-      $this->dmID = $dmID;
-      $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
-      $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmID = $dmID;
+        $this->dmEventTime = $dmEventTime !== null ? $dmEventTime->format(DateTime::ATOM) : null;
     }
+
 
     /**
      * @return tIdDm
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
+
 
     /**
      * @param tIdDm $dmID
@@ -46,43 +38,46 @@ class tStateChangesRecord
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
+
 
     /**
      * @return \DateTime
      */
     public function getDmEventTime()
     {
-      if ($this->dmEventTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmEventTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmEventTime == null) {
+            return null;
+        } else {
+            try {
+                return new DateTime($this->dmEventTime);
+            } catch (Exception) {
+                return false;
+            }
         }
-      }
     }
 
+
     /**
-     * @param \DateTime $dmEventTime
      * @return \Defr\CzechDataBox\Api\tStateChangesRecord
      */
-    public function setDmEventTime(\DateTime $dmEventTime)
+    public function setDmEventTime(DateTime $dmEventTime)
     {
-      $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmEventTime = $dmEventTime->format(DateTime::ATOM);
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getDmMessageStatus()
     {
-      return $this->dmMessageStatus;
+        return $this->dmMessageStatus;
     }
+
 
     /**
      * @param int $dmMessageStatus
@@ -90,8 +85,8 @@ class tStateChangesRecord
      */
     public function setDmMessageStatus($dmMessageStatus)
     {
-      $this->dmMessageStatus = $dmMessageStatus;
-      return $this;
+        $this->dmMessageStatus = $dmMessageStatus;
+        return $this;
     }
 
 }

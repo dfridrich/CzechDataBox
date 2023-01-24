@@ -6,53 +6,25 @@ class tUpdDBUserInput
 {
 
     /**
-     * @var tDbOwnerInfo $dbOwnerInfo
-     */
-    protected $dbOwnerInfo = null;
-
-    /**
-     * @var tDbUserInfo $dbOldUserInfo
-     */
-    protected $dbOldUserInfo = null;
-
-    /**
-     * @var tDbUserInfo $dbNewUserInfo
-     */
-    protected $dbNewUserInfo = null;
-
-    /**
-     * @var boolean $dbApproved
-     */
-    protected $dbApproved = null;
-
-    /**
-     * @var string $dbExternRefNumber
-     */
-    protected $dbExternRefNumber = null;
-
-    /**
      * @param tDbOwnerInfo $dbOwnerInfo
      * @param tDbUserInfo $dbOldUserInfo
      * @param tDbUserInfo $dbNewUserInfo
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbOwnerInfo = null, $dbOldUserInfo = null, $dbNewUserInfo = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct(protected $dbOwnerInfo = null, protected $dbOldUserInfo = null, protected $dbNewUserInfo = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbOldUserInfo = $dbOldUserInfo;
-      $this->dbNewUserInfo = $dbNewUserInfo;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
     }
+
 
     /**
      * @return tDbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
+
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -60,17 +32,19 @@ class tUpdDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
+
 
     /**
      * @return tDbUserInfo
      */
     public function getDbOldUserInfo()
     {
-      return $this->dbOldUserInfo;
+        return $this->dbOldUserInfo;
     }
+
 
     /**
      * @param tDbUserInfo $dbOldUserInfo
@@ -78,17 +52,19 @@ class tUpdDBUserInput
      */
     public function setDbOldUserInfo($dbOldUserInfo)
     {
-      $this->dbOldUserInfo = $dbOldUserInfo;
-      return $this;
+        $this->dbOldUserInfo = $dbOldUserInfo;
+        return $this;
     }
+
 
     /**
      * @return tDbUserInfo
      */
     public function getDbNewUserInfo()
     {
-      return $this->dbNewUserInfo;
+        return $this->dbNewUserInfo;
     }
+
 
     /**
      * @param tDbUserInfo $dbNewUserInfo
@@ -96,17 +72,19 @@ class tUpdDBUserInput
      */
     public function setDbNewUserInfo($dbNewUserInfo)
     {
-      $this->dbNewUserInfo = $dbNewUserInfo;
-      return $this;
+        $this->dbNewUserInfo = $dbNewUserInfo;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
+
 
     /**
      * @param boolean $dbApproved
@@ -114,17 +92,19 @@ class tUpdDBUserInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
+
 
     /**
      * @param string $dbExternRefNumber
@@ -132,8 +112,8 @@ class tUpdDBUserInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
 
 }

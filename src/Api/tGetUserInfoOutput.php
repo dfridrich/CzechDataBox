@@ -6,32 +6,22 @@ class tGetUserInfoOutput
 {
 
     /**
-     * @var tDbUserInfo $dbUserInfo
-     */
-    protected $dbUserInfo = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
-
-    /**
      * @param tDbUserInfo $dbUserInfo
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbUserInfo = null, $dbStatus = null)
+    public function __construct(protected $dbUserInfo = null, protected $dbStatus = null)
     {
-      $this->dbUserInfo = $dbUserInfo;
-      $this->dbStatus = $dbStatus;
     }
+
 
     /**
      * @return tDbUserInfo
      */
     public function getDbUserInfo()
     {
-      return $this->dbUserInfo;
+        return $this->dbUserInfo;
     }
+
 
     /**
      * @param tDbUserInfo $dbUserInfo
@@ -39,17 +29,19 @@ class tGetUserInfoOutput
      */
     public function setDbUserInfo($dbUserInfo)
     {
-      $this->dbUserInfo = $dbUserInfo;
-      return $this;
+        $this->dbUserInfo = $dbUserInfo;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -57,8 +49,8 @@ class tGetUserInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

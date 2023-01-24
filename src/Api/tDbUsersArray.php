@@ -6,25 +6,21 @@ class tDbUsersArray
 {
 
     /**
-     * @var tDbUserInfo $dbUserInfo
-     */
-    protected $dbUserInfo = null;
-
-    /**
      * @param tDbUserInfo $dbUserInfo
      */
-    public function __construct($dbUserInfo = null)
+    public function __construct(protected $dbUserInfo = null)
     {
-      $this->dbUserInfo = $dbUserInfo;
     }
+
 
     /**
      * @return tDbUserInfo
      */
     public function getDbUserInfo()
     {
-      return $this->dbUserInfo;
+        return $this->dbUserInfo;
     }
+
 
     /**
      * @param tDbUserInfo $dbUserInfo
@@ -32,8 +28,8 @@ class tDbUsersArray
      */
     public function setDbUserInfo($dbUserInfo)
     {
-      $this->dbUserInfo = $dbUserInfo;
-      return $this;
+        $this->dbUserInfo = $dbUserInfo;
+        return $this;
     }
 
 }

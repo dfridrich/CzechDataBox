@@ -6,32 +6,22 @@ class tPDZInfoOutput
 {
 
     /**
-     * @var tPDZRecArray $dbPDZRecords
-     */
-    protected $dbPDZRecords = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
-
-    /**
      * @param tPDZRecArray $dbPDZRecords
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbPDZRecords = null, $dbStatus = null)
+    public function __construct(protected $dbPDZRecords = null, protected $dbStatus = null)
     {
-      $this->dbPDZRecords = $dbPDZRecords;
-      $this->dbStatus = $dbStatus;
     }
+
 
     /**
      * @return tPDZRecArray
      */
     public function getDbPDZRecords()
     {
-      return $this->dbPDZRecords;
+        return $this->dbPDZRecords;
     }
+
 
     /**
      * @param tPDZRecArray $dbPDZRecords
@@ -39,17 +29,19 @@ class tPDZInfoOutput
      */
     public function setDbPDZRecords($dbPDZRecords)
     {
-      $this->dbPDZRecords = $dbPDZRecords;
-      return $this;
+        $this->dbPDZRecords = $dbPDZRecords;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -57,8 +49,8 @@ class tPDZInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

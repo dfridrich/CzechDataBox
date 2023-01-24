@@ -5,25 +5,7 @@ namespace Defr\CzechDataBox\Api;
 class tDisableExternallyInput
 {
 
-    /**
-     * @var tDbOwnerInfo $dbOwnerInfo
-     */
-    protected $dbOwnerInfo = null;
-
-    /**
-     * @var date $dbOwnerDisableDate
-     */
-    protected $dbOwnerDisableDate = null;
-
-    /**
-     * @var boolean $dbApproved
-     */
-    protected $dbApproved = null;
-
-    /**
-     * @var string $dbExternRefNumber
-     */
-    protected $dbExternRefNumber = null;
+    protected date $dbOwnerDisableDate = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -31,21 +13,20 @@ class tDisableExternallyInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbOwnerInfo = null, $dbOwnerDisableDate = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct(protected $dbOwnerInfo = null, $dbOwnerDisableDate = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbOwnerDisableDate = $dbOwnerDisableDate;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbOwnerDisableDate = $dbOwnerDisableDate;
     }
+
 
     /**
      * @return tDbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
+
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -53,17 +34,19 @@ class tDisableExternallyInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
+
 
     /**
      * @return date
      */
     public function getDbOwnerDisableDate()
     {
-      return $this->dbOwnerDisableDate;
+        return $this->dbOwnerDisableDate;
     }
+
 
     /**
      * @param date $dbOwnerDisableDate
@@ -71,17 +54,19 @@ class tDisableExternallyInput
      */
     public function setDbOwnerDisableDate($dbOwnerDisableDate)
     {
-      $this->dbOwnerDisableDate = $dbOwnerDisableDate;
-      return $this;
+        $this->dbOwnerDisableDate = $dbOwnerDisableDate;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
+
 
     /**
      * @param boolean $dbApproved
@@ -89,17 +74,19 @@ class tDisableExternallyInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
+
 
     /**
      * @param string $dbExternRefNumber
@@ -107,8 +94,8 @@ class tDisableExternallyInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
 
 }

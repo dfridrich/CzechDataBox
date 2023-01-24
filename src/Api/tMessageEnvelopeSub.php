@@ -5,110 +5,19 @@ namespace Defr\CzechDataBox\Api;
 class tMessageEnvelopeSub
 {
 
-    /**
-     * @var string $dmSenderOrgUnit
-     */
-    protected $dmSenderOrgUnit = null;
+    protected tIdDb $dbIDRecipient = null;
 
-    /**
-     * @var int $dmSenderOrgUnitNum
-     */
-    protected $dmSenderOrgUnitNum = null;
+    protected dmAnnotation $dmAnnotation = null;
 
-    /**
-     * @var tIdDb $dbIDRecipient
-     */
-    protected $dbIDRecipient = null;
+    protected dmRecipientRefNumber $dmRecipientRefNumber = null;
 
-    /**
-     * @var string $dmRecipientOrgUnit
-     */
-    protected $dmRecipientOrgUnit = null;
+    protected dmSenderRefNumber $dmSenderRefNumber = null;
 
-    /**
-     * @var int $dmRecipientOrgUnitNum
-     */
-    protected $dmRecipientOrgUnitNum = null;
+    protected dmRecipientIdent $dmRecipientIdent = null;
 
-    /**
-     * @var string $dmToHands
-     */
-    protected $dmToHands = null;
+    protected dmSenderIdent $dmSenderIdent = null;
 
-    /**
-     * @var dmAnnotation $dmAnnotation
-     */
-    protected $dmAnnotation = null;
-
-    /**
-     * @var dmRecipientRefNumber $dmRecipientRefNumber
-     */
-    protected $dmRecipientRefNumber = null;
-
-    /**
-     * @var dmSenderRefNumber $dmSenderRefNumber
-     */
-    protected $dmSenderRefNumber = null;
-
-    /**
-     * @var dmRecipientIdent $dmRecipientIdent
-     */
-    protected $dmRecipientIdent = null;
-
-    /**
-     * @var dmSenderIdent $dmSenderIdent
-     */
-    protected $dmSenderIdent = null;
-
-    /**
-     * @var int $dmLegalTitleLaw
-     */
-    protected $dmLegalTitleLaw = null;
-
-    /**
-     * @var int $dmLegalTitleYear
-     */
-    protected $dmLegalTitleYear = null;
-
-    /**
-     * @var string $dmLegalTitleSect
-     */
-    protected $dmLegalTitleSect = null;
-
-    /**
-     * @var string $dmLegalTitlePar
-     */
-    protected $dmLegalTitlePar = null;
-
-    /**
-     * @var string $dmLegalTitlePoint
-     */
-    protected $dmLegalTitlePoint = null;
-
-    /**
-     * @var boolean $dmPersonalDelivery
-     */
-    protected $dmPersonalDelivery = null;
-
-    /**
-     * @var boolean $dmAllowSubstDelivery
-     */
-    protected $dmAllowSubstDelivery = null;
-
-    /**
-     * @var boolean $dmOVM
-     */
-    protected $dmOVM = null;
-
-    /**
-     * @var boolean $dmPublishOwnID
-     */
-    protected $dmPublishOwnID = null;
-
-    /**
-     * @var tDmType $dmType
-     */
-    protected $dmType = null;
+    protected tDmType $dmType = null;
 
     /**
      * @param string $dmSenderOrgUnit
@@ -133,38 +42,26 @@ class tMessageEnvelopeSub
      * @param boolean $dmPublishOwnID
      * @param tDmType $dmType
      */
-    public function __construct($dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmOVM = null, $dmPublishOwnID = null, $dmType = null)
+    public function __construct(protected $dmSenderOrgUnit = null, protected $dmSenderOrgUnitNum = null, $dbIDRecipient = null, protected $dmRecipientOrgUnit = null, protected $dmRecipientOrgUnitNum = null, protected $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, protected $dmLegalTitleLaw = null, protected $dmLegalTitleYear = null, protected $dmLegalTitleSect = null, protected $dmLegalTitlePar = null, protected $dmLegalTitlePoint = null, protected $dmPersonalDelivery = null, protected $dmAllowSubstDelivery = null, protected $dmOVM = null, protected $dmPublishOwnID = null, $dmType = null)
     {
-      $this->dmSenderOrgUnit = $dmSenderOrgUnit;
-      $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
-      $this->dbIDRecipient = $dbIDRecipient;
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      $this->dmToHands = $dmToHands;
-      $this->dmAnnotation = $dmAnnotation;
-      $this->dmRecipientRefNumber = $dmRecipientRefNumber;
-      $this->dmSenderRefNumber = $dmSenderRefNumber;
-      $this->dmRecipientIdent = $dmRecipientIdent;
-      $this->dmSenderIdent = $dmSenderIdent;
-      $this->dmLegalTitleLaw = $dmLegalTitleLaw;
-      $this->dmLegalTitleYear = $dmLegalTitleYear;
-      $this->dmLegalTitleSect = $dmLegalTitleSect;
-      $this->dmLegalTitlePar = $dmLegalTitlePar;
-      $this->dmLegalTitlePoint = $dmLegalTitlePoint;
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
-      $this->dmOVM = $dmOVM;
-      $this->dmPublishOwnID = $dmPublishOwnID;
-      $this->dmType = $dmType;
+        $this->dbIDRecipient = $dbIDRecipient;
+        $this->dmAnnotation = $dmAnnotation;
+        $this->dmRecipientRefNumber = $dmRecipientRefNumber;
+        $this->dmSenderRefNumber = $dmSenderRefNumber;
+        $this->dmRecipientIdent = $dmRecipientIdent;
+        $this->dmSenderIdent = $dmSenderIdent;
+        $this->dmType = $dmType;
     }
+
 
     /**
      * @return string
      */
     public function getDmSenderOrgUnit()
     {
-      return $this->dmSenderOrgUnit;
+        return $this->dmSenderOrgUnit;
     }
+
 
     /**
      * @param string $dmSenderOrgUnit
@@ -172,17 +69,19 @@ class tMessageEnvelopeSub
      */
     public function setDmSenderOrgUnit($dmSenderOrgUnit)
     {
-      $this->dmSenderOrgUnit = $dmSenderOrgUnit;
-      return $this;
+        $this->dmSenderOrgUnit = $dmSenderOrgUnit;
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getDmSenderOrgUnitNum()
     {
-      return $this->dmSenderOrgUnitNum;
+        return $this->dmSenderOrgUnitNum;
     }
+
 
     /**
      * @param int $dmSenderOrgUnitNum
@@ -190,17 +89,19 @@ class tMessageEnvelopeSub
      */
     public function setDmSenderOrgUnitNum($dmSenderOrgUnitNum)
     {
-      $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
-      return $this;
+        $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
+        return $this;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getDbIDRecipient()
     {
-      return $this->dbIDRecipient;
+        return $this->dbIDRecipient;
     }
+
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -208,17 +109,19 @@ class tMessageEnvelopeSub
      */
     public function setDbIDRecipient($dbIDRecipient)
     {
-      $this->dbIDRecipient = $dbIDRecipient;
-      return $this;
+        $this->dbIDRecipient = $dbIDRecipient;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmRecipientOrgUnit()
     {
-      return $this->dmRecipientOrgUnit;
+        return $this->dmRecipientOrgUnit;
     }
+
 
     /**
      * @param string $dmRecipientOrgUnit
@@ -226,17 +129,19 @@ class tMessageEnvelopeSub
      */
     public function setDmRecipientOrgUnit($dmRecipientOrgUnit)
     {
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      return $this;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getDmRecipientOrgUnitNum()
     {
-      return $this->dmRecipientOrgUnitNum;
+        return $this->dmRecipientOrgUnitNum;
     }
+
 
     /**
      * @param int $dmRecipientOrgUnitNum
@@ -244,17 +149,19 @@ class tMessageEnvelopeSub
      */
     public function setDmRecipientOrgUnitNum($dmRecipientOrgUnitNum)
     {
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      return $this;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmToHands()
     {
-      return $this->dmToHands;
+        return $this->dmToHands;
     }
+
 
     /**
      * @param string $dmToHands
@@ -262,17 +169,19 @@ class tMessageEnvelopeSub
      */
     public function setDmToHands($dmToHands)
     {
-      $this->dmToHands = $dmToHands;
-      return $this;
+        $this->dmToHands = $dmToHands;
+        return $this;
     }
+
 
     /**
      * @return dmAnnotation
      */
     public function getDmAnnotation()
     {
-      return $this->dmAnnotation;
+        return $this->dmAnnotation;
     }
+
 
     /**
      * @param dmAnnotation $dmAnnotation
@@ -280,17 +189,19 @@ class tMessageEnvelopeSub
      */
     public function setDmAnnotation($dmAnnotation)
     {
-      $this->dmAnnotation = $dmAnnotation;
-      return $this;
+        $this->dmAnnotation = $dmAnnotation;
+        return $this;
     }
+
 
     /**
      * @return dmRecipientRefNumber
      */
     public function getDmRecipientRefNumber()
     {
-      return $this->dmRecipientRefNumber;
+        return $this->dmRecipientRefNumber;
     }
+
 
     /**
      * @param dmRecipientRefNumber $dmRecipientRefNumber
@@ -298,17 +209,19 @@ class tMessageEnvelopeSub
      */
     public function setDmRecipientRefNumber($dmRecipientRefNumber)
     {
-      $this->dmRecipientRefNumber = $dmRecipientRefNumber;
-      return $this;
+        $this->dmRecipientRefNumber = $dmRecipientRefNumber;
+        return $this;
     }
+
 
     /**
      * @return dmSenderRefNumber
      */
     public function getDmSenderRefNumber()
     {
-      return $this->dmSenderRefNumber;
+        return $this->dmSenderRefNumber;
     }
+
 
     /**
      * @param dmSenderRefNumber $dmSenderRefNumber
@@ -316,17 +229,19 @@ class tMessageEnvelopeSub
      */
     public function setDmSenderRefNumber($dmSenderRefNumber)
     {
-      $this->dmSenderRefNumber = $dmSenderRefNumber;
-      return $this;
+        $this->dmSenderRefNumber = $dmSenderRefNumber;
+        return $this;
     }
+
 
     /**
      * @return dmRecipientIdent
      */
     public function getDmRecipientIdent()
     {
-      return $this->dmRecipientIdent;
+        return $this->dmRecipientIdent;
     }
+
 
     /**
      * @param dmRecipientIdent $dmRecipientIdent
@@ -334,17 +249,19 @@ class tMessageEnvelopeSub
      */
     public function setDmRecipientIdent($dmRecipientIdent)
     {
-      $this->dmRecipientIdent = $dmRecipientIdent;
-      return $this;
+        $this->dmRecipientIdent = $dmRecipientIdent;
+        return $this;
     }
+
 
     /**
      * @return dmSenderIdent
      */
     public function getDmSenderIdent()
     {
-      return $this->dmSenderIdent;
+        return $this->dmSenderIdent;
     }
+
 
     /**
      * @param dmSenderIdent $dmSenderIdent
@@ -352,17 +269,19 @@ class tMessageEnvelopeSub
      */
     public function setDmSenderIdent($dmSenderIdent)
     {
-      $this->dmSenderIdent = $dmSenderIdent;
-      return $this;
+        $this->dmSenderIdent = $dmSenderIdent;
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getDmLegalTitleLaw()
     {
-      return $this->dmLegalTitleLaw;
+        return $this->dmLegalTitleLaw;
     }
+
 
     /**
      * @param int $dmLegalTitleLaw
@@ -370,17 +289,19 @@ class tMessageEnvelopeSub
      */
     public function setDmLegalTitleLaw($dmLegalTitleLaw)
     {
-      $this->dmLegalTitleLaw = $dmLegalTitleLaw;
-      return $this;
+        $this->dmLegalTitleLaw = $dmLegalTitleLaw;
+        return $this;
     }
+
 
     /**
      * @return int
      */
     public function getDmLegalTitleYear()
     {
-      return $this->dmLegalTitleYear;
+        return $this->dmLegalTitleYear;
     }
+
 
     /**
      * @param int $dmLegalTitleYear
@@ -388,17 +309,19 @@ class tMessageEnvelopeSub
      */
     public function setDmLegalTitleYear($dmLegalTitleYear)
     {
-      $this->dmLegalTitleYear = $dmLegalTitleYear;
-      return $this;
+        $this->dmLegalTitleYear = $dmLegalTitleYear;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmLegalTitleSect()
     {
-      return $this->dmLegalTitleSect;
+        return $this->dmLegalTitleSect;
     }
+
 
     /**
      * @param string $dmLegalTitleSect
@@ -406,17 +329,19 @@ class tMessageEnvelopeSub
      */
     public function setDmLegalTitleSect($dmLegalTitleSect)
     {
-      $this->dmLegalTitleSect = $dmLegalTitleSect;
-      return $this;
+        $this->dmLegalTitleSect = $dmLegalTitleSect;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmLegalTitlePar()
     {
-      return $this->dmLegalTitlePar;
+        return $this->dmLegalTitlePar;
     }
+
 
     /**
      * @param string $dmLegalTitlePar
@@ -424,17 +349,19 @@ class tMessageEnvelopeSub
      */
     public function setDmLegalTitlePar($dmLegalTitlePar)
     {
-      $this->dmLegalTitlePar = $dmLegalTitlePar;
-      return $this;
+        $this->dmLegalTitlePar = $dmLegalTitlePar;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmLegalTitlePoint()
     {
-      return $this->dmLegalTitlePoint;
+        return $this->dmLegalTitlePoint;
     }
+
 
     /**
      * @param string $dmLegalTitlePoint
@@ -442,17 +369,19 @@ class tMessageEnvelopeSub
      */
     public function setDmLegalTitlePoint($dmLegalTitlePoint)
     {
-      $this->dmLegalTitlePoint = $dmLegalTitlePoint;
-      return $this;
+        $this->dmLegalTitlePoint = $dmLegalTitlePoint;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDmPersonalDelivery()
     {
-      return $this->dmPersonalDelivery;
+        return $this->dmPersonalDelivery;
     }
+
 
     /**
      * @param boolean $dmPersonalDelivery
@@ -460,17 +389,19 @@ class tMessageEnvelopeSub
      */
     public function setDmPersonalDelivery($dmPersonalDelivery)
     {
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      return $this;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDmAllowSubstDelivery()
     {
-      return $this->dmAllowSubstDelivery;
+        return $this->dmAllowSubstDelivery;
     }
+
 
     /**
      * @param boolean $dmAllowSubstDelivery
@@ -478,17 +409,19 @@ class tMessageEnvelopeSub
      */
     public function setDmAllowSubstDelivery($dmAllowSubstDelivery)
     {
-      $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
-      return $this;
+        $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDmOVM()
     {
-      return $this->dmOVM;
+        return $this->dmOVM;
     }
+
 
     /**
      * @param boolean $dmOVM
@@ -496,17 +429,19 @@ class tMessageEnvelopeSub
      */
     public function setDmOVM($dmOVM)
     {
-      $this->dmOVM = $dmOVM;
-      return $this;
+        $this->dmOVM = $dmOVM;
+        return $this;
     }
+
 
     /**
      * @return boolean
      */
     public function getDmPublishOwnID()
     {
-      return $this->dmPublishOwnID;
+        return $this->dmPublishOwnID;
     }
+
 
     /**
      * @param boolean $dmPublishOwnID
@@ -514,17 +449,19 @@ class tMessageEnvelopeSub
      */
     public function setDmPublishOwnID($dmPublishOwnID)
     {
-      $this->dmPublishOwnID = $dmPublishOwnID;
-      return $this;
+        $this->dmPublishOwnID = $dmPublishOwnID;
+        return $this;
     }
+
 
     /**
      * @return tDmType
      */
     public function getDmType()
     {
-      return $this->dmType;
+        return $this->dmType;
     }
+
 
     /**
      * @param tDmType $dmType
@@ -532,8 +469,8 @@ class tMessageEnvelopeSub
      */
     public function setDmType($dmType)
     {
-      $this->dmType = $dmType;
-      return $this;
+        $this->dmType = $dmType;
+        return $this;
     }
 
 }

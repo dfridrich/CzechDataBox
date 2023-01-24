@@ -6,25 +6,21 @@ class tEventsArray
 {
 
     /**
-     * @var tEvent $dmEvent
-     */
-    protected $dmEvent = null;
-
-    /**
      * @param tEvent $dmEvent
      */
-    public function __construct($dmEvent = null)
+    public function __construct(protected $dmEvent = null)
     {
-      $this->dmEvent = $dmEvent;
     }
+
 
     /**
      * @return tEvent
      */
     public function getDmEvent()
     {
-      return $this->dmEvent;
+        return $this->dmEvent;
     }
+
 
     /**
      * @param tEvent $dmEvent
@@ -32,8 +28,8 @@ class tEventsArray
      */
     public function setDmEvent($dmEvent)
     {
-      $this->dmEvent = $dmEvent;
-      return $this;
+        $this->dmEvent = $dmEvent;
+        return $this;
     }
 
 }

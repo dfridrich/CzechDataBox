@@ -5,35 +5,7 @@ namespace Defr\CzechDataBox\Api;
 class dmFile
 {
 
-    /**
-     * @var string $dmMimeType
-     */
-    protected $dmMimeType = null;
-
-    /**
-     * @var anonymous6 $dmFileMetaType
-     */
-    protected $dmFileMetaType = null;
-
-    /**
-     * @var string $dmFileGuid
-     */
-    protected $dmFileGuid = null;
-
-    /**
-     * @var string $dmUpFileGuid
-     */
-    protected $dmUpFileGuid = null;
-
-    /**
-     * @var string $dmFileDescr
-     */
-    protected $dmFileDescr = null;
-
-    /**
-     * @var string $dmFormat
-     */
-    protected $dmFormat = null;
+    protected anonymous6 $dmFileMetaType = null;
 
     /**
      * @param string $dmMimeType
@@ -43,23 +15,20 @@ class dmFile
      * @param string $dmFileDescr
      * @param string $dmFormat
      */
-    public function __construct($dmMimeType = null, $dmFileMetaType = null, $dmFileGuid = null, $dmUpFileGuid = null, $dmFileDescr = null, $dmFormat = null)
+    public function __construct(protected $dmMimeType = null, $dmFileMetaType = null, protected $dmFileGuid = null, protected $dmUpFileGuid = null, protected $dmFileDescr = null, protected $dmFormat = null)
     {
-      $this->dmMimeType = $dmMimeType;
-      $this->dmFileMetaType = $dmFileMetaType;
-      $this->dmFileGuid = $dmFileGuid;
-      $this->dmUpFileGuid = $dmUpFileGuid;
-      $this->dmFileDescr = $dmFileDescr;
-      $this->dmFormat = $dmFormat;
+        $this->dmFileMetaType = $dmFileMetaType;
     }
+
 
     /**
      * @return string
      */
     public function getDmMimeType()
     {
-      return $this->dmMimeType;
+        return $this->dmMimeType;
     }
+
 
     /**
      * @param string $dmMimeType
@@ -67,17 +36,19 @@ class dmFile
      */
     public function setDmMimeType($dmMimeType)
     {
-      $this->dmMimeType = $dmMimeType;
-      return $this;
+        $this->dmMimeType = $dmMimeType;
+        return $this;
     }
+
 
     /**
      * @return anonymous6
      */
     public function getDmFileMetaType()
     {
-      return $this->dmFileMetaType;
+        return $this->dmFileMetaType;
     }
+
 
     /**
      * @param anonymous6 $dmFileMetaType
@@ -85,17 +56,19 @@ class dmFile
      */
     public function setDmFileMetaType($dmFileMetaType)
     {
-      $this->dmFileMetaType = $dmFileMetaType;
-      return $this;
+        $this->dmFileMetaType = $dmFileMetaType;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmFileGuid()
     {
-      return $this->dmFileGuid;
+        return $this->dmFileGuid;
     }
+
 
     /**
      * @param string $dmFileGuid
@@ -103,17 +76,19 @@ class dmFile
      */
     public function setDmFileGuid($dmFileGuid)
     {
-      $this->dmFileGuid = $dmFileGuid;
-      return $this;
+        $this->dmFileGuid = $dmFileGuid;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmUpFileGuid()
     {
-      return $this->dmUpFileGuid;
+        return $this->dmUpFileGuid;
     }
+
 
     /**
      * @param string $dmUpFileGuid
@@ -121,17 +96,19 @@ class dmFile
      */
     public function setDmUpFileGuid($dmUpFileGuid)
     {
-      $this->dmUpFileGuid = $dmUpFileGuid;
-      return $this;
+        $this->dmUpFileGuid = $dmUpFileGuid;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmFileDescr()
     {
-      return $this->dmFileDescr;
+        return $this->dmFileDescr;
     }
+
 
     /**
      * @param string $dmFileDescr
@@ -139,17 +116,19 @@ class dmFile
      */
     public function setDmFileDescr($dmFileDescr)
     {
-      $this->dmFileDescr = $dmFileDescr;
-      return $this;
+        $this->dmFileDescr = $dmFileDescr;
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmFormat()
     {
-      return $this->dmFormat;
+        return $this->dmFormat;
     }
+
 
     /**
      * @param string $dmFormat
@@ -157,8 +136,8 @@ class dmFile
      */
     public function setDmFormat($dmFormat)
     {
-      $this->dmFormat = $dmFormat;
-      return $this;
+        $this->dmFormat = $dmFormat;
+        return $this;
     }
 
 }

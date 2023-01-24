@@ -2,62 +2,58 @@
 
 namespace Defr\CzechDataBox\Api;
 
+use DateTime;
+use Exception;
+
 class tEvent
 {
 
-    /**
-     * @var \DateTime $dmEventTime
-     */
-    protected $dmEventTime = null;
+    protected DateTime $dmEventTime = null;
 
     /**
-     * @var string $dmEventDescr
-     */
-    protected $dmEventDescr = null;
-
-    /**
-     * @param \DateTime $dmEventTime
      * @param string $dmEventDescr
      */
-    public function __construct(\DateTime $dmEventTime = null, $dmEventDescr = null)
+    public function __construct(DateTime $dmEventTime = null, protected $dmEventDescr = null)
     {
-      $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
-      $this->dmEventDescr = $dmEventDescr;
+        $this->dmEventTime = $dmEventTime !== null ? $dmEventTime->format(DateTime::ATOM) : null;
     }
+
 
     /**
      * @return \DateTime
      */
     public function getDmEventTime()
     {
-      if ($this->dmEventTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmEventTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmEventTime == null) {
+            return null;
+        } else {
+            try {
+                return new DateTime($this->dmEventTime);
+            } catch (Exception) {
+                return false;
+            }
         }
-      }
     }
 
+
     /**
-     * @param \DateTime $dmEventTime
      * @return \Defr\CzechDataBox\Api\tEvent
      */
-    public function setDmEventTime(\DateTime $dmEventTime)
+    public function setDmEventTime(DateTime $dmEventTime)
     {
-      $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmEventTime = $dmEventTime->format(DateTime::ATOM);
+        return $this;
     }
+
 
     /**
      * @return string
      */
     public function getDmEventDescr()
     {
-      return $this->dmEventDescr;
+        return $this->dmEventDescr;
     }
+
 
     /**
      * @param string $dmEventDescr
@@ -65,8 +61,8 @@ class tEvent
      */
     public function setDmEventDescr($dmEventDescr)
     {
-      $this->dmEventDescr = $dmEventDescr;
-      return $this;
+        $this->dmEventDescr = $dmEventDescr;
+        return $this;
     }
 
 }

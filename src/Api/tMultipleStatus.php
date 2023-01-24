@@ -6,25 +6,21 @@ class tMultipleStatus
 {
 
     /**
-     * @var tMStatus $dmSingleStatus
-     */
-    protected $dmSingleStatus = null;
-
-    /**
      * @param tMStatus $dmSingleStatus
      */
-    public function __construct($dmSingleStatus = null)
+    public function __construct(protected $dmSingleStatus = null)
     {
-      $this->dmSingleStatus = $dmSingleStatus;
     }
+
 
     /**
      * @return tMStatus
      */
     public function getDmSingleStatus()
     {
-      return $this->dmSingleStatus;
+        return $this->dmSingleStatus;
     }
+
 
     /**
      * @param tMStatus $dmSingleStatus
@@ -32,8 +28,8 @@ class tMultipleStatus
      */
     public function setDmSingleStatus($dmSingleStatus)
     {
-      $this->dmSingleStatus = $dmSingleStatus;
-      return $this;
+        $this->dmSingleStatus = $dmSingleStatus;
+        return $this;
     }
 
 }

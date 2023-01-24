@@ -6,25 +6,21 @@ class tRecordsArray
 {
 
     /**
-     * @var tRecord $dmRecord
-     */
-    protected $dmRecord = null;
-
-    /**
      * @param tRecord $dmRecord
      */
-    public function __construct($dmRecord = null)
+    public function __construct(protected $dmRecord = null)
     {
-      $this->dmRecord = $dmRecord;
     }
+
 
     /**
      * @return tRecord
      */
     public function getDmRecord()
     {
-      return $this->dmRecord;
+        return $this->dmRecord;
     }
+
 
     /**
      * @param tRecord $dmRecord
@@ -32,8 +28,8 @@ class tRecordsArray
      */
     public function setDmRecord($dmRecord)
     {
-      $this->dmRecord = $dmRecord;
-      return $this;
+        $this->dmRecord = $dmRecord;
+        return $this;
     }
 
 }

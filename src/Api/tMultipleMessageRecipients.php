@@ -6,25 +6,21 @@ class tMultipleMessageRecipients
 {
 
     /**
-     * @var tRecipients $dmRecipient
-     */
-    protected $dmRecipient = null;
-
-    /**
      * @param tRecipients $dmRecipient
      */
-    public function __construct($dmRecipient = null)
+    public function __construct(protected $dmRecipient = null)
     {
-      $this->dmRecipient = $dmRecipient;
     }
+
 
     /**
      * @return tRecipients
      */
     public function getDmRecipient()
     {
-      return $this->dmRecipient;
+        return $this->dmRecipient;
     }
+
 
     /**
      * @param tRecipients $dmRecipient
@@ -32,8 +28,8 @@ class tMultipleMessageRecipients
      */
     public function setDmRecipient($dmRecipient)
     {
-      $this->dmRecipient = $dmRecipient;
-      return $this;
+        $this->dmRecipient = $dmRecipient;
+        return $this;
     }
 
 }

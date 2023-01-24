@@ -5,25 +5,11 @@ namespace Defr\CzechDataBox\Api;
 class tCreateDBOutput
 {
 
-    /**
-     * @var tIdDb $dbID
-     */
-    protected $dbID = null;
+    protected tIdDb $dbID = null;
 
-    /**
-     * @var tUserID $dbUserID
-     */
-    protected $dbUserID = null;
+    protected tUserID $dbUserID = null;
 
-    /**
-     * @var tDbAccessDataId $dbAccessDataId
-     */
-    protected $dbAccessDataId = null;
-
-    /**
-     * @var tDbReqStatus $dbStatus
-     */
-    protected $dbStatus = null;
+    protected tDbAccessDataId $dbAccessDataId = null;
 
     /**
      * @param tIdDb $dbID
@@ -31,21 +17,22 @@ class tCreateDBOutput
      * @param tDbAccessDataId $dbAccessDataId
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbID = null, $dbUserID = null, $dbAccessDataId = null, $dbStatus = null)
+    public function __construct($dbID = null, $dbUserID = null, $dbAccessDataId = null, protected $dbStatus = null)
     {
-      $this->dbID = $dbID;
-      $this->dbUserID = $dbUserID;
-      $this->dbAccessDataId = $dbAccessDataId;
-      $this->dbStatus = $dbStatus;
+        $this->dbID = $dbID;
+        $this->dbUserID = $dbUserID;
+        $this->dbAccessDataId = $dbAccessDataId;
     }
+
 
     /**
      * @return tIdDb
      */
     public function getDbID()
     {
-      return $this->dbID;
+        return $this->dbID;
     }
+
 
     /**
      * @param tIdDb $dbID
@@ -53,17 +40,19 @@ class tCreateDBOutput
      */
     public function setDbID($dbID)
     {
-      $this->dbID = $dbID;
-      return $this;
+        $this->dbID = $dbID;
+        return $this;
     }
+
 
     /**
      * @return tUserID
      */
     public function getDbUserID()
     {
-      return $this->dbUserID;
+        return $this->dbUserID;
     }
+
 
     /**
      * @param tUserID $dbUserID
@@ -71,17 +60,19 @@ class tCreateDBOutput
      */
     public function setDbUserID($dbUserID)
     {
-      $this->dbUserID = $dbUserID;
-      return $this;
+        $this->dbUserID = $dbUserID;
+        return $this;
     }
+
 
     /**
      * @return tDbAccessDataId
      */
     public function getDbAccessDataId()
     {
-      return $this->dbAccessDataId;
+        return $this->dbAccessDataId;
     }
+
 
     /**
      * @param tDbAccessDataId $dbAccessDataId
@@ -89,17 +80,19 @@ class tCreateDBOutput
      */
     public function setDbAccessDataId($dbAccessDataId)
     {
-      $this->dbAccessDataId = $dbAccessDataId;
-      return $this;
+        $this->dbAccessDataId = $dbAccessDataId;
+        return $this;
     }
+
 
     /**
      * @return tDbReqStatus
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
+
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -107,8 +100,8 @@ class tCreateDBOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
 
 }

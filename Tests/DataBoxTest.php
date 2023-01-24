@@ -1,5 +1,6 @@
 <?php
 
+use Defr\CzechDataBox\Api\tDummyInput;
 use Defr\CzechDataBox\DataBox;
 use PHPUnit\Framework\TestCase;
 
@@ -21,11 +22,13 @@ class DataBoxTest extends TestCase
         return $dataBox;
     }
 
+
     public function testLogin()
     {
-        $info = $this->__getDataBox()->DataBoxAccess()->GetOwnerInfoFromLogin(new \Defr\CzechDataBox\Api\tDummyInput(null));
+        $info = $this->__getDataBox()->DataBoxAccess()->GetOwnerInfoFromLogin(new tDummyInput(null));
         $this->assertInstanceOf("Defr\\CzechDataBox\\Api\\tGetOwnInfoOutput", $info);
     }
+
 
     /**
      * @expectedException \Defr\CzechDataBox\DataBoxException
