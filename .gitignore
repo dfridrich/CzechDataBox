@@ -3,3 +3,4 @@ vendor/
 .idea/
 config.ini
 .phpunit.result.cache
+phpunit.xml

@@ -37,7 +37,7 @@ class DataBoxSimpleApiTest extends TestCase
 	public function testSimpleApiStats()
 	{
 		$api = $this->__getDataBox()->getSimpleApi();
-		$this->assertInternalType("int", $api->getStats());
+		$this->assertIsInt($api->getStats());
 	}
 
 	public function testSimpleApiPasswordChange()

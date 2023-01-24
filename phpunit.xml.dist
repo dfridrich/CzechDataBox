@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="./vendor/autoload.php" colors="true"
+         verbose="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <coverage>
+        <include>
+            <directory>./src</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="dfridrich/Library test suite">
+            <directory suffix="Test.php">./Tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DATABOX_LOGIN" value="" />
+        <env name="DATABOX_PASSWORD" value="" />
+        <env name="DATABOX_PRODUCTION" value="0" />
+    </php>
+</phpunit>

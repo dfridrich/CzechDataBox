@@ -22,7 +22,8 @@
   },
   "require-dev": {
     "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2",
-    "phpunit/phpunit": "^9"
+    "phpunit/phpunit": "^9",
+    "symfony/var-dumper": "^6.2"
   },
   "autoload": {
     "psr-4": {
