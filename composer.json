@@ -1,33 +1,37 @@
 {
-  "name": "dfridrich/czech-data-box",
-  "type": "library",
-  "description": "Knihovna pro komunikaci s datovou schránkou v PHP.",
-  "keywords": [
-    "php",
-    "library",
-    "ISDS",
-    "Datové schránky"
-  ],
-  "homepage": "https://github.com/dfridrich/CzechDataBox",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Dennis Fridrich",
-      "email": "fridrich.dennis@gmail.com"
+    "name": "dfridrich/czech-data-box",
+    "type": "library",
+    "description": "Knihovna pro komunikaci s datovou schránkou v PHP.",
+    "keywords": [
+        "php",
+        "library",
+        "ISDS",
+        "Datové schránky"
+    ],
+    "homepage": "https://github.com/dfridrich/CzechDataBox",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis Fridrich",
+            "email": "fridrich.dennis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0",
+        "ext-soap": "*"
+    },
+    "require-dev": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2",
+        "phpunit/phpunit": "^9",
+        "symfony/var-dumper": "^6.2",
+        "phpstan/phpstan": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Defr\\CzechDataBox\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse -c phpstan.neon"
     }
-  ],
-  "require": {
-    "php": ">=8.0.0",
-    "ext-soap": "*"
-  },
-  "require-dev": {
-    "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2",
-    "phpunit/phpunit": "^9",
-    "symfony/var-dumper": "^6.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "Defr\\CzechDataBox\\": "src/"
-    }
-  }
 }
