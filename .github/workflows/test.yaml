@@ -27,12 +27,12 @@ jobs:
                 with:
                     php-version: ${{ matrix.php-versions }}
                     tools: phpunit:9.6
-                env:
-                    DATABOX_LOGIN: ${{ secrets.DATABOX_LOGIN }}
-                    DATABOX_PASSWORD: ${{ secrets.DATABOX_PASSWORD }}
-                    DATABOX_PRODUCTION: ${{ secrets.DATABOX_PRODUCTION }}
 
             -   name: Install dependencies
                 run: composer install --prefer-dist --dev
 
             -   run: phpunit
+                env:
+                    DATABOX_LOGIN: ${{ secrets.DATABOX_LOGIN }}
+                    DATABOX_PASSWORD: ${{ secrets.DATABOX_PASSWORD }}
+                    DATABOX_PRODUCTION: ${{ secrets.DATABOX_PRODUCTION }}
