@@ -1,7 +1,7 @@
 # CzechDataBox
 
 [![Build Status](https://travis-ci.org/dfridrich/CzechDataBox.svg)](https://travis-ci.org/dfridrich/CzechDataBox)
-[![Latest Stable Version](https://poser.pugx.org/dfridrich/czech-data-box/v/stable)](https://packagist.org/packages/dfridrich/czech-data-box) 
+[![Latest Stable Version](https://poser.pugx.org/dfridrich/czech-data-box/v/stable)](https://packagist.org/packages/dfridrich/czech-data-box)
 [![Total Downloads](https://poser.pugx.org/dfridrich/czech-data-box/downloads)](https://packagist.org/packages/dfridrich/czech-data-box)
 [![Monthly Downloads](https://poser.pugx.org/dfridrich/czech-data-box/d/monthly)](https://packagist.org/packages/dfridrich/czech-data-box)
 [![License](https://poser.pugx.org/dfridrich/czech-data-box/license)](https://packagist.org/packages/dfridrich/czech-data-box)
@@ -76,15 +76,15 @@ foreach ($messages as $message) {
     echo "<h2>Msg# " . $message->getDmID() . "</h2>";
     // Defr\CzechDataBox\Api\tIdDm
     var_dump($message);
-    
+
     echo "<h3>Signed message</h3>";
     // Defr\CzechDataBox\DataBoxMessageFile
     var_dump($simpleApi->downloadSignedReceivedMessage($message->getDmID()));
-    
+
     echo "<h3>Delivery info</h3>";
     // Defr\CzechDataBox\DataBoxMessageFile
     var_dump($simpleApi->downloadDeliveryInfo($message->getDmID()));
-    
+
     echo "<h3>Attachments</h3>";
     // Defr\CzechDataBox\DataBoxMessageAttachment[]
     var_dump($simpleApi->getReceivedDataMessageAttachments($message->getDmID()));
@@ -139,10 +139,8 @@ Jakmile přístupové údaje budete mít, vytvořte config.ini (z config.ini.dis
 
 ## Odkazy
 
-- Žádost o testovací datovou schránku - https://www.datoveschranky.info/documents/1744842/1746073/zadost_zrizeni_testovaci_ds.zfo/4b75d5bf-0272-4305-9cef-8ec8f019e9d3
 - Testovací prostředí datových schránek - https://www.czebox.cz/
 - Ostré prostředí datových schránek - https://www.mojedatovaschranka.cz/
-- 602 XML Filler (pro formát ZFO) - http://www.602.cz/602xml_filler/download
 
 ## Contributing
 
