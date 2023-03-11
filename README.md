@@ -1,6 +1,6 @@
 # CzechDataBox
 
-[![Build Status](https://travis-ci.org/dfridrich/CzechDataBox.svg)](https://travis-ci.org/dfridrich/CzechDataBox)
+[![PHPUnit](https://github.com/dfridrich/CzechDataBox/actions/workflows/test.yaml/badge.svg)](https://github.com/dfridrich/CzechDataBox/actions/workflows/test.yaml)
 [![Latest Stable Version](https://poser.pugx.org/dfridrich/czech-data-box/v/stable)](https://packagist.org/packages/dfridrich/czech-data-box)
 [![Total Downloads](https://poser.pugx.org/dfridrich/czech-data-box/downloads)](https://packagist.org/packages/dfridrich/czech-data-box)
 [![Monthly Downloads](https://poser.pugx.org/dfridrich/czech-data-box/d/monthly)](https://packagist.org/packages/dfridrich/czech-data-box)
