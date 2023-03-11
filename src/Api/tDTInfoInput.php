@@ -18,7 +18,6 @@ class tDTInfoInput
         $this->dbId = $dbId;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -26,7 +25,6 @@ class tDTInfoInput
     {
         return $this->dbId;
     }
-
 
     /**
      * @param tIdDb $dbId
@@ -37,5 +35,4 @@ class tDTInfoInput
         $this->dbId = $dbId;
         return $this;
     }
-
 }

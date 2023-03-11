@@ -39,7 +39,6 @@ class tRecipients
         $this->dmToHands = $dmToHands;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -47,7 +46,6 @@ class tRecipients
     {
         return $this->dbIDRecipient;
     }
-
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -59,7 +57,6 @@ class tRecipients
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -67,7 +64,6 @@ class tRecipients
     {
         return $this->dmRecipientOrgUnit;
     }
-
 
     /**
      * @param string $dmRecipientOrgUnit
@@ -79,7 +75,6 @@ class tRecipients
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -87,7 +82,6 @@ class tRecipients
     {
         return $this->dmRecipientOrgUnitNum;
     }
-
 
     /**
      * @param int $dmRecipientOrgUnitNum
@@ -99,7 +93,6 @@ class tRecipients
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -107,7 +100,6 @@ class tRecipients
     {
         return $this->dmToHands;
     }
-
 
     /**
      * @param string $dmToHands
@@ -118,5 +110,4 @@ class tRecipients
         $this->dmToHands = $dmToHands;
         return $this;
     }
-
 }

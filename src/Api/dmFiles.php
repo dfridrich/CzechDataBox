@@ -25,7 +25,6 @@ class dmFiles
         $this->dmFile = $dmFile;
     }
 
-
     /**
      * @return dmExtFile
      */
@@ -33,7 +32,6 @@ class dmFiles
     {
         return $this->dmExtFile;
     }
-
 
     /**
      * @param dmExtFile $dmExtFile
@@ -45,7 +43,6 @@ class dmFiles
         return $this;
     }
 
-
     /**
      * @return dmFile
      */
@@ -53,7 +50,6 @@ class dmFiles
     {
         return $this->dmFile;
     }
-
 
     /**
      * @param dmFile $dmFile
@@ -64,5 +60,4 @@ class dmFiles
         $this->dmFile = $dmFile;
         return $this;
     }
-
 }

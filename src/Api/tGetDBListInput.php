@@ -18,7 +18,6 @@ class tGetDBListInput
         $this->dblType = $dblType;
     }
 
-
     /**
      * @return string
      */
@@ -26,7 +25,6 @@ class tGetDBListInput
     {
         return $this->dblType;
     }
-
 
     /**
      * @param string $dblType
@@ -37,5 +35,4 @@ class tGetDBListInput
         $this->dblType = $dblType;
         return $this;
     }
-
 }

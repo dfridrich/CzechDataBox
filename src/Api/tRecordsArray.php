@@ -18,7 +18,6 @@ class tRecordsArray
         $this->dmRecord = $dmRecord;
     }
 
-
     /**
      * @return tRecord
      */
@@ -26,7 +25,6 @@ class tRecordsArray
     {
         return $this->dmRecord;
     }
-
 
     /**
      * @param tRecord $dmRecord
@@ -37,5 +35,4 @@ class tRecordsArray
         $this->dmRecord = $dmRecord;
         return $this;
     }
-
 }

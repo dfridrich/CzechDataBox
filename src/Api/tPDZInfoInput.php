@@ -18,7 +18,6 @@ class tPDZInfoInput
         $this->PDZSender = $PDZSender;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -26,7 +25,6 @@ class tPDZInfoInput
     {
         return $this->PDZSender;
     }
-
 
     /**
      * @param tIdDb $PDZSender
@@ -37,5 +35,4 @@ class tPDZInfoInput
         $this->PDZSender = $PDZSender;
         return $this;
     }
-
 }

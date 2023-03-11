@@ -25,7 +25,6 @@ class tGetConstsOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return constRecords
      */
@@ -33,7 +32,6 @@ class tGetConstsOutput
     {
         return $this->constRecords;
     }
-
 
     /**
      * @param constRecords $constRecords
@@ -45,7 +43,6 @@ class tGetConstsOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tGetConstsOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tGetConstsOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

@@ -25,7 +25,6 @@ class AuthenticateBigMessageResponse
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return boolean
      */
@@ -33,7 +32,6 @@ class AuthenticateBigMessageResponse
     {
         return $this->dmAuthResult;
     }
-
 
     /**
      * @param boolean $dmAuthResult
@@ -45,7 +43,6 @@ class AuthenticateBigMessageResponse
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class AuthenticateBigMessageResponse
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class AuthenticateBigMessageResponse
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

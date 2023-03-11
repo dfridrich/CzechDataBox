@@ -25,7 +25,6 @@ class DownloadAttachmentResponse
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return dmFile
      */
@@ -33,7 +32,6 @@ class DownloadAttachmentResponse
     {
         return $this->dmFile;
     }
-
 
     /**
      * @param dmFile $dmFile
@@ -45,7 +43,6 @@ class DownloadAttachmentResponse
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class DownloadAttachmentResponse
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class DownloadAttachmentResponse
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

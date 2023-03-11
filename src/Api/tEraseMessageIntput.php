@@ -25,7 +25,6 @@ class tEraseMessageIntput
         $this->dmIncoming = $dmIncoming;
     }
 
-
     /**
      * @return tIdDm
      */
@@ -33,7 +32,6 @@ class tEraseMessageIntput
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -45,7 +43,6 @@ class tEraseMessageIntput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -53,7 +50,6 @@ class tEraseMessageIntput
     {
         return $this->dmIncoming;
     }
-
 
     /**
      * @param boolean $dmIncoming
@@ -64,5 +60,4 @@ class tEraseMessageIntput
         $this->dmIncoming = $dmIncoming;
         return $this;
     }
-
 }

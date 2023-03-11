@@ -18,7 +18,6 @@ class tDummyInput
         $this->dbDummy = $dbDummy;
     }
 
-
     /**
      * @return string
      */
@@ -26,7 +25,6 @@ class tDummyInput
     {
         return $this->dbDummy;
     }
-
 
     /**
      * @param string $dbDummy
@@ -37,5 +35,4 @@ class tDummyInput
         $this->dbDummy = $dbDummy;
         return $this;
     }
-
 }

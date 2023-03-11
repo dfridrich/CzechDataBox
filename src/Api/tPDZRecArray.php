@@ -18,7 +18,6 @@ class tPDZRecArray
         $this->dbPDZRecord = $dbPDZRecord;
     }
 
-
     /**
      * @return tPDZRec
      */
@@ -26,7 +25,6 @@ class tPDZRecArray
     {
         return $this->dbPDZRecord;
     }
-
 
     /**
      * @param tPDZRec $dbPDZRecord
@@ -37,5 +35,4 @@ class tPDZRecArray
         $this->dbPDZRecord = $dbPDZRecord;
         return $this;
     }
-
 }

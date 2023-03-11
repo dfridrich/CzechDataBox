@@ -18,7 +18,6 @@ class dmMessageAuthor
         $this->maItem = $maItem;
     }
 
-
     /**
      * @return maItem
      */
@@ -26,7 +25,6 @@ class dmMessageAuthor
     {
         return $this->maItem;
     }
-
 
     /**
      * @param maItem $maItem
@@ -37,5 +35,4 @@ class dmMessageAuthor
         $this->maItem = $maItem;
         return $this;
     }
-
 }

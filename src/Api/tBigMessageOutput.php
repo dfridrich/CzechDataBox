@@ -25,7 +25,6 @@ class tBigMessageOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tIdDm
      */
@@ -33,7 +32,6 @@ class tBigMessageOutput
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -45,7 +43,6 @@ class tBigMessageOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tBigMessageOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tBigMessageOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

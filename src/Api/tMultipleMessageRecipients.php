@@ -18,7 +18,6 @@ class tMultipleMessageRecipients
         $this->dmRecipient = $dmRecipient;
     }
 
-
     /**
      * @return tRecipients
      */
@@ -26,7 +25,6 @@ class tMultipleMessageRecipients
     {
         return $this->dmRecipient;
     }
-
 
     /**
      * @param tRecipients $dmRecipient
@@ -37,5 +35,4 @@ class tMultipleMessageRecipients
         $this->dmRecipient = $dmRecipient;
         return $this;
     }
-
 }

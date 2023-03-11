@@ -25,7 +25,6 @@ class tGetListOfErasedOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class tGetListOfErasedOutput
     {
         return $this->asyncID;
     }
-
 
     /**
      * @param string $asyncID
@@ -45,7 +43,6 @@ class tGetListOfErasedOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tGetListOfErasedOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tGetListOfErasedOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

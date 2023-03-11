@@ -25,7 +25,6 @@ class tChangeDBsTypeOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -33,7 +32,6 @@ class tChangeDBsTypeOutput
     {
         return $this->changeLogFile;
     }
-
 
     /**
      * @param base64Binary $changeLogFile
@@ -45,7 +43,6 @@ class tChangeDBsTypeOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tChangeDBsTypeOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tChangeDBsTypeOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

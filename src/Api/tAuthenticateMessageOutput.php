@@ -25,7 +25,6 @@ class tAuthenticateMessageOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return boolean
      */
@@ -33,7 +32,6 @@ class tAuthenticateMessageOutput
     {
         return $this->dmAuthResult;
     }
-
 
     /**
      * @param boolean $dmAuthResult
@@ -45,7 +43,6 @@ class tAuthenticateMessageOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tAuthenticateMessageOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tAuthenticateMessageOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

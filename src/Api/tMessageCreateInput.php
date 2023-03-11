@@ -25,7 +25,6 @@ class tMessageCreateInput
         $this->dmFiles = $dmFiles;
     }
 
-
     /**
      * @return dmEnvelope
      */
@@ -33,7 +32,6 @@ class tMessageCreateInput
     {
         return $this->dmEnvelope;
     }
-
 
     /**
      * @param dmEnvelope $dmEnvelope
@@ -45,7 +43,6 @@ class tMessageCreateInput
         return $this;
     }
 
-
     /**
      * @return tFilesArray
      */
@@ -53,7 +50,6 @@ class tMessageCreateInput
     {
         return $this->dmFiles;
     }
-
 
     /**
      * @param tFilesArray $dmFiles
@@ -64,5 +60,4 @@ class tMessageCreateInput
         $this->dmFiles = $dmFiles;
         return $this;
     }
-
 }

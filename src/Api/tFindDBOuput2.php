@@ -25,7 +25,6 @@ class tFindDBOuput2
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tDbOwnersArray2
      */
@@ -33,7 +32,6 @@ class tFindDBOuput2
     {
         return $this->dbResults;
     }
-
 
     /**
      * @param tDbOwnersArray2 $dbResults
@@ -45,7 +43,6 @@ class tFindDBOuput2
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tFindDBOuput2
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tFindDBOuput2
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

@@ -200,7 +200,6 @@ class dmDm
         $this->dmFiles = $dmFiles;
     }
 
-
     /**
      * @return tIdDm
      */
@@ -208,7 +207,6 @@ class dmDm
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -220,7 +218,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -228,7 +225,6 @@ class dmDm
     {
         return $this->dbIDSender;
     }
-
 
     /**
      * @param tIdDb $dbIDSender
@@ -240,7 +236,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmSender
      */
@@ -248,7 +243,6 @@ class dmDm
     {
         return $this->dmSender;
     }
-
 
     /**
      * @param dmSender $dmSender
@@ -260,7 +254,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmSenderAddress
      */
@@ -268,7 +261,6 @@ class dmDm
     {
         return $this->dmSenderAddress;
     }
-
 
     /**
      * @param dmSenderAddress $dmSenderAddress
@@ -280,7 +272,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -288,7 +279,6 @@ class dmDm
     {
         return $this->dmSenderType;
     }
-
 
     /**
      * @param int $dmSenderType
@@ -300,7 +290,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmRecipient
      */
@@ -308,7 +297,6 @@ class dmDm
     {
         return $this->dmRecipient;
     }
-
 
     /**
      * @param dmRecipient $dmRecipient
@@ -320,7 +308,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmRecipientAddress
      */
@@ -328,7 +315,6 @@ class dmDm
     {
         return $this->dmRecipientAddress;
     }
-
 
     /**
      * @param dmRecipientAddress $dmRecipientAddress
@@ -340,7 +326,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -348,7 +333,6 @@ class dmDm
     {
         return $this->dmAmbiguousRecipient;
     }
-
 
     /**
      * @param boolean $dmAmbiguousRecipient
@@ -360,7 +344,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -368,7 +351,6 @@ class dmDm
     {
         return $this->dmSenderOrgUnit;
     }
-
 
     /**
      * @param string $dmSenderOrgUnit
@@ -380,7 +362,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -388,7 +369,6 @@ class dmDm
     {
         return $this->dmSenderOrgUnitNum;
     }
-
 
     /**
      * @param int $dmSenderOrgUnitNum
@@ -400,7 +380,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -408,7 +387,6 @@ class dmDm
     {
         return $this->dbIDRecipient;
     }
-
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -420,7 +398,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -428,7 +405,6 @@ class dmDm
     {
         return $this->dmRecipientOrgUnit;
     }
-
 
     /**
      * @param string $dmRecipientOrgUnit
@@ -440,7 +416,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -448,7 +423,6 @@ class dmDm
     {
         return $this->dmRecipientOrgUnitNum;
     }
-
 
     /**
      * @param int $dmRecipientOrgUnitNum
@@ -460,7 +434,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -468,7 +441,6 @@ class dmDm
     {
         return $this->dmToHands;
     }
-
 
     /**
      * @param string $dmToHands
@@ -480,7 +452,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmAnnotation
      */
@@ -488,7 +459,6 @@ class dmDm
     {
         return $this->dmAnnotation;
     }
-
 
     /**
      * @param dmAnnotation $dmAnnotation
@@ -500,7 +470,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmRecipientRefNumber
      */
@@ -508,7 +477,6 @@ class dmDm
     {
         return $this->dmRecipientRefNumber;
     }
-
 
     /**
      * @param dmRecipientRefNumber $dmRecipientRefNumber
@@ -520,7 +488,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmSenderRefNumber
      */
@@ -528,7 +495,6 @@ class dmDm
     {
         return $this->dmSenderRefNumber;
     }
-
 
     /**
      * @param dmSenderRefNumber $dmSenderRefNumber
@@ -540,7 +506,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmRecipientIdent
      */
@@ -548,7 +513,6 @@ class dmDm
     {
         return $this->dmRecipientIdent;
     }
-
 
     /**
      * @param dmRecipientIdent $dmRecipientIdent
@@ -560,7 +524,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return dmSenderIdent
      */
@@ -568,7 +531,6 @@ class dmDm
     {
         return $this->dmSenderIdent;
     }
-
 
     /**
      * @param dmSenderIdent $dmSenderIdent
@@ -580,7 +542,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -588,7 +549,6 @@ class dmDm
     {
         return $this->dmLegalTitleLaw;
     }
-
 
     /**
      * @param int $dmLegalTitleLaw
@@ -600,7 +560,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -608,7 +567,6 @@ class dmDm
     {
         return $this->dmLegalTitleYear;
     }
-
 
     /**
      * @param int $dmLegalTitleYear
@@ -620,7 +578,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -628,7 +585,6 @@ class dmDm
     {
         return $this->dmLegalTitleSect;
     }
-
 
     /**
      * @param string $dmLegalTitleSect
@@ -640,7 +596,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -648,7 +603,6 @@ class dmDm
     {
         return $this->dmLegalTitlePar;
     }
-
 
     /**
      * @param string $dmLegalTitlePar
@@ -660,7 +614,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -668,7 +621,6 @@ class dmDm
     {
         return $this->dmLegalTitlePoint;
     }
-
 
     /**
      * @param string $dmLegalTitlePoint
@@ -680,7 +632,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -688,7 +639,6 @@ class dmDm
     {
         return $this->dmPersonalDelivery;
     }
-
 
     /**
      * @param boolean $dmPersonalDelivery
@@ -700,7 +650,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -708,7 +657,6 @@ class dmDm
     {
         return $this->dmAllowSubstDelivery;
     }
-
 
     /**
      * @param boolean $dmAllowSubstDelivery
@@ -720,7 +668,6 @@ class dmDm
         return $this;
     }
 
-
     /**
      * @return tFilesArray
      */
@@ -728,7 +675,6 @@ class dmDm
     {
         return $this->dmFiles;
     }
-
 
     /**
      * @param tFilesArray $dmFiles
@@ -739,5 +685,4 @@ class dmDm
         $this->dmFiles = $dmFiles;
         return $this;
     }
-
 }

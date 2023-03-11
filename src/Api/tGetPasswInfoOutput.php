@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tGetPasswInfoOutput
 {
 
@@ -22,12 +19,11 @@ class tGetPasswInfoOutput
      * @param \DateTime $pswExpDate
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(DateTime $pswExpDate = null, $dbStatus = null)
+    public function __construct(\DateTime $pswExpDate = null, $dbStatus = null)
     {
-        $this->pswExpDate = $pswExpDate ? $pswExpDate->format(DateTime::ATOM) : null;
+        $this->pswExpDate = $pswExpDate ? $pswExpDate->format(\DateTime::ATOM) : null;
         $this->dbStatus = $dbStatus;
     }
-
 
     /**
      * @return \DateTime
@@ -38,24 +34,22 @@ class tGetPasswInfoOutput
             return null;
         } else {
             try {
-                return new DateTime($this->pswExpDate);
-            } catch (Exception $e) {
+                return new \DateTime($this->pswExpDate);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $pswExpDate
      * @return \Defr\CzechDataBox\Api\tGetPasswInfoOutput
      */
-    public function setPswExpDate(DateTime $pswExpDate)
+    public function setPswExpDate(\DateTime $pswExpDate)
     {
-        $this->pswExpDate = $pswExpDate->format(DateTime::ATOM);
+        $this->pswExpDate = $pswExpDate->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return tDbReqStatus
@@ -64,7 +58,6 @@ class tGetPasswInfoOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -75,5 +68,4 @@ class tGetPasswInfoOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

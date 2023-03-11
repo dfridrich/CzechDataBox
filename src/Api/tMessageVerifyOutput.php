@@ -25,7 +25,6 @@ class tMessageVerifyOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tHash
      */
@@ -33,7 +32,6 @@ class tMessageVerifyOutput
     {
         return $this->dmHash;
     }
-
 
     /**
      * @param tHash $dmHash
@@ -45,7 +43,6 @@ class tMessageVerifyOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tMessageVerifyOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tMessageVerifyOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

@@ -123,7 +123,6 @@ class tMultipleMessageEnvelopeSub
         $this->dmPublishOwnID = $dmPublishOwnID;
     }
 
-
     /**
      * @return string
      */
@@ -131,7 +130,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmSenderOrgUnit;
     }
-
 
     /**
      * @param string $dmSenderOrgUnit
@@ -143,7 +141,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -151,7 +148,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmSenderOrgUnitNum;
     }
-
 
     /**
      * @param int $dmSenderOrgUnitNum
@@ -163,7 +159,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return dmAnnotation
      */
@@ -171,7 +166,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmAnnotation;
     }
-
 
     /**
      * @param dmAnnotation $dmAnnotation
@@ -183,7 +177,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return dmRecipientRefNumber
      */
@@ -191,7 +184,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmRecipientRefNumber;
     }
-
 
     /**
      * @param dmRecipientRefNumber $dmRecipientRefNumber
@@ -203,7 +195,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return dmSenderRefNumber
      */
@@ -211,7 +202,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmSenderRefNumber;
     }
-
 
     /**
      * @param dmSenderRefNumber $dmSenderRefNumber
@@ -223,7 +213,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return dmRecipientIdent
      */
@@ -231,7 +220,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmRecipientIdent;
     }
-
 
     /**
      * @param dmRecipientIdent $dmRecipientIdent
@@ -243,7 +231,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return dmSenderIdent
      */
@@ -251,7 +238,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmSenderIdent;
     }
-
 
     /**
      * @param dmSenderIdent $dmSenderIdent
@@ -263,7 +249,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -271,7 +256,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmLegalTitleLaw;
     }
-
 
     /**
      * @param int $dmLegalTitleLaw
@@ -283,7 +267,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -291,7 +274,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmLegalTitleYear;
     }
-
 
     /**
      * @param int $dmLegalTitleYear
@@ -303,7 +285,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -311,7 +292,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmLegalTitleSect;
     }
-
 
     /**
      * @param string $dmLegalTitleSect
@@ -323,7 +303,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -331,7 +310,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmLegalTitlePar;
     }
-
 
     /**
      * @param string $dmLegalTitlePar
@@ -343,7 +321,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -351,7 +328,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmLegalTitlePoint;
     }
-
 
     /**
      * @param string $dmLegalTitlePoint
@@ -363,7 +339,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -371,7 +346,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmPersonalDelivery;
     }
-
 
     /**
      * @param boolean $dmPersonalDelivery
@@ -383,7 +357,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -391,7 +364,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmAllowSubstDelivery;
     }
-
 
     /**
      * @param boolean $dmAllowSubstDelivery
@@ -403,7 +375,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -411,7 +382,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmOVM;
     }
-
 
     /**
      * @param boolean $dmOVM
@@ -423,7 +393,6 @@ class tMultipleMessageEnvelopeSub
         return $this;
     }
 
-
     /**
      * @return dmPublishOwnID
      */
@@ -431,7 +400,6 @@ class tMultipleMessageEnvelopeSub
     {
         return $this->dmPublishOwnID;
     }
-
 
     /**
      * @param dmPublishOwnID $dmPublishOwnID
@@ -442,5 +410,4 @@ class tMultipleMessageEnvelopeSub
         $this->dmPublishOwnID = $dmPublishOwnID;
         return $this;
     }
-
 }

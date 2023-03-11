@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tEvent
 {
 
@@ -22,12 +19,11 @@ class tEvent
      * @param \DateTime $dmEventTime
      * @param string $dmEventDescr
      */
-    public function __construct(DateTime $dmEventTime = null, $dmEventDescr = null)
+    public function __construct(\DateTime $dmEventTime = null, $dmEventDescr = null)
     {
-        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(DateTime::ATOM) : null;
+        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
         $this->dmEventDescr = $dmEventDescr;
     }
-
 
     /**
      * @return \DateTime
@@ -38,24 +34,22 @@ class tEvent
             return null;
         } else {
             try {
-                return new DateTime($this->dmEventTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmEventTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmEventTime
      * @return \Defr\CzechDataBox\Api\tEvent
      */
-    public function setDmEventTime(DateTime $dmEventTime)
+    public function setDmEventTime(\DateTime $dmEventTime)
     {
-        $this->dmEventTime = $dmEventTime->format(DateTime::ATOM);
+        $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return string
@@ -64,7 +58,6 @@ class tEvent
     {
         return $this->dmEventDescr;
     }
-
 
     /**
      * @param string $dmEventDescr
@@ -75,5 +68,4 @@ class tEvent
         $this->dmEventDescr = $dmEventDescr;
         return $this;
     }
-
 }

@@ -2,16 +2,13 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use SoapClient;
-use function array_merge;
-
-class DmOperationsWebService extends SoapClient
+class DmOperationsWebService extends \SoapClient
 {
 
     /**
      * @var array $classmap The defined classes
      */
-    private static $classmap =  [
+    private static $classmap = array (
       'tFile' => 'Defr\\CzechDataBox\\Api\\tFile',
       'dmXMLContent' => 'Defr\\CzechDataBox\\Api\\dmXMLContent',
       'tFilesArray' => 'Defr\\CzechDataBox\\Api\\tFilesArray',
@@ -94,28 +91,27 @@ class DmOperationsWebService extends SoapClient
       'GetMessageAuthor2Response' => 'Defr\\CzechDataBox\\Api\\GetMessageAuthor2Response',
       'dmMessageAuthor' => 'Defr\\CzechDataBox\\Api\\dmMessageAuthor',
       'maItem' => 'Defr\\CzechDataBox\\Api\\maItem',
-    ];
+    );
 
     /**
      * @param array $options A array of config values
      * @param string $wsdl The wsdl file to use
      */
-    public function __construct(array $options = [], $wsdl = null)
+    public function __construct(array $options = array(), $wsdl = null)
     {
         foreach (self::$classmap as $key => $value) {
             if (!isset($options['classmap'][$key])) {
                 $options['classmap'][$key] = $value;
             }
         }
-        $options = array_merge([
+        $options = array_merge(array (
         'features' => 1,
-        ], $options);
+        ), $options);
         if (!$wsdl) {
             $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/dm_operations.wsdl';
         }
         parent::__construct($wsdl, $options);
     }
-
 
     /**
      * @param tMessageCreateInput $parameter
@@ -123,9 +119,8 @@ class DmOperationsWebService extends SoapClient
      */
     public function CreateMessage(tMessageCreateInput $parameter)
     {
-        return $this->__soapCall('CreateMessage', [$parameter]);
+        return $this->__soapCall('CreateMessage', array($parameter));
     }
-
 
     /**
      * @param tIDMessInput $parameter
@@ -133,9 +128,8 @@ class DmOperationsWebService extends SoapClient
      */
     public function MessageDownload(tIDMessInput $parameter)
     {
-        return $this->__soapCall('MessageDownload', [$parameter]);
+        return $this->__soapCall('MessageDownload', array($parameter));
     }
-
 
     /**
      * @param tIDMessInput $parameter
@@ -143,9 +137,8 @@ class DmOperationsWebService extends SoapClient
      */
     public function SignedMessageDownload(tIDMessInput $parameter)
     {
-        return $this->__soapCall('SignedMessageDownload', [$parameter]);
+        return $this->__soapCall('SignedMessageDownload', array($parameter));
     }
-
 
     /**
      * @param tIDMessInput $parameter
@@ -153,9 +146,8 @@ class DmOperationsWebService extends SoapClient
      */
     public function SignedSentMessageDownload(tIDMessInput $parameter)
     {
-        return $this->__soapCall('SignedSentMessageDownload', [$parameter]);
+        return $this->__soapCall('SignedSentMessageDownload', array($parameter));
     }
-
 
     /**
      * @param string $parameter
@@ -163,9 +155,8 @@ class DmOperationsWebService extends SoapClient
      */
     public function DummyOperation($parameter)
     {
-        return $this->__soapCall('DummyOperation', [$parameter]);
+        return $this->__soapCall('DummyOperation', array($parameter));
     }
-
 
     /**
      * @param tMultipleMessageCreateInput $parameter
@@ -173,9 +164,8 @@ class DmOperationsWebService extends SoapClient
      */
     public function CreateMultipleMessage(tMultipleMessageCreateInput $parameter)
     {
-        return $this->__soapCall('CreateMultipleMessage', [$parameter]);
+        return $this->__soapCall('CreateMultipleMessage', array($parameter));
     }
-
 
     /**
      * @param tAuthenticateMessageInput $parameter
@@ -183,7 +173,6 @@ class DmOperationsWebService extends SoapClient
      */
     public function AuthenticateMessage(tAuthenticateMessageInput $parameter)
     {
-        return $this->__soapCall('AuthenticateMessage', [$parameter]);
+        return $this->__soapCall('AuthenticateMessage', array($parameter));
     }
-
 }

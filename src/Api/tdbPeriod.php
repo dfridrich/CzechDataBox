@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tdbPeriod
 {
 
@@ -28,13 +25,12 @@ class tdbPeriod
      * @param \DateTime $PeriodTo
      * @param int $DbState
      */
-    public function __construct(DateTime $PeriodFrom = null, DateTime $PeriodTo = null, $DbState = null)
+    public function __construct(\DateTime $PeriodFrom = null, \DateTime $PeriodTo = null, $DbState = null)
     {
-        $this->PeriodFrom = $PeriodFrom ? $PeriodFrom->format(DateTime::ATOM) : null;
-        $this->PeriodTo = $PeriodTo ? $PeriodTo->format(DateTime::ATOM) : null;
+        $this->PeriodFrom = $PeriodFrom ? $PeriodFrom->format(\DateTime::ATOM) : null;
+        $this->PeriodTo = $PeriodTo ? $PeriodTo->format(\DateTime::ATOM) : null;
         $this->DbState = $DbState;
     }
-
 
     /**
      * @return \DateTime
@@ -45,24 +41,22 @@ class tdbPeriod
             return null;
         } else {
             try {
-                return new DateTime($this->PeriodFrom);
-            } catch (Exception $e) {
+                return new \DateTime($this->PeriodFrom);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $PeriodFrom
      * @return \Defr\CzechDataBox\Api\tdbPeriod
      */
-    public function setPeriodFrom(DateTime $PeriodFrom)
+    public function setPeriodFrom(\DateTime $PeriodFrom)
     {
-        $this->PeriodFrom = $PeriodFrom->format(DateTime::ATOM);
+        $this->PeriodFrom = $PeriodFrom->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return \DateTime
@@ -73,24 +67,22 @@ class tdbPeriod
             return null;
         } else {
             try {
-                return new DateTime($this->PeriodTo);
-            } catch (Exception $e) {
+                return new \DateTime($this->PeriodTo);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $PeriodTo
      * @return \Defr\CzechDataBox\Api\tdbPeriod
      */
-    public function setPeriodTo(DateTime $PeriodTo)
+    public function setPeriodTo(\DateTime $PeriodTo)
     {
-        $this->PeriodTo = $PeriodTo->format(DateTime::ATOM);
+        $this->PeriodTo = $PeriodTo->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return int
@@ -99,7 +91,6 @@ class tdbPeriod
     {
         return $this->DbState;
     }
-
 
     /**
      * @param int $DbState
@@ -110,5 +101,4 @@ class tdbPeriod
         $this->DbState = $DbState;
         return $this;
     }
-
 }

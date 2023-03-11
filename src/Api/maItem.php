@@ -25,7 +25,6 @@ class maItem
         $this->value = $value;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class maItem
     {
         return $this->key;
     }
-
 
     /**
      * @param string $key
@@ -45,7 +43,6 @@ class maItem
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class maItem
     {
         return $this->value;
     }
-
 
     /**
      * @param string $value
@@ -64,5 +60,4 @@ class maItem
         $this->value = $value;
         return $this;
     }
-
 }

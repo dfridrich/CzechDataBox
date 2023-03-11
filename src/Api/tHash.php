@@ -25,7 +25,6 @@ class tHash
         $this->algorithm = $algorithm;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -33,7 +32,6 @@ class tHash
     {
         return $this->_;
     }
-
 
     /**
      * @param base64Binary $_
@@ -45,7 +43,6 @@ class tHash
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class tHash
     {
         return $this->algorithm;
     }
-
 
     /**
      * @param string $algorithm
@@ -64,5 +60,4 @@ class tHash
         $this->algorithm = $algorithm;
         return $this;
     }
-
 }

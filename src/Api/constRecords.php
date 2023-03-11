@@ -18,7 +18,6 @@ class constRecords
         $this->constRecord = $constRecord;
     }
 
-
     /**
      * @return tConstRecord
      */
@@ -26,7 +25,6 @@ class constRecords
     {
         return $this->constRecord;
     }
-
 
     /**
      * @param tConstRecord $constRecord
@@ -37,5 +35,4 @@ class constRecords
         $this->constRecord = $constRecord;
         return $this;
     }
-
 }

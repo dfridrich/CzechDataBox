@@ -39,7 +39,6 @@ class dbID
         $this->branch = $branch;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -47,7 +46,6 @@ class dbID
     {
         return $this->_;
     }
-
 
     /**
      * @param tIdDb $_
@@ -59,7 +57,6 @@ class dbID
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -67,7 +64,6 @@ class dbID
     {
         return $this->guid;
     }
-
 
     /**
      * @param string $guid
@@ -79,7 +75,6 @@ class dbID
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -87,7 +82,6 @@ class dbID
     {
         return $this->subject;
     }
-
 
     /**
      * @param string $subject
@@ -99,7 +93,6 @@ class dbID
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -107,7 +100,6 @@ class dbID
     {
         return $this->branch;
     }
-
 
     /**
      * @param string $branch
@@ -118,5 +110,4 @@ class dbID
         $this->branch = $branch;
         return $this;
     }
-
 }

@@ -18,7 +18,6 @@ class tChangeLogRow
         $this->changeLogRow = $changeLogRow;
     }
 
-
     /**
      * @return string
      */
@@ -26,7 +25,6 @@ class tChangeLogRow
     {
         return $this->changeLogRow;
     }
-
 
     /**
      * @param string $changeLogRow
@@ -37,5 +35,4 @@ class tChangeLogRow
         $this->changeLogRow = $changeLogRow;
         return $this;
     }
-
 }

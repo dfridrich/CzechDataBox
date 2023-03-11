@@ -137,7 +137,6 @@ class tdbPersonalOwnerInfo
         $this->nationality = $nationality;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -145,7 +144,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->dbID;
     }
-
 
     /**
      * @param tIdDb $dbID
@@ -157,7 +155,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -165,7 +162,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->aifoIsds;
     }
-
 
     /**
      * @param boolean $aifoIsds
@@ -177,7 +173,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -185,7 +180,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->pnFirstName;
     }
-
 
     /**
      * @param string $pnFirstName
@@ -197,7 +191,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -205,7 +198,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->pnMiddleName;
     }
-
 
     /**
      * @param string $pnMiddleName
@@ -217,7 +209,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -225,7 +216,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->pnLastName;
     }
-
 
     /**
      * @param string $pnLastName
@@ -237,7 +227,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -245,7 +234,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->biDate;
     }
-
 
     /**
      * @param date $biDate
@@ -257,7 +245,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -265,7 +252,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->biCity;
     }
-
 
     /**
      * @param string $biCity
@@ -277,7 +263,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -285,7 +270,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->biCounty;
     }
-
 
     /**
      * @param string $biCounty
@@ -297,7 +281,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -305,7 +288,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->biState;
     }
-
 
     /**
      * @param string $biState
@@ -317,7 +299,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -325,7 +306,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adCode;
     }
-
 
     /**
      * @param int $adCode
@@ -337,7 +317,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -345,7 +324,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adCity;
     }
-
 
     /**
      * @param string $adCity
@@ -357,7 +335,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -365,7 +342,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adDistrict;
     }
-
 
     /**
      * @param string $adDistrict
@@ -377,7 +353,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -385,7 +360,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adStreet;
     }
-
 
     /**
      * @param string $adStreet
@@ -397,7 +371,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -405,7 +378,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adNumberInStreet;
     }
-
 
     /**
      * @param string $adNumberInStreet
@@ -417,7 +389,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -425,7 +396,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adNumberInMunicipality;
     }
-
 
     /**
      * @param string $adNumberInMunicipality
@@ -437,7 +407,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -445,7 +414,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adZipCode;
     }
-
 
     /**
      * @param string $adZipCode
@@ -457,7 +425,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -465,7 +432,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->adState;
     }
-
 
     /**
      * @param string $adState
@@ -477,7 +443,6 @@ class tdbPersonalOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -485,7 +450,6 @@ class tdbPersonalOwnerInfo
     {
         return $this->nationality;
     }
-
 
     /**
      * @param string $nationality
@@ -496,5 +460,4 @@ class tdbPersonalOwnerInfo
         $this->nationality = $nationality;
         return $this;
     }
-
 }

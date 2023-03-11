@@ -158,7 +158,6 @@ class tBigMessEnvelope
         $this->dmType = $dmType;
     }
 
-
     /**
      * @return string
      */
@@ -166,7 +165,6 @@ class tBigMessEnvelope
     {
         return $this->dmSenderOrgUnit;
     }
-
 
     /**
      * @param string $dmSenderOrgUnit
@@ -178,7 +176,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -186,7 +183,6 @@ class tBigMessEnvelope
     {
         return $this->dmSenderOrgUnitNum;
     }
-
 
     /**
      * @param int $dmSenderOrgUnitNum
@@ -198,7 +194,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -206,7 +201,6 @@ class tBigMessEnvelope
     {
         return $this->dbIDRecipient;
     }
-
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -218,7 +212,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -226,7 +219,6 @@ class tBigMessEnvelope
     {
         return $this->dmRecipientOrgUnit;
     }
-
 
     /**
      * @param string $dmRecipientOrgUnit
@@ -238,7 +230,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -246,7 +237,6 @@ class tBigMessEnvelope
     {
         return $this->dmRecipientOrgUnitNum;
     }
-
 
     /**
      * @param int $dmRecipientOrgUnitNum
@@ -258,7 +248,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -266,7 +255,6 @@ class tBigMessEnvelope
     {
         return $this->dmToHands;
     }
-
 
     /**
      * @param string $dmToHands
@@ -278,7 +266,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return dmAnnotation
      */
@@ -286,7 +273,6 @@ class tBigMessEnvelope
     {
         return $this->dmAnnotation;
     }
-
 
     /**
      * @param dmAnnotation $dmAnnotation
@@ -298,7 +284,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return dmRecipientRefNumber
      */
@@ -306,7 +291,6 @@ class tBigMessEnvelope
     {
         return $this->dmRecipientRefNumber;
     }
-
 
     /**
      * @param dmRecipientRefNumber $dmRecipientRefNumber
@@ -318,7 +302,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return dmSenderRefNumber
      */
@@ -326,7 +309,6 @@ class tBigMessEnvelope
     {
         return $this->dmSenderRefNumber;
     }
-
 
     /**
      * @param dmSenderRefNumber $dmSenderRefNumber
@@ -338,7 +320,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return dmRecipientIdent
      */
@@ -346,7 +327,6 @@ class tBigMessEnvelope
     {
         return $this->dmRecipientIdent;
     }
-
 
     /**
      * @param dmRecipientIdent $dmRecipientIdent
@@ -358,7 +338,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return dmSenderIdent
      */
@@ -366,7 +345,6 @@ class tBigMessEnvelope
     {
         return $this->dmSenderIdent;
     }
-
 
     /**
      * @param dmSenderIdent $dmSenderIdent
@@ -378,7 +356,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -386,7 +363,6 @@ class tBigMessEnvelope
     {
         return $this->dmLegalTitleLaw;
     }
-
 
     /**
      * @param int $dmLegalTitleLaw
@@ -398,7 +374,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -406,7 +381,6 @@ class tBigMessEnvelope
     {
         return $this->dmLegalTitleYear;
     }
-
 
     /**
      * @param int $dmLegalTitleYear
@@ -418,7 +392,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -426,7 +399,6 @@ class tBigMessEnvelope
     {
         return $this->dmLegalTitleSect;
     }
-
 
     /**
      * @param string $dmLegalTitleSect
@@ -438,7 +410,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -446,7 +417,6 @@ class tBigMessEnvelope
     {
         return $this->dmLegalTitlePar;
     }
-
 
     /**
      * @param string $dmLegalTitlePar
@@ -458,7 +428,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -466,7 +435,6 @@ class tBigMessEnvelope
     {
         return $this->dmLegalTitlePoint;
     }
-
 
     /**
      * @param string $dmLegalTitlePoint
@@ -478,7 +446,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -486,7 +453,6 @@ class tBigMessEnvelope
     {
         return $this->dmPersonalDelivery;
     }
-
 
     /**
      * @param boolean $dmPersonalDelivery
@@ -498,7 +464,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -506,7 +471,6 @@ class tBigMessEnvelope
     {
         return $this->dmAllowSubstDelivery;
     }
-
 
     /**
      * @param boolean $dmAllowSubstDelivery
@@ -518,7 +482,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -526,7 +489,6 @@ class tBigMessEnvelope
     {
         return $this->dmOVM;
     }
-
 
     /**
      * @param boolean $dmOVM
@@ -538,7 +500,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return dmPublishOwnID
      */
@@ -546,7 +507,6 @@ class tBigMessEnvelope
     {
         return $this->dmPublishOwnID;
     }
-
 
     /**
      * @param dmPublishOwnID $dmPublishOwnID
@@ -558,7 +518,6 @@ class tBigMessEnvelope
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -566,7 +525,6 @@ class tBigMessEnvelope
     {
         return $this->dmType;
     }
-
 
     /**
      * @param string $dmType
@@ -577,5 +535,4 @@ class tBigMessEnvelope
         $this->dmType = $dmType;
         return $this;
     }
-
 }

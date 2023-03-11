@@ -18,7 +18,6 @@ class tDbOwnersArray
         $this->dbOwnerInfo = $dbOwnerInfo;
     }
 
-
     /**
      * @return tDbOwnerInfoExt
      */
@@ -26,7 +25,6 @@ class tDbOwnersArray
     {
         return $this->dbOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfoExt $dbOwnerInfo
@@ -37,5 +35,4 @@ class tDbOwnersArray
         $this->dbOwnerInfo = $dbOwnerInfo;
         return $this;
     }
-
 }

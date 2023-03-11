@@ -18,7 +18,6 @@ class tEraseMessageOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tStatus
      */
@@ -26,7 +25,6 @@ class tEraseMessageOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -37,5 +35,4 @@ class tEraseMessageOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

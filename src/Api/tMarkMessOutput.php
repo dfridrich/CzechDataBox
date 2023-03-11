@@ -18,7 +18,6 @@ class tMarkMessOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tStatus
      */
@@ -26,7 +25,6 @@ class tMarkMessOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -37,5 +35,4 @@ class tMarkMessOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

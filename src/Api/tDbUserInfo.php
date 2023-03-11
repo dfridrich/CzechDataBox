@@ -151,7 +151,6 @@ class tDbUserInfo
         $this->caState = $caState;
     }
 
-
     /**
      * @return string
      */
@@ -159,7 +158,6 @@ class tDbUserInfo
     {
         return $this->pnFirstName;
     }
-
 
     /**
      * @param string $pnFirstName
@@ -171,7 +169,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -179,7 +176,6 @@ class tDbUserInfo
     {
         return $this->pnMiddleName;
     }
-
 
     /**
      * @param string $pnMiddleName
@@ -191,7 +187,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -199,7 +194,6 @@ class tDbUserInfo
     {
         return $this->pnLastName;
     }
-
 
     /**
      * @param string $pnLastName
@@ -211,7 +205,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -219,7 +212,6 @@ class tDbUserInfo
     {
         return $this->pnLastNameAtBirth;
     }
-
 
     /**
      * @param string $pnLastNameAtBirth
@@ -231,7 +223,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -239,7 +230,6 @@ class tDbUserInfo
     {
         return $this->adCity;
     }
-
 
     /**
      * @param string $adCity
@@ -251,7 +241,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -259,7 +248,6 @@ class tDbUserInfo
     {
         return $this->adStreet;
     }
-
 
     /**
      * @param string $adStreet
@@ -271,7 +259,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -279,7 +266,6 @@ class tDbUserInfo
     {
         return $this->adNumberInStreet;
     }
-
 
     /**
      * @param string $adNumberInStreet
@@ -291,7 +277,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -299,7 +284,6 @@ class tDbUserInfo
     {
         return $this->adNumberInMunicipality;
     }
-
 
     /**
      * @param string $adNumberInMunicipality
@@ -311,7 +295,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -319,7 +302,6 @@ class tDbUserInfo
     {
         return $this->adZipCode;
     }
-
 
     /**
      * @param string $adZipCode
@@ -331,7 +313,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -339,7 +320,6 @@ class tDbUserInfo
     {
         return $this->adState;
     }
-
 
     /**
      * @param string $adState
@@ -351,7 +331,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -359,7 +338,6 @@ class tDbUserInfo
     {
         return $this->biDate;
     }
-
 
     /**
      * @param date $biDate
@@ -371,7 +349,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return tUserID
      */
@@ -379,7 +356,6 @@ class tDbUserInfo
     {
         return $this->userID;
     }
-
 
     /**
      * @param tUserID $userID
@@ -391,7 +367,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return tUserType
      */
@@ -399,7 +374,6 @@ class tDbUserInfo
     {
         return $this->userType;
     }
-
 
     /**
      * @param tUserType $userType
@@ -411,7 +385,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -419,7 +392,6 @@ class tDbUserInfo
     {
         return $this->userPrivils;
     }
-
 
     /**
      * @param int $userPrivils
@@ -431,7 +403,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return ic
      */
@@ -439,7 +410,6 @@ class tDbUserInfo
     {
         return $this->ic;
     }
-
 
     /**
      * @param ic $ic
@@ -451,7 +421,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -459,7 +428,6 @@ class tDbUserInfo
     {
         return $this->firmName;
     }
-
 
     /**
      * @param string $firmName
@@ -471,7 +439,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -479,7 +446,6 @@ class tDbUserInfo
     {
         return $this->caStreet;
     }
-
 
     /**
      * @param string $caStreet
@@ -491,7 +457,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -499,7 +464,6 @@ class tDbUserInfo
     {
         return $this->caCity;
     }
-
 
     /**
      * @param string $caCity
@@ -511,7 +475,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -519,7 +482,6 @@ class tDbUserInfo
     {
         return $this->caZipCode;
     }
-
 
     /**
      * @param string $caZipCode
@@ -531,7 +493,6 @@ class tDbUserInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -539,7 +500,6 @@ class tDbUserInfo
     {
         return $this->caState;
     }
-
 
     /**
      * @param string $caState
@@ -550,5 +510,4 @@ class tDbUserInfo
         $this->caState = $caState;
         return $this;
     }
-
 }

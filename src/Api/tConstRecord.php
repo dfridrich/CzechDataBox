@@ -39,7 +39,6 @@ class tConstRecord
         $this->cTo = $cTo;
     }
 
-
     /**
      * @return string
      */
@@ -47,7 +46,6 @@ class tConstRecord
     {
         return $this->cName;
     }
-
 
     /**
      * @param string $cName
@@ -59,7 +57,6 @@ class tConstRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -67,7 +64,6 @@ class tConstRecord
     {
         return $this->cValue;
     }
-
 
     /**
      * @param string $cValue
@@ -79,7 +75,6 @@ class tConstRecord
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -87,7 +82,6 @@ class tConstRecord
     {
         return $this->cFrom;
     }
-
 
     /**
      * @param date $cFrom
@@ -99,7 +93,6 @@ class tConstRecord
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -107,7 +100,6 @@ class tConstRecord
     {
         return $this->cTo;
     }
-
 
     /**
      * @param date $cTo
@@ -118,5 +110,4 @@ class tConstRecord
         $this->cTo = $cTo;
         return $this;
     }
-
 }

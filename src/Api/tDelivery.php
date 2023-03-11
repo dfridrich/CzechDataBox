@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tDelivery
 {
 
@@ -52,17 +49,16 @@ class tDelivery
      * @param int $dmMessageStatus
      * @param tEventsArray $dmEvents
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, DateTime $dmDeliveryTime = null, DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmEvents = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmEvents = null)
     {
         $this->dmDm = $dmDm;
         $this->dmHash = $dmHash;
         $this->dmQTimestamp = $dmQTimestamp;
-        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(DateTime::ATOM) : null;
-        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(DateTime::ATOM) : null;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
         $this->dmMessageStatus = $dmMessageStatus;
         $this->dmEvents = $dmEvents;
     }
-
 
     /**
      * @return dmDm
@@ -71,7 +67,6 @@ class tDelivery
     {
         return $this->dmDm;
     }
-
 
     /**
      * @param dmDm $dmDm
@@ -83,7 +78,6 @@ class tDelivery
         return $this;
     }
 
-
     /**
      * @return tHash
      */
@@ -91,7 +85,6 @@ class tDelivery
     {
         return $this->dmHash;
     }
-
 
     /**
      * @param tHash $dmHash
@@ -103,7 +96,6 @@ class tDelivery
         return $this;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -111,7 +103,6 @@ class tDelivery
     {
         return $this->dmQTimestamp;
     }
-
 
     /**
      * @param base64Binary $dmQTimestamp
@@ -123,7 +114,6 @@ class tDelivery
         return $this;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -133,24 +123,22 @@ class tDelivery
             return null;
         } else {
             try {
-                return new DateTime($this->dmDeliveryTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmDeliveryTime
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
-    public function setDmDeliveryTime(DateTime $dmDeliveryTime)
+    public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-        $this->dmDeliveryTime = $dmDeliveryTime->format(DateTime::ATOM);
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return \DateTime
@@ -161,24 +149,22 @@ class tDelivery
             return null;
         } else {
             try {
-                return new DateTime($this->dmAcceptanceTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmAcceptanceTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmAcceptanceTime
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
-    public function setDmAcceptanceTime(DateTime $dmAcceptanceTime)
+    public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-        $this->dmAcceptanceTime = $dmAcceptanceTime->format(DateTime::ATOM);
+        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return int
@@ -187,7 +173,6 @@ class tDelivery
     {
         return $this->dmMessageStatus;
     }
-
 
     /**
      * @param int $dmMessageStatus
@@ -199,7 +184,6 @@ class tDelivery
         return $this;
     }
 
-
     /**
      * @return tEventsArray
      */
@@ -207,7 +191,6 @@ class tDelivery
     {
         return $this->dmEvents;
     }
-
 
     /**
      * @param tEventsArray $dmEvents
@@ -218,5 +201,4 @@ class tDelivery
         $this->dmEvents = $dmEvents;
         return $this;
     }
-
 }

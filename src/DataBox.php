@@ -67,7 +67,7 @@ class DataBox
      */
     public function __construct($directory = null)
     {
-        $this->directory = $directory ?? sys_get_temp_dir().'/DataBox';
+        $this->directory = $directory ?: sys_get_temp_dir().'/DataBox';
         $this->simpleApi = new DataBoxSimpleApi($this);
     }
 

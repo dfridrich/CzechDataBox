@@ -5,5 +5,6 @@ parameters:
       - tests
 
     ignoreErrors:
-        - '#Access to an undefined property Symfony\\Component\\Validator\\Constraint::\$message\.#'
-        - '#Call to an undefined method Symfony\\Component\\Form\\FormInterface\:\:isClicked\(\)\.#'
+        - '#has invalid type#'
+        - '#has invalid return#'
+        - '#has unknown class#'

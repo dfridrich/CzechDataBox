@@ -24,6 +24,4 @@ class tDbType
     const OVM_FO = 'OVM_FO';
     const OVM_PFO = 'OVM_PFO';
     const OVM_PO = 'OVM_PO';
-
-
 }

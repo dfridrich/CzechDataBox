@@ -25,7 +25,6 @@ class tMessEnvelDownOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tReturnedMessageEnvelope
      */
@@ -33,7 +32,6 @@ class tMessEnvelDownOutput
     {
         return $this->dmReturnedMessageEnvelope;
     }
-
 
     /**
      * @param tReturnedMessageEnvelope $dmReturnedMessageEnvelope
@@ -45,7 +43,6 @@ class tMessEnvelDownOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tMessEnvelDownOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tMessEnvelDownOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

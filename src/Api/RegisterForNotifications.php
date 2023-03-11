@@ -18,7 +18,6 @@ class RegisterForNotifications
         $this->action = $action;
     }
 
-
     /**
      * @return int
      */
@@ -26,7 +25,6 @@ class RegisterForNotifications
     {
         return $this->action;
     }
-
 
     /**
      * @param int $action
@@ -37,5 +35,4 @@ class RegisterForNotifications
         $this->action = $action;
         return $this;
     }
-
 }

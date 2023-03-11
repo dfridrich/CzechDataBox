@@ -25,7 +25,6 @@ class tFindPersonalDBOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tdbPersOwnersArray
      */
@@ -33,7 +32,6 @@ class tFindPersonalDBOutput
     {
         return $this->dbResults;
     }
-
 
     /**
      * @param tdbPersOwnersArray $dbResults
@@ -45,7 +43,6 @@ class tFindPersonalDBOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tFindPersonalDBOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tFindPersonalDBOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

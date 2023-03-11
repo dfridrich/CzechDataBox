@@ -39,7 +39,6 @@ class tDBCreditInfoOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return int
      */
@@ -47,7 +46,6 @@ class tDBCreditInfoOutput
     {
         return $this->currentCredit;
     }
-
 
     /**
      * @param int $currentCredit
@@ -59,7 +57,6 @@ class tDBCreditInfoOutput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -67,7 +64,6 @@ class tDBCreditInfoOutput
     {
         return $this->notifEmail;
     }
-
 
     /**
      * @param string $notifEmail
@@ -79,7 +75,6 @@ class tDBCreditInfoOutput
         return $this;
     }
 
-
     /**
      * @return ciRecords
      */
@@ -87,7 +82,6 @@ class tDBCreditInfoOutput
     {
         return $this->ciRecords;
     }
-
 
     /**
      * @param ciRecords $ciRecords
@@ -99,7 +93,6 @@ class tDBCreditInfoOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -107,7 +100,6 @@ class tDBCreditInfoOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -118,5 +110,4 @@ class tDBCreditInfoOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

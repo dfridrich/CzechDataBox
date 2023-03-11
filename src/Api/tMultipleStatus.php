@@ -18,7 +18,6 @@ class tMultipleStatus
         $this->dmSingleStatus = $dmSingleStatus;
     }
 
-
     /**
      * @return tMStatus
      */
@@ -26,7 +25,6 @@ class tMultipleStatus
     {
         return $this->dmSingleStatus;
     }
-
 
     /**
      * @param tMStatus $dmSingleStatus
@@ -37,5 +35,4 @@ class tMultipleStatus
         $this->dmSingleStatus = $dmSingleStatus;
         return $this;
     }
-
 }

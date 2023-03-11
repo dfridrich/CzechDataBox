@@ -67,7 +67,6 @@ class tCreateDBInput2
         $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
-
     /**
      * @return dbOwnerInfo
      */
@@ -75,7 +74,6 @@ class tCreateDBInput2
     {
         return $this->dbOwnerInfo;
     }
-
 
     /**
      * @param dbOwnerInfo $dbOwnerInfo
@@ -87,7 +85,6 @@ class tCreateDBInput2
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -95,7 +92,6 @@ class tCreateDBInput2
     {
         return $this->pnLastNameAtBirth;
     }
-
 
     /**
      * @param string $pnLastNameAtBirth
@@ -107,7 +103,6 @@ class tCreateDBInput2
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -115,7 +110,6 @@ class tCreateDBInput2
     {
         return $this->notifEmail;
     }
-
 
     /**
      * @param string $notifEmail
@@ -127,7 +121,6 @@ class tCreateDBInput2
         return $this;
     }
 
-
     /**
      * @return tDbUsersArray2
      */
@@ -135,7 +128,6 @@ class tCreateDBInput2
     {
         return $this->dbPrimaryUsers;
     }
-
 
     /**
      * @param tDbUsersArray2 $dbPrimaryUsers
@@ -147,7 +139,6 @@ class tCreateDBInput2
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -155,7 +146,6 @@ class tCreateDBInput2
     {
         return $this->dbVirtual;
     }
-
 
     /**
      * @param boolean $dbVirtual
@@ -167,7 +157,6 @@ class tCreateDBInput2
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -175,7 +164,6 @@ class tCreateDBInput2
     {
         return $this->email;
     }
-
 
     /**
      * @param string $email
@@ -187,7 +175,6 @@ class tCreateDBInput2
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -195,7 +182,6 @@ class tCreateDBInput2
     {
         return $this->dbApproved;
     }
-
 
     /**
      * @param boolean $dbApproved
@@ -207,7 +193,6 @@ class tCreateDBInput2
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -215,7 +200,6 @@ class tCreateDBInput2
     {
         return $this->dbExternRefNumber;
     }
-
 
     /**
      * @param string $dbExternRefNumber
@@ -226,5 +210,4 @@ class tCreateDBInput2
         $this->dbExternRefNumber = $dbExternRefNumber;
         return $this;
     }
-
 }

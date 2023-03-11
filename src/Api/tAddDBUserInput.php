@@ -53,7 +53,6 @@ class tAddDBUserInput
         $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
-
     /**
      * @return tDbOwnerInfoExt
      */
@@ -61,7 +60,6 @@ class tAddDBUserInput
     {
         return $this->dbOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfoExt $dbOwnerInfo
@@ -73,7 +71,6 @@ class tAddDBUserInput
         return $this;
     }
 
-
     /**
      * @return dbUserInfo
      */
@@ -81,7 +78,6 @@ class tAddDBUserInput
     {
         return $this->dbUserInfo;
     }
-
 
     /**
      * @param dbUserInfo $dbUserInfo
@@ -93,7 +89,6 @@ class tAddDBUserInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -101,7 +96,6 @@ class tAddDBUserInput
     {
         return $this->dbVirtual;
     }
-
 
     /**
      * @param boolean $dbVirtual
@@ -113,7 +107,6 @@ class tAddDBUserInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -121,7 +114,6 @@ class tAddDBUserInput
     {
         return $this->email;
     }
-
 
     /**
      * @param string $email
@@ -133,7 +125,6 @@ class tAddDBUserInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -141,7 +132,6 @@ class tAddDBUserInput
     {
         return $this->dbApproved;
     }
-
 
     /**
      * @param boolean $dbApproved
@@ -153,7 +143,6 @@ class tAddDBUserInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -161,7 +150,6 @@ class tAddDBUserInput
     {
         return $this->dbExternRefNumber;
     }
-
 
     /**
      * @param string $dbExternRefNumber
@@ -172,5 +160,4 @@ class tAddDBUserInput
         $this->dbExternRefNumber = $dbExternRefNumber;
         return $this;
     }
-
 }

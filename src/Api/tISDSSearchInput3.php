@@ -53,7 +53,6 @@ class tISDSSearchInput3
         $this->highlighting = $highlighting;
     }
 
-
     /**
      * @return string
      */
@@ -61,7 +60,6 @@ class tISDSSearchInput3
     {
         return $this->searchText;
     }
-
 
     /**
      * @param string $searchText
@@ -73,7 +71,6 @@ class tISDSSearchInput3
         return $this;
     }
 
-
     /**
      * @return searchType
      */
@@ -81,7 +78,6 @@ class tISDSSearchInput3
     {
         return $this->searchType;
     }
-
 
     /**
      * @param searchType $searchType
@@ -93,7 +89,6 @@ class tISDSSearchInput3
         return $this;
     }
 
-
     /**
      * @return searchScope
      */
@@ -101,7 +96,6 @@ class tISDSSearchInput3
     {
         return $this->searchScope;
     }
-
 
     /**
      * @param searchScope $searchScope
@@ -113,7 +107,6 @@ class tISDSSearchInput3
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -121,7 +114,6 @@ class tISDSSearchInput3
     {
         return $this->page;
     }
-
 
     /**
      * @param int $page
@@ -133,7 +125,6 @@ class tISDSSearchInput3
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -141,7 +132,6 @@ class tISDSSearchInput3
     {
         return $this->pageSize;
     }
-
 
     /**
      * @param int $pageSize
@@ -153,7 +143,6 @@ class tISDSSearchInput3
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -161,7 +150,6 @@ class tISDSSearchInput3
     {
         return $this->highlighting;
     }
-
 
     /**
      * @param boolean $highlighting
@@ -172,5 +160,4 @@ class tISDSSearchInput3
         $this->highlighting = $highlighting;
         return $this;
     }
-
 }

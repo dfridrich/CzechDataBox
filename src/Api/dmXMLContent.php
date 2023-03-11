@@ -18,7 +18,6 @@ class dmXMLContent
         $this->any = $any;
     }
 
-
     /**
      * @return string
      */
@@ -26,7 +25,6 @@ class dmXMLContent
     {
         return $this->any;
     }
-
 
     /**
      * @param string $any
@@ -37,5 +35,4 @@ class dmXMLContent
         $this->any = $any;
         return $this;
     }
-
 }

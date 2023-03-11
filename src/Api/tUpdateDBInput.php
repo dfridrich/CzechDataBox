@@ -39,7 +39,6 @@ class tUpdateDBInput
         $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
-
     /**
      * @return tDbOwnerInfoExt
      */
@@ -47,7 +46,6 @@ class tUpdateDBInput
     {
         return $this->dbOldOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfoExt $dbOldOwnerInfo
@@ -59,7 +57,6 @@ class tUpdateDBInput
         return $this;
     }
 
-
     /**
      * @return tDbOwnerInfoExt
      */
@@ -67,7 +64,6 @@ class tUpdateDBInput
     {
         return $this->dbNewOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfoExt $dbNewOwnerInfo
@@ -79,7 +75,6 @@ class tUpdateDBInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -87,7 +82,6 @@ class tUpdateDBInput
     {
         return $this->dbApproved;
     }
-
 
     /**
      * @param boolean $dbApproved
@@ -99,7 +93,6 @@ class tUpdateDBInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -107,7 +100,6 @@ class tUpdateDBInput
     {
         return $this->dbExternRefNumber;
     }
-
 
     /**
      * @param string $dbExternRefNumber
@@ -118,5 +110,4 @@ class tUpdateDBInput
         $this->dbExternRefNumber = $dbExternRefNumber;
         return $this;
     }
-
 }

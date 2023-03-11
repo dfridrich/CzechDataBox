@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tPDZRec
 {
 
@@ -46,16 +43,15 @@ class tPDZRec
      * @param int $PDZCnt
      * @param string $ODZIdent
      */
-    public function __construct($PDZType = null, $PDZRecip = null, $PDZPayer = null, DateTime $PDZExpire = null, $PDZCnt = null, $ODZIdent = null)
+    public function __construct($PDZType = null, $PDZRecip = null, $PDZPayer = null, \DateTime $PDZExpire = null, $PDZCnt = null, $ODZIdent = null)
     {
         $this->PDZType = $PDZType;
         $this->PDZRecip = $PDZRecip;
         $this->PDZPayer = $PDZPayer;
-        $this->PDZExpire = $PDZExpire ? $PDZExpire->format(DateTime::ATOM) : null;
+        $this->PDZExpire = $PDZExpire ? $PDZExpire->format(\DateTime::ATOM) : null;
         $this->PDZCnt = $PDZCnt;
         $this->ODZIdent = $ODZIdent;
     }
-
 
     /**
      * @return string
@@ -64,7 +60,6 @@ class tPDZRec
     {
         return $this->PDZType;
     }
-
 
     /**
      * @param string $PDZType
@@ -76,7 +71,6 @@ class tPDZRec
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -84,7 +78,6 @@ class tPDZRec
     {
         return $this->PDZRecip;
     }
-
 
     /**
      * @param tIdDb $PDZRecip
@@ -96,7 +89,6 @@ class tPDZRec
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -104,7 +96,6 @@ class tPDZRec
     {
         return $this->PDZPayer;
     }
-
 
     /**
      * @param tIdDb $PDZPayer
@@ -116,7 +107,6 @@ class tPDZRec
         return $this;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -126,24 +116,22 @@ class tPDZRec
             return null;
         } else {
             try {
-                return new DateTime($this->PDZExpire);
-            } catch (Exception $e) {
+                return new \DateTime($this->PDZExpire);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $PDZExpire
      * @return \Defr\CzechDataBox\Api\tPDZRec
      */
-    public function setPDZExpire(DateTime $PDZExpire)
+    public function setPDZExpire(\DateTime $PDZExpire)
     {
-        $this->PDZExpire = $PDZExpire->format(DateTime::ATOM);
+        $this->PDZExpire = $PDZExpire->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return int
@@ -152,7 +140,6 @@ class tPDZRec
     {
         return $this->PDZCnt;
     }
-
 
     /**
      * @param int $PDZCnt
@@ -164,7 +151,6 @@ class tPDZRec
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -172,7 +158,6 @@ class tPDZRec
     {
         return $this->ODZIdent;
     }
-
 
     /**
      * @param string $ODZIdent
@@ -183,5 +168,4 @@ class tPDZRec
         $this->ODZIdent = $ODZIdent;
         return $this;
     }
-
 }

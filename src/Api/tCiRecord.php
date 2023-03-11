@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tCiRecord
 {
 
@@ -94,9 +91,9 @@ class tCiRecord
      * @param date $ciOldTo
      * @param string $ciDoneBy
      */
-    public function __construct(DateTime $ciEventTime = null, $ciEventType = null, $ciCreditChange = null, $ciCreditAfter = null, $ciTransID = null, $ciRecipientID = null, $ciPDZID = null, $ciNewCapacity = null, $ciNewFrom = null, $ciNewTo = null, $ciOldCapacity = null, $ciOldFrom = null, $ciOldTo = null, $ciDoneBy = null)
+    public function __construct(\DateTime $ciEventTime = null, $ciEventType = null, $ciCreditChange = null, $ciCreditAfter = null, $ciTransID = null, $ciRecipientID = null, $ciPDZID = null, $ciNewCapacity = null, $ciNewFrom = null, $ciNewTo = null, $ciOldCapacity = null, $ciOldFrom = null, $ciOldTo = null, $ciDoneBy = null)
     {
-        $this->ciEventTime = $ciEventTime ? $ciEventTime->format(DateTime::ATOM) : null;
+        $this->ciEventTime = $ciEventTime ? $ciEventTime->format(\DateTime::ATOM) : null;
         $this->ciEventType = $ciEventType;
         $this->ciCreditChange = $ciCreditChange;
         $this->ciCreditAfter = $ciCreditAfter;
@@ -112,7 +109,6 @@ class tCiRecord
         $this->ciDoneBy = $ciDoneBy;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -122,24 +118,22 @@ class tCiRecord
             return null;
         } else {
             try {
-                return new DateTime($this->ciEventTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->ciEventTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $ciEventTime
      * @return \Defr\CzechDataBox\Api\tCiRecord
      */
-    public function setCiEventTime(DateTime $ciEventTime)
+    public function setCiEventTime(\DateTime $ciEventTime)
     {
-        $this->ciEventTime = $ciEventTime->format(DateTime::ATOM);
+        $this->ciEventTime = $ciEventTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return int
@@ -148,7 +142,6 @@ class tCiRecord
     {
         return $this->ciEventType;
     }
-
 
     /**
      * @param int $ciEventType
@@ -160,7 +153,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -168,7 +160,6 @@ class tCiRecord
     {
         return $this->ciCreditChange;
     }
-
 
     /**
      * @param int $ciCreditChange
@@ -180,7 +171,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -188,7 +178,6 @@ class tCiRecord
     {
         return $this->ciCreditAfter;
     }
-
 
     /**
      * @param int $ciCreditAfter
@@ -200,7 +189,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -208,7 +196,6 @@ class tCiRecord
     {
         return $this->ciTransID;
     }
-
 
     /**
      * @param string $ciTransID
@@ -220,7 +207,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -228,7 +214,6 @@ class tCiRecord
     {
         return $this->ciRecipientID;
     }
-
 
     /**
      * @param tIdDb $ciRecipientID
@@ -240,7 +225,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -248,7 +232,6 @@ class tCiRecord
     {
         return $this->ciPDZID;
     }
-
 
     /**
      * @param string $ciPDZID
@@ -260,7 +243,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -268,7 +250,6 @@ class tCiRecord
     {
         return $this->ciNewCapacity;
     }
-
 
     /**
      * @param int $ciNewCapacity
@@ -280,7 +261,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -288,7 +268,6 @@ class tCiRecord
     {
         return $this->ciNewFrom;
     }
-
 
     /**
      * @param date $ciNewFrom
@@ -300,7 +279,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -308,7 +286,6 @@ class tCiRecord
     {
         return $this->ciNewTo;
     }
-
 
     /**
      * @param date $ciNewTo
@@ -320,7 +297,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -328,7 +304,6 @@ class tCiRecord
     {
         return $this->ciOldCapacity;
     }
-
 
     /**
      * @param int $ciOldCapacity
@@ -340,7 +315,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -348,7 +322,6 @@ class tCiRecord
     {
         return $this->ciOldFrom;
     }
-
 
     /**
      * @param date $ciOldFrom
@@ -360,7 +333,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -368,7 +340,6 @@ class tCiRecord
     {
         return $this->ciOldTo;
     }
-
 
     /**
      * @param date $ciOldTo
@@ -380,7 +351,6 @@ class tCiRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -388,7 +358,6 @@ class tCiRecord
     {
         return $this->ciDoneBy;
     }
-
 
     /**
      * @param string $ciDoneBy
@@ -399,5 +368,4 @@ class tCiRecord
         $this->ciDoneBy = $ciDoneBy;
         return $this;
     }
-
 }

@@ -18,7 +18,6 @@ class tdbResultsArray2
         $this->dbResult = $dbResult;
     }
 
-
     /**
      * @return tdbResult2
      */
@@ -26,7 +25,6 @@ class tdbResultsArray2
     {
         return $this->dbResult;
     }
-
 
     /**
      * @param tdbResult2 $dbResult
@@ -37,5 +35,4 @@ class tdbResultsArray2
         $this->dbResult = $dbResult;
         return $this;
     }
-
 }

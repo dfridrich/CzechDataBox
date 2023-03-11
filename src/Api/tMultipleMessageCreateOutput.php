@@ -25,7 +25,6 @@ class tMultipleMessageCreateOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tMultipleStatus
      */
@@ -33,7 +32,6 @@ class tMultipleMessageCreateOutput
     {
         return $this->dmMultipleStatus;
     }
-
 
     /**
      * @param tMultipleStatus $dmMultipleStatus
@@ -45,7 +43,6 @@ class tMultipleMessageCreateOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tMultipleMessageCreateOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tMultipleMessageCreateOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

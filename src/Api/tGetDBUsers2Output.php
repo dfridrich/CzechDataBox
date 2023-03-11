@@ -25,7 +25,6 @@ class tGetDBUsers2Output
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tDbUsersArray2
      */
@@ -33,7 +32,6 @@ class tGetDBUsers2Output
     {
         return $this->dbUsers;
     }
-
 
     /**
      * @param tDbUsersArray2 $dbUsers
@@ -45,7 +43,6 @@ class tGetDBUsers2Output
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tGetDBUsers2Output
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tGetDBUsers2Output
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

@@ -18,7 +18,6 @@ class tDbUsersArray2
         $this->dbUserInfo = $dbUserInfo;
     }
 
-
     /**
      * @return dbUserInfo
      */
@@ -26,7 +25,6 @@ class tDbUsersArray2
     {
         return $this->dbUserInfo;
     }
-
 
     /**
      * @param dbUserInfo $dbUserInfo
@@ -37,5 +35,4 @@ class tDbUsersArray2
         $this->dbUserInfo = $dbUserInfo;
         return $this;
     }
-
 }

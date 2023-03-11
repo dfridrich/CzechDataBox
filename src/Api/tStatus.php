@@ -25,7 +25,6 @@ class tStatus
         $this->dmStatusMessage = $dmStatusMessage;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class tStatus
     {
         return $this->dmStatusCode;
     }
-
 
     /**
      * @param string $dmStatusCode
@@ -45,7 +43,6 @@ class tStatus
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class tStatus
     {
         return $this->dmStatusMessage;
     }
-
 
     /**
      * @param string $dmStatusMessage
@@ -64,5 +60,4 @@ class tStatus
         $this->dmStatusMessage = $dmStatusMessage;
         return $this;
     }
-
 }

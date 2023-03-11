@@ -32,7 +32,6 @@ class tDBCreditInfoInput
         $this->ciTodate = $ciTodate;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -40,7 +39,6 @@ class tDBCreditInfoInput
     {
         return $this->dbID;
     }
-
 
     /**
      * @param tIdDb $dbID
@@ -52,7 +50,6 @@ class tDBCreditInfoInput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -60,7 +57,6 @@ class tDBCreditInfoInput
     {
         return $this->ciFromDate;
     }
-
 
     /**
      * @param date $ciFromDate
@@ -72,7 +68,6 @@ class tDBCreditInfoInput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -80,7 +75,6 @@ class tDBCreditInfoInput
     {
         return $this->ciTodate;
     }
-
 
     /**
      * @param date $ciTodate
@@ -91,5 +85,4 @@ class tDBCreditInfoInput
         $this->ciTodate = $ciTodate;
         return $this;
     }
-
 }

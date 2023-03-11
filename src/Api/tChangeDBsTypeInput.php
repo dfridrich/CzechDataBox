@@ -32,7 +32,6 @@ class tChangeDBsTypeInput
         $this->IDsFile = $IDsFile;
     }
 
-
     /**
      * @return string
      */
@@ -40,7 +39,6 @@ class tChangeDBsTypeInput
     {
         return $this->refNumber;
     }
-
 
     /**
      * @param string $refNumber
@@ -52,7 +50,6 @@ class tChangeDBsTypeInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -60,7 +57,6 @@ class tChangeDBsTypeInput
     {
         return $this->newDBType;
     }
-
 
     /**
      * @param string $newDBType
@@ -72,7 +68,6 @@ class tChangeDBsTypeInput
         return $this;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -80,7 +75,6 @@ class tChangeDBsTypeInput
     {
         return $this->IDsFile;
     }
-
 
     /**
      * @param base64Binary $IDsFile
@@ -91,5 +85,4 @@ class tChangeDBsTypeInput
         $this->IDsFile = $IDsFile;
         return $this;
     }
-
 }

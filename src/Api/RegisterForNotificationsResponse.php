@@ -18,7 +18,6 @@ class RegisterForNotificationsResponse
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tStatus
      */
@@ -26,7 +25,6 @@ class RegisterForNotificationsResponse
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -37,5 +35,4 @@ class RegisterForNotificationsResponse
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

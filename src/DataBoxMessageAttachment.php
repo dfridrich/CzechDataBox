@@ -82,9 +82,6 @@ class DataBoxMessageAttachment
     }
 
 
-    /**
-     * @return mixed
-     */
     public function getIsExist(): bool
     {
         return file_exists($this->location);

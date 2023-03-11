@@ -207,7 +207,6 @@ class tDbOwnerInfoExt
         $this->dbOpenAddressing = $dbOpenAddressing;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -215,7 +214,6 @@ class tDbOwnerInfoExt
     {
         return $this->dbID;
     }
-
 
     /**
      * @param tIdDb $dbID
@@ -227,7 +225,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return tDbType
      */
@@ -235,7 +232,6 @@ class tDbOwnerInfoExt
     {
         return $this->dbType;
     }
-
 
     /**
      * @param tDbType $dbType
@@ -247,7 +243,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return tIdentificationNumber
      */
@@ -255,7 +250,6 @@ class tDbOwnerInfoExt
     {
         return $this->ic;
     }
-
 
     /**
      * @param tIdentificationNumber $ic
@@ -267,7 +261,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -275,7 +268,6 @@ class tDbOwnerInfoExt
     {
         return $this->pnFirstName;
     }
-
 
     /**
      * @param string $pnFirstName
@@ -287,7 +279,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -295,7 +286,6 @@ class tDbOwnerInfoExt
     {
         return $this->pnMiddleName;
     }
-
 
     /**
      * @param string $pnMiddleName
@@ -307,7 +297,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -315,7 +304,6 @@ class tDbOwnerInfoExt
     {
         return $this->pnLastName;
     }
-
 
     /**
      * @param string $pnLastName
@@ -327,7 +315,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -335,7 +322,6 @@ class tDbOwnerInfoExt
     {
         return $this->pnLastNameAtBirth;
     }
-
 
     /**
      * @param string $pnLastNameAtBirth
@@ -347,7 +333,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -355,7 +340,6 @@ class tDbOwnerInfoExt
     {
         return $this->firmName;
     }
-
 
     /**
      * @param string $firmName
@@ -367,7 +351,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -375,7 +358,6 @@ class tDbOwnerInfoExt
     {
         return $this->biDate;
     }
-
 
     /**
      * @param date $biDate
@@ -387,7 +369,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -395,7 +376,6 @@ class tDbOwnerInfoExt
     {
         return $this->biCity;
     }
-
 
     /**
      * @param string $biCity
@@ -407,7 +387,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -415,7 +394,6 @@ class tDbOwnerInfoExt
     {
         return $this->biCounty;
     }
-
 
     /**
      * @param string $biCounty
@@ -427,7 +405,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -435,7 +412,6 @@ class tDbOwnerInfoExt
     {
         return $this->biState;
     }
-
 
     /**
      * @param string $biState
@@ -447,7 +423,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -455,7 +430,6 @@ class tDbOwnerInfoExt
     {
         return $this->adCity;
     }
-
 
     /**
      * @param string $adCity
@@ -467,7 +441,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -475,7 +448,6 @@ class tDbOwnerInfoExt
     {
         return $this->adDistrict;
     }
-
 
     /**
      * @param string $adDistrict
@@ -487,7 +459,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -495,7 +466,6 @@ class tDbOwnerInfoExt
     {
         return $this->adStreet;
     }
-
 
     /**
      * @param string $adStreet
@@ -507,7 +477,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -515,7 +484,6 @@ class tDbOwnerInfoExt
     {
         return $this->adNumberInStreet;
     }
-
 
     /**
      * @param string $adNumberInStreet
@@ -527,7 +495,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -535,7 +502,6 @@ class tDbOwnerInfoExt
     {
         return $this->adNumberInMunicipality;
     }
-
 
     /**
      * @param string $adNumberInMunicipality
@@ -547,7 +513,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -555,7 +520,6 @@ class tDbOwnerInfoExt
     {
         return $this->adZipCode;
     }
-
 
     /**
      * @param string $adZipCode
@@ -567,7 +531,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -575,7 +538,6 @@ class tDbOwnerInfoExt
     {
         return $this->adState;
     }
-
 
     /**
      * @param string $adState
@@ -587,7 +549,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -595,7 +556,6 @@ class tDbOwnerInfoExt
     {
         return $this->adAMCode;
     }
-
 
     /**
      * @param string $adAMCode
@@ -607,7 +567,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -615,7 +574,6 @@ class tDbOwnerInfoExt
     {
         return $this->nationality;
     }
-
 
     /**
      * @param string $nationality
@@ -627,7 +585,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -635,7 +592,6 @@ class tDbOwnerInfoExt
     {
         return $this->email;
     }
-
 
     /**
      * @param string $email
@@ -647,7 +603,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -655,7 +610,6 @@ class tDbOwnerInfoExt
     {
         return $this->telNumber;
     }
-
 
     /**
      * @param string $telNumber
@@ -667,7 +621,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -675,7 +628,6 @@ class tDbOwnerInfoExt
     {
         return $this->identifier;
     }
-
 
     /**
      * @param string $identifier
@@ -687,7 +639,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -695,7 +646,6 @@ class tDbOwnerInfoExt
     {
         return $this->registryCode;
     }
-
 
     /**
      * @param string $registryCode
@@ -707,7 +657,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -715,7 +664,6 @@ class tDbOwnerInfoExt
     {
         return $this->dbState;
     }
-
 
     /**
      * @param int $dbState
@@ -727,7 +675,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -735,7 +682,6 @@ class tDbOwnerInfoExt
     {
         return $this->dbEffectiveOVM;
     }
-
 
     /**
      * @param boolean $dbEffectiveOVM
@@ -747,7 +693,6 @@ class tDbOwnerInfoExt
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -755,7 +700,6 @@ class tDbOwnerInfoExt
     {
         return $this->dbOpenAddressing;
     }
-
 
     /**
      * @param boolean $dbOpenAddressing
@@ -766,5 +710,4 @@ class tDbOwnerInfoExt
         $this->dbOpenAddressing = $dbOpenAddressing;
         return $this;
     }
-
 }

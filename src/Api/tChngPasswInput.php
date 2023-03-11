@@ -25,7 +25,6 @@ class tChngPasswInput
         $this->dbNewPassword = $dbNewPassword;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class tChngPasswInput
     {
         return $this->dbOldPassword;
     }
-
 
     /**
      * @param string $dbOldPassword
@@ -45,7 +43,6 @@ class tChngPasswInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class tChngPasswInput
     {
         return $this->dbNewPassword;
     }
-
 
     /**
      * @param string $dbNewPassword
@@ -64,5 +60,4 @@ class tChngPasswInput
         $this->dbNewPassword = $dbNewPassword;
         return $this;
     }
-
 }

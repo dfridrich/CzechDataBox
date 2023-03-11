@@ -18,7 +18,6 @@ class tAuthenticateMessageInput
         $this->dmMessage = $dmMessage;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -26,7 +25,6 @@ class tAuthenticateMessageInput
     {
         return $this->dmMessage;
     }
-
 
     /**
      * @param base64Binary $dmMessage
@@ -37,5 +35,4 @@ class tAuthenticateMessageInput
         $this->dmMessage = $dmMessage;
         return $this;
     }
-
 }

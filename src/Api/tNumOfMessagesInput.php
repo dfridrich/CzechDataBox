@@ -15,7 +15,6 @@ class tNumOfMessagesInput
     {
     }
 
-
     /**
      * @return int
      */
@@ -23,7 +22,6 @@ class tNumOfMessagesInput
     {
         return $this->statType;
     }
-
 
     /**
      * @param int $statType
@@ -34,5 +32,4 @@ class tNumOfMessagesInput
         $this->statType = $statType;
         return $this;
     }
-
 }

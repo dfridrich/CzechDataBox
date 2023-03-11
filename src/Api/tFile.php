@@ -25,7 +25,6 @@ class tFile
         $this->dmXMLContent = $dmXMLContent;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -33,7 +32,6 @@ class tFile
     {
         return $this->dmEncodedContent;
     }
-
 
     /**
      * @param base64Binary $dmEncodedContent
@@ -45,7 +43,6 @@ class tFile
         return $this;
     }
 
-
     /**
      * @return dmXMLContent
      */
@@ -53,7 +50,6 @@ class tFile
     {
         return $this->dmXMLContent;
     }
-
 
     /**
      * @param dmXMLContent $dmXMLContent
@@ -64,5 +60,4 @@ class tFile
         $this->dmXMLContent = $dmXMLContent;
         return $this;
     }
-
 }

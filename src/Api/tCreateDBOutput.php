@@ -39,7 +39,6 @@ class tCreateDBOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -47,7 +46,6 @@ class tCreateDBOutput
     {
         return $this->dbID;
     }
-
 
     /**
      * @param tIdDb $dbID
@@ -59,7 +57,6 @@ class tCreateDBOutput
         return $this;
     }
 
-
     /**
      * @return tUserID
      */
@@ -67,7 +64,6 @@ class tCreateDBOutput
     {
         return $this->dbUserID;
     }
-
 
     /**
      * @param tUserID $dbUserID
@@ -79,7 +75,6 @@ class tCreateDBOutput
         return $this;
     }
 
-
     /**
      * @return tDbAccessDataId
      */
@@ -87,7 +82,6 @@ class tCreateDBOutput
     {
         return $this->dbAccessDataId;
     }
-
 
     /**
      * @param tDbAccessDataId $dbAccessDataId
@@ -99,7 +93,6 @@ class tCreateDBOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -107,7 +100,6 @@ class tCreateDBOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -118,5 +110,4 @@ class tCreateDBOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

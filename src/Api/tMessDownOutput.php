@@ -25,7 +25,6 @@ class tMessDownOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tReturnedMessage
      */
@@ -33,7 +32,6 @@ class tMessDownOutput
     {
         return $this->dmReturnedMessage;
     }
-
 
     /**
      * @param tReturnedMessage $dmReturnedMessage
@@ -45,7 +43,6 @@ class tMessDownOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tMessDownOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tMessDownOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

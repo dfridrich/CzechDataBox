@@ -67,7 +67,6 @@ class tdbResult
         $this->dbSendOptions = $dbSendOptions;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -75,7 +74,6 @@ class tdbResult
     {
         return $this->dbID;
     }
-
 
     /**
      * @param tIdDb $dbID
@@ -87,7 +85,6 @@ class tdbResult
         return $this;
     }
 
-
     /**
      * @return tDbType
      */
@@ -95,7 +92,6 @@ class tdbResult
     {
         return $this->dbType;
     }
-
 
     /**
      * @param tDbType $dbType
@@ -107,7 +103,6 @@ class tdbResult
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -115,7 +110,6 @@ class tdbResult
     {
         return $this->dbName;
     }
-
 
     /**
      * @param string $dbName
@@ -127,7 +121,6 @@ class tdbResult
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -135,7 +128,6 @@ class tdbResult
     {
         return $this->dbAddress;
     }
-
 
     /**
      * @param string $dbAddress
@@ -147,7 +139,6 @@ class tdbResult
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -155,7 +146,6 @@ class tdbResult
     {
         return $this->dbBiDate;
     }
-
 
     /**
      * @param date $dbBiDate
@@ -167,7 +157,6 @@ class tdbResult
         return $this;
     }
 
-
     /**
      * @return tIdentificationNumber
      */
@@ -175,7 +164,6 @@ class tdbResult
     {
         return $this->dbICO;
     }
-
 
     /**
      * @param tIdentificationNumber $dbICO
@@ -187,7 +175,6 @@ class tdbResult
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -195,7 +182,6 @@ class tdbResult
     {
         return $this->dbEffectiveOVM;
     }
-
 
     /**
      * @param boolean $dbEffectiveOVM
@@ -207,7 +193,6 @@ class tdbResult
         return $this;
     }
 
-
     /**
      * @return dbSendOptions
      */
@@ -215,7 +200,6 @@ class tdbResult
     {
         return $this->dbSendOptions;
     }
-
 
     /**
      * @param dbSendOptions $dbSendOptions
@@ -226,5 +210,4 @@ class tdbResult
         $this->dbSendOptions = $dbSendOptions;
         return $this;
     }
-
 }

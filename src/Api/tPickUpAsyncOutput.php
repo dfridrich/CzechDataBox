@@ -32,7 +32,6 @@ class tPickUpAsyncOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return string
      */
@@ -40,7 +39,6 @@ class tPickUpAsyncOutput
     {
         return $this->asyncReqType;
     }
-
 
     /**
      * @param string $asyncReqType
@@ -52,7 +50,6 @@ class tPickUpAsyncOutput
         return $this;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -60,7 +57,6 @@ class tPickUpAsyncOutput
     {
         return $this->asyncResponse;
     }
-
 
     /**
      * @param base64Binary $asyncResponse
@@ -72,7 +68,6 @@ class tPickUpAsyncOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -80,7 +75,6 @@ class tPickUpAsyncOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -91,5 +85,4 @@ class tPickUpAsyncOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

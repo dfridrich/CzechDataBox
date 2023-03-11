@@ -25,7 +25,6 @@ class tStatReqStatus
         $this->dbStatusMessage = $dbStatusMessage;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class tStatReqStatus
     {
         return $this->dbStatusCode;
     }
-
 
     /**
      * @param string $dbStatusCode
@@ -45,7 +43,6 @@ class tStatReqStatus
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class tStatReqStatus
     {
         return $this->dbStatusMessage;
     }
-
 
     /**
      * @param string $dbStatusMessage
@@ -64,5 +60,4 @@ class tStatReqStatus
         $this->dbStatusMessage = $dbStatusMessage;
         return $this;
     }
-
 }

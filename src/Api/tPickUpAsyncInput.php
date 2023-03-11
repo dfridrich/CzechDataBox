@@ -25,7 +25,6 @@ class tPickUpAsyncInput
         $this->asyncReqType = $asyncReqType;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class tPickUpAsyncInput
     {
         return $this->asyncID;
     }
-
 
     /**
      * @param string $asyncID
@@ -45,7 +43,6 @@ class tPickUpAsyncInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class tPickUpAsyncInput
     {
         return $this->asyncReqType;
     }
-
 
     /**
      * @param string $asyncReqType
@@ -64,5 +60,4 @@ class tPickUpAsyncInput
         $this->asyncReqType = $asyncReqType;
         return $this;
     }
-
 }

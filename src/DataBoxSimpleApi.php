@@ -236,13 +236,13 @@ class DataBoxSimpleApi
         /** @var dmFile[] $attachments */
         $attachments = $this->dataBox->DmOperationsWebService()->MessageDownload(
             new tIDMessInput($dataMessageId),
-        )->getDmReturnedMessage()->getDmDm()->dmFiles->getDmFile();
+        )->getDmReturnedMessage()->getDmDm()->getDmFiles()->getDmFile();
         $files = [];
 
         foreach ($attachments as $attachment) {
             $file = $this->getLocationForAttachment($dataMessageId, $attachment->getDmFileDescr());
             if (!$file->getIsExist()) {
-                $content = $attachment->dmEncodedContent;
+                $content = $attachment->getDmEncodedContent();
                 $file->save($content);
             }
 

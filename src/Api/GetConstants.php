@@ -18,7 +18,6 @@ class GetConstants
         $this->constDate = $constDate;
     }
 
-
     /**
      * @return date
      */
@@ -26,7 +25,6 @@ class GetConstants
     {
         return $this->constDate;
     }
-
 
     /**
      * @param date $constDate
@@ -37,5 +35,4 @@ class GetConstants
         $this->constDate = $constDate;
         return $this;
     }
-
 }

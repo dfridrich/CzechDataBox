@@ -18,7 +18,6 @@ class dbUserInfo
         $this->AIFOTicket = $AIFOTicket;
     }
 
-
     /**
      * @return string
      */
@@ -26,7 +25,6 @@ class dbUserInfo
     {
         return $this->AIFOTicket;
     }
-
 
     /**
      * @param string $AIFOTicket
@@ -37,5 +35,4 @@ class dbUserInfo
         $this->AIFOTicket = $AIFOTicket;
         return $this;
     }
-
 }

@@ -25,7 +25,6 @@ class tSignDelivMessOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -33,7 +32,6 @@ class tSignDelivMessOutput
     {
         return $this->dmSignature;
     }
-
 
     /**
      * @param base64Binary $dmSignature
@@ -45,7 +43,6 @@ class tSignDelivMessOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tSignDelivMessOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tSignDelivMessOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

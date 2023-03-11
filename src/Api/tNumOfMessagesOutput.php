@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tNumOfMessagesOutput
 {
 
@@ -26,11 +23,10 @@ class tNumOfMessagesOutput
     /**
      * @param \DateTime $statTime
      */
-    public function __construct(DateTime $statTime = null)
+    public function __construct(\DateTime $statTime = null)
     {
-        $this->statTime = $statTime ? $statTime->format(DateTime::ATOM) : null;
+        $this->statTime = $statTime ? $statTime->format(\DateTime::ATOM) : null;
     }
-
 
     /**
      * @return int
@@ -39,7 +35,6 @@ class tNumOfMessagesOutput
     {
         return $this->statResult;
     }
-
 
     /**
      * @param int $statResult
@@ -51,7 +46,6 @@ class tNumOfMessagesOutput
         return $this;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -61,24 +55,22 @@ class tNumOfMessagesOutput
             return null;
         } else {
             try {
-                return new DateTime($this->statTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->statTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $statTime
      * @return \Defr\CzechDataBox\Api\tNumOfMessagesOutput
      */
-    public function setStatTime(DateTime $statTime)
+    public function setStatTime(\DateTime $statTime)
     {
-        $this->statTime = $statTime->format(DateTime::ATOM);
+        $this->statTime = $statTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return tStatReqStatus
@@ -87,7 +79,6 @@ class tNumOfMessagesOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tStatReqStatus $dbStatus
@@ -98,5 +89,4 @@ class tNumOfMessagesOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

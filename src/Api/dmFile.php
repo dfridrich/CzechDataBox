@@ -39,7 +39,6 @@ class dmFile
         $this->dmMimeType = $dmMimeType;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -47,7 +46,6 @@ class dmFile
     {
         return $this->dmEncodedContent;
     }
-
 
     /**
      * @param base64Binary $dmEncodedContent
@@ -59,7 +57,6 @@ class dmFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -67,7 +64,6 @@ class dmFile
     {
         return $this->dmFileMetaType;
     }
-
 
     /**
      * @param string $dmFileMetaType
@@ -79,7 +75,6 @@ class dmFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -87,7 +82,6 @@ class dmFile
     {
         return $this->dmFileDescr;
     }
-
 
     /**
      * @param string $dmFileDescr
@@ -99,7 +93,6 @@ class dmFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -107,7 +100,6 @@ class dmFile
     {
         return $this->dmMimeType;
     }
-
 
     /**
      * @param string $dmMimeType
@@ -118,5 +110,4 @@ class dmFile
         $this->dmMimeType = $dmMimeType;
         return $this;
     }
-
 }

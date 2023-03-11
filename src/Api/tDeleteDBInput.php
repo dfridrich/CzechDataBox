@@ -39,7 +39,6 @@ class tDeleteDBInput
         $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
-
     /**
      * @return tDbOwnerInfo
      */
@@ -47,7 +46,6 @@ class tDeleteDBInput
     {
         return $this->dbOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -59,7 +57,6 @@ class tDeleteDBInput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -67,7 +64,6 @@ class tDeleteDBInput
     {
         return $this->dbOwnerTerminationDate;
     }
-
 
     /**
      * @param date $dbOwnerTerminationDate
@@ -79,7 +75,6 @@ class tDeleteDBInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -87,7 +82,6 @@ class tDeleteDBInput
     {
         return $this->dbApproved;
     }
-
 
     /**
      * @param boolean $dbApproved
@@ -99,7 +93,6 @@ class tDeleteDBInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -107,7 +100,6 @@ class tDeleteDBInput
     {
         return $this->dbExternRefNumber;
     }
-
 
     /**
      * @param string $dbExternRefNumber
@@ -118,5 +110,4 @@ class tDeleteDBInput
         $this->dbExternRefNumber = $dbExternRefNumber;
         return $this;
     }
-
 }

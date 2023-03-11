@@ -25,7 +25,6 @@ class GetMessageAuthor2Response
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return dmMessageAuthor
      */
@@ -33,7 +32,6 @@ class GetMessageAuthor2Response
     {
         return $this->dmMessageAuthor;
     }
-
 
     /**
      * @param dmMessageAuthor $dmMessageAuthor
@@ -45,7 +43,6 @@ class GetMessageAuthor2Response
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class GetMessageAuthor2Response
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class GetMessageAuthor2Response
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

@@ -32,7 +32,6 @@ class tAddDBUserOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -40,7 +39,6 @@ class tAddDBUserOutput
     {
         return $this->dbID;
     }
-
 
     /**
      * @param tIdDb $dbID
@@ -52,7 +50,6 @@ class tAddDBUserOutput
         return $this;
     }
 
-
     /**
      * @return tDbAccessDataId
      */
@@ -60,7 +57,6 @@ class tAddDBUserOutput
     {
         return $this->dbAccessDataId;
     }
-
 
     /**
      * @param tDbAccessDataId $dbAccessDataId
@@ -72,7 +68,6 @@ class tAddDBUserOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -80,7 +75,6 @@ class tAddDBUserOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -91,5 +85,4 @@ class tAddDBUserOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

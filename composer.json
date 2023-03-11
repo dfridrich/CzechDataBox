@@ -35,6 +35,11 @@
             "Defr\\CzechDataBox\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Defr\\CzechDataBox\\": "tests/"
+        }
+    },
     "scripts": {
         "phpcs": "@php -d memor_limit=2G vendor/bin/phpcs -sp",
         "phpcbf": "@php -d memor_limit=2G vendor/bin/phpcbf -sp",

@@ -25,7 +25,6 @@ class tGetOwnInfoOutput2
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tDbOwnerInfoExt2
      */
@@ -33,7 +32,6 @@ class tGetOwnInfoOutput2
     {
         return $this->dbOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfoExt2 $dbOwnerInfo
@@ -45,7 +43,6 @@ class tGetOwnInfoOutput2
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tGetOwnInfoOutput2
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tGetOwnInfoOutput2
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

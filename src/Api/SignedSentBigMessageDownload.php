@@ -18,7 +18,6 @@ class SignedSentBigMessageDownload
         $this->dmID = $dmID;
     }
 
-
     /**
      * @return tIdDm
      */
@@ -26,7 +25,6 @@ class SignedSentBigMessageDownload
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -37,5 +35,4 @@ class SignedSentBigMessageDownload
         $this->dmID = $dmID;
         return $this;
     }
-
 }

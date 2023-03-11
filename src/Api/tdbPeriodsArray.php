@@ -18,7 +18,6 @@ class tdbPeriodsArray
         $this->Period = $Period;
     }
 
-
     /**
      * @return tdbPeriod
      */
@@ -26,7 +25,6 @@ class tdbPeriodsArray
     {
         return $this->Period;
     }
-
 
     /**
      * @param tdbPeriod $Period
@@ -37,5 +35,4 @@ class tdbPeriodsArray
         $this->Period = $Period;
         return $this;
     }
-
 }

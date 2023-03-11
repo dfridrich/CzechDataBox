@@ -25,7 +25,6 @@ class tCheckDBOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return int
      */
@@ -33,7 +32,6 @@ class tCheckDBOutput
     {
         return $this->dbState;
     }
-
 
     /**
      * @param int $dbState
@@ -45,7 +43,6 @@ class tCheckDBOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tCheckDBOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tCheckDBOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

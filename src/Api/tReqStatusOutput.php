@@ -18,7 +18,6 @@ class tReqStatusOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -26,7 +25,6 @@ class tReqStatusOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -37,5 +35,4 @@ class tReqStatusOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tListOfFReceivedInput
 {
 
@@ -46,16 +43,15 @@ class tListOfFReceivedInput
      * @param int $dmOffset
      * @param int $dmLimit
      */
-    public function __construct(DateTime $dmFromTime = null, DateTime $dmToTime = null, $dmRecipientOrgUnitNum = null, $dmStatusFilter = null, $dmOffset = null, $dmLimit = null)
+    public function __construct(\DateTime $dmFromTime = null, \DateTime $dmToTime = null, $dmRecipientOrgUnitNum = null, $dmStatusFilter = null, $dmOffset = null, $dmLimit = null)
     {
-        $this->dmFromTime = $dmFromTime ? $dmFromTime->format(DateTime::ATOM) : null;
-        $this->dmToTime = $dmToTime ? $dmToTime->format(DateTime::ATOM) : null;
+        $this->dmFromTime = $dmFromTime ? $dmFromTime->format(\DateTime::ATOM) : null;
+        $this->dmToTime = $dmToTime ? $dmToTime->format(\DateTime::ATOM) : null;
         $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
         $this->dmStatusFilter = $dmStatusFilter;
         $this->dmOffset = $dmOffset;
         $this->dmLimit = $dmLimit;
     }
-
 
     /**
      * @return \DateTime
@@ -66,24 +62,22 @@ class tListOfFReceivedInput
             return null;
         } else {
             try {
-                return new DateTime($this->dmFromTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmFromTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmFromTime
      * @return \Defr\CzechDataBox\Api\tListOfFReceivedInput
      */
-    public function setDmFromTime(DateTime $dmFromTime)
+    public function setDmFromTime(\DateTime $dmFromTime)
     {
-        $this->dmFromTime = $dmFromTime->format(DateTime::ATOM);
+        $this->dmFromTime = $dmFromTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return \DateTime
@@ -94,24 +88,22 @@ class tListOfFReceivedInput
             return null;
         } else {
             try {
-                return new DateTime($this->dmToTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmToTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmToTime
      * @return \Defr\CzechDataBox\Api\tListOfFReceivedInput
      */
-    public function setDmToTime(DateTime $dmToTime)
+    public function setDmToTime(\DateTime $dmToTime)
     {
-        $this->dmToTime = $dmToTime->format(DateTime::ATOM);
+        $this->dmToTime = $dmToTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return int
@@ -120,7 +112,6 @@ class tListOfFReceivedInput
     {
         return $this->dmRecipientOrgUnitNum;
     }
-
 
     /**
      * @param int $dmRecipientOrgUnitNum
@@ -132,7 +123,6 @@ class tListOfFReceivedInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -140,7 +130,6 @@ class tListOfFReceivedInput
     {
         return $this->dmStatusFilter;
     }
-
 
     /**
      * @param string $dmStatusFilter
@@ -152,7 +141,6 @@ class tListOfFReceivedInput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -160,7 +148,6 @@ class tListOfFReceivedInput
     {
         return $this->dmOffset;
     }
-
 
     /**
      * @param int $dmOffset
@@ -172,7 +159,6 @@ class tListOfFReceivedInput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -180,7 +166,6 @@ class tListOfFReceivedInput
     {
         return $this->dmLimit;
     }
-
 
     /**
      * @param int $dmLimit
@@ -191,5 +176,4 @@ class tListOfFReceivedInput
         $this->dmLimit = $dmLimit;
         return $this;
     }
-
 }

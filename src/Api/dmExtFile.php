@@ -53,7 +53,6 @@ class dmExtFile
         $this->dmAttHash2Alg = $dmAttHash2Alg;
     }
 
-
     /**
      * @return string
      */
@@ -61,7 +60,6 @@ class dmExtFile
     {
         return $this->dmFileMetaType;
     }
-
 
     /**
      * @param string $dmFileMetaType
@@ -73,7 +71,6 @@ class dmExtFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -81,7 +78,6 @@ class dmExtFile
     {
         return $this->dmAttID;
     }
-
 
     /**
      * @param string $dmAttID
@@ -93,7 +89,6 @@ class dmExtFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -101,7 +96,6 @@ class dmExtFile
     {
         return $this->dmAttHash1;
     }
-
 
     /**
      * @param string $dmAttHash1
@@ -113,7 +107,6 @@ class dmExtFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -121,7 +114,6 @@ class dmExtFile
     {
         return $this->dmAttHash1Alg;
     }
-
 
     /**
      * @param string $dmAttHash1Alg
@@ -133,7 +125,6 @@ class dmExtFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -141,7 +132,6 @@ class dmExtFile
     {
         return $this->dmAttHash2;
     }
-
 
     /**
      * @param string $dmAttHash2
@@ -153,7 +143,6 @@ class dmExtFile
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -161,7 +150,6 @@ class dmExtFile
     {
         return $this->dmAttHash2Alg;
     }
-
 
     /**
      * @param string $dmAttHash2Alg
@@ -172,5 +160,4 @@ class dmExtFile
         $this->dmAttHash2Alg = $dmAttHash2Alg;
         return $this;
     }
-
 }

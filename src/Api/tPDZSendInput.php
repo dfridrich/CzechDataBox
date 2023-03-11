@@ -25,7 +25,6 @@ class tPDZSendInput
         $this->PDZType = $PDZType;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -33,7 +32,6 @@ class tPDZSendInput
     {
         return $this->dbId;
     }
-
 
     /**
      * @param tIdDb $dbId
@@ -45,7 +43,6 @@ class tPDZSendInput
         return $this;
     }
 
-
     /**
      * @return PDZType
      */
@@ -53,7 +50,6 @@ class tPDZSendInput
     {
         return $this->PDZType;
     }
-
 
     /**
      * @param PDZType $PDZType
@@ -64,5 +60,4 @@ class tPDZSendInput
         $this->PDZType = $PDZType;
         return $this;
     }
-
 }

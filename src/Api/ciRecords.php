@@ -18,7 +18,6 @@ class ciRecords
         $this->ciRecord = $ciRecord;
     }
 
-
     /**
      * @return tCiRecord
      */
@@ -26,7 +25,6 @@ class ciRecords
     {
         return $this->ciRecord;
     }
-
 
     /**
      * @param tCiRecord $ciRecord
@@ -37,5 +35,4 @@ class ciRecords
         $this->ciRecord = $ciRecord;
         return $this;
     }
-
 }

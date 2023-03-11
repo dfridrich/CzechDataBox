@@ -1,16 +1,21 @@
 <?php
 
+namespace Defr\CzechDataBox;
+
 use Defr\CzechDataBox\Api\tGetOwnInfoOutput;
 use Defr\CzechDataBox\DataBox;
 use Defr\CzechDataBox\DataBoxException;
 use Defr\CzechDataBox\DataBoxHelper;
-use Defr\CzechDataBox\Ws\ServiceType\Get;
-use Defr\CzechDataBox\Ws\StructType\TDummyInput;
+use Defr\CzechDataBox\Api\tDummyInput;
 use PHPUnit\Framework\TestCase;
 
 class DataBoxTest extends TestCase
 {
-    private function provideDataBox(): DataBox
+
+    /**
+     * @return DataBox
+     */
+    private function __getDataBox()
     {
         $dataBox = new DataBox();
         $dataBox->loginWithUsernameAndPassword(
@@ -22,11 +27,10 @@ class DataBoxTest extends TestCase
         return $dataBox;
     }
 
-
     public function testLogin(): void
     {
-        $info = $this->__getDataBox()->DataBoxAccess()->GetOwnerInfoFromLogin(new \Defr\CzechDataBox\Api\tDummyInput(null));
-        $this->assertInstanceOf("Defr\\CzechDataBox\\Api\\tGetOwnInfoOutput", $info);
+        $info = $this->__getDataBox()->DataBoxAccess()->GetOwnerInfoFromLogin(new tDummyInput(null));
+        $this->assertInstanceOf(\Defr\CzechDataBox\Api\tGetOwnInfoOutput::class, $info);
     }
 
 
@@ -37,5 +41,4 @@ class DataBoxTest extends TestCase
         $dataBox->loginWithUsernameAndPassword("fakeLogin", "fakePassword", false);
         $dataBox->testConnection();
     }
-
 }

@@ -25,7 +25,6 @@ class tPDZSendOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return boolean
      */
@@ -33,7 +32,6 @@ class tPDZSendOutput
     {
         return $this->PDZsiResult;
     }
-
 
     /**
      * @param boolean $PDZsiResult
@@ -45,7 +43,6 @@ class tPDZSendOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tPDZSendOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tPDZSendOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

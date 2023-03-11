@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tStateChangesRecord
 {
 
@@ -28,13 +25,12 @@ class tStateChangesRecord
      * @param \DateTime $dmEventTime
      * @param int $dmMessageStatus
      */
-    public function __construct($dmID = null, DateTime $dmEventTime = null, $dmMessageStatus = null)
+    public function __construct($dmID = null, \DateTime $dmEventTime = null, $dmMessageStatus = null)
     {
         $this->dmID = $dmID;
-        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(DateTime::ATOM) : null;
+        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
         $this->dmMessageStatus = $dmMessageStatus;
     }
-
 
     /**
      * @return tIdDm
@@ -43,7 +39,6 @@ class tStateChangesRecord
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -55,7 +50,6 @@ class tStateChangesRecord
         return $this;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -65,24 +59,22 @@ class tStateChangesRecord
             return null;
         } else {
             try {
-                return new DateTime($this->dmEventTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmEventTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmEventTime
      * @return \Defr\CzechDataBox\Api\tStateChangesRecord
      */
-    public function setDmEventTime(DateTime $dmEventTime)
+    public function setDmEventTime(\DateTime $dmEventTime)
     {
-        $this->dmEventTime = $dmEventTime->format(DateTime::ATOM);
+        $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return int
@@ -91,7 +83,6 @@ class tStateChangesRecord
     {
         return $this->dmMessageStatus;
     }
-
 
     /**
      * @param int $dmMessageStatus
@@ -102,5 +93,4 @@ class tStateChangesRecord
         $this->dmMessageStatus = $dmMessageStatus;
         return $this;
     }
-
 }

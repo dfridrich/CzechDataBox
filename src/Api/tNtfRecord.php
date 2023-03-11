@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tNtfRecord
 {
 
@@ -58,18 +55,17 @@ class tNtfRecord
      * @param tIdDb $dbIDSender
      * @param string $dmSender
      */
-    public function __construct($ntfType = null, $dmID = null, $dmPersonalDelivery = null, DateTime $dmDeliveryTime = null, $dbIDRecipient = null, $dmAnnotation = null, $dbIDSender = null, $dmSender = null)
+    public function __construct($ntfType = null, $dmID = null, $dmPersonalDelivery = null, \DateTime $dmDeliveryTime = null, $dbIDRecipient = null, $dmAnnotation = null, $dbIDSender = null, $dmSender = null)
     {
         $this->ntfType = $ntfType;
         $this->dmID = $dmID;
         $this->dmPersonalDelivery = $dmPersonalDelivery;
-        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(DateTime::ATOM) : null;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
         $this->dbIDRecipient = $dbIDRecipient;
         $this->dmAnnotation = $dmAnnotation;
         $this->dbIDSender = $dbIDSender;
         $this->dmSender = $dmSender;
     }
-
 
     /**
      * @return int
@@ -78,7 +74,6 @@ class tNtfRecord
     {
         return $this->ntfType;
     }
-
 
     /**
      * @param int $ntfType
@@ -90,7 +85,6 @@ class tNtfRecord
         return $this;
     }
 
-
     /**
      * @return tIdDm
      */
@@ -98,7 +92,6 @@ class tNtfRecord
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -110,7 +103,6 @@ class tNtfRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -118,7 +110,6 @@ class tNtfRecord
     {
         return $this->dmPersonalDelivery;
     }
-
 
     /**
      * @param int $dmPersonalDelivery
@@ -130,7 +121,6 @@ class tNtfRecord
         return $this;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -140,24 +130,22 @@ class tNtfRecord
             return null;
         } else {
             try {
-                return new DateTime($this->dmDeliveryTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmDeliveryTime
      * @return \Defr\CzechDataBox\Api\tNtfRecord
      */
-    public function setDmDeliveryTime(DateTime $dmDeliveryTime)
+    public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-        $this->dmDeliveryTime = $dmDeliveryTime->format(DateTime::ATOM);
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return tIdDb
@@ -166,7 +154,6 @@ class tNtfRecord
     {
         return $this->dbIDRecipient;
     }
-
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -178,7 +165,6 @@ class tNtfRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -186,7 +172,6 @@ class tNtfRecord
     {
         return $this->dmAnnotation;
     }
-
 
     /**
      * @param string $dmAnnotation
@@ -198,7 +183,6 @@ class tNtfRecord
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -206,7 +190,6 @@ class tNtfRecord
     {
         return $this->dbIDSender;
     }
-
 
     /**
      * @param tIdDb $dbIDSender
@@ -218,7 +201,6 @@ class tNtfRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -226,7 +208,6 @@ class tNtfRecord
     {
         return $this->dmSender;
     }
-
 
     /**
      * @param string $dmSender
@@ -237,5 +218,4 @@ class tNtfRecord
         $this->dmSender = $dmSender;
         return $this;
     }
-
 }

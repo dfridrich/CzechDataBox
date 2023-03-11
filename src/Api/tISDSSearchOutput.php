@@ -53,7 +53,6 @@ class tISDSSearchOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return int
      */
@@ -61,7 +60,6 @@ class tISDSSearchOutput
     {
         return $this->totalCount;
     }
-
 
     /**
      * @param int $totalCount
@@ -73,7 +71,6 @@ class tISDSSearchOutput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -81,7 +78,6 @@ class tISDSSearchOutput
     {
         return $this->currentCount;
     }
-
 
     /**
      * @param int $currentCount
@@ -93,7 +89,6 @@ class tISDSSearchOutput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -101,7 +96,6 @@ class tISDSSearchOutput
     {
         return $this->position;
     }
-
 
     /**
      * @param int $position
@@ -113,7 +107,6 @@ class tISDSSearchOutput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -121,7 +114,6 @@ class tISDSSearchOutput
     {
         return $this->lastPage;
     }
-
 
     /**
      * @param boolean $lastPage
@@ -133,7 +125,6 @@ class tISDSSearchOutput
         return $this;
     }
 
-
     /**
      * @return tdbResultsArray
      */
@@ -141,7 +132,6 @@ class tISDSSearchOutput
     {
         return $this->dbResults;
     }
-
 
     /**
      * @param tdbResultsArray $dbResults
@@ -153,7 +143,6 @@ class tISDSSearchOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -161,7 +150,6 @@ class tISDSSearchOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -172,5 +160,4 @@ class tISDSSearchOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

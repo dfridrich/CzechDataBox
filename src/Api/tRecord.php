@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tRecord
 {
 
@@ -208,7 +205,7 @@ class tRecord
      * @param anonymous50 $dmType
      * @param boolean $dmVODZ
      */
-    public function __construct($dmOrdinal = null, $dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, $dmAmbiguousRecipient = null, $dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmMessageStatus = null, $dmAttachmentSize = null, DateTime $dmDeliveryTime = null, DateTime $dmAcceptanceTime = null, $dmType = null, $dmVODZ = null)
+    public function __construct($dmOrdinal = null, $dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, $dmAmbiguousRecipient = null, $dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmMessageStatus = null, $dmAttachmentSize = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmType = null, $dmVODZ = null)
     {
         $this->dmOrdinal = $dmOrdinal;
         $this->dmID = $dmID;
@@ -239,12 +236,11 @@ class tRecord
         $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
         $this->dmMessageStatus = $dmMessageStatus;
         $this->dmAttachmentSize = $dmAttachmentSize;
-        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(DateTime::ATOM) : null;
-        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(DateTime::ATOM) : null;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
         $this->dmType = $dmType;
         $this->dmVODZ = $dmVODZ;
     }
-
 
     /**
      * @return dmOrdinal
@@ -253,7 +249,6 @@ class tRecord
     {
         return $this->dmOrdinal;
     }
-
 
     /**
      * @param dmOrdinal $dmOrdinal
@@ -265,7 +260,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return tIdDm
      */
@@ -273,7 +267,6 @@ class tRecord
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -285,7 +278,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -293,7 +285,6 @@ class tRecord
     {
         return $this->dbIDSender;
     }
-
 
     /**
      * @param tIdDb $dbIDSender
@@ -305,7 +296,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmSender
      */
@@ -313,7 +303,6 @@ class tRecord
     {
         return $this->dmSender;
     }
-
 
     /**
      * @param dmSender $dmSender
@@ -325,7 +314,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmSenderAddress
      */
@@ -333,7 +321,6 @@ class tRecord
     {
         return $this->dmSenderAddress;
     }
-
 
     /**
      * @param dmSenderAddress $dmSenderAddress
@@ -345,7 +332,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -353,7 +339,6 @@ class tRecord
     {
         return $this->dmSenderType;
     }
-
 
     /**
      * @param int $dmSenderType
@@ -365,7 +350,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmRecipient
      */
@@ -373,7 +357,6 @@ class tRecord
     {
         return $this->dmRecipient;
     }
-
 
     /**
      * @param dmRecipient $dmRecipient
@@ -385,7 +368,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmRecipientAddress
      */
@@ -393,7 +375,6 @@ class tRecord
     {
         return $this->dmRecipientAddress;
     }
-
 
     /**
      * @param dmRecipientAddress $dmRecipientAddress
@@ -405,7 +386,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -413,7 +393,6 @@ class tRecord
     {
         return $this->dmAmbiguousRecipient;
     }
-
 
     /**
      * @param boolean $dmAmbiguousRecipient
@@ -425,7 +404,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -433,7 +411,6 @@ class tRecord
     {
         return $this->dmSenderOrgUnit;
     }
-
 
     /**
      * @param string $dmSenderOrgUnit
@@ -445,7 +422,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -453,7 +429,6 @@ class tRecord
     {
         return $this->dmSenderOrgUnitNum;
     }
-
 
     /**
      * @param int $dmSenderOrgUnitNum
@@ -465,7 +440,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -473,7 +447,6 @@ class tRecord
     {
         return $this->dbIDRecipient;
     }
-
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -485,7 +458,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -493,7 +465,6 @@ class tRecord
     {
         return $this->dmRecipientOrgUnit;
     }
-
 
     /**
      * @param string $dmRecipientOrgUnit
@@ -505,7 +476,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -513,7 +483,6 @@ class tRecord
     {
         return $this->dmRecipientOrgUnitNum;
     }
-
 
     /**
      * @param int $dmRecipientOrgUnitNum
@@ -525,7 +494,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -533,7 +501,6 @@ class tRecord
     {
         return $this->dmToHands;
     }
-
 
     /**
      * @param string $dmToHands
@@ -545,7 +512,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmAnnotation
      */
@@ -553,7 +519,6 @@ class tRecord
     {
         return $this->dmAnnotation;
     }
-
 
     /**
      * @param dmAnnotation $dmAnnotation
@@ -565,7 +530,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmRecipientRefNumber
      */
@@ -573,7 +537,6 @@ class tRecord
     {
         return $this->dmRecipientRefNumber;
     }
-
 
     /**
      * @param dmRecipientRefNumber $dmRecipientRefNumber
@@ -585,7 +548,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmSenderRefNumber
      */
@@ -593,7 +555,6 @@ class tRecord
     {
         return $this->dmSenderRefNumber;
     }
-
 
     /**
      * @param dmSenderRefNumber $dmSenderRefNumber
@@ -605,7 +566,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmRecipientIdent
      */
@@ -613,7 +573,6 @@ class tRecord
     {
         return $this->dmRecipientIdent;
     }
-
 
     /**
      * @param dmRecipientIdent $dmRecipientIdent
@@ -625,7 +584,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return dmSenderIdent
      */
@@ -633,7 +591,6 @@ class tRecord
     {
         return $this->dmSenderIdent;
     }
-
 
     /**
      * @param dmSenderIdent $dmSenderIdent
@@ -645,7 +602,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -653,7 +609,6 @@ class tRecord
     {
         return $this->dmLegalTitleLaw;
     }
-
 
     /**
      * @param int $dmLegalTitleLaw
@@ -665,7 +620,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -673,7 +627,6 @@ class tRecord
     {
         return $this->dmLegalTitleYear;
     }
-
 
     /**
      * @param int $dmLegalTitleYear
@@ -685,7 +638,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -693,7 +645,6 @@ class tRecord
     {
         return $this->dmLegalTitleSect;
     }
-
 
     /**
      * @param string $dmLegalTitleSect
@@ -705,7 +656,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -713,7 +663,6 @@ class tRecord
     {
         return $this->dmLegalTitlePar;
     }
-
 
     /**
      * @param string $dmLegalTitlePar
@@ -725,7 +674,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -733,7 +681,6 @@ class tRecord
     {
         return $this->dmLegalTitlePoint;
     }
-
 
     /**
      * @param string $dmLegalTitlePoint
@@ -745,7 +692,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -753,7 +699,6 @@ class tRecord
     {
         return $this->dmPersonalDelivery;
     }
-
 
     /**
      * @param boolean $dmPersonalDelivery
@@ -765,7 +710,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -773,7 +717,6 @@ class tRecord
     {
         return $this->dmAllowSubstDelivery;
     }
-
 
     /**
      * @param boolean $dmAllowSubstDelivery
@@ -785,7 +728,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -793,7 +735,6 @@ class tRecord
     {
         return $this->dmMessageStatus;
     }
-
 
     /**
      * @param int $dmMessageStatus
@@ -805,7 +746,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -813,7 +753,6 @@ class tRecord
     {
         return $this->dmAttachmentSize;
     }
-
 
     /**
      * @param int $dmAttachmentSize
@@ -825,7 +764,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -835,24 +773,22 @@ class tRecord
             return null;
         } else {
             try {
-                return new DateTime($this->dmDeliveryTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmDeliveryTime
      * @return \Defr\CzechDataBox\Api\tRecord
      */
-    public function setDmDeliveryTime(DateTime $dmDeliveryTime)
+    public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-        $this->dmDeliveryTime = $dmDeliveryTime->format(DateTime::ATOM);
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return \DateTime
@@ -863,24 +799,22 @@ class tRecord
             return null;
         } else {
             try {
-                return new DateTime($this->dmAcceptanceTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmAcceptanceTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmAcceptanceTime
      * @return \Defr\CzechDataBox\Api\tRecord
      */
-    public function setDmAcceptanceTime(DateTime $dmAcceptanceTime)
+    public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-        $this->dmAcceptanceTime = $dmAcceptanceTime->format(DateTime::ATOM);
+        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return anonymous50
@@ -889,7 +823,6 @@ class tRecord
     {
         return $this->dmType;
     }
-
 
     /**
      * @param anonymous50 $dmType
@@ -901,7 +834,6 @@ class tRecord
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -909,7 +841,6 @@ class tRecord
     {
         return $this->dmVODZ;
     }
-
 
     /**
      * @param boolean $dmVODZ
@@ -920,5 +851,4 @@ class tRecord
         $this->dmVODZ = $dmVODZ;
         return $this;
     }
-
 }

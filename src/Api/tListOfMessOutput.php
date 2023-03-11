@@ -25,7 +25,6 @@ class tListOfMessOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tRecordsArray
      */
@@ -33,7 +32,6 @@ class tListOfMessOutput
     {
         return $this->dmRecords;
     }
-
 
     /**
      * @param tRecordsArray $dmRecords
@@ -45,7 +43,6 @@ class tListOfMessOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tListOfMessOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tListOfMessOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

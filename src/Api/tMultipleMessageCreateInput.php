@@ -32,7 +32,6 @@ class tMultipleMessageCreateInput
         $this->dmFiles = $dmFiles;
     }
 
-
     /**
      * @return tMultipleMessageRecipients
      */
@@ -40,7 +39,6 @@ class tMultipleMessageCreateInput
     {
         return $this->dmRecipients;
     }
-
 
     /**
      * @param tMultipleMessageRecipients $dmRecipients
@@ -52,7 +50,6 @@ class tMultipleMessageCreateInput
         return $this;
     }
 
-
     /**
      * @return dmEnvelope
      */
@@ -60,7 +57,6 @@ class tMultipleMessageCreateInput
     {
         return $this->dmEnvelope;
     }
-
 
     /**
      * @param dmEnvelope $dmEnvelope
@@ -72,7 +68,6 @@ class tMultipleMessageCreateInput
         return $this;
     }
 
-
     /**
      * @return tFilesArray
      */
@@ -80,7 +75,6 @@ class tMultipleMessageCreateInput
     {
         return $this->dmFiles;
     }
-
 
     /**
      * @param tFilesArray $dmFiles
@@ -91,5 +85,4 @@ class tMultipleMessageCreateInput
         $this->dmFiles = $dmFiles;
         return $this;
     }
-
 }

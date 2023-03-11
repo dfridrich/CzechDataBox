@@ -25,7 +25,6 @@ class tGetStateChangesOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tStateChangesArray
      */
@@ -33,7 +32,6 @@ class tGetStateChangesOutput
     {
         return $this->dmRecords;
     }
-
 
     /**
      * @param tStateChangesArray $dmRecords
@@ -45,7 +43,6 @@ class tGetStateChangesOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tGetStateChangesOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tGetStateChangesOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

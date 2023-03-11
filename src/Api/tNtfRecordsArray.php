@@ -18,7 +18,6 @@ class tNtfRecordsArray
         $this->ntfRecord = $ntfRecord;
     }
 
-
     /**
      * @return tNtfRecord
      */
@@ -26,7 +25,6 @@ class tNtfRecordsArray
     {
         return $this->ntfRecord;
     }
-
 
     /**
      * @param tNtfRecord $ntfRecord
@@ -37,5 +35,4 @@ class tNtfRecordsArray
         $this->ntfRecord = $ntfRecord;
         return $this;
     }
-
 }

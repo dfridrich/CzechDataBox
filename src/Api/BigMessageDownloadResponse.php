@@ -25,7 +25,6 @@ class BigMessageDownloadResponse
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return dmReturnedMessage
      */
@@ -33,7 +32,6 @@ class BigMessageDownloadResponse
     {
         return $this->dmReturnedMessage;
     }
-
 
     /**
      * @param dmReturnedMessage $dmReturnedMessage
@@ -45,7 +43,6 @@ class BigMessageDownloadResponse
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class BigMessageDownloadResponse
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class BigMessageDownloadResponse
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

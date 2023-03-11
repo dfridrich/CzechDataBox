@@ -53,7 +53,6 @@ class tGetListOfErasedInput
         $this->dmOutFormat = $dmOutFormat;
     }
 
-
     /**
      * @return date
      */
@@ -61,7 +60,6 @@ class tGetListOfErasedInput
     {
         return $this->dmFromDate;
     }
-
 
     /**
      * @param date $dmFromDate
@@ -73,7 +71,6 @@ class tGetListOfErasedInput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -81,7 +78,6 @@ class tGetListOfErasedInput
     {
         return $this->dmToDate;
     }
-
 
     /**
      * @param date $dmToDate
@@ -93,7 +89,6 @@ class tGetListOfErasedInput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -101,7 +96,6 @@ class tGetListOfErasedInput
     {
         return $this->dmYear;
     }
-
 
     /**
      * @param int $dmYear
@@ -113,7 +107,6 @@ class tGetListOfErasedInput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -121,7 +114,6 @@ class tGetListOfErasedInput
     {
         return $this->dmMonth;
     }
-
 
     /**
      * @param int $dmMonth
@@ -133,7 +125,6 @@ class tGetListOfErasedInput
         return $this;
     }
 
-
     /**
      * @return dmMessageType
      */
@@ -141,7 +132,6 @@ class tGetListOfErasedInput
     {
         return $this->dmMessageType;
     }
-
 
     /**
      * @param dmMessageType $dmMessageType
@@ -153,7 +143,6 @@ class tGetListOfErasedInput
         return $this;
     }
 
-
     /**
      * @return dmOutFormat
      */
@@ -161,7 +150,6 @@ class tGetListOfErasedInput
     {
         return $this->dmOutFormat;
     }
-
 
     /**
      * @param dmOutFormat $dmOutFormat
@@ -172,5 +160,4 @@ class tGetListOfErasedInput
         $this->dmOutFormat = $dmOutFormat;
         return $this;
     }
-
 }

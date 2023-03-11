@@ -8,7 +8,7 @@ class dmFile extends \Defr\CzechDataBox\Api\dmFile
     /**
      * @var string
      */
-    protected $dmEncodedContent = null;
+    protected $dmEncodedContent;
 
     /**
      * @return string
@@ -30,5 +30,4 @@ class dmFile extends \Defr\CzechDataBox\Api\dmFile
 
         return $this;
     }
-
 }

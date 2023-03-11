@@ -18,7 +18,6 @@ class tStateChangesArray
         $this->dmRecord = $dmRecord;
     }
 
-
     /**
      * @return tStateChangesRecord
      */
@@ -26,7 +25,6 @@ class tStateChangesArray
     {
         return $this->dmRecord;
     }
-
 
     /**
      * @param tStateChangesRecord $dmRecord
@@ -37,5 +35,4 @@ class tStateChangesArray
         $this->dmRecord = $dmRecord;
         return $this;
     }
-
 }

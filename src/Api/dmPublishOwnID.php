@@ -25,7 +25,6 @@ class dmPublishOwnID
         $this->IdLevel = $IdLevel;
     }
 
-
     /**
      * @return boolean
      */
@@ -33,7 +32,6 @@ class dmPublishOwnID
     {
         return $this->_;
     }
-
 
     /**
      * @param boolean $_
@@ -45,7 +43,6 @@ class dmPublishOwnID
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -53,7 +50,6 @@ class dmPublishOwnID
     {
         return $this->IdLevel;
     }
-
 
     /**
      * @param int $IdLevel
@@ -64,5 +60,4 @@ class dmPublishOwnID
         $this->IdLevel = $IdLevel;
         return $this;
     }
-
 }

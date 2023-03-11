@@ -25,7 +25,6 @@ class tGetUserInfoOutput2
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return tDbUserInfoExt2
      */
@@ -33,7 +32,6 @@ class tGetUserInfoOutput2
     {
         return $this->dbUserInfo;
     }
-
 
     /**
      * @param tDbUserInfoExt2 $dbUserInfo
@@ -45,7 +43,6 @@ class tGetUserInfoOutput2
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tGetUserInfoOutput2
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tGetUserInfoOutput2
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

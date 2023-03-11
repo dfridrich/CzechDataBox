@@ -18,7 +18,6 @@ class tResignDocInput
         $this->dmDoc = $dmDoc;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -26,7 +25,6 @@ class tResignDocInput
     {
         return $this->dmDoc;
     }
-
 
     /**
      * @param base64Binary $dmDoc
@@ -37,5 +35,4 @@ class tResignDocInput
         $this->dmDoc = $dmDoc;
         return $this;
     }
-
 }

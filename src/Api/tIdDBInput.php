@@ -32,7 +32,6 @@ class tIdDBInput
         $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
-
     /**
      * @return tIdDb
      */
@@ -40,7 +39,6 @@ class tIdDBInput
     {
         return $this->dbID;
     }
-
 
     /**
      * @param tIdDb $dbID
@@ -52,7 +50,6 @@ class tIdDBInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -60,7 +57,6 @@ class tIdDBInput
     {
         return $this->dbApproved;
     }
-
 
     /**
      * @param boolean $dbApproved
@@ -72,7 +68,6 @@ class tIdDBInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -80,7 +75,6 @@ class tIdDBInput
     {
         return $this->dbExternRefNumber;
     }
-
 
     /**
      * @param string $dbExternRefNumber
@@ -91,5 +85,4 @@ class tIdDBInput
         $this->dbExternRefNumber = $dbExternRefNumber;
         return $this;
     }
-
 }

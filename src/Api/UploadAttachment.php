@@ -18,7 +18,6 @@ class UploadAttachment
         $this->dmFile = $dmFile;
     }
 
-
     /**
      * @return dmFile
      */
@@ -26,7 +25,6 @@ class UploadAttachment
     {
         return $this->dmFile;
     }
-
 
     /**
      * @param dmFile $dmFile
@@ -37,5 +35,4 @@ class UploadAttachment
         $this->dmFile = $dmFile;
         return $this;
     }
-
 }

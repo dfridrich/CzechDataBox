@@ -60,7 +60,6 @@ class dbOwnerInfo
         $this->branch = $branch;
     }
 
-
     /**
      * @return string
      */
@@ -68,7 +67,6 @@ class dbOwnerInfo
     {
         return $this->formdataid;
     }
-
 
     /**
      * @param string $formdataid
@@ -80,7 +78,6 @@ class dbOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -88,7 +85,6 @@ class dbOwnerInfo
     {
         return $this->identityDocumentNum;
     }
-
 
     /**
      * @param string $identityDocumentNum
@@ -100,7 +96,6 @@ class dbOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -108,7 +103,6 @@ class dbOwnerInfo
     {
         return $this->identityDocumentType;
     }
-
 
     /**
      * @param string $identityDocumentType
@@ -120,7 +114,6 @@ class dbOwnerInfo
         return $this;
     }
 
-
     /**
      * @return anonymous44
      */
@@ -128,7 +121,6 @@ class dbOwnerInfo
     {
         return $this->PDZ;
     }
-
 
     /**
      * @param anonymous44 $PDZ
@@ -140,7 +132,6 @@ class dbOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -148,7 +139,6 @@ class dbOwnerInfo
     {
         return $this->guid;
     }
-
 
     /**
      * @param string $guid
@@ -160,7 +150,6 @@ class dbOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -168,7 +157,6 @@ class dbOwnerInfo
     {
         return $this->subject;
     }
-
 
     /**
      * @param string $subject
@@ -180,7 +168,6 @@ class dbOwnerInfo
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -188,7 +175,6 @@ class dbOwnerInfo
     {
         return $this->branch;
     }
-
 
     /**
      * @param string $branch
@@ -199,5 +185,4 @@ class dbOwnerInfo
         $this->branch = $branch;
         return $this;
     }
-
 }

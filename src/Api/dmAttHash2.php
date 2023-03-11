@@ -25,7 +25,6 @@ class dmAttHash2
         $this->AttHashAlg = $AttHashAlg;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class dmAttHash2
     {
         return $this->_;
     }
-
 
     /**
      * @param string $_
@@ -45,7 +43,6 @@ class dmAttHash2
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -53,7 +50,6 @@ class dmAttHash2
     {
         return $this->AttHashAlg;
     }
-
 
     /**
      * @param string $AttHashAlg
@@ -64,5 +60,4 @@ class dmAttHash2
         $this->AttHashAlg = $AttHashAlg;
         return $this;
     }
-
 }

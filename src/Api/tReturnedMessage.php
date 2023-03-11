@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tReturnedMessage
 {
 
@@ -58,18 +55,17 @@ class tReturnedMessage
      * @param int $dmAttachmentSize
      * @param tDmType $dmType
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, DateTime $dmDeliveryTime = null, DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null)
     {
         $this->dmDm = $dmDm;
         $this->dmHash = $dmHash;
         $this->dmQTimestamp = $dmQTimestamp;
-        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(DateTime::ATOM) : null;
-        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(DateTime::ATOM) : null;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
         $this->dmMessageStatus = $dmMessageStatus;
         $this->dmAttachmentSize = $dmAttachmentSize;
         $this->dmType = $dmType;
     }
-
 
     /**
      * @return dmDm
@@ -78,7 +74,6 @@ class tReturnedMessage
     {
         return $this->dmDm;
     }
-
 
     /**
      * @param dmDm $dmDm
@@ -90,7 +85,6 @@ class tReturnedMessage
         return $this;
     }
 
-
     /**
      * @return tHash
      */
@@ -98,7 +92,6 @@ class tReturnedMessage
     {
         return $this->dmHash;
     }
-
 
     /**
      * @param tHash $dmHash
@@ -110,7 +103,6 @@ class tReturnedMessage
         return $this;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -118,7 +110,6 @@ class tReturnedMessage
     {
         return $this->dmQTimestamp;
     }
-
 
     /**
      * @param base64Binary $dmQTimestamp
@@ -130,7 +121,6 @@ class tReturnedMessage
         return $this;
     }
 
-
     /**
      * @return \DateTime
      */
@@ -140,24 +130,22 @@ class tReturnedMessage
             return null;
         } else {
             try {
-                return new DateTime($this->dmDeliveryTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmDeliveryTime
      * @return \Defr\CzechDataBox\Api\tReturnedMessage
      */
-    public function setDmDeliveryTime(DateTime $dmDeliveryTime)
+    public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-        $this->dmDeliveryTime = $dmDeliveryTime->format(DateTime::ATOM);
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return \DateTime
@@ -168,24 +156,22 @@ class tReturnedMessage
             return null;
         } else {
             try {
-                return new DateTime($this->dmAcceptanceTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmAcceptanceTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmAcceptanceTime
      * @return \Defr\CzechDataBox\Api\tReturnedMessage
      */
-    public function setDmAcceptanceTime(DateTime $dmAcceptanceTime)
+    public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-        $this->dmAcceptanceTime = $dmAcceptanceTime->format(DateTime::ATOM);
+        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return int
@@ -194,7 +180,6 @@ class tReturnedMessage
     {
         return $this->dmMessageStatus;
     }
-
 
     /**
      * @param int $dmMessageStatus
@@ -206,7 +191,6 @@ class tReturnedMessage
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -214,7 +198,6 @@ class tReturnedMessage
     {
         return $this->dmAttachmentSize;
     }
-
 
     /**
      * @param int $dmAttachmentSize
@@ -226,7 +209,6 @@ class tReturnedMessage
         return $this;
     }
 
-
     /**
      * @return tDmType
      */
@@ -234,7 +216,6 @@ class tReturnedMessage
     {
         return $this->dmType;
     }
-
 
     /**
      * @param tDmType $dmType
@@ -245,5 +226,4 @@ class tReturnedMessage
         $this->dmType = $dmType;
         return $this;
     }
-
 }

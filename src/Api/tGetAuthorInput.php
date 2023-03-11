@@ -18,7 +18,6 @@ class tGetAuthorInput
         $this->dmID = $dmID;
     }
 
-
     /**
      * @return tIdDm
      */
@@ -26,7 +25,6 @@ class tGetAuthorInput
     {
         return $this->dmID;
     }
-
 
     /**
      * @param tIdDm $dmID
@@ -37,5 +35,4 @@ class tGetAuthorInput
         $this->dmID = $dmID;
         return $this;
     }
-
 }

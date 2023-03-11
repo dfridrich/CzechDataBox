@@ -32,7 +32,6 @@ class tDbReqStatus
         $this->dbStatusRefNumber = $dbStatusRefNumber;
     }
 
-
     /**
      * @return string
      */
@@ -40,7 +39,6 @@ class tDbReqStatus
     {
         return $this->dbStatusCode;
     }
-
 
     /**
      * @param string $dbStatusCode
@@ -52,7 +50,6 @@ class tDbReqStatus
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -60,7 +57,6 @@ class tDbReqStatus
     {
         return $this->dbStatusMessage;
     }
-
 
     /**
      * @param string $dbStatusMessage
@@ -72,7 +68,6 @@ class tDbReqStatus
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -80,7 +75,6 @@ class tDbReqStatus
     {
         return $this->dbStatusRefNumber;
     }
-
 
     /**
      * @param string $dbStatusRefNumber
@@ -91,5 +85,4 @@ class tDbReqStatus
         $this->dbStatusRefNumber = $dbStatusRefNumber;
         return $this;
     }
-
 }

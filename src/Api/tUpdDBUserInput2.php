@@ -46,7 +46,6 @@ class tUpdDBUserInput2
         $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
-
     /**
      * @return dbID
      */
@@ -54,7 +53,6 @@ class tUpdDBUserInput2
     {
         return $this->dbID;
     }
-
 
     /**
      * @param dbID $dbID
@@ -66,7 +64,6 @@ class tUpdDBUserInput2
         return $this;
     }
 
-
     /**
      * @return tIsdsID
      */
@@ -74,7 +71,6 @@ class tUpdDBUserInput2
     {
         return $this->isdsID;
     }
-
 
     /**
      * @param tIsdsID $isdsID
@@ -86,7 +82,6 @@ class tUpdDBUserInput2
         return $this;
     }
 
-
     /**
      * @return tDbUserInfoExt2
      */
@@ -94,7 +89,6 @@ class tUpdDBUserInput2
     {
         return $this->dbNewUserInfo;
     }
-
 
     /**
      * @param tDbUserInfoExt2 $dbNewUserInfo
@@ -106,7 +100,6 @@ class tUpdDBUserInput2
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -114,7 +107,6 @@ class tUpdDBUserInput2
     {
         return $this->dbApproved;
     }
-
 
     /**
      * @param boolean $dbApproved
@@ -126,7 +118,6 @@ class tUpdDBUserInput2
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -134,7 +125,6 @@ class tUpdDBUserInput2
     {
         return $this->dbExternRefNumber;
     }
-
 
     /**
      * @param string $dbExternRefNumber
@@ -145,5 +135,4 @@ class tUpdDBUserInput2
         $this->dbExternRefNumber = $dbExternRefNumber;
         return $this;
     }
-
 }

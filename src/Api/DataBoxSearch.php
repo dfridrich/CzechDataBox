@@ -2,16 +2,13 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use SoapClient;
-use function array_merge;
-
-class DataBoxSearch extends SoapClient
+class DataBoxSearch extends \SoapClient
 {
 
     /**
      * @var array $classmap The defined classes
      */
-    private static $classmap =  [
+    private static $classmap = array (
       'dbID' => 'Defr\\CzechDataBox\\Api\\dbID',
       'tIdDBInput' => 'Defr\\CzechDataBox\\Api\\tIdDBInput',
       'tIdDBDUInput' => 'Defr\\CzechDataBox\\Api\\tIdDBDUInput',
@@ -105,28 +102,27 @@ class DataBoxSearch extends SoapClient
       'tGetConstsOutput' => 'Defr\\CzechDataBox\\Api\\tGetConstsOutput',
       'constRecords' => 'Defr\\CzechDataBox\\Api\\constRecords',
       'tConstRecord' => 'Defr\\CzechDataBox\\Api\\tConstRecord',
-    ];
+    );
 
     /**
      * @param array $options A array of config values
      * @param string $wsdl The wsdl file to use
      */
-    public function __construct(array $options = [], $wsdl = null)
+    public function __construct(array $options = array(), $wsdl = null)
     {
         foreach (self::$classmap as $key => $value) {
             if (!isset($options['classmap'][$key])) {
                 $options['classmap'][$key] = $value;
             }
         }
-        $options = array_merge([
+        $options = array_merge(array (
         'features' => 1,
-        ], $options);
+        ), $options);
         if (!$wsdl) {
             $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/db_search.wsdl';
         }
         parent::__construct($wsdl, $options);
     }
-
 
     /**
      * @param tFindDBInput $parameter
@@ -134,9 +130,8 @@ class DataBoxSearch extends SoapClient
      */
     public function FindDataBox(tFindDBInput $parameter)
     {
-        return $this->__soapCall('FindDataBox', [$parameter]);
+        return $this->__soapCall('FindDataBox', array($parameter));
     }
-
 
     /**
      * @param tFindDBInput2 $parameter
@@ -144,9 +139,8 @@ class DataBoxSearch extends SoapClient
      */
     public function FindDataBox2(tFindDBInput2 $parameter)
     {
-        return $this->__soapCall('FindDataBox2', [$parameter]);
+        return $this->__soapCall('FindDataBox2', array($parameter));
     }
-
 
     /**
      * @param tIdDBInput $parameter
@@ -154,9 +148,8 @@ class DataBoxSearch extends SoapClient
      */
     public function CheckDataBox(tIdDBInput $parameter)
     {
-        return $this->__soapCall('CheckDataBox', [$parameter]);
+        return $this->__soapCall('CheckDataBox', array($parameter));
     }
-
 
     /**
      * @param tGetDBListInput $parameter
@@ -164,9 +157,8 @@ class DataBoxSearch extends SoapClient
      */
     public function GetDataBoxList(tGetDBListInput $parameter)
     {
-        return $this->__soapCall('GetDataBoxList', [$parameter]);
+        return $this->__soapCall('GetDataBoxList', array($parameter));
     }
-
 
     /**
      * @param tPDZInfoInput $parameter
@@ -174,9 +166,8 @@ class DataBoxSearch extends SoapClient
      */
     public function PDZInfo(tPDZInfoInput $parameter)
     {
-        return $this->__soapCall('PDZInfo', [$parameter]);
+        return $this->__soapCall('PDZInfo', array($parameter));
     }
-
 
     /**
      * @param tDBCreditInfoInput $parameter
@@ -184,9 +175,8 @@ class DataBoxSearch extends SoapClient
      */
     public function DataBoxCreditInfo(tDBCreditInfoInput $parameter)
     {
-        return $this->__soapCall('DataBoxCreditInfo', [$parameter]);
+        return $this->__soapCall('DataBoxCreditInfo', array($parameter));
     }
-
 
     /**
      * @param tISDSSearchInput $parameter
@@ -194,9 +184,8 @@ class DataBoxSearch extends SoapClient
      */
     public function ISDSSearch2(tISDSSearchInput $parameter)
     {
-        return $this->__soapCall('ISDSSearch2', [$parameter]);
+        return $this->__soapCall('ISDSSearch2', array($parameter));
     }
-
 
     /**
      * @param tISDSSearchInput3 $parameter
@@ -204,9 +193,8 @@ class DataBoxSearch extends SoapClient
      */
     public function ISDSSearch3(tISDSSearchInput3 $parameter)
     {
-        return $this->__soapCall('ISDSSearch3', [$parameter]);
+        return $this->__soapCall('ISDSSearch3', array($parameter));
     }
-
 
     /**
      * @param tGetDBStatusInput $parameter
@@ -214,9 +202,8 @@ class DataBoxSearch extends SoapClient
      */
     public function GetDataBoxActivityStatus(tGetDBStatusInput $parameter)
     {
-        return $this->__soapCall('GetDataBoxActivityStatus', [$parameter]);
+        return $this->__soapCall('GetDataBoxActivityStatus', array($parameter));
     }
-
 
     /**
      * @param tFindPersonalDBInput $parameter
@@ -224,9 +211,8 @@ class DataBoxSearch extends SoapClient
      */
     public function FindPersonalDataBox(tFindPersonalDBInput $parameter)
     {
-        return $this->__soapCall('FindPersonalDataBox', [$parameter]);
+        return $this->__soapCall('FindPersonalDataBox', array($parameter));
     }
-
 
     /**
      * @param tDTInfoInput $parameter
@@ -234,9 +220,8 @@ class DataBoxSearch extends SoapClient
      */
     public function DTInfo(tDTInfoInput $parameter)
     {
-        return $this->__soapCall('DTInfo', [$parameter]);
+        return $this->__soapCall('DTInfo', array($parameter));
     }
-
 
     /**
      * @param tPDZSendInput $parameter
@@ -244,9 +229,8 @@ class DataBoxSearch extends SoapClient
      */
     public function PDZSendInfo(tPDZSendInput $parameter)
     {
-        return $this->__soapCall('PDZSendInfo', [$parameter]);
+        return $this->__soapCall('PDZSendInfo', array($parameter));
     }
-
 
     /**
      * @param GetConstants $parameter
@@ -254,7 +238,6 @@ class DataBoxSearch extends SoapClient
      */
     public function GetConstants(GetConstants $parameter)
     {
-        return $this->__soapCall('GetConstants', [$parameter]);
+        return $this->__soapCall('GetConstants', array($parameter));
     }
-
 }

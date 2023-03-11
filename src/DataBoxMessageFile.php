@@ -71,9 +71,6 @@ class DataBoxMessageFile
     }
 
 
-    /**
-     * @return mixed
-     */
     public function getIsExist(): bool
     {
         return file_exists($this->location);

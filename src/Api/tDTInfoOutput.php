@@ -88,7 +88,6 @@ class tDTInfoOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return int
      */
@@ -96,7 +95,6 @@ class tDTInfoOutput
     {
         return $this->ActDTType;
     }
-
 
     /**
      * @param int $ActDTType
@@ -108,7 +106,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -116,7 +113,6 @@ class tDTInfoOutput
     {
         return $this->ActDTCapacity;
     }
-
 
     /**
      * @param int $ActDTCapacity
@@ -128,7 +124,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -136,7 +131,6 @@ class tDTInfoOutput
     {
         return $this->ActDTFrom;
     }
-
 
     /**
      * @param date $ActDTFrom
@@ -148,7 +142,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -156,7 +149,6 @@ class tDTInfoOutput
     {
         return $this->ActDTTo;
     }
-
 
     /**
      * @param date $ActDTTo
@@ -168,7 +160,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -176,7 +167,6 @@ class tDTInfoOutput
     {
         return $this->ActDTCapUsed;
     }
-
 
     /**
      * @param int $ActDTCapUsed
@@ -188,7 +178,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -196,7 +185,6 @@ class tDTInfoOutput
     {
         return $this->FutDTType;
     }
-
 
     /**
      * @param int $FutDTType
@@ -208,7 +196,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -216,7 +203,6 @@ class tDTInfoOutput
     {
         return $this->FutDTCapacity;
     }
-
 
     /**
      * @param int $FutDTCapacity
@@ -228,7 +214,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -236,7 +221,6 @@ class tDTInfoOutput
     {
         return $this->FutDTFrom;
     }
-
 
     /**
      * @param date $FutDTFrom
@@ -248,7 +232,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -256,7 +239,6 @@ class tDTInfoOutput
     {
         return $this->FutDTTo;
     }
-
 
     /**
      * @param date $FutDTTo
@@ -268,7 +250,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -276,7 +257,6 @@ class tDTInfoOutput
     {
         return $this->FutDTPaid;
     }
-
 
     /**
      * @param int $FutDTPaid
@@ -288,7 +268,6 @@ class tDTInfoOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -296,7 +275,6 @@ class tDTInfoOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -307,5 +285,4 @@ class tDTInfoOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

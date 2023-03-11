@@ -25,7 +25,6 @@ class DownloadAttachment
         $this->attNum = $attNum;
     }
 
-
     /**
      * @return string
      */
@@ -33,7 +32,6 @@ class DownloadAttachment
     {
         return $this->dmID;
     }
-
 
     /**
      * @param string $dmID
@@ -45,7 +43,6 @@ class DownloadAttachment
         return $this;
     }
 
-
     /**
      * @return int
      */
@@ -53,7 +50,6 @@ class DownloadAttachment
     {
         return $this->attNum;
     }
-
 
     /**
      * @param int $attNum
@@ -64,5 +60,4 @@ class DownloadAttachment
         $this->attNum = $attNum;
         return $this;
     }
-
 }

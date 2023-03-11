@@ -60,7 +60,6 @@ class tNewAccDataInput
         $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
-
     /**
      * @return tDbOwnerInfo
      */
@@ -68,7 +67,6 @@ class tNewAccDataInput
     {
         return $this->dbOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -80,7 +78,6 @@ class tNewAccDataInput
         return $this;
     }
 
-
     /**
      * @return tDbUserInfo
      */
@@ -88,7 +85,6 @@ class tNewAccDataInput
     {
         return $this->dbUserInfo;
     }
-
 
     /**
      * @param tDbUserInfo $dbUserInfo
@@ -100,7 +96,6 @@ class tNewAccDataInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -108,7 +103,6 @@ class tNewAccDataInput
     {
         return $this->dbFeePaid;
     }
-
 
     /**
      * @param boolean $dbFeePaid
@@ -120,7 +114,6 @@ class tNewAccDataInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -128,7 +121,6 @@ class tNewAccDataInput
     {
         return $this->dbVirtual;
     }
-
 
     /**
      * @param boolean $dbVirtual
@@ -140,7 +132,6 @@ class tNewAccDataInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -148,7 +139,6 @@ class tNewAccDataInput
     {
         return $this->email;
     }
-
 
     /**
      * @param string $email
@@ -160,7 +150,6 @@ class tNewAccDataInput
         return $this;
     }
 
-
     /**
      * @return boolean
      */
@@ -168,7 +157,6 @@ class tNewAccDataInput
     {
         return $this->dbApproved;
     }
-
 
     /**
      * @param boolean $dbApproved
@@ -180,7 +168,6 @@ class tNewAccDataInput
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -188,7 +175,6 @@ class tNewAccDataInput
     {
         return $this->dbExternRefNumber;
     }
-
 
     /**
      * @param string $dbExternRefNumber
@@ -199,5 +185,4 @@ class tNewAccDataInput
         $this->dbExternRefNumber = $dbExternRefNumber;
         return $this;
     }
-
 }

@@ -25,7 +25,6 @@ class tBigMessageInput
         $this->dmFiles = $dmFiles;
     }
 
-
     /**
      * @return tBigMessEnvelope
      */
@@ -33,7 +32,6 @@ class tBigMessageInput
     {
         return $this->dmEnvelope;
     }
-
 
     /**
      * @param tBigMessEnvelope $dmEnvelope
@@ -45,7 +43,6 @@ class tBigMessageInput
         return $this;
     }
 
-
     /**
      * @return dmFiles
      */
@@ -53,7 +50,6 @@ class tBigMessageInput
     {
         return $this->dmFiles;
     }
-
 
     /**
      * @param dmFiles $dmFiles
@@ -64,5 +60,4 @@ class tBigMessageInput
         $this->dmFiles = $dmFiles;
         return $this;
     }
-
 }

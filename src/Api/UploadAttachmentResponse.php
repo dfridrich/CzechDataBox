@@ -39,7 +39,6 @@ class UploadAttachmentResponse
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return string
      */
@@ -47,7 +46,6 @@ class UploadAttachmentResponse
     {
         return $this->dmAttID;
     }
-
 
     /**
      * @param string $dmAttID
@@ -59,7 +57,6 @@ class UploadAttachmentResponse
         return $this;
     }
 
-
     /**
      * @return dmAttHash1
      */
@@ -67,7 +64,6 @@ class UploadAttachmentResponse
     {
         return $this->dmAttHash1;
     }
-
 
     /**
      * @param dmAttHash1 $dmAttHash1
@@ -79,7 +75,6 @@ class UploadAttachmentResponse
         return $this;
     }
 
-
     /**
      * @return dmAttHash2
      */
@@ -87,7 +82,6 @@ class UploadAttachmentResponse
     {
         return $this->dmAttHash2;
     }
-
 
     /**
      * @param dmAttHash2 $dmAttHash2
@@ -99,7 +93,6 @@ class UploadAttachmentResponse
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -107,7 +100,6 @@ class UploadAttachmentResponse
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -118,5 +110,4 @@ class UploadAttachmentResponse
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

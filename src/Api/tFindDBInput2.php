@@ -18,7 +18,6 @@ class tFindDBInput2
         $this->dbOwnerInfo = $dbOwnerInfo;
     }
 
-
     /**
      * @return tDbOwnerInfoExt2
      */
@@ -26,7 +25,6 @@ class tFindDBInput2
     {
         return $this->dbOwnerInfo;
     }
-
 
     /**
      * @param tDbOwnerInfoExt2 $dbOwnerInfo
@@ -37,5 +35,4 @@ class tFindDBInput2
         $this->dbOwnerInfo = $dbOwnerInfo;
         return $this;
     }
-
 }

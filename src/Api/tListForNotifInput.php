@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tListForNotifInput
 {
 
@@ -22,12 +19,11 @@ class tListForNotifInput
      * @param \DateTime $ntfFromTime
      * @param string $ntfScope
      */
-    public function __construct(DateTime $ntfFromTime = null, $ntfScope = null)
+    public function __construct(\DateTime $ntfFromTime = null, $ntfScope = null)
     {
-        $this->ntfFromTime = $ntfFromTime ? $ntfFromTime->format(DateTime::ATOM) : null;
+        $this->ntfFromTime = $ntfFromTime ? $ntfFromTime->format(\DateTime::ATOM) : null;
         $this->ntfScope = $ntfScope;
     }
-
 
     /**
      * @return \DateTime
@@ -38,24 +34,22 @@ class tListForNotifInput
             return null;
         } else {
             try {
-                return new DateTime($this->ntfFromTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->ntfFromTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $ntfFromTime
      * @return \Defr\CzechDataBox\Api\tListForNotifInput
      */
-    public function setNtfFromTime(DateTime $ntfFromTime)
+    public function setNtfFromTime(\DateTime $ntfFromTime)
     {
-        $this->ntfFromTime = $ntfFromTime->format(DateTime::ATOM);
+        $this->ntfFromTime = $ntfFromTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return string
@@ -64,7 +58,6 @@ class tListForNotifInput
     {
         return $this->ntfScope;
     }
-
 
     /**
      * @param string $ntfScope
@@ -75,5 +68,4 @@ class tListForNotifInput
         $this->ntfScope = $ntfScope;
         return $this;
     }
-
 }

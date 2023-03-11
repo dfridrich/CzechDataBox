@@ -25,7 +25,6 @@ class tDeliveryMessageOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return tDelivery
      */
@@ -33,7 +32,6 @@ class tDeliveryMessageOutput
     {
         return $this->dmDelivery;
     }
-
 
     /**
      * @param tDelivery $dmDelivery
@@ -45,7 +43,6 @@ class tDeliveryMessageOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -53,7 +50,6 @@ class tDeliveryMessageOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -64,5 +60,4 @@ class tDeliveryMessageOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

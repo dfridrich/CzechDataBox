@@ -25,7 +25,6 @@ class tGetDBListOutput
         $this->dbStatus = $dbStatus;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -33,7 +32,6 @@ class tGetDBListOutput
     {
         return $this->dblData;
     }
-
 
     /**
      * @param base64Binary $dblData
@@ -45,7 +43,6 @@ class tGetDBListOutput
         return $this;
     }
 
-
     /**
      * @return tDbReqStatus
      */
@@ -53,7 +50,6 @@ class tGetDBListOutput
     {
         return $this->dbStatus;
     }
-
 
     /**
      * @param tDbReqStatus $dbStatus
@@ -64,5 +60,4 @@ class tGetDBListOutput
         $this->dbStatus = $dbStatus;
         return $this;
     }
-
 }

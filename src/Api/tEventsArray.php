@@ -18,7 +18,6 @@ class tEventsArray
         $this->dmEvent = $dmEvent;
     }
 
-
     /**
      * @return tEvent
      */
@@ -26,7 +25,6 @@ class tEventsArray
     {
         return $this->dmEvent;
     }
-
 
     /**
      * @param tEvent $dmEvent
@@ -37,5 +35,4 @@ class tEventsArray
         $this->dmEvent = $dmEvent;
         return $this;
     }
-
 }

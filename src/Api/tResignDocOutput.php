@@ -32,7 +32,6 @@ class tResignDocOutput
         $this->dmStatus = $dmStatus;
     }
 
-
     /**
      * @return base64Binary
      */
@@ -40,7 +39,6 @@ class tResignDocOutput
     {
         return $this->dmResultDoc;
     }
-
 
     /**
      * @param base64Binary $dmResultDoc
@@ -52,7 +50,6 @@ class tResignDocOutput
         return $this;
     }
 
-
     /**
      * @return date
      */
@@ -60,7 +57,6 @@ class tResignDocOutput
     {
         return $this->dmValidTo;
     }
-
 
     /**
      * @param date $dmValidTo
@@ -72,7 +68,6 @@ class tResignDocOutput
         return $this;
     }
 
-
     /**
      * @return tStatus
      */
@@ -80,7 +75,6 @@ class tResignDocOutput
     {
         return $this->dmStatus;
     }
-
 
     /**
      * @param tStatus $dmStatus
@@ -91,5 +85,4 @@ class tResignDocOutput
         $this->dmStatus = $dmStatus;
         return $this;
     }
-
 }

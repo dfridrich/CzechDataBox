@@ -1,5 +1,7 @@
 <?php
 
+namespace Defr\CzechDataBox;
+
 use Defr\CzechDataBox\DataBox;
 use PHPUnit\Framework\TestCase;
 

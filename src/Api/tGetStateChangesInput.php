@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use DateTime;
-use Exception;
-
 class tGetStateChangesInput
 {
 
@@ -22,12 +19,11 @@ class tGetStateChangesInput
      * @param \DateTime $dmFromTime
      * @param \DateTime $dmToTime
      */
-    public function __construct(DateTime $dmFromTime = null, DateTime $dmToTime = null)
+    public function __construct(\DateTime $dmFromTime = null, \DateTime $dmToTime = null)
     {
-        $this->dmFromTime = $dmFromTime ? $dmFromTime->format(DateTime::ATOM) : null;
-        $this->dmToTime = $dmToTime ? $dmToTime->format(DateTime::ATOM) : null;
+        $this->dmFromTime = $dmFromTime ? $dmFromTime->format(\DateTime::ATOM) : null;
+        $this->dmToTime = $dmToTime ? $dmToTime->format(\DateTime::ATOM) : null;
     }
-
 
     /**
      * @return \DateTime
@@ -38,24 +34,22 @@ class tGetStateChangesInput
             return null;
         } else {
             try {
-                return new DateTime($this->dmFromTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmFromTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmFromTime
      * @return \Defr\CzechDataBox\Api\tGetStateChangesInput
      */
-    public function setDmFromTime(DateTime $dmFromTime)
+    public function setDmFromTime(\DateTime $dmFromTime)
     {
-        $this->dmFromTime = $dmFromTime->format(DateTime::ATOM);
+        $this->dmFromTime = $dmFromTime->format(\DateTime::ATOM);
         return $this;
     }
-
 
     /**
      * @return \DateTime
@@ -66,22 +60,20 @@ class tGetStateChangesInput
             return null;
         } else {
             try {
-                return new DateTime($this->dmToTime);
-            } catch (Exception $e) {
+                return new \DateTime($this->dmToTime);
+            } catch (\Exception $e) {
                 return false;
             }
         }
     }
 
-
     /**
      * @param \DateTime $dmToTime
      * @return \Defr\CzechDataBox\Api\tGetStateChangesInput
      */
-    public function setDmToTime(DateTime $dmToTime)
+    public function setDmToTime(\DateTime $dmToTime)
     {
-        $this->dmToTime = $dmToTime->format(DateTime::ATOM);
+        $this->dmToTime = $dmToTime->format(\DateTime::ATOM);
         return $this;
     }
-
 }

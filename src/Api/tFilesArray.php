@@ -18,7 +18,6 @@ class tFilesArray
         $this->dmFile = $dmFile;
     }
 
-
     /**
      * @return dmFile
      */
@@ -26,7 +25,6 @@ class tFilesArray
     {
         return $this->dmFile;
     }
-
 
     /**
      * @param dmFile $dmFile
@@ -37,5 +35,4 @@ class tFilesArray
         $this->dmFile = $dmFile;
         return $this;
     }
-
 }
