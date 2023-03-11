@@ -1,34 +1,38 @@
 name: PHPUnit
 
 on:
-  push:
-    branches:
-      - '**'
-    tags-ignore:
-      - '**'
+    push:
+        branches:
+            - '**'
+        tags-ignore:
+            - '**'
 
 jobs:
-  run:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php-versions:
-          - 8.0
-          - 8.1
-          - 8.2
-    name: PHP ${{ matrix.php-versions }} test
+    run:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                php-versions:
+                    - 8.0
+                    - 8.1
+                    - 8.2
+        name: PHP ${{ matrix.php-versions }} test
 
-    steps:
+        steps:
 
-      - uses: actions/checkout@v2
+            -   uses: actions/checkout@v2
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-versions }}
-          tools: phpunit
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php-versions }}
+                    tools: phpunit
+                env:
+                    DATABOX_LOGIN: ${{ secrets.DATABOX_LOGIN }}
+                    DATABOX_PASSWORD: ${{ secrets.DATABOX_PASSWORD }}
+                    DATABOX_PRODUCTION: ${{ secrets.DATABOX_PRODUCTION }}
 
-      - name: Install dependencies
-        run: composer install --prefer-dist --dev
+            -   name: Install dependencies
+                run: composer install --prefer-dist --dev
 
-      - run: phpunit
+            -   run: phpunit
