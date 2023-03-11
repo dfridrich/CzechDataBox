@@ -6,11 +6,23 @@ class tMultipleMessageCreateOutput
 {
 
     /**
+     * @var tMultipleStatus $dmMultipleStatus
+     */
+    protected $dmMultipleStatus = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param tMultipleStatus $dmMultipleStatus
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmMultipleStatus = null, protected $dmStatus = null)
+    public function __construct($dmMultipleStatus = null, $dmStatus = null)
     {
+        $this->dmMultipleStatus = $dmMultipleStatus;
+        $this->dmStatus = $dmStatus;
     }
 
 

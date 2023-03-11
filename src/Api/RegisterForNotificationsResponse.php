@@ -2,14 +2,20 @@
 
 namespace Defr\CzechDataBox\Api;
 
-class tConfirmDeliveryOutput
+class RegisterForNotificationsResponse
 {
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
 
     /**
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmStatus = null)
+    public function __construct($dmStatus = null)
     {
+        $this->dmStatus = $dmStatus;
     }
 
 
@@ -24,7 +30,7 @@ class tConfirmDeliveryOutput
 
     /**
      * @param tStatus $dmStatus
-     * @return \Defr\CzechDataBox\Api\tConfirmDeliveryOutput
+     * @return \Defr\CzechDataBox\Api\RegisterForNotificationsResponse
      */
     public function setDmStatus($dmStatus)
     {

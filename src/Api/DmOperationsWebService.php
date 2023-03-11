@@ -2,55 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use Defr\CzechDataBox\Api\dmDm;
-use Defr\CzechDataBox\Api\dmEnvelope;
-use Defr\CzechDataBox\Api\dmFile;
-use Defr\CzechDataBox\Api\dmXMLContent;
-use Defr\CzechDataBox\Api\tAuthenticateMessageInput;
-use Defr\CzechDataBox\Api\tAuthenticateMessageOutput;
-use Defr\CzechDataBox\Api\tConfirmDeliveryOutput;
-use Defr\CzechDataBox\Api\tDelivery;
-use Defr\CzechDataBox\Api\tDeliveryMessageOutput;
-use Defr\CzechDataBox\Api\tEraseMessageIntput;
-use Defr\CzechDataBox\Api\tEraseMessageOutput;
-use Defr\CzechDataBox\Api\tEvent;
-use Defr\CzechDataBox\Api\tEventsArray;
-use Defr\CzechDataBox\Api\tFile;
-use Defr\CzechDataBox\Api\tFilesArray;
-use Defr\CzechDataBox\Api\tGetAuthorInput;
-use Defr\CzechDataBox\Api\tGetAuthorOutput;
-use Defr\CzechDataBox\Api\tGetStateChangesInput;
-use Defr\CzechDataBox\Api\tGetStateChangesOutput;
-use Defr\CzechDataBox\Api\tHash;
-use Defr\CzechDataBox\Api\tIDMessInput;
-use Defr\CzechDataBox\Api\tListOfFReceivedInput;
-use Defr\CzechDataBox\Api\tListOfMessOutput;
-use Defr\CzechDataBox\Api\tListOfSentInput;
-use Defr\CzechDataBox\Api\tMarkMessOutput;
-use Defr\CzechDataBox\Api\tMessageCreateInput;
-use Defr\CzechDataBox\Api\tMessageCreateOutput;
-use Defr\CzechDataBox\Api\tMessageEnvelopeSub;
-use Defr\CzechDataBox\Api\tMessageVerifyOutput;
-use Defr\CzechDataBox\Api\tMessDownOutput;
-use Defr\CzechDataBox\Api\tMessEnvelDownOutput;
-use Defr\CzechDataBox\Api\tMStatus;
-use Defr\CzechDataBox\Api\tMultipleMessageCreateInput;
-use Defr\CzechDataBox\Api\tMultipleMessageCreateOutput;
-use Defr\CzechDataBox\Api\tMultipleMessageEnvelopeSub;
-use Defr\CzechDataBox\Api\tMultipleMessageRecipients;
-use Defr\CzechDataBox\Api\tMultipleStatus;
-use Defr\CzechDataBox\Api\tRecipients;
-use Defr\CzechDataBox\Api\tRecord;
-use Defr\CzechDataBox\Api\tRecordsArray;
-use Defr\CzechDataBox\Api\tResignDocInput;
-use Defr\CzechDataBox\Api\tResignDocOutput;
-use Defr\CzechDataBox\Api\tReturnedMessage;
-use Defr\CzechDataBox\Api\tReturnedMessageEnvelope;
-use Defr\CzechDataBox\Api\tSignDelivMessOutput;
-use Defr\CzechDataBox\Api\tSignedMessDownOutput;
-use Defr\CzechDataBox\Api\tStateChangesArray;
-use Defr\CzechDataBox\Api\tStateChangesRecord;
-use Defr\CzechDataBox\Api\tStatus;
 use SoapClient;
 use function array_merge;
 
@@ -60,56 +11,89 @@ class DmOperationsWebService extends SoapClient
     /**
      * @var array $classmap The defined classes
      */
-    private static array $classmap =  [
-      'tFile' => tFile::class,
-      'dmXMLContent' => dmXMLContent::class,
-      'tFilesArray' => tFilesArray::class,
-      'dmFile' => dmFile::class,
-      'tStatus' => tStatus::class,
-      'tHash' => tHash::class,
-      'tEvent' => tEvent::class,
-      'tEventsArray' => tEventsArray::class,
-      'tRecipients' => tRecipients::class,
-      'tMultipleMessageEnvelopeSub' => tMultipleMessageEnvelopeSub::class,
-      'tMultipleMessageRecipients' => tMultipleMessageRecipients::class,
-      'tMultipleMessageCreateInput' => tMultipleMessageCreateInput::class,
-      'dmEnvelope' => dmEnvelope::class,
-      'tMultipleStatus' => tMultipleStatus::class,
-      'tMStatus' => tMStatus::class,
-      'tMultipleMessageCreateOutput' => tMultipleMessageCreateOutput::class,
-      'tReturnedMessage' => tReturnedMessage::class,
-      'dmDm' => dmDm::class,
-      'tReturnedMessageEnvelope' => tReturnedMessageEnvelope::class,
-      'tMessageEnvelopeSub' => tMessageEnvelopeSub::class,
-      'tMessageCreateInput' => tMessageCreateInput::class,
-      'tMessageCreateOutput' => tMessageCreateOutput::class,
-      'tMessageVerifyOutput' => tMessageVerifyOutput::class,
-      'tDelivery' => tDelivery::class,
-      'tDeliveryMessageOutput' => tDeliveryMessageOutput::class,
-      'tSignDelivMessOutput' => tSignDelivMessOutput::class,
-      'tRecord' => tRecord::class,
-      'tRecordsArray' => tRecordsArray::class,
-      'tListOfSentInput' => tListOfSentInput::class,
-      'tListOfMessOutput' => tListOfMessOutput::class,
-      'tListOfFReceivedInput' => tListOfFReceivedInput::class,
-      'tIDMessInput' => tIDMessInput::class,
-      'tMessDownOutput' => tMessDownOutput::class,
-      'tMessEnvelDownOutput' => tMessEnvelDownOutput::class,
-      'tSignedMessDownOutput' => tSignedMessDownOutput::class,
-      'tMarkMessOutput' => tMarkMessOutput::class,
-      'tConfirmDeliveryOutput' => tConfirmDeliveryOutput::class,
-      'tAuthenticateMessageInput' => tAuthenticateMessageInput::class,
-      'tAuthenticateMessageOutput' => tAuthenticateMessageOutput::class,
-      'tGetStateChangesInput' => tGetStateChangesInput::class,
-      'tStateChangesRecord' => tStateChangesRecord::class,
-      'tStateChangesArray' => tStateChangesArray::class,
-      'tGetStateChangesOutput' => tGetStateChangesOutput::class,
-      'tGetAuthorInput' => tGetAuthorInput::class,
-      'tGetAuthorOutput' => tGetAuthorOutput::class,
-      'tEraseMessageIntput' => tEraseMessageIntput::class,
-      'tEraseMessageOutput' => tEraseMessageOutput::class,
-      'tResignDocInput' => tResignDocInput::class,
-      'tResignDocOutput' => tResignDocOutput::class,
+    private static $classmap =  [
+      'tFile' => 'Defr\\CzechDataBox\\Api\\tFile',
+      'dmXMLContent' => 'Defr\\CzechDataBox\\Api\\dmXMLContent',
+      'tFilesArray' => 'Defr\\CzechDataBox\\Api\\tFilesArray',
+      'dmFile' => 'Defr\\CzechDataBox\\Api\\dmFile',
+      'tStatus' => 'Defr\\CzechDataBox\\Api\\tStatus',
+      'tHash' => 'Defr\\CzechDataBox\\Api\\tHash',
+      'tEvent' => 'Defr\\CzechDataBox\\Api\\tEvent',
+      'tEventsArray' => 'Defr\\CzechDataBox\\Api\\tEventsArray',
+      'tRecipients' => 'Defr\\CzechDataBox\\Api\\tRecipients',
+      'tMultipleMessageEnvelopeSub' => 'Defr\\CzechDataBox\\Api\\tMultipleMessageEnvelopeSub',
+      'dmPublishOwnID' => 'Defr\\CzechDataBox\\Api\\dmPublishOwnID',
+      'tMultipleMessageRecipients' => 'Defr\\CzechDataBox\\Api\\tMultipleMessageRecipients',
+      'tMultipleMessageCreateInput' => 'Defr\\CzechDataBox\\Api\\tMultipleMessageCreateInput',
+      'dmEnvelope' => 'Defr\\CzechDataBox\\Api\\dmEnvelope',
+      'tMultipleStatus' => 'Defr\\CzechDataBox\\Api\\tMultipleStatus',
+      'tMStatus' => 'Defr\\CzechDataBox\\Api\\tMStatus',
+      'tMultipleMessageCreateOutput' => 'Defr\\CzechDataBox\\Api\\tMultipleMessageCreateOutput',
+      'tReturnedMessage' => 'Defr\\CzechDataBox\\Api\\tReturnedMessage',
+      'dmDm' => 'Defr\\CzechDataBox\\Api\\dmDm',
+      'tReturnedMessageEnvelope' => 'Defr\\CzechDataBox\\Api\\tReturnedMessageEnvelope',
+      'tMessageEnvelopeSub' => 'Defr\\CzechDataBox\\Api\\tMessageEnvelopeSub',
+      'tMessageCreateInput' => 'Defr\\CzechDataBox\\Api\\tMessageCreateInput',
+      'tMessageCreateOutput' => 'Defr\\CzechDataBox\\Api\\tMessageCreateOutput',
+      'tMessageVerifyOutput' => 'Defr\\CzechDataBox\\Api\\tMessageVerifyOutput',
+      'tDelivery' => 'Defr\\CzechDataBox\\Api\\tDelivery',
+      'tDeliveryMessageOutput' => 'Defr\\CzechDataBox\\Api\\tDeliveryMessageOutput',
+      'tSignDelivMessOutput' => 'Defr\\CzechDataBox\\Api\\tSignDelivMessOutput',
+      'tRecord' => 'Defr\\CzechDataBox\\Api\\tRecord',
+      'tRecordsArray' => 'Defr\\CzechDataBox\\Api\\tRecordsArray',
+      'tListOfSentInput' => 'Defr\\CzechDataBox\\Api\\tListOfSentInput',
+      'tListOfMessOutput' => 'Defr\\CzechDataBox\\Api\\tListOfMessOutput',
+      'tListOfFReceivedInput' => 'Defr\\CzechDataBox\\Api\\tListOfFReceivedInput',
+      'tIDMessInput' => 'Defr\\CzechDataBox\\Api\\tIDMessInput',
+      'tMessDownOutput' => 'Defr\\CzechDataBox\\Api\\tMessDownOutput',
+      'tMessEnvelDownOutput' => 'Defr\\CzechDataBox\\Api\\tMessEnvelDownOutput',
+      'tSignedMessDownOutput' => 'Defr\\CzechDataBox\\Api\\tSignedMessDownOutput',
+      'tMarkMessOutput' => 'Defr\\CzechDataBox\\Api\\tMarkMessOutput',
+      'tAuthenticateMessageInput' => 'Defr\\CzechDataBox\\Api\\tAuthenticateMessageInput',
+      'tAuthenticateMessageOutput' => 'Defr\\CzechDataBox\\Api\\tAuthenticateMessageOutput',
+      'tGetStateChangesInput' => 'Defr\\CzechDataBox\\Api\\tGetStateChangesInput',
+      'tStateChangesRecord' => 'Defr\\CzechDataBox\\Api\\tStateChangesRecord',
+      'tStateChangesArray' => 'Defr\\CzechDataBox\\Api\\tStateChangesArray',
+      'tGetStateChangesOutput' => 'Defr\\CzechDataBox\\Api\\tGetStateChangesOutput',
+      'tGetAuthorInput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorInput',
+      'tGetAuthorOutput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorOutput',
+      'tEraseMessageIntput' => 'Defr\\CzechDataBox\\Api\\tEraseMessageIntput',
+      'tEraseMessageOutput' => 'Defr\\CzechDataBox\\Api\\tEraseMessageOutput',
+      'tResignDocInput' => 'Defr\\CzechDataBox\\Api\\tResignDocInput',
+      'tResignDocOutput' => 'Defr\\CzechDataBox\\Api\\tResignDocOutput',
+      'tGetListOfErasedInput' => 'Defr\\CzechDataBox\\Api\\tGetListOfErasedInput',
+      'tGetListOfErasedOutput' => 'Defr\\CzechDataBox\\Api\\tGetListOfErasedOutput',
+      'tPickUpAsyncInput' => 'Defr\\CzechDataBox\\Api\\tPickUpAsyncInput',
+      'tPickUpAsyncOutput' => 'Defr\\CzechDataBox\\Api\\tPickUpAsyncOutput',
+      'tListForNotifInput' => 'Defr\\CzechDataBox\\Api\\tListForNotifInput',
+      'tListForNotifOutput' => 'Defr\\CzechDataBox\\Api\\tListForNotifOutput',
+      'tNtfRecordsArray' => 'Defr\\CzechDataBox\\Api\\tNtfRecordsArray',
+      'tNtfRecord' => 'Defr\\CzechDataBox\\Api\\tNtfRecord',
+      'RegisterForNotifications' => 'Defr\\CzechDataBox\\Api\\RegisterForNotifications',
+      'RegisterForNotificationsResponse' => 'Defr\\CzechDataBox\\Api\\RegisterForNotificationsResponse',
+      'UploadAttachment' => 'Defr\\CzechDataBox\\Api\\UploadAttachment',
+      'UploadAttachmentResponse' => 'Defr\\CzechDataBox\\Api\\UploadAttachmentResponse',
+      'dmAttHash1' => 'Defr\\CzechDataBox\\Api\\dmAttHash1',
+      'dmAttHash2' => 'Defr\\CzechDataBox\\Api\\dmAttHash2',
+      'DownloadAttachment' => 'Defr\\CzechDataBox\\Api\\DownloadAttachment',
+      'DownloadAttachmentResponse' => 'Defr\\CzechDataBox\\Api\\DownloadAttachmentResponse',
+      'tBigMessageInput' => 'Defr\\CzechDataBox\\Api\\tBigMessageInput',
+      'dmFiles' => 'Defr\\CzechDataBox\\Api\\dmFiles',
+      'dmExtFile' => 'Defr\\CzechDataBox\\Api\\dmExtFile',
+      'tBigMessEnvelope' => 'Defr\\CzechDataBox\\Api\\tBigMessEnvelope',
+      'tBigMessageOutput' => 'Defr\\CzechDataBox\\Api\\tBigMessageOutput',
+      'AuthenticateBigMessage' => 'Defr\\CzechDataBox\\Api\\AuthenticateBigMessage',
+      'AuthenticateBigMessageResponse' => 'Defr\\CzechDataBox\\Api\\AuthenticateBigMessageResponse',
+      'SignedBigMessageDownload' => 'Defr\\CzechDataBox\\Api\\SignedBigMessageDownload',
+      'SignedBigMessageDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SignedBigMessageDownloadResponse',
+      'SignedSentBigMessageDownload' => 'Defr\\CzechDataBox\\Api\\SignedSentBigMessageDownload',
+      'SignedSentBigMessageDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SignedSentBigMessageDownloadResponse',
+      'BigMessageDownload' => 'Defr\\CzechDataBox\\Api\\BigMessageDownload',
+      'BigMessageDownloadResponse' => 'Defr\\CzechDataBox\\Api\\BigMessageDownloadResponse',
+      'dmReturnedMessage' => 'Defr\\CzechDataBox\\Api\\dmReturnedMessage',
+      'GetMessageAuthor2Response' => 'Defr\\CzechDataBox\\Api\\GetMessageAuthor2Response',
+      'dmMessageAuthor' => 'Defr\\CzechDataBox\\Api\\dmMessageAuthor',
+      'maItem' => 'Defr\\CzechDataBox\\Api\\maItem',
     ];
 
     /**
@@ -123,51 +107,53 @@ class DmOperationsWebService extends SoapClient
                 $options['classmap'][$key] = $value;
             }
         }
-
         $options = array_merge([
         'features' => 1,
         ], $options);
         if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/isas/vendor/dfridrich/czech-data-box/Resources/dm_operations.wsdl';
+            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/dm_operations.wsdl';
         }
-
         parent::__construct($wsdl, $options);
     }
 
 
     /**
+     * @param tMessageCreateInput $parameter
      * @return tMessageCreateOutput
      */
     public function CreateMessage(tMessageCreateInput $parameter)
     {
-        return $this->soapCall('CreateMessage', [$parameter]);
+        return $this->__soapCall('CreateMessage', [$parameter]);
     }
 
 
     /**
+     * @param tIDMessInput $parameter
      * @return tMessDownOutput
      */
     public function MessageDownload(tIDMessInput $parameter)
     {
-        return $this->soapCall('MessageDownload', [$parameter]);
+        return $this->__soapCall('MessageDownload', [$parameter]);
     }
 
 
     /**
+     * @param tIDMessInput $parameter
      * @return tSignedMessDownOutput
      */
     public function SignedMessageDownload(tIDMessInput $parameter)
     {
-        return $this->soapCall('SignedMessageDownload', [$parameter]);
+        return $this->__soapCall('SignedMessageDownload', [$parameter]);
     }
 
 
     /**
+     * @param tIDMessInput $parameter
      * @return tSignedMessDownOutput
      */
     public function SignedSentMessageDownload(tIDMessInput $parameter)
     {
-        return $this->soapCall('SignedSentMessageDownload', [$parameter]);
+        return $this->__soapCall('SignedSentMessageDownload', [$parameter]);
     }
 
 
@@ -177,25 +163,27 @@ class DmOperationsWebService extends SoapClient
      */
     public function DummyOperation($parameter)
     {
-        return $this->soapCall('DummyOperation', [$parameter]);
+        return $this->__soapCall('DummyOperation', [$parameter]);
     }
 
 
     /**
+     * @param tMultipleMessageCreateInput $parameter
      * @return tMultipleMessageCreateOutput
      */
     public function CreateMultipleMessage(tMultipleMessageCreateInput $parameter)
     {
-        return $this->soapCall('CreateMultipleMessage', [$parameter]);
+        return $this->__soapCall('CreateMultipleMessage', [$parameter]);
     }
 
 
     /**
+     * @param tAuthenticateMessageInput $parameter
      * @return tAuthenticateMessageOutput
      */
     public function AuthenticateMessage(tAuthenticateMessageInput $parameter)
     {
-        return $this->soapCall('AuthenticateMessage', [$parameter]);
+        return $this->__soapCall('AuthenticateMessage', [$parameter]);
     }
 
 }

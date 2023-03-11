@@ -5,19 +5,31 @@ namespace Defr\CzechDataBox\Api;
 class tResignDocOutput
 {
 
-    protected base64Binary $dmResultDoc = null;
+    /**
+     * @var base64Binary $dmResultDoc
+     */
+    protected $dmResultDoc = null;
 
-    protected date $dmValidTo = null;
+    /**
+     * @var date $dmValidTo
+     */
+    protected $dmValidTo = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
 
     /**
      * @param base64Binary $dmResultDoc
      * @param date $dmValidTo
      * @param tStatus $dmStatus
      */
-    public function __construct($dmResultDoc = null, $dmValidTo = null, protected $dmStatus = null)
+    public function __construct($dmResultDoc = null, $dmValidTo = null, $dmStatus = null)
     {
         $this->dmResultDoc = $dmResultDoc;
         $this->dmValidTo = $dmValidTo;
+        $this->dmStatus = $dmStatus;
     }
 
 

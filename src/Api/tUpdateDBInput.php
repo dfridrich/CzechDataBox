@@ -6,18 +6,42 @@ class tUpdateDBInput
 {
 
     /**
-     * @param tDbOwnerInfo $dbOldOwnerInfo
-     * @param tDbOwnerInfo $dbNewOwnerInfo
+     * @var tDbOwnerInfoExt $dbOldOwnerInfo
+     */
+    protected $dbOldOwnerInfo = null;
+
+    /**
+     * @var tDbOwnerInfoExt $dbNewOwnerInfo
+     */
+    protected $dbNewOwnerInfo = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
+
+    /**
+     * @param tDbOwnerInfoExt $dbOldOwnerInfo
+     * @param tDbOwnerInfoExt $dbNewOwnerInfo
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOldOwnerInfo = null, protected $dbNewOwnerInfo = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOldOwnerInfo = null, $dbNewOwnerInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOldOwnerInfo = $dbOldOwnerInfo;
+        $this->dbNewOwnerInfo = $dbNewOwnerInfo;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbOldOwnerInfo()
     {
@@ -26,7 +50,7 @@ class tUpdateDBInput
 
 
     /**
-     * @param tDbOwnerInfo $dbOldOwnerInfo
+     * @param tDbOwnerInfoExt $dbOldOwnerInfo
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbOldOwnerInfo($dbOldOwnerInfo)
@@ -37,7 +61,7 @@ class tUpdateDBInput
 
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbNewOwnerInfo()
     {
@@ -46,7 +70,7 @@ class tUpdateDBInput
 
 
     /**
-     * @param tDbOwnerInfo $dbNewOwnerInfo
+     * @param tDbOwnerInfoExt $dbNewOwnerInfo
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbNewOwnerInfo($dbNewOwnerInfo)

@@ -6,11 +6,23 @@ class tMessageVerifyOutput
 {
 
     /**
+     * @var tHash $dmHash
+     */
+    protected $dmHash = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param tHash $dmHash
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmHash = null, protected $dmStatus = null)
+    public function __construct($dmHash = null, $dmStatus = null)
     {
+        $this->dmHash = $dmHash;
+        $this->dmStatus = $dmStatus;
     }
 
 

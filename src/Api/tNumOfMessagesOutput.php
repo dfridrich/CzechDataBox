@@ -8,15 +8,27 @@ use Exception;
 class tNumOfMessagesOutput
 {
 
-    protected int $statResult = null;
+    /**
+     * @var int $statResult
+     */
+    protected $statResult = null;
 
-    protected DateTime $statTime = null;
+    /**
+     * @var \DateTime $statTime
+     */
+    protected $statTime = null;
 
-    protected tStatReqStatus $dbStatus = null;
+    /**
+     * @var tStatReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
 
+    /**
+     * @param \DateTime $statTime
+     */
     public function __construct(DateTime $statTime = null)
     {
-        $this->statTime = $statTime !== null ? $statTime->format(DateTime::ATOM) : null;
+        $this->statTime = $statTime ? $statTime->format(DateTime::ATOM) : null;
     }
 
 
@@ -50,7 +62,7 @@ class tNumOfMessagesOutput
         } else {
             try {
                 return new DateTime($this->statTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -58,6 +70,7 @@ class tNumOfMessagesOutput
 
 
     /**
+     * @param \DateTime $statTime
      * @return \Defr\CzechDataBox\Api\tNumOfMessagesOutput
      */
     public function setStatTime(DateTime $statTime)

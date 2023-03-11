@@ -6,11 +6,23 @@ class tChngPasswInput
 {
 
     /**
+     * @var string $dbOldPassword
+     */
+    protected $dbOldPassword = null;
+
+    /**
+     * @var string $dbNewPassword
+     */
+    protected $dbNewPassword = null;
+
+    /**
      * @param string $dbOldPassword
      * @param string $dbNewPassword
      */
-    public function __construct(protected $dbOldPassword = null, protected $dbNewPassword = null)
+    public function __construct($dbOldPassword = null, $dbNewPassword = null)
     {
+        $this->dbOldPassword = $dbOldPassword;
+        $this->dbNewPassword = $dbNewPassword;
     }
 
 

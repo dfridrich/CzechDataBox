@@ -6,11 +6,23 @@ class tMessageCreateInput
 {
 
     /**
+     * @var dmEnvelope $dmEnvelope
+     */
+    protected $dmEnvelope = null;
+
+    /**
+     * @var tFilesArray $dmFiles
+     */
+    protected $dmFiles = null;
+
+    /**
      * @param dmEnvelope $dmEnvelope
      * @param tFilesArray $dmFiles
      */
-    public function __construct(protected $dmEnvelope = null, protected $dmFiles = null)
+    public function __construct($dmEnvelope = null, $dmFiles = null)
     {
+        $this->dmEnvelope = $dmEnvelope;
+        $this->dmFiles = $dmFiles;
     }
 
 

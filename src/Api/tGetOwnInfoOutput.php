@@ -6,11 +6,23 @@ class tGetOwnInfoOutput
 {
 
     /**
+     * @var tDbOwnerInfo $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
+
+    /**
      * @param tDbOwnerInfo $dbOwnerInfo
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(protected $dbOwnerInfo = null, protected $dbStatus = null)
+    public function __construct($dbOwnerInfo = null, $dbStatus = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbStatus = $dbStatus;
     }
 
 

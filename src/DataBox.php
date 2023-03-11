@@ -234,7 +234,7 @@ class DataBox
      *
      * @return array
      */
-    private function getSoapOptions($service)
+    public function getSoapOptions($service)
     {
         return [
             'login'          => $this->loginName,

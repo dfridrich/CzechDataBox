@@ -5,19 +5,31 @@ namespace Defr\CzechDataBox\Api;
 class tNewAccDataOutput
 {
 
-    protected tUserID $dbUserID = null;
+    /**
+     * @var tUserID $dbUserID
+     */
+    protected $dbUserID = null;
 
-    protected tDbAccessDataId $dbAccessDataId = null;
+    /**
+     * @var tDbAccessDataId $dbAccessDataId
+     */
+    protected $dbAccessDataId = null;
+
+    /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
 
     /**
      * @param tUserID $dbUserID
      * @param tDbAccessDataId $dbAccessDataId
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbUserID = null, $dbAccessDataId = null, protected $dbStatus = null)
+    public function __construct($dbUserID = null, $dbAccessDataId = null, $dbStatus = null)
     {
         $this->dbUserID = $dbUserID;
         $this->dbAccessDataId = $dbAccessDataId;
+        $this->dbStatus = $dbStatus;
     }
 
 

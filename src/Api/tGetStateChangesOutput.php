@@ -6,11 +6,23 @@ class tGetStateChangesOutput
 {
 
     /**
+     * @var tStateChangesArray $dmRecords
+     */
+    protected $dmRecords = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param tStateChangesArray $dmRecords
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmRecords = null, protected $dmStatus = null)
+    public function __construct($dmRecords = null, $dmStatus = null)
     {
+        $this->dmRecords = $dmRecords;
+        $this->dmStatus = $dmStatus;
     }
 
 

@@ -6,6 +6,41 @@ class tNewAccDataInput
 {
 
     /**
+     * @var tDbOwnerInfo $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @var tDbUserInfo $dbUserInfo
+     */
+    protected $dbUserInfo = null;
+
+    /**
+     * @var boolean $dbFeePaid
+     */
+    protected $dbFeePaid = null;
+
+    /**
+     * @var boolean $dbVirtual
+     */
+    protected $dbVirtual = null;
+
+    /**
+     * @var string $email
+     */
+    protected $email = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
+
+    /**
      * @param tDbOwnerInfo $dbOwnerInfo
      * @param tDbUserInfo $dbUserInfo
      * @param boolean $dbFeePaid
@@ -14,8 +49,15 @@ class tNewAccDataInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, protected $dbUserInfo = null, protected $dbFeePaid = null, protected $dbVirtual = null, protected $email = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOwnerInfo = null, $dbUserInfo = null, $dbFeePaid = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbUserInfo = $dbUserInfo;
+        $this->dbFeePaid = $dbFeePaid;
+        $this->dbVirtual = $dbVirtual;
+        $this->email = $email;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 

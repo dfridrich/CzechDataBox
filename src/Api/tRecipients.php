@@ -5,7 +5,25 @@ namespace Defr\CzechDataBox\Api;
 class tRecipients
 {
 
-    protected tIdDb $dbIDRecipient = null;
+    /**
+     * @var tIdDb $dbIDRecipient
+     */
+    protected $dbIDRecipient = null;
+
+    /**
+     * @var string $dmRecipientOrgUnit
+     */
+    protected $dmRecipientOrgUnit = null;
+
+    /**
+     * @var int $dmRecipientOrgUnitNum
+     */
+    protected $dmRecipientOrgUnitNum = null;
+
+    /**
+     * @var string $dmToHands
+     */
+    protected $dmToHands = null;
 
     /**
      * @param tIdDb $dbIDRecipient
@@ -13,9 +31,12 @@ class tRecipients
      * @param int $dmRecipientOrgUnitNum
      * @param string $dmToHands
      */
-    public function __construct($dbIDRecipient = null, protected $dmRecipientOrgUnit = null, protected $dmRecipientOrgUnitNum = null, protected $dmToHands = null)
+    public function __construct($dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null)
     {
         $this->dbIDRecipient = $dbIDRecipient;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        $this->dmToHands = $dmToHands;
     }
 
 

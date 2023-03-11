@@ -6,10 +6,16 @@ class tMultipleStatus
 {
 
     /**
+     * @var tMStatus $dmSingleStatus
+     */
+    protected $dmSingleStatus = null;
+
+    /**
      * @param tMStatus $dmSingleStatus
      */
-    public function __construct(protected $dmSingleStatus = null)
+    public function __construct($dmSingleStatus = null)
     {
+        $this->dmSingleStatus = $dmSingleStatus;
     }
 
 

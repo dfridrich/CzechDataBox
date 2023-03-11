@@ -5,13 +5,105 @@ namespace Defr\CzechDataBox\Api;
 class tDbUserInfo
 {
 
-    protected date $biDate = null;
+    /**
+     * @var string $pnFirstName
+     */
+    protected $pnFirstName = null;
 
-    protected tUserID $userID = null;
+    /**
+     * @var string $pnMiddleName
+     */
+    protected $pnMiddleName = null;
 
-    protected ic $ic = null;
+    /**
+     * @var string $pnLastName
+     */
+    protected $pnLastName = null;
 
-    protected firmName $firmName = null;
+    /**
+     * @var string $pnLastNameAtBirth
+     */
+    protected $pnLastNameAtBirth = null;
+
+    /**
+     * @var string $adCity
+     */
+    protected $adCity = null;
+
+    /**
+     * @var string $adStreet
+     */
+    protected $adStreet = null;
+
+    /**
+     * @var string $adNumberInStreet
+     */
+    protected $adNumberInStreet = null;
+
+    /**
+     * @var string $adNumberInMunicipality
+     */
+    protected $adNumberInMunicipality = null;
+
+    /**
+     * @var string $adZipCode
+     */
+    protected $adZipCode = null;
+
+    /**
+     * @var string $adState
+     */
+    protected $adState = null;
+
+    /**
+     * @var date $biDate
+     */
+    protected $biDate = null;
+
+    /**
+     * @var tUserID $userID
+     */
+    protected $userID = null;
+
+    /**
+     * @var tUserType $userType
+     */
+    protected $userType = null;
+
+    /**
+     * @var int $userPrivils
+     */
+    protected $userPrivils = null;
+
+    /**
+     * @var ic $ic
+     */
+    protected $ic = null;
+
+    /**
+     * @var string $firmName
+     */
+    protected $firmName = null;
+
+    /**
+     * @var string $caStreet
+     */
+    protected $caStreet = null;
+
+    /**
+     * @var string $caCity
+     */
+    protected $caCity = null;
+
+    /**
+     * @var string $caZipCode
+     */
+    protected $caZipCode = null;
+
+    /**
+     * @var string $caState
+     */
+    protected $caState = null;
 
     /**
      * @param string $pnFirstName
@@ -29,18 +121,34 @@ class tDbUserInfo
      * @param tUserType $userType
      * @param int $userPrivils
      * @param ic $ic
-     * @param firmName $firmName
+     * @param string $firmName
      * @param string $caStreet
      * @param string $caCity
      * @param string $caZipCode
      * @param string $caState
      */
-    public function __construct(protected $pnFirstName = null, protected $pnMiddleName = null, protected $pnLastName = null, protected $pnLastNameAtBirth = null, protected $adCity = null, protected $adStreet = null, protected $adNumberInStreet = null, protected $adNumberInMunicipality = null, protected $adZipCode = null, protected $adState = null, $biDate = null, $userID = null, protected $userType = null, protected $userPrivils = null, $ic = null, $firmName = null, protected $caStreet = null, protected $caCity = null, protected $caZipCode = null, protected $caState = null)
+    public function __construct($pnFirstName = null, $pnMiddleName = null, $pnLastName = null, $pnLastNameAtBirth = null, $adCity = null, $adStreet = null, $adNumberInStreet = null, $adNumberInMunicipality = null, $adZipCode = null, $adState = null, $biDate = null, $userID = null, $userType = null, $userPrivils = null, $ic = null, $firmName = null, $caStreet = null, $caCity = null, $caZipCode = null, $caState = null)
     {
+        $this->pnFirstName = $pnFirstName;
+        $this->pnMiddleName = $pnMiddleName;
+        $this->pnLastName = $pnLastName;
+        $this->pnLastNameAtBirth = $pnLastNameAtBirth;
+        $this->adCity = $adCity;
+        $this->adStreet = $adStreet;
+        $this->adNumberInStreet = $adNumberInStreet;
+        $this->adNumberInMunicipality = $adNumberInMunicipality;
+        $this->adZipCode = $adZipCode;
+        $this->adState = $adState;
         $this->biDate = $biDate;
         $this->userID = $userID;
+        $this->userType = $userType;
+        $this->userPrivils = $userPrivils;
         $this->ic = $ic;
         $this->firmName = $firmName;
+        $this->caStreet = $caStreet;
+        $this->caCity = $caCity;
+        $this->caZipCode = $caZipCode;
+        $this->caState = $caState;
     }
 
 
@@ -345,7 +453,7 @@ class tDbUserInfo
 
 
     /**
-     * @return firmName
+     * @return string
      */
     public function getFirmName()
     {
@@ -354,7 +462,7 @@ class tDbUserInfo
 
 
     /**
-     * @param firmName $firmName
+     * @param string $firmName
      * @return \Defr\CzechDataBox\Api\tDbUserInfo
      */
     public function setFirmName($firmName)

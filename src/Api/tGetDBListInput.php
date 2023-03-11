@@ -6,10 +6,16 @@ class tGetDBListInput
 {
 
     /**
+     * @var string $dblType
+     */
+    protected $dblType = null;
+
+    /**
      * @param string $dblType
      */
-    public function __construct(protected $dblType = null)
+    public function __construct($dblType = null)
     {
+        $this->dblType = $dblType;
     }
 
 

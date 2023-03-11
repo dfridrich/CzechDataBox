@@ -6,11 +6,23 @@ class tStatus
 {
 
     /**
+     * @var string $dmStatusCode
+     */
+    protected $dmStatusCode = null;
+
+    /**
+     * @var string $dmStatusMessage
+     */
+    protected $dmStatusMessage = null;
+
+    /**
      * @param string $dmStatusCode
      * @param string $dmStatusMessage
      */
-    public function __construct(protected $dmStatusCode = null, protected $dmStatusMessage = null)
+    public function __construct($dmStatusCode = null, $dmStatusMessage = null)
     {
+        $this->dmStatusCode = $dmStatusCode;
+        $this->dmStatusMessage = $dmStatusMessage;
     }
 
 

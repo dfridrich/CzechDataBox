@@ -5,7 +5,10 @@ namespace Defr\CzechDataBox\Api;
 class tGetAuthorInput
 {
 
-    protected tIdDm $dmID = null;
+    /**
+     * @var tIdDm $dmID
+     */
+    protected $dmID = null;
 
     /**
      * @param tIdDm $dmID

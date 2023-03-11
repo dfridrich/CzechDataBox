@@ -8,18 +8,31 @@ use Exception;
 class tStateChangesRecord
 {
 
-    protected tIdDm $dmID = null;
+    /**
+     * @var tIdDm $dmID
+     */
+    protected $dmID = null;
 
-    protected DateTime $dmEventTime = null;
+    /**
+     * @var \DateTime $dmEventTime
+     */
+    protected $dmEventTime = null;
+
+    /**
+     * @var int $dmMessageStatus
+     */
+    protected $dmMessageStatus = null;
 
     /**
      * @param tIdDm $dmID
+     * @param \DateTime $dmEventTime
      * @param int $dmMessageStatus
      */
-    public function __construct($dmID = null, DateTime $dmEventTime = null, protected $dmMessageStatus = null)
+    public function __construct($dmID = null, DateTime $dmEventTime = null, $dmMessageStatus = null)
     {
         $this->dmID = $dmID;
-        $this->dmEventTime = $dmEventTime !== null ? $dmEventTime->format(DateTime::ATOM) : null;
+        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(DateTime::ATOM) : null;
+        $this->dmMessageStatus = $dmMessageStatus;
     }
 
 
@@ -53,7 +66,7 @@ class tStateChangesRecord
         } else {
             try {
                 return new DateTime($this->dmEventTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -61,6 +74,7 @@ class tStateChangesRecord
 
 
     /**
+     * @param \DateTime $dmEventTime
      * @return \Defr\CzechDataBox\Api\tStateChangesRecord
      */
     public function setDmEventTime(DateTime $dmEventTime)

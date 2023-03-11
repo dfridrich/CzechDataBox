@@ -8,28 +8,80 @@ use Exception;
 class tReturnedMessageEnvelope
 {
 
-    protected base64Binary $dmQTimestamp = null;
+    /**
+     * @var dmDm $dmDm
+     */
+    protected $dmDm = null;
 
-    protected DateTime $dmDeliveryTime = null;
+    /**
+     * @var tHash $dmHash
+     */
+    protected $dmHash = null;
 
-    protected DateTime $dmAcceptanceTime = null;
+    /**
+     * @var base64Binary $dmQTimestamp
+     */
+    protected $dmQTimestamp = null;
 
-    protected tDmType $dmType = null;
+    /**
+     * @var \DateTime $dmDeliveryTime
+     */
+    protected $dmDeliveryTime = null;
+
+    /**
+     * @var \DateTime $dmAcceptanceTime
+     */
+    protected $dmAcceptanceTime = null;
+
+    /**
+     * @var int $dmMessageStatus
+     */
+    protected $dmMessageStatus = null;
+
+    /**
+     * @var int $dmAttachmentSize
+     */
+    protected $dmAttachmentSize = null;
+
+    /**
+     * @var tDmType $dmType
+     */
+    protected $dmType = null;
+
+    /**
+     * @var boolean $dmVODZ
+     */
+    protected $dmVODZ = null;
+
+    /**
+     * @var int $attsNum
+     */
+    protected $attsNum = null;
 
     /**
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
+     * @param \DateTime $dmDeliveryTime
+     * @param \DateTime $dmAcceptanceTime
      * @param int $dmMessageStatus
      * @param int $dmAttachmentSize
      * @param tDmType $dmType
+     * @param boolean $dmVODZ
+     * @param int $attsNum
      */
-    public function __construct(protected $dmDm = null, protected $dmHash = null, $dmQTimestamp = null, DateTime $dmDeliveryTime = null, DateTime $dmAcceptanceTime = null, protected $dmMessageStatus = null, protected $dmAttachmentSize = null, $dmType = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, DateTime $dmDeliveryTime = null, DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $dmVODZ = null, $attsNum = null)
     {
+        $this->dmDm = $dmDm;
+        $this->dmHash = $dmHash;
         $this->dmQTimestamp = $dmQTimestamp;
-        $this->dmDeliveryTime = $dmDeliveryTime !== null ? $dmDeliveryTime->format(DateTime::ATOM) : null;
-        $this->dmAcceptanceTime = $dmAcceptanceTime !== null ? $dmAcceptanceTime->format(DateTime::ATOM) : null;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(DateTime::ATOM) : null;
+        $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmAttachmentSize = $dmAttachmentSize;
         $this->dmType = $dmType;
+        $this->dmVODZ = $dmVODZ;
+        $this->attsNum = $attsNum;
     }
 
 
@@ -103,7 +155,7 @@ class tReturnedMessageEnvelope
         } else {
             try {
                 return new DateTime($this->dmDeliveryTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -111,6 +163,7 @@ class tReturnedMessageEnvelope
 
 
     /**
+     * @param \DateTime $dmDeliveryTime
      * @return \Defr\CzechDataBox\Api\tReturnedMessageEnvelope
      */
     public function setDmDeliveryTime(DateTime $dmDeliveryTime)
@@ -130,7 +183,7 @@ class tReturnedMessageEnvelope
         } else {
             try {
                 return new DateTime($this->dmAcceptanceTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -138,6 +191,7 @@ class tReturnedMessageEnvelope
 
 
     /**
+     * @param \DateTime $dmAcceptanceTime
      * @return \Defr\CzechDataBox\Api\tReturnedMessageEnvelope
      */
     public function setDmAcceptanceTime(DateTime $dmAcceptanceTime)
@@ -203,6 +257,46 @@ class tReturnedMessageEnvelope
     public function setDmType($dmType)
     {
         $this->dmType = $dmType;
+        return $this;
+    }
+
+
+    /**
+     * @return boolean
+     */
+    public function getDmVODZ()
+    {
+        return $this->dmVODZ;
+    }
+
+
+    /**
+     * @param boolean $dmVODZ
+     * @return \Defr\CzechDataBox\Api\tReturnedMessageEnvelope
+     */
+    public function setDmVODZ($dmVODZ)
+    {
+        $this->dmVODZ = $dmVODZ;
+        return $this;
+    }
+
+
+    /**
+     * @return int
+     */
+    public function getAttsNum()
+    {
+        return $this->attsNum;
+    }
+
+
+    /**
+     * @param int $attsNum
+     * @return \Defr\CzechDataBox\Api\tReturnedMessageEnvelope
+     */
+    public function setAttsNum($attsNum)
+    {
+        $this->attsNum = $attsNum;
         return $this;
     }
 

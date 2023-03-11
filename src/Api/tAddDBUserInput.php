@@ -6,20 +6,56 @@ class tAddDBUserInput
 {
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
-     * @param tDbUserInfo $dbUserInfo
+     * @var tDbOwnerInfoExt $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @var dbUserInfo $dbUserInfo
+     */
+    protected $dbUserInfo = null;
+
+    /**
+     * @var boolean $dbVirtual
+     */
+    protected $dbVirtual = null;
+
+    /**
+     * @var string $email
+     */
+    protected $email = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
+
+    /**
+     * @param tDbOwnerInfoExt $dbOwnerInfo
+     * @param dbUserInfo $dbUserInfo
      * @param boolean $dbVirtual
      * @param string $email
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, protected $dbUserInfo = null, protected $dbVirtual = null, protected $email = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOwnerInfo = null, $dbUserInfo = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbUserInfo = $dbUserInfo;
+        $this->dbVirtual = $dbVirtual;
+        $this->email = $email;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbOwnerInfo()
     {
@@ -28,7 +64,7 @@ class tAddDBUserInput
 
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param tDbOwnerInfoExt $dbOwnerInfo
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
@@ -39,7 +75,7 @@ class tAddDBUserInput
 
 
     /**
-     * @return tDbUserInfo
+     * @return dbUserInfo
      */
     public function getDbUserInfo()
     {
@@ -48,7 +84,7 @@ class tAddDBUserInput
 
 
     /**
-     * @param tDbUserInfo $dbUserInfo
+     * @param dbUserInfo $dbUserInfo
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setDbUserInfo($dbUserInfo)

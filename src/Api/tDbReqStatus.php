@@ -6,12 +6,30 @@ class tDbReqStatus
 {
 
     /**
+     * @var string $dbStatusCode
+     */
+    protected $dbStatusCode = null;
+
+    /**
+     * @var string $dbStatusMessage
+     */
+    protected $dbStatusMessage = null;
+
+    /**
+     * @var string $dbStatusRefNumber
+     */
+    protected $dbStatusRefNumber = null;
+
+    /**
      * @param string $dbStatusCode
      * @param string $dbStatusMessage
      * @param string $dbStatusRefNumber
      */
-    public function __construct(protected $dbStatusCode = null, protected $dbStatusMessage = null, protected $dbStatusRefNumber = null)
+    public function __construct($dbStatusCode = null, $dbStatusMessage = null, $dbStatusRefNumber = null)
     {
+        $this->dbStatusCode = $dbStatusCode;
+        $this->dbStatusMessage = $dbStatusMessage;
+        $this->dbStatusRefNumber = $dbStatusRefNumber;
     }
 
 

@@ -8,14 +8,24 @@ use Exception;
 class tEvent
 {
 
-    protected DateTime $dmEventTime = null;
+    /**
+     * @var \DateTime $dmEventTime
+     */
+    protected $dmEventTime = null;
 
     /**
+     * @var string $dmEventDescr
+     */
+    protected $dmEventDescr = null;
+
+    /**
+     * @param \DateTime $dmEventTime
      * @param string $dmEventDescr
      */
-    public function __construct(DateTime $dmEventTime = null, protected $dmEventDescr = null)
+    public function __construct(DateTime $dmEventTime = null, $dmEventDescr = null)
     {
-        $this->dmEventTime = $dmEventTime !== null ? $dmEventTime->format(DateTime::ATOM) : null;
+        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(DateTime::ATOM) : null;
+        $this->dmEventDescr = $dmEventDescr;
     }
 
 
@@ -29,7 +39,7 @@ class tEvent
         } else {
             try {
                 return new DateTime($this->dmEventTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -37,6 +47,7 @@ class tEvent
 
 
     /**
+     * @param \DateTime $dmEventTime
      * @return \Defr\CzechDataBox\Api\tEvent
      */
     public function setDmEventTime(DateTime $dmEventTime)

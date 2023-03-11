@@ -6,10 +6,16 @@ class tPDZRecArray
 {
 
     /**
+     * @var tPDZRec $dbPDZRecord
+     */
+    protected $dbPDZRecord = null;
+
+    /**
      * @param tPDZRec $dbPDZRecord
      */
-    public function __construct(protected $dbPDZRecord = null)
+    public function __construct($dbPDZRecord = null)
     {
+        $this->dbPDZRecord = $dbPDZRecord;
     }
 
 

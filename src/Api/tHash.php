@@ -5,15 +5,24 @@ namespace Defr\CzechDataBox\Api;
 class tHash
 {
 
-    protected base64Binary $_ = null;
+    /**
+     * @var base64Binary $_
+     */
+    protected $_ = null;
+
+    /**
+     * @var string $algorithm
+     */
+    protected $algorithm = null;
 
     /**
      * @param base64Binary $_
      * @param string $algorithm
      */
-    public function __construct($_ = null, protected $algorithm = null)
+    public function __construct($_ = null, $algorithm = null)
     {
         $this->_ = $_;
+        $this->algorithm = $algorithm;
     }
 
 

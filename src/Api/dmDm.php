@@ -5,29 +5,140 @@ namespace Defr\CzechDataBox\Api;
 class dmDm
 {
 
-    protected tIdDm $dmID = null;
+    /**
+     * @var tIdDm $dmID
+     */
+    protected $dmID = null;
 
-    protected tIdDb $dbIDSender = null;
+    /**
+     * @var tIdDb $dbIDSender
+     */
+    protected $dbIDSender = null;
 
-    protected dmSender $dmSender = null;
+    /**
+     * @var dmSender $dmSender
+     */
+    protected $dmSender = null;
 
-    protected dmSenderAddress $dmSenderAddress = null;
+    /**
+     * @var dmSenderAddress $dmSenderAddress
+     */
+    protected $dmSenderAddress = null;
 
-    protected dmRecipient $dmRecipient = null;
+    /**
+     * @var int $dmSenderType
+     */
+    protected $dmSenderType = null;
 
-    protected dmRecipientAddress $dmRecipientAddress = null;
+    /**
+     * @var dmRecipient $dmRecipient
+     */
+    protected $dmRecipient = null;
 
-    protected tIdDb $dbIDRecipient = null;
+    /**
+     * @var dmRecipientAddress $dmRecipientAddress
+     */
+    protected $dmRecipientAddress = null;
 
-    protected dmAnnotation $dmAnnotation = null;
+    /**
+     * @var boolean $dmAmbiguousRecipient
+     */
+    protected $dmAmbiguousRecipient = null;
 
-    protected dmRecipientRefNumber $dmRecipientRefNumber = null;
+    /**
+     * @var string $dmSenderOrgUnit
+     */
+    protected $dmSenderOrgUnit = null;
 
-    protected dmSenderRefNumber $dmSenderRefNumber = null;
+    /**
+     * @var int $dmSenderOrgUnitNum
+     */
+    protected $dmSenderOrgUnitNum = null;
 
-    protected dmRecipientIdent $dmRecipientIdent = null;
+    /**
+     * @var tIdDb $dbIDRecipient
+     */
+    protected $dbIDRecipient = null;
 
-    protected dmSenderIdent $dmSenderIdent = null;
+    /**
+     * @var string $dmRecipientOrgUnit
+     */
+    protected $dmRecipientOrgUnit = null;
+
+    /**
+     * @var int $dmRecipientOrgUnitNum
+     */
+    protected $dmRecipientOrgUnitNum = null;
+
+    /**
+     * @var string $dmToHands
+     */
+    protected $dmToHands = null;
+
+    /**
+     * @var dmAnnotation $dmAnnotation
+     */
+    protected $dmAnnotation = null;
+
+    /**
+     * @var dmRecipientRefNumber $dmRecipientRefNumber
+     */
+    protected $dmRecipientRefNumber = null;
+
+    /**
+     * @var dmSenderRefNumber $dmSenderRefNumber
+     */
+    protected $dmSenderRefNumber = null;
+
+    /**
+     * @var dmRecipientIdent $dmRecipientIdent
+     */
+    protected $dmRecipientIdent = null;
+
+    /**
+     * @var dmSenderIdent $dmSenderIdent
+     */
+    protected $dmSenderIdent = null;
+
+    /**
+     * @var int $dmLegalTitleLaw
+     */
+    protected $dmLegalTitleLaw = null;
+
+    /**
+     * @var int $dmLegalTitleYear
+     */
+    protected $dmLegalTitleYear = null;
+
+    /**
+     * @var string $dmLegalTitleSect
+     */
+    protected $dmLegalTitleSect = null;
+
+    /**
+     * @var string $dmLegalTitlePar
+     */
+    protected $dmLegalTitlePar = null;
+
+    /**
+     * @var string $dmLegalTitlePoint
+     */
+    protected $dmLegalTitlePoint = null;
+
+    /**
+     * @var boolean $dmPersonalDelivery
+     */
+    protected $dmPersonalDelivery = null;
+
+    /**
+     * @var boolean $dmAllowSubstDelivery
+     */
+    protected $dmAllowSubstDelivery = null;
+
+    /**
+     * @var tFilesArray $dmFiles
+     */
+    protected $dmFiles = null;
 
     /**
      * @param tIdDm $dmID
@@ -56,21 +167,37 @@ class dmDm
      * @param string $dmLegalTitlePoint
      * @param boolean $dmPersonalDelivery
      * @param boolean $dmAllowSubstDelivery
+     * @param tFilesArray $dmFiles
      */
-    public function __construct($dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, protected $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, protected $dmAmbiguousRecipient = null, protected $dmSenderOrgUnit = null, protected $dmSenderOrgUnitNum = null, $dbIDRecipient = null, protected $dmRecipientOrgUnit = null, protected $dmRecipientOrgUnitNum = null, protected $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, protected $dmLegalTitleLaw = null, protected $dmLegalTitleYear = null, protected $dmLegalTitleSect = null, protected $dmLegalTitlePar = null, protected $dmLegalTitlePoint = null, protected $dmPersonalDelivery = null, protected $dmAllowSubstDelivery = null)
+    public function __construct($dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, $dmAmbiguousRecipient = null, $dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmFiles = null)
     {
         $this->dmID = $dmID;
         $this->dbIDSender = $dbIDSender;
         $this->dmSender = $dmSender;
         $this->dmSenderAddress = $dmSenderAddress;
+        $this->dmSenderType = $dmSenderType;
         $this->dmRecipient = $dmRecipient;
         $this->dmRecipientAddress = $dmRecipientAddress;
+        $this->dmAmbiguousRecipient = $dmAmbiguousRecipient;
+        $this->dmSenderOrgUnit = $dmSenderOrgUnit;
+        $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
         $this->dbIDRecipient = $dbIDRecipient;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        $this->dmToHands = $dmToHands;
         $this->dmAnnotation = $dmAnnotation;
         $this->dmRecipientRefNumber = $dmRecipientRefNumber;
         $this->dmSenderRefNumber = $dmSenderRefNumber;
         $this->dmRecipientIdent = $dmRecipientIdent;
         $this->dmSenderIdent = $dmSenderIdent;
+        $this->dmLegalTitleLaw = $dmLegalTitleLaw;
+        $this->dmLegalTitleYear = $dmLegalTitleYear;
+        $this->dmLegalTitleSect = $dmLegalTitleSect;
+        $this->dmLegalTitlePar = $dmLegalTitlePar;
+        $this->dmLegalTitlePoint = $dmLegalTitlePoint;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        $this->dmFiles = $dmFiles;
     }
 
 
@@ -590,6 +717,26 @@ class dmDm
     public function setDmAllowSubstDelivery($dmAllowSubstDelivery)
     {
         $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        return $this;
+    }
+
+
+    /**
+     * @return tFilesArray
+     */
+    public function getDmFiles()
+    {
+        return $this->dmFiles;
+    }
+
+
+    /**
+     * @param tFilesArray $dmFiles
+     * @return \Defr\CzechDataBox\Api\dmDm
+     */
+    public function setDmFiles($dmFiles)
+    {
+        $this->dmFiles = $dmFiles;
         return $this;
     }
 

@@ -6,10 +6,16 @@ class dmXMLContent
 {
 
     /**
+     * @var string $any
+     */
+    protected $any = null;
+
+    /**
      * @param string $any
      */
-    public function __construct(protected $any = null)
+    public function __construct($any = null)
     {
+        $this->any = $any;
     }
 
 

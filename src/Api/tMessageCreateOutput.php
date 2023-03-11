@@ -5,15 +5,24 @@ namespace Defr\CzechDataBox\Api;
 class tMessageCreateOutput
 {
 
-    protected tIdDm $dmID = null;
+    /**
+     * @var tIdDm $dmID
+     */
+    protected $dmID = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
 
     /**
      * @param tIdDm $dmID
      * @param tStatus $dmStatus
      */
-    public function __construct($dmID = null, protected $dmStatus = null)
+    public function __construct($dmID = null, $dmStatus = null)
     {
         $this->dmID = $dmID;
+        $this->dmStatus = $dmStatus;
     }
 
 

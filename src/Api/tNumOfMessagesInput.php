@@ -5,7 +5,15 @@ namespace Defr\CzechDataBox\Api;
 class tNumOfMessagesInput
 {
 
-    protected int $statType = null;
+    /**
+     * @var int $statType
+     */
+    protected $statType = null;
+
+    
+    public function __construct()
+    {
+    }
 
 
     /**

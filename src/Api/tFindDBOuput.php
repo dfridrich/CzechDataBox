@@ -6,11 +6,23 @@ class tFindDBOuput
 {
 
     /**
+     * @var tDbOwnersArray $dbResults
+     */
+    protected $dbResults = null;
+
+    /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
+
+    /**
      * @param tDbOwnersArray $dbResults
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(protected $dbResults = null, protected $dbStatus = null)
+    public function __construct($dbResults = null, $dbStatus = null)
     {
+        $this->dbResults = $dbResults;
+        $this->dbStatus = $dbStatus;
     }
 
 

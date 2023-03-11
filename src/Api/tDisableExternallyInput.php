@@ -5,7 +5,25 @@ namespace Defr\CzechDataBox\Api;
 class tDisableExternallyInput
 {
 
-    protected date $dbOwnerDisableDate = null;
+    /**
+     * @var tDbOwnerInfo $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @var date $dbOwnerDisableDate
+     */
+    protected $dbOwnerDisableDate = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -13,9 +31,12 @@ class tDisableExternallyInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, $dbOwnerDisableDate = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOwnerInfo = null, $dbOwnerDisableDate = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
         $this->dbOwnerDisableDate = $dbOwnerDisableDate;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 

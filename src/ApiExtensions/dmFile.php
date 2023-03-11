@@ -5,7 +5,10 @@ namespace Defr\CzechDataBox\ApiExtensions;
 
 class dmFile extends \Defr\CzechDataBox\Api\dmFile
 {
-    protected string $dmEncodedContent = null;
+    /**
+     * @var string
+     */
+    protected $dmEncodedContent = null;
 
     /**
      * @return string

@@ -5,19 +5,110 @@ namespace Defr\CzechDataBox\Api;
 class tMessageEnvelopeSub
 {
 
-    protected tIdDb $dbIDRecipient = null;
+    /**
+     * @var string $dmSenderOrgUnit
+     */
+    protected $dmSenderOrgUnit = null;
 
-    protected dmAnnotation $dmAnnotation = null;
+    /**
+     * @var int $dmSenderOrgUnitNum
+     */
+    protected $dmSenderOrgUnitNum = null;
 
-    protected dmRecipientRefNumber $dmRecipientRefNumber = null;
+    /**
+     * @var tIdDb $dbIDRecipient
+     */
+    protected $dbIDRecipient = null;
 
-    protected dmSenderRefNumber $dmSenderRefNumber = null;
+    /**
+     * @var string $dmRecipientOrgUnit
+     */
+    protected $dmRecipientOrgUnit = null;
 
-    protected dmRecipientIdent $dmRecipientIdent = null;
+    /**
+     * @var int $dmRecipientOrgUnitNum
+     */
+    protected $dmRecipientOrgUnitNum = null;
 
-    protected dmSenderIdent $dmSenderIdent = null;
+    /**
+     * @var string $dmToHands
+     */
+    protected $dmToHands = null;
 
-    protected tDmType $dmType = null;
+    /**
+     * @var dmAnnotation $dmAnnotation
+     */
+    protected $dmAnnotation = null;
+
+    /**
+     * @var dmRecipientRefNumber $dmRecipientRefNumber
+     */
+    protected $dmRecipientRefNumber = null;
+
+    /**
+     * @var dmSenderRefNumber $dmSenderRefNumber
+     */
+    protected $dmSenderRefNumber = null;
+
+    /**
+     * @var dmRecipientIdent $dmRecipientIdent
+     */
+    protected $dmRecipientIdent = null;
+
+    /**
+     * @var dmSenderIdent $dmSenderIdent
+     */
+    protected $dmSenderIdent = null;
+
+    /**
+     * @var int $dmLegalTitleLaw
+     */
+    protected $dmLegalTitleLaw = null;
+
+    /**
+     * @var int $dmLegalTitleYear
+     */
+    protected $dmLegalTitleYear = null;
+
+    /**
+     * @var string $dmLegalTitleSect
+     */
+    protected $dmLegalTitleSect = null;
+
+    /**
+     * @var string $dmLegalTitlePar
+     */
+    protected $dmLegalTitlePar = null;
+
+    /**
+     * @var string $dmLegalTitlePoint
+     */
+    protected $dmLegalTitlePoint = null;
+
+    /**
+     * @var boolean $dmPersonalDelivery
+     */
+    protected $dmPersonalDelivery = null;
+
+    /**
+     * @var boolean $dmAllowSubstDelivery
+     */
+    protected $dmAllowSubstDelivery = null;
+
+    /**
+     * @var boolean $dmOVM
+     */
+    protected $dmOVM = null;
+
+    /**
+     * @var dmPublishOwnID $dmPublishOwnID
+     */
+    protected $dmPublishOwnID = null;
+
+    /**
+     * @var tDmType $dmType
+     */
+    protected $dmType = null;
 
     /**
      * @param string $dmSenderOrgUnit
@@ -39,17 +130,31 @@ class tMessageEnvelopeSub
      * @param boolean $dmPersonalDelivery
      * @param boolean $dmAllowSubstDelivery
      * @param boolean $dmOVM
-     * @param boolean $dmPublishOwnID
+     * @param dmPublishOwnID $dmPublishOwnID
      * @param tDmType $dmType
      */
-    public function __construct(protected $dmSenderOrgUnit = null, protected $dmSenderOrgUnitNum = null, $dbIDRecipient = null, protected $dmRecipientOrgUnit = null, protected $dmRecipientOrgUnitNum = null, protected $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, protected $dmLegalTitleLaw = null, protected $dmLegalTitleYear = null, protected $dmLegalTitleSect = null, protected $dmLegalTitlePar = null, protected $dmLegalTitlePoint = null, protected $dmPersonalDelivery = null, protected $dmAllowSubstDelivery = null, protected $dmOVM = null, protected $dmPublishOwnID = null, $dmType = null)
+    public function __construct($dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmOVM = null, $dmPublishOwnID = null, $dmType = null)
     {
+        $this->dmSenderOrgUnit = $dmSenderOrgUnit;
+        $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
         $this->dbIDRecipient = $dbIDRecipient;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        $this->dmToHands = $dmToHands;
         $this->dmAnnotation = $dmAnnotation;
         $this->dmRecipientRefNumber = $dmRecipientRefNumber;
         $this->dmSenderRefNumber = $dmSenderRefNumber;
         $this->dmRecipientIdent = $dmRecipientIdent;
         $this->dmSenderIdent = $dmSenderIdent;
+        $this->dmLegalTitleLaw = $dmLegalTitleLaw;
+        $this->dmLegalTitleYear = $dmLegalTitleYear;
+        $this->dmLegalTitleSect = $dmLegalTitleSect;
+        $this->dmLegalTitlePar = $dmLegalTitlePar;
+        $this->dmLegalTitlePoint = $dmLegalTitlePoint;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        $this->dmOVM = $dmOVM;
+        $this->dmPublishOwnID = $dmPublishOwnID;
         $this->dmType = $dmType;
     }
 
@@ -435,7 +540,7 @@ class tMessageEnvelopeSub
 
 
     /**
-     * @return boolean
+     * @return dmPublishOwnID
      */
     public function getDmPublishOwnID()
     {
@@ -444,7 +549,7 @@ class tMessageEnvelopeSub
 
 
     /**
-     * @param boolean $dmPublishOwnID
+     * @param dmPublishOwnID $dmPublishOwnID
      * @return \Defr\CzechDataBox\Api\tMessageEnvelopeSub
      */
     public function setDmPublishOwnID($dmPublishOwnID)

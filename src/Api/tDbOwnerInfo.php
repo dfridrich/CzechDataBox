@@ -5,15 +5,135 @@ namespace Defr\CzechDataBox\Api;
 class tDbOwnerInfo
 {
 
-    protected tIdDb $dbID = null;
+    /**
+     * @var tIdDb $dbID
+     */
+    protected $dbID = null;
 
-    protected tIdentificationNumber $ic = null;
+    /**
+     * @var tDbType $dbType
+     */
+    protected $dbType = null;
 
-    protected date $biDate = null;
+    /**
+     * @var tIdentificationNumber $ic
+     */
+    protected $ic = null;
 
-    protected identifier $identifier = null;
+    /**
+     * @var string $pnFirstName
+     */
+    protected $pnFirstName = null;
 
-    protected registryCode $registryCode = null;
+    /**
+     * @var string $pnMiddleName
+     */
+    protected $pnMiddleName = null;
+
+    /**
+     * @var string $pnLastName
+     */
+    protected $pnLastName = null;
+
+    /**
+     * @var string $pnLastNameAtBirth
+     */
+    protected $pnLastNameAtBirth = null;
+
+    /**
+     * @var string $firmName
+     */
+    protected $firmName = null;
+
+    /**
+     * @var date $biDate
+     */
+    protected $biDate = null;
+
+    /**
+     * @var string $biCity
+     */
+    protected $biCity = null;
+
+    /**
+     * @var string $biCounty
+     */
+    protected $biCounty = null;
+
+    /**
+     * @var string $biState
+     */
+    protected $biState = null;
+
+    /**
+     * @var string $adCity
+     */
+    protected $adCity = null;
+
+    /**
+     * @var string $adStreet
+     */
+    protected $adStreet = null;
+
+    /**
+     * @var string $adNumberInStreet
+     */
+    protected $adNumberInStreet = null;
+
+    /**
+     * @var string $adNumberInMunicipality
+     */
+    protected $adNumberInMunicipality = null;
+
+    /**
+     * @var string $adZipCode
+     */
+    protected $adZipCode = null;
+
+    /**
+     * @var string $adState
+     */
+    protected $adState = null;
+
+    /**
+     * @var string $nationality
+     */
+    protected $nationality = null;
+
+    /**
+     * @var string $email
+     */
+    protected $email = null;
+
+    /**
+     * @var string $telNumber
+     */
+    protected $telNumber = null;
+
+    /**
+     * @var identifier $identifier
+     */
+    protected $identifier = null;
+
+    /**
+     * @var registryCode $registryCode
+     */
+    protected $registryCode = null;
+
+    /**
+     * @var int $dbState
+     */
+    protected $dbState = null;
+
+    /**
+     * @var boolean $dbEffectiveOVM
+     */
+    protected $dbEffectiveOVM = null;
+
+    /**
+     * @var boolean $dbOpenAddressing
+     */
+    protected $dbOpenAddressing = null;
 
     /**
      * @param tIdDb $dbID
@@ -43,13 +163,34 @@ class tDbOwnerInfo
      * @param boolean $dbEffectiveOVM
      * @param boolean $dbOpenAddressing
      */
-    public function __construct($dbID = null, protected $dbType = null, $ic = null, protected $pnFirstName = null, protected $pnMiddleName = null, protected $pnLastName = null, protected $pnLastNameAtBirth = null, protected $firmName = null, $biDate = null, protected $biCity = null, protected $biCounty = null, protected $biState = null, protected $adCity = null, protected $adStreet = null, protected $adNumberInStreet = null, protected $adNumberInMunicipality = null, protected $adZipCode = null, protected $adState = null, protected $nationality = null, protected $email = null, protected $telNumber = null, $identifier = null, $registryCode = null, protected $dbState = null, protected $dbEffectiveOVM = null, protected $dbOpenAddressing = null)
+    public function __construct($dbID = null, $dbType = null, $ic = null, $pnFirstName = null, $pnMiddleName = null, $pnLastName = null, $pnLastNameAtBirth = null, $firmName = null, $biDate = null, $biCity = null, $biCounty = null, $biState = null, $adCity = null, $adStreet = null, $adNumberInStreet = null, $adNumberInMunicipality = null, $adZipCode = null, $adState = null, $nationality = null, $email = null, $telNumber = null, $identifier = null, $registryCode = null, $dbState = null, $dbEffectiveOVM = null, $dbOpenAddressing = null)
     {
         $this->dbID = $dbID;
+        $this->dbType = $dbType;
         $this->ic = $ic;
+        $this->pnFirstName = $pnFirstName;
+        $this->pnMiddleName = $pnMiddleName;
+        $this->pnLastName = $pnLastName;
+        $this->pnLastNameAtBirth = $pnLastNameAtBirth;
+        $this->firmName = $firmName;
         $this->biDate = $biDate;
+        $this->biCity = $biCity;
+        $this->biCounty = $biCounty;
+        $this->biState = $biState;
+        $this->adCity = $adCity;
+        $this->adStreet = $adStreet;
+        $this->adNumberInStreet = $adNumberInStreet;
+        $this->adNumberInMunicipality = $adNumberInMunicipality;
+        $this->adZipCode = $adZipCode;
+        $this->adState = $adState;
+        $this->nationality = $nationality;
+        $this->email = $email;
+        $this->telNumber = $telNumber;
         $this->identifier = $identifier;
         $this->registryCode = $registryCode;
+        $this->dbState = $dbState;
+        $this->dbEffectiveOVM = $dbEffectiveOVM;
+        $this->dbOpenAddressing = $dbOpenAddressing;
     }
 
 

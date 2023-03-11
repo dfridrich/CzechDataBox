@@ -5,15 +5,24 @@ namespace Defr\CzechDataBox\Api;
 class tSignedMessDownOutput
 {
 
-    protected base64Binary $dmSignature = null;
+    /**
+     * @var base64Binary $dmSignature
+     */
+    protected $dmSignature = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
 
     /**
      * @param base64Binary $dmSignature
      * @param tStatus $dmStatus
      */
-    public function __construct($dmSignature = null, protected $dmStatus = null)
+    public function __construct($dmSignature = null, $dmStatus = null)
     {
         $this->dmSignature = $dmSignature;
+        $this->dmStatus = $dmStatus;
     }
 
 

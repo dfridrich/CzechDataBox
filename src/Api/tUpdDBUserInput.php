@@ -6,19 +6,49 @@ class tUpdDBUserInput
 {
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
-     * @param tDbUserInfo $dbOldUserInfo
-     * @param tDbUserInfo $dbNewUserInfo
+     * @var tDbOwnerInfoExt $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @var tDbUserInfoExt $dbOldUserInfo
+     */
+    protected $dbOldUserInfo = null;
+
+    /**
+     * @var tDbUserInfoExt $dbNewUserInfo
+     */
+    protected $dbNewUserInfo = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
+
+    /**
+     * @param tDbOwnerInfoExt $dbOwnerInfo
+     * @param tDbUserInfoExt $dbOldUserInfo
+     * @param tDbUserInfoExt $dbNewUserInfo
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, protected $dbOldUserInfo = null, protected $dbNewUserInfo = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOwnerInfo = null, $dbOldUserInfo = null, $dbNewUserInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbOldUserInfo = $dbOldUserInfo;
+        $this->dbNewUserInfo = $dbNewUserInfo;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbOwnerInfo()
     {
@@ -27,7 +57,7 @@ class tUpdDBUserInput
 
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param tDbOwnerInfoExt $dbOwnerInfo
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
@@ -38,7 +68,7 @@ class tUpdDBUserInput
 
 
     /**
-     * @return tDbUserInfo
+     * @return tDbUserInfoExt
      */
     public function getDbOldUserInfo()
     {
@@ -47,7 +77,7 @@ class tUpdDBUserInput
 
 
     /**
-     * @param tDbUserInfo $dbOldUserInfo
+     * @param tDbUserInfoExt $dbOldUserInfo
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbOldUserInfo($dbOldUserInfo)
@@ -58,7 +88,7 @@ class tUpdDBUserInput
 
 
     /**
-     * @return tDbUserInfo
+     * @return tDbUserInfoExt
      */
     public function getDbNewUserInfo()
     {
@@ -67,7 +97,7 @@ class tUpdDBUserInput
 
 
     /**
-     * @param tDbUserInfo $dbNewUserInfo
+     * @param tDbUserInfoExt $dbNewUserInfo
      * @return \Defr\CzechDataBox\Api\tUpdDBUserInput
      */
     public function setDbNewUserInfo($dbNewUserInfo)

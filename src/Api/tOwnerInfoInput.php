@@ -6,12 +6,30 @@ class tOwnerInfoInput
 {
 
     /**
+     * @var tDbOwnerInfo $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
+
+    /**
      * @param tDbOwnerInfo $dbOwnerInfo
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOwnerInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 

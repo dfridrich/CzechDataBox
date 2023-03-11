@@ -5,19 +5,31 @@ namespace Defr\CzechDataBox\Api;
 class tAddDBUserOutput
 {
 
-    protected tIdDb $dbID = null;
+    /**
+     * @var tIdDb $dbID
+     */
+    protected $dbID = null;
 
-    protected tDbAccessDataId $dbAccessDataId = null;
+    /**
+     * @var tDbAccessDataId $dbAccessDataId
+     */
+    protected $dbAccessDataId = null;
+
+    /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
 
     /**
      * @param tIdDb $dbID
      * @param tDbAccessDataId $dbAccessDataId
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct($dbID = null, $dbAccessDataId = null, protected $dbStatus = null)
+    public function __construct($dbID = null, $dbAccessDataId = null, $dbStatus = null)
     {
         $this->dbID = $dbID;
         $this->dbAccessDataId = $dbAccessDataId;
+        $this->dbStatus = $dbStatus;
     }
 
 

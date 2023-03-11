@@ -6,15 +6,21 @@ class tDbOwnersArray
 {
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @var tDbOwnerInfoExt $dbOwnerInfo
      */
-    public function __construct(protected $dbOwnerInfo = null)
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @param tDbOwnerInfoExt $dbOwnerInfo
+     */
+    public function __construct($dbOwnerInfo = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
     }
 
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbOwnerInfo()
     {
@@ -23,7 +29,7 @@ class tDbOwnersArray
 
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param tDbOwnerInfoExt $dbOwnerInfo
      * @return \Defr\CzechDataBox\Api\tDbOwnersArray
      */
     public function setDbOwnerInfo($dbOwnerInfo)

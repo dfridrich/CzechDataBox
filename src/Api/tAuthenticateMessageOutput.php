@@ -6,11 +6,23 @@ class tAuthenticateMessageOutput
 {
 
     /**
+     * @var boolean $dmAuthResult
+     */
+    protected $dmAuthResult = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param boolean $dmAuthResult
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmAuthResult = null, protected $dmStatus = null)
+    public function __construct($dmAuthResult = null, $dmStatus = null)
     {
+        $this->dmAuthResult = $dmAuthResult;
+        $this->dmStatus = $dmStatus;
     }
 
 

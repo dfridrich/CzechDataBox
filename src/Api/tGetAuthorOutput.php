@@ -6,12 +6,30 @@ class tGetAuthorOutput
 {
 
     /**
+     * @var string $userType
+     */
+    protected $userType = null;
+
+    /**
+     * @var string $authorName
+     */
+    protected $authorName = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param string $userType
      * @param string $authorName
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $userType = null, protected $authorName = null, protected $dmStatus = null)
+    public function __construct($userType = null, $authorName = null, $dmStatus = null)
     {
+        $this->userType = $userType;
+        $this->authorName = $authorName;
+        $this->dmStatus = $dmStatus;
     }
 
 

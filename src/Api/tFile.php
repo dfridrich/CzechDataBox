@@ -5,15 +5,24 @@ namespace Defr\CzechDataBox\Api;
 class tFile
 {
 
-    protected base64Binary $dmEncodedContent = null;
+    /**
+     * @var base64Binary $dmEncodedContent
+     */
+    protected $dmEncodedContent = null;
+
+    /**
+     * @var dmXMLContent $dmXMLContent
+     */
+    protected $dmXMLContent = null;
 
     /**
      * @param base64Binary $dmEncodedContent
      * @param dmXMLContent $dmXMLContent
      */
-    public function __construct($dmEncodedContent = null, protected $dmXMLContent = null)
+    public function __construct($dmEncodedContent = null, $dmXMLContent = null)
     {
         $this->dmEncodedContent = $dmEncodedContent;
+        $this->dmXMLContent = $dmXMLContent;
     }
 
 

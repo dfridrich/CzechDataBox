@@ -6,11 +6,23 @@ class tGetUserInfoOutput
 {
 
     /**
+     * @var tDbUserInfo $dbUserInfo
+     */
+    protected $dbUserInfo = null;
+
+    /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
+
+    /**
      * @param tDbUserInfo $dbUserInfo
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(protected $dbUserInfo = null, protected $dbStatus = null)
+    public function __construct($dbUserInfo = null, $dbStatus = null)
     {
+        $this->dbUserInfo = $dbUserInfo;
+        $this->dbStatus = $dbStatus;
     }
 
 

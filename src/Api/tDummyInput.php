@@ -6,10 +6,16 @@ class tDummyInput
 {
 
     /**
+     * @var string $dbDummy
+     */
+    protected $dbDummy = null;
+
+    /**
      * @param string $dbDummy
      */
-    public function __construct(protected $dbDummy = null)
+    public function __construct($dbDummy = null)
     {
+        $this->dbDummy = $dbDummy;
     }
 
 

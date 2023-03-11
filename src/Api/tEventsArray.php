@@ -6,10 +6,16 @@ class tEventsArray
 {
 
     /**
+     * @var tEvent $dmEvent
+     */
+    protected $dmEvent = null;
+
+    /**
      * @param tEvent $dmEvent
      */
-    public function __construct(protected $dmEvent = null)
+    public function __construct($dmEvent = null)
     {
+        $this->dmEvent = $dmEvent;
     }
 
 

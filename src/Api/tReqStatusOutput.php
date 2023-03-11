@@ -6,10 +6,16 @@ class tReqStatusOutput
 {
 
     /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
+
+    /**
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(protected $dbStatus = null)
+    public function __construct($dbStatus = null)
     {
+        $this->dbStatus = $dbStatus;
     }
 
 

@@ -6,11 +6,23 @@ class tCheckDBOutput
 {
 
     /**
+     * @var int $dbState
+     */
+    protected $dbState = null;
+
+    /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
+
+    /**
      * @param int $dbState
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(protected $dbState = null, protected $dbStatus = null)
+    public function __construct($dbState = null, $dbStatus = null)
     {
+        $this->dbState = $dbState;
+        $this->dbStatus = $dbStatus;
     }
 
 

@@ -8,24 +8,52 @@ use Exception;
 class tPDZRec
 {
 
-    protected tIdDb $PDZRecip = null;
+    /**
+     * @var string $PDZType
+     */
+    protected $PDZType = null;
 
-    protected tIdDb $PDZPayer = null;
+    /**
+     * @var tIdDb $PDZRecip
+     */
+    protected $PDZRecip = null;
 
-    protected DateTime $PDZExpire = null;
+    /**
+     * @var tIdDb $PDZPayer
+     */
+    protected $PDZPayer = null;
+
+    /**
+     * @var \DateTime $PDZExpire
+     */
+    protected $PDZExpire = null;
+
+    /**
+     * @var int $PDZCnt
+     */
+    protected $PDZCnt = null;
+
+    /**
+     * @var string $ODZIdent
+     */
+    protected $ODZIdent = null;
 
     /**
      * @param string $PDZType
      * @param tIdDb $PDZRecip
      * @param tIdDb $PDZPayer
+     * @param \DateTime $PDZExpire
      * @param int $PDZCnt
      * @param string $ODZIdent
      */
-    public function __construct(protected $PDZType = null, $PDZRecip = null, $PDZPayer = null, DateTime $PDZExpire = null, protected $PDZCnt = null, protected $ODZIdent = null)
+    public function __construct($PDZType = null, $PDZRecip = null, $PDZPayer = null, DateTime $PDZExpire = null, $PDZCnt = null, $ODZIdent = null)
     {
+        $this->PDZType = $PDZType;
         $this->PDZRecip = $PDZRecip;
         $this->PDZPayer = $PDZPayer;
-        $this->PDZExpire = $PDZExpire !== null ? $PDZExpire->format(DateTime::ATOM) : null;
+        $this->PDZExpire = $PDZExpire ? $PDZExpire->format(DateTime::ATOM) : null;
+        $this->PDZCnt = $PDZCnt;
+        $this->ODZIdent = $ODZIdent;
     }
 
 
@@ -99,7 +127,7 @@ class tPDZRec
         } else {
             try {
                 return new DateTime($this->PDZExpire);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -107,6 +135,7 @@ class tPDZRec
 
 
     /**
+     * @param \DateTime $PDZExpire
      * @return \Defr\CzechDataBox\Api\tPDZRec
      */
     public function setPDZExpire(DateTime $PDZExpire)

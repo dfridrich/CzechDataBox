@@ -6,12 +6,30 @@ class tMultipleMessageCreateInput
 {
 
     /**
+     * @var tMultipleMessageRecipients $dmRecipients
+     */
+    protected $dmRecipients = null;
+
+    /**
+     * @var dmEnvelope $dmEnvelope
+     */
+    protected $dmEnvelope = null;
+
+    /**
+     * @var tFilesArray $dmFiles
+     */
+    protected $dmFiles = null;
+
+    /**
      * @param tMultipleMessageRecipients $dmRecipients
      * @param dmEnvelope $dmEnvelope
      * @param tFilesArray $dmFiles
      */
-    public function __construct(protected $dmRecipients = null, protected $dmEnvelope = null, protected $dmFiles = null)
+    public function __construct($dmRecipients = null, $dmEnvelope = null, $dmFiles = null)
     {
+        $this->dmRecipients = $dmRecipients;
+        $this->dmEnvelope = $dmEnvelope;
+        $this->dmFiles = $dmFiles;
     }
 
 

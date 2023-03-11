@@ -2,9 +2,6 @@
 
 namespace Defr\CzechDataBox\Api;
 
-use Defr\CzechDataBox\Api\tNumOfMessagesInput;
-use Defr\CzechDataBox\Api\tNumOfMessagesOutput;
-use Defr\CzechDataBox\Api\tStatReqStatus;
 use SoapClient;
 use function array_merge;
 
@@ -14,10 +11,10 @@ class IsdsStat extends SoapClient
     /**
      * @var array $classmap The defined classes
      */
-    private static array $classmap =  [
-      'tNumOfMessagesInput' => tNumOfMessagesInput::class,
-      'tNumOfMessagesOutput' => tNumOfMessagesOutput::class,
-      'tStatReqStatus' => tStatReqStatus::class,
+    private static $classmap =  [
+      'tNumOfMessagesInput' => 'Defr\\CzechDataBox\\Api\\tNumOfMessagesInput',
+      'tNumOfMessagesOutput' => 'Defr\\CzechDataBox\\Api\\tNumOfMessagesOutput',
+      'tStatReqStatus' => 'Defr\\CzechDataBox\\Api\\tStatReqStatus',
     ];
 
     /**
@@ -31,24 +28,23 @@ class IsdsStat extends SoapClient
                 $options['classmap'][$key] = $value;
             }
         }
-
         $options = array_merge([
         'features' => 1,
         ], $options);
         if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/isas/vendor/dfridrich/czech-data-box/Resources/isds_stat.wsdl';
+            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/isds_stat.wsdl';
         }
-
         parent::__construct($wsdl, $options);
     }
 
 
     /**
+     * @param tNumOfMessagesInput $parameter
      * @return tNumOfMessagesOutput
      */
     public function NumOfMessages(tNumOfMessagesInput $parameter)
     {
-        return $this->soapCall('NumOfMessages', [$parameter]);
+        return $this->__soapCall('NumOfMessages', [$parameter]);
     }
 
 }

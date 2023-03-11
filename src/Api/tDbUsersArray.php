@@ -6,15 +6,21 @@ class tDbUsersArray
 {
 
     /**
-     * @param tDbUserInfo $dbUserInfo
+     * @var dbUserInfo $dbUserInfo
      */
-    public function __construct(protected $dbUserInfo = null)
+    protected $dbUserInfo = null;
+
+    /**
+     * @param dbUserInfo $dbUserInfo
+     */
+    public function __construct($dbUserInfo = null)
     {
+        $this->dbUserInfo = $dbUserInfo;
     }
 
 
     /**
-     * @return tDbUserInfo
+     * @return dbUserInfo
      */
     public function getDbUserInfo()
     {
@@ -23,7 +29,7 @@ class tDbUsersArray
 
 
     /**
-     * @param tDbUserInfo $dbUserInfo
+     * @param dbUserInfo $dbUserInfo
      * @return \Defr\CzechDataBox\Api\tDbUsersArray
      */
     public function setDbUserInfo($dbUserInfo)

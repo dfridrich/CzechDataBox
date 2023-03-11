@@ -8,20 +8,52 @@ use Exception;
 class tListOfFReceivedInput
 {
 
-    protected DateTime $dmFromTime = null;
-
-    protected DateTime $dmToTime = null;
+    /**
+     * @var \DateTime $dmFromTime
+     */
+    protected $dmFromTime = null;
 
     /**
+     * @var \DateTime $dmToTime
+     */
+    protected $dmToTime = null;
+
+    /**
+     * @var int $dmRecipientOrgUnitNum
+     */
+    protected $dmRecipientOrgUnitNum = null;
+
+    /**
+     * @var string $dmStatusFilter
+     */
+    protected $dmStatusFilter = null;
+
+    /**
+     * @var int $dmOffset
+     */
+    protected $dmOffset = null;
+
+    /**
+     * @var int $dmLimit
+     */
+    protected $dmLimit = null;
+
+    /**
+     * @param \DateTime $dmFromTime
+     * @param \DateTime $dmToTime
      * @param int $dmRecipientOrgUnitNum
      * @param string $dmStatusFilter
      * @param int $dmOffset
      * @param int $dmLimit
      */
-    public function __construct(DateTime $dmFromTime = null, DateTime $dmToTime = null, protected $dmRecipientOrgUnitNum = null, protected $dmStatusFilter = null, protected $dmOffset = null, protected $dmLimit = null)
+    public function __construct(DateTime $dmFromTime = null, DateTime $dmToTime = null, $dmRecipientOrgUnitNum = null, $dmStatusFilter = null, $dmOffset = null, $dmLimit = null)
     {
-        $this->dmFromTime = $dmFromTime !== null ? $dmFromTime->format(DateTime::ATOM) : null;
-        $this->dmToTime = $dmToTime !== null ? $dmToTime->format(DateTime::ATOM) : null;
+        $this->dmFromTime = $dmFromTime ? $dmFromTime->format(DateTime::ATOM) : null;
+        $this->dmToTime = $dmToTime ? $dmToTime->format(DateTime::ATOM) : null;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        $this->dmStatusFilter = $dmStatusFilter;
+        $this->dmOffset = $dmOffset;
+        $this->dmLimit = $dmLimit;
     }
 
 
@@ -35,7 +67,7 @@ class tListOfFReceivedInput
         } else {
             try {
                 return new DateTime($this->dmFromTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -43,6 +75,7 @@ class tListOfFReceivedInput
 
 
     /**
+     * @param \DateTime $dmFromTime
      * @return \Defr\CzechDataBox\Api\tListOfFReceivedInput
      */
     public function setDmFromTime(DateTime $dmFromTime)
@@ -62,7 +95,7 @@ class tListOfFReceivedInput
         } else {
             try {
                 return new DateTime($this->dmToTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -70,6 +103,7 @@ class tListOfFReceivedInput
 
 
     /**
+     * @param \DateTime $dmToTime
      * @return \Defr\CzechDataBox\Api\tListOfFReceivedInput
      */
     public function setDmToTime(DateTime $dmToTime)

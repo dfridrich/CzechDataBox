@@ -6,11 +6,23 @@ class tMessEnvelDownOutput
 {
 
     /**
+     * @var tReturnedMessageEnvelope $dmReturnedMessageEnvelope
+     */
+    protected $dmReturnedMessageEnvelope = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param tReturnedMessageEnvelope $dmReturnedMessageEnvelope
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmReturnedMessageEnvelope = null, protected $dmStatus = null)
+    public function __construct($dmReturnedMessageEnvelope = null, $dmStatus = null)
     {
+        $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
+        $this->dmStatus = $dmStatus;
     }
 
 

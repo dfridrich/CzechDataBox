@@ -6,10 +6,16 @@ class tFindDBInput
 {
 
     /**
+     * @var tDbOwnerInfo $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
      * @param tDbOwnerInfo $dbOwnerInfo
      */
-    public function __construct(protected $dbOwnerInfo = null)
+    public function __construct($dbOwnerInfo = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
     }
 
 

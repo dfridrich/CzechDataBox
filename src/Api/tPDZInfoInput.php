@@ -5,7 +5,10 @@ namespace Defr\CzechDataBox\Api;
 class tPDZInfoInput
 {
 
-    protected tIdDb $PDZSender = null;
+    /**
+     * @var tIdDb $PDZSender
+     */
+    protected $PDZSender = null;
 
     /**
      * @param tIdDb $PDZSender

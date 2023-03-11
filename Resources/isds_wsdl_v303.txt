@@ -1,0 +1,347 @@
+WSDL a XSD definice verejneho rozhrani webovych sluzeb ISDS       
+                         
+verze:  2.7  
+datum nasazeni:  21.1.2010
+============================================================
+
+Novinky a zmeny:
+----------------
+1.  nova skupina WS v db_access.wsdl, typy v dbTypes.xsd
+2.  zrusen db_supplementary.wsdl
+3.  do db_manipulations.wsdl presunuta WS GetDataBoxUsers ze zruseneho db_supplementary.wsdl
+
+verze:  2.8  
+datum nasazeni:  25.3.2010
+============================================================
+
+Novinky a zmeny:
+----------------
+1. ve schematu pro spravu schranek dbTypes.xsd (pro Poskytovatele dat) pribyl ve struktuøe dbUserInfo nepovinny element caState. Obsahuje zkratku statu v kontaktni adrese, pokud neni uveden, stat je CZ.
+Tyka se to WS CreateDataBox, AddDataBoxUser, UpdateDataBoxUser, DeleteDataBoxUser, NewAccessData, GetUserInfoFromLogin, GetDataBoxUsers.  
+
+
+verze:  2.9  
+datum nasazeni: 22.5.2010
+============================================================
+
+Novinky a zmeny:      
+----------------
+1. dbTypes.xsd: u CreateDataBox pribyl nepovinny atribut na vstupu a nepovinny atribut na vystupu (priprava pro virtualni obalky)
+2. dm_operations.wsdl: nová WS AuthenticateMessage   
+3. dmBaseType.xsd: nepovinny atribut dmType u CreateMessage  (priprava na budouci rozsireni)
+4. dmBaseType.xsd: formalni zmeny v umistìni nepovinnych atributu dmType u obalky a seznamu beze zmeny v XML  (kompatibilni)
+
+
+verze:  2.10  
+datum nasazeni na TEST: 17.10.2010
+datum nasazeni na PRODUKCI: 27.11.2010
+============================================================
+
+Novinky a zmeny:
+----------------
+1. Zmena URL v service location v dusledku povinneho prechodu na Basic autentizaci z https://www.mojedatovaschranka.cz/DS na https://ws1.mojedatovaschranka.cz/DS
+V pripade testovaciho prostredi z https://www.czebox.cz/DS na https://ws1.czebox.cz/DS
+2. dbTypes.xsd: u WS NewAccessData pribyl nepovinny element email pro zaznamenani emailu pro Aktivacni portal a na vystupu nepovinny element dbUserID s novym ID uzivatele - pouze pro Czech POINT a použití Virtuální obálky
+3. dbTypes.xsd: u WS AddDataBoxUser pribyly na vstupu nepovinne elementy dbVirtual a email, na vystupu nepovinne elementy dbUserId a dbAccessDataId - pouze pro pøidávání Interních uživatelù z Portálu MV. 
+4. dbTypes.xsd: u WS CreateDataBox pribyly na vstupu nepovinne elementy dbVirtual a email, na vystupu nepovinne elementy dbUserId a dbAccessDataId - pouze pro Czech POINT a použití Virtuální obálky (v budoucí verzi)
+5. dmBaseTypes.xsd: pridaní typu pro WS GetMessageStateChanges (dm_info.wsdl) 
+6. dbTypes.xsd: pridaní typu pro GetDataBoxList (db_search.wsdl)
+
+verze:  2.11  
+datum nasazeni na TEST: 18.12.2010
+datum nasazeni na PRODUKCI: 5.2.2011 
+============================================================
+
+Novinky a zmeny:
+----------------
+1. dmBaseType.xsd: nova WS GetMessageAuthor
+2. dmBaseType.xsd: pridani nepovinného elementu dmPublishOwnID do CreateMessage a CreateMultipleMessage 
+3. dbTypes.xsd: u WS GetDataBoxUsers povolen nulovy pocet uzivatelu schranky
+
+verze:  2.12  
+datum nasazeni na TEST: 16.4.2011
+datum nasazeni na PRODUKCI: 15.5.2011 
+============================================================
+Novinky a zmeny:
+----------------
+1. dbTypes.xsd: pøidána definice pro neveøejnou WS DeleteDataBoxPromptly   
+2. dbTypes.xsd: nová konstanta typu uživatele LIQUIDATOR a OFFICIAL_CERT (všude, kde se vrací typ uživatele, je nutno u schránek typu PO poèítat s novým typem Likvidátor)
+
+
+verze:  2.13  
+datum nasazeni na TEST: 30.7.2011
+datum nasazeni na PRODUKCI: 19.9.2011 
+============================================================
+Novinky a zmeny:
+----------------
+1. pøidáno wsdl a xsd pro statistickou WS NumOfMessages
+
+verze:  2.14  
+datum nasazeni na TEST: 17.9.2011
+datum nasazeni na PRODUKCI: 16.10.2011 
+============================================================
+Novinky a zmeny:
+----------------
+1. pøidáno wsdl a xsd pro WS týkající se OTP pøihlašování
+
+
+verze:  2.15 (novela zákona 300/2008)  
+datum nasazeni na TEST: 16.10.2011
+datum nasazeni na PRODUKCI: 27.11.2011 
+============================================================
+Novinky a zmeny:
+----------------
+Nasazení zmìn v používání PDZ:
+1. db_search.wsdl - pøidána WS PDZInfo
+2. dbTypes.xsd - pøidána definice pro novou WS PDZInfo
+3. dmBaseTypes.xsd - pøidání dalších typù zprávy (rùzné podtypy PDZ)
+3. dmBaseTypes.xsd - Create[Multiple]Message - nepovinné atributy pro oznaèení Iniciaèní poštovní zprávy pro Odpovìdní DZ
+
+verze:  2.16   
+datum nasazeni na TEST:  25.6.2012
+datum nasazeni na PRODUKCI: -- 
+============================================================
+Novinky a zmeny:
+----------------
+dm_info.wsdl + dmBaseTypes - pøidána WS EraseMessage
+
+verze:  2.17   
+datum nasazeni na TEST:  20.7.2012
+datum nasazeni na PRODUKCI: 21.10.2012 
+============================================================
+Novinky a zmeny:
+----------------
+dm_operation.wsdl + dmBaseTypes - pøidána WS Re-signISDSDocument
+
+
+verze:  2.18   
+datum nasazeni na TEST: 20.11.2012
+datum nasazeni na PRODUKCI: 20.4.2013 
+============================================================
+ Novinky a zmeny:
+----------------
+db_search.wsdl + dbTypes.xsd - pøidána WS DataBoxCreditInfo
+
+
+verze:  2.18a        (25.1.2014)
+kompatibilní z 2.18  
+============================================================
+ Novinky a zmeny:
+----------------
+dmBaseTypes.xsd - oprava definice dmXMLContent pro použití v ess.xsd
+
+ 
+verze:  2.18b        (17.4.2014)
+kompatibilní z 2.18  
+============================================================
+ Novinky a zmeny:
+----------------
+dmBaseTypes.xsd - pouze opravy komentáøù u atributù elementu dmFile
+
+
+verze: 2.19 
+datum nasazeni na TEST: 4.12.2014
+datum nasazeni na PRODUKCI: 14.12.2014
+============================================================
+ Novinky a zmeny:
+----------------
+db_search.wsdl + dbTypes.xsd - pøidána WS ISDSSearch2
+
+
+verze: 2.20 
+datum nasazeni na TEST: 8.8.2015
+datum nasazeni na PRODUKCI: 8.8.2015
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidána definice WS GetDataBoxActivityStatus
+db_search.wsdl - pøidána WS GetDataBoxActivityStatus 
+
+
+verze: 2.21
+datum nasazeni na TEST: 23.9.2015
+datum nasazeni na PRODUKCI: 11.10.2015
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidána definice WS FindPersonalDataBox
+db_search.wsdl - pøidána WS FindPersonalDataBox 
+
+
+verze: 2.22
+datum nasazeni na TEST: 8.11.2015
+datum nasazeni na PRODUKCI: 8.11.2015
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidána hodnota OVM_MAIN parametru searchScope u služby ISDSSearch2
+  
+verze: 2.23
+datum nasazeni na TEST: 7.2.2016
+datum nasazeni na PRODUKCI: 7.2.2016
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - na vstupu služeb CreateDataBox, UpdateDataBoxDescr, AddDataBoxUser a UpdateDataBoxUser použita rozšíøené skupina adresních elementù gAddressExt
+
+verze 2.24
+datum nasazeni na TEST: 10.4.2016
+datum nasazeni na PRODUKCI: 10.4.2016
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidána definice WS DTInfo
+db_search.wsdl - pøidána WS DTInfo 
+
+verze 2.25
+datum nasazeni na TEST: 11.9.2016
+datum nasazeni na PRODUKCI: 11.9.2016
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidána definice WS PDZSendInfo
+db_search.wsdl - pøidána  WS PDZSendInfo
+
+
+verze 2.26
+datum nasazeni na TEST: 5.3.2017
+datum nasazeni na PRODUKCI: 5.3.2017
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidána nový typ schránky PFO_AUDITOR 
+            - pøidány nové typy uživatelù GUARDIAN a RECEIVER
+            - zmìna typu u dbOwnerInfo ze simple na complex
+
+
+verze 2.27
+datum nasazeni na TEST: 26.5.2017
+datum nasazeni na PRODUKCI: 10.9.2017
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidány nové typy schránek OVM_FO, OVM_PFO a PVM_PO 
+dodateènì pøidána klasifikace informací, nezmìnìno èíslo verze
+
+
+verze 2.28
+datum nasazeni na TEST: 13.5.2018
+datum nasazeni na PRODUKCI: 2.9.2018  - poslední wsdl starého formátu pro uživatele
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - pøidány definice pro službu GetDataBoxUsers2, odstranìny služby Activate, SetEffectiveOVM, ClearEffectiveOVM
+db_manipulations.wsdl - pøidána služba GetDataBoxUsers2, odstranìny služby Activate, SetEffectiveOVM, ClearEffectiveOVM
+- vydáno Info pro vývojáøe (kvìten 2018)
+
+
+verze 2.29
+datum nasazeni na TEST: 2.9.2018
+datum nasazeni na PRODUKCI: 2.9.2018  - pouze pro Czech POINT, neveøejné, není tøeba publikovat
+============================================================
+ Novinky a zmeny:
+----------------
+dbTypes.xsd - CzP atributy guid, subject a branch  pro služby CzP 
+
+            
+verze 2.30     
+datum nasazeni na TEST: 2.9.2018 , druhý den staženo
+datum nasazeni na PRODUKCI: nikdy
+============================================================
+ Novinky a zmeny:
+----------------
+- ZÁSADNÍ ZMÌNY ve strukturách, staré služby zùstávají funkèní, ale nedokumentované
+- jiný namespace, nový formát WS pro správu schránek a vyhledávání (UserInfo a OwnerInfo)
+- pøidáno idOVM i do vyhledávání
+- z wsdl odstranìna GetDataBoxUsers a Activate
+- pøesuny mezi wsdl
+
+
+verze 2.31     
+datum nasazeni na TEST: 6.9.2018
+datum nasazeni na PRODUKCI: 4.11.2018
+============================================================
+ Novinky a zmeny:
+----------------
+- slouèení starých (2.28) a nových (2.30) verzí do jediného wsdl
+- jediný namespace /v20
+- dokumentovány již jen nové verze služeb - pøíruèky od verze 2.64; staré služby jsou popsány v pøíruèkách do verze 2.63 (Provozní øád k odstávce záøí 2018)
+- vydáno Info pro vývojáøe  (záøí 2018)
+
+verze 2.32     
+datum nasazeni na TEST: 11.2.2021
+datum nasazeni na PRODUKCI: 7.3.2021
+============================================================
+ Novinky a zmeny:
+----------------
+- pøidány typy schránek PFO_ZNALEC a PFO_TLUMOCNIK pro FindDataBox2 a ISDSSearch3 a CreateDataBox2
+- vydáno Info pro vývojáøe  (jaro 2021)
+
+
+verze 2.33     
+datum nasazeni na TEST: 5.9.2021
+datum nasazeni na PRODUKCI: 5.9.2021
+============================================================
+ Novinky a zmeny:
+----------------
+- nové služby PickUpAsyncResponse a GetListOfErasedMessages
+- nové služby RegisterForNotifications a GetListForNotifications
+- odstranìní 10 let nepoužívané ConfirmDelivery (stále bude volatelná)
+- vydáno Info pro vývojáøe (podzim 2021)
+- popsáno v nové verzi dokumentace 2.73
+
+
+verze 2.34     
+datum nasazeni na TEST: 7.1.2022
+datum nasazeni na PRODUKCI: nikdy
+============================================================
+ Novinky a zmeny:
+----------------
+- použití spoleèného XSD souboru (VoDZ služby) s verzí 3.0
+- vydáno Info pro vývojáøe  (leden 2022)
+
+
+verze 3.00  (ISDS 2023) - nadmnožina WSDl verze 2.3x  
+datum nasazeni na TEST: 7.1.2022
+datum nasazeni na PRODUKCI: 1.1.2023
+============================================================
+ Novinky a zmeny:
+----------------
+- nový dm_VoDZ.wsdl pro SOAP 1.2 - služby pro VoDZ
+- upravený dmBaseTypes.xsd, spoleèný i pro verzi 2.34
+- vydáno Info pro vývojáøe  (leden 2022), náhrada budoucí dokumentace
+
+
+verze 3.01  (ISDS 2023)   
+datum nasazeni na TEST: 5.6.2022
+datum nasazeni na PRODUKCI: 1.7.2023
+============================================================
+ Novinky a zmeny:
+----------------
+Stejné zmìny jako pro stávající verzi 2.35, pøidané do verze 3 pro ISDS 2023.
+- osobní údaje v datové zprávì - CreateMessage (kompatibilní)
+- ètení osobních údajù ze zprávy - GetMessageAuthor2
+- popis u wsdl verze 2.35 a dokumentace verze 2.75  
+
+verze 3.02  (ISDS 2023)   
+datum nasazeni na TEST: 4.9.2022
+datum nasazeni na PRODUKCI: ?
+============================================================
+ Novinky a zmeny:
+----------------
+- nová služba GetConstants (kvùli VoDZ)
+- nový enum VoDZ u PDZSendInfo (kvùli VoDZ)
+- nový typ schránky PO_REQ (50)             
+- vydáno Info pro vývojáøe  (záøí 2022), náhrada budoucí dokumentace
+
+verze 3.03  (ISDS 2023)   
+datum nasazeni na TEST: 6.11.2022
+datum nasazeni na PRODUKCI: ?
+============================================================
+ Novinky a zmeny:
+----------------
+Stejné zmìny jako pro stávající verzi 2.36, pøidané do verze 3 pro ISDS 2023.
+- osobní údaje v datové zprávì - CreateMultipleMessage (kompatibilní)
+- popis u wsdl verze 2.36 a dokumentace verze 2.76  
+
+ 

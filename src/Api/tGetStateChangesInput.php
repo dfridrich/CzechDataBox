@@ -8,14 +8,24 @@ use Exception;
 class tGetStateChangesInput
 {
 
-    protected DateTime $dmFromTime = null;
+    /**
+     * @var \DateTime $dmFromTime
+     */
+    protected $dmFromTime = null;
 
-    protected DateTime $dmToTime = null;
+    /**
+     * @var \DateTime $dmToTime
+     */
+    protected $dmToTime = null;
 
+    /**
+     * @param \DateTime $dmFromTime
+     * @param \DateTime $dmToTime
+     */
     public function __construct(DateTime $dmFromTime = null, DateTime $dmToTime = null)
     {
-        $this->dmFromTime = $dmFromTime !== null ? $dmFromTime->format(DateTime::ATOM) : null;
-        $this->dmToTime = $dmToTime !== null ? $dmToTime->format(DateTime::ATOM) : null;
+        $this->dmFromTime = $dmFromTime ? $dmFromTime->format(DateTime::ATOM) : null;
+        $this->dmToTime = $dmToTime ? $dmToTime->format(DateTime::ATOM) : null;
     }
 
 
@@ -29,7 +39,7 @@ class tGetStateChangesInput
         } else {
             try {
                 return new DateTime($this->dmFromTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -37,6 +47,7 @@ class tGetStateChangesInput
 
 
     /**
+     * @param \DateTime $dmFromTime
      * @return \Defr\CzechDataBox\Api\tGetStateChangesInput
      */
     public function setDmFromTime(DateTime $dmFromTime)
@@ -56,7 +67,7 @@ class tGetStateChangesInput
         } else {
             try {
                 return new DateTime($this->dmToTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -64,6 +75,7 @@ class tGetStateChangesInput
 
 
     /**
+     * @param \DateTime $dmToTime
      * @return \Defr\CzechDataBox\Api\tGetStateChangesInput
      */
     public function setDmToTime(DateTime $dmToTime)

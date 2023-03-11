@@ -6,10 +6,16 @@ class tStateChangesArray
 {
 
     /**
+     * @var tStateChangesRecord $dmRecord
+     */
+    protected $dmRecord = null;
+
+    /**
      * @param tStateChangesRecord $dmRecord
      */
-    public function __construct(protected $dmRecord = null)
+    public function __construct($dmRecord = null)
     {
+        $this->dmRecord = $dmRecord;
     }
 
 

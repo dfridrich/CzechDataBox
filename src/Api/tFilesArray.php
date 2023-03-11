@@ -6,10 +6,16 @@ class tFilesArray
 {
 
     /**
+     * @var dmFile $dmFile
+     */
+    protected $dmFile = null;
+
+    /**
      * @param dmFile $dmFile
      */
-    public function __construct(protected $dmFile = null)
+    public function __construct($dmFile = null)
     {
+        $this->dmFile = $dmFile;
     }
 
 

@@ -5,7 +5,10 @@ namespace Defr\CzechDataBox\Api;
 class tAuthenticateMessageInput
 {
 
-    protected base64Binary $dmMessage = null;
+    /**
+     * @var base64Binary $dmMessage
+     */
+    protected $dmMessage = null;
 
     /**
      * @param base64Binary $dmMessage

@@ -5,7 +5,10 @@ namespace Defr\CzechDataBox\Api;
 class tResignDocInput
 {
 
-    protected base64Binary $dmDoc = null;
+    /**
+     * @var base64Binary $dmDoc
+     */
+    protected $dmDoc = null;
 
     /**
      * @param base64Binary $dmDoc

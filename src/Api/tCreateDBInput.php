@@ -5,10 +5,53 @@ namespace Defr\CzechDataBox\Api;
 class tCreateDBInput
 {
 
-    protected tIdDb $dbUpperDBId = null;
+    /**
+     * @var dbOwnerInfo $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @var tDbUsersArray $dbPrimaryUsers
+     */
+    protected $dbPrimaryUsers = null;
+
+    /**
+     * @var string $dbFormerNames
+     */
+    protected $dbFormerNames = null;
+
+    /**
+     * @var tIdDb $dbUpperDBId
+     */
+    protected $dbUpperDBId = null;
+
+    /**
+     * @var string $dbCEOLabel
+     */
+    protected $dbCEOLabel = null;
+
+    /**
+     * @var boolean $dbVirtual
+     */
+    protected $dbVirtual = null;
+
+    /**
+     * @var string $email
+     */
+    protected $email = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
+
+    /**
+     * @param dbOwnerInfo $dbOwnerInfo
      * @param tDbUsersArray $dbPrimaryUsers
      * @param string $dbFormerNames
      * @param tIdDb $dbUpperDBId
@@ -18,14 +61,22 @@ class tCreateDBInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, protected $dbPrimaryUsers = null, protected $dbFormerNames = null, $dbUpperDBId = null, protected $dbCEOLabel = null, protected $dbVirtual = null, protected $email = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOwnerInfo = null, $dbPrimaryUsers = null, $dbFormerNames = null, $dbUpperDBId = null, $dbCEOLabel = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbPrimaryUsers = $dbPrimaryUsers;
+        $this->dbFormerNames = $dbFormerNames;
         $this->dbUpperDBId = $dbUpperDBId;
+        $this->dbCEOLabel = $dbCEOLabel;
+        $this->dbVirtual = $dbVirtual;
+        $this->email = $email;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 
     /**
-     * @return tDbOwnerInfo
+     * @return dbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
@@ -34,7 +85,7 @@ class tCreateDBInput
 
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param dbOwnerInfo $dbOwnerInfo
      * @return \Defr\CzechDataBox\Api\tCreateDBInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)

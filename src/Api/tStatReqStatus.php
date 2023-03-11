@@ -6,11 +6,23 @@ class tStatReqStatus
 {
 
     /**
+     * @var string $dbStatusCode
+     */
+    protected $dbStatusCode = null;
+
+    /**
+     * @var string $dbStatusMessage
+     */
+    protected $dbStatusMessage = null;
+
+    /**
      * @param string $dbStatusCode
      * @param string $dbStatusMessage
      */
-    public function __construct(protected $dbStatusCode = null, protected $dbStatusMessage = null)
+    public function __construct($dbStatusCode = null, $dbStatusMessage = null)
     {
+        $this->dbStatusCode = $dbStatusCode;
+        $this->dbStatusMessage = $dbStatusMessage;
     }
 
 

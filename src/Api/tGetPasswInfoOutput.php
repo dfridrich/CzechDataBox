@@ -8,14 +8,24 @@ use Exception;
 class tGetPasswInfoOutput
 {
 
-    protected DateTime $pswExpDate = null;
+    /**
+     * @var \DateTime $pswExpDate
+     */
+    protected $pswExpDate = null;
 
     /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
+
+    /**
+     * @param \DateTime $pswExpDate
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(DateTime $pswExpDate = null, protected $dbStatus = null)
+    public function __construct(DateTime $pswExpDate = null, $dbStatus = null)
     {
-        $this->pswExpDate = $pswExpDate !== null ? $pswExpDate->format(DateTime::ATOM) : null;
+        $this->pswExpDate = $pswExpDate ? $pswExpDate->format(DateTime::ATOM) : null;
+        $this->dbStatus = $dbStatus;
     }
 
 
@@ -29,7 +39,7 @@ class tGetPasswInfoOutput
         } else {
             try {
                 return new DateTime($this->pswExpDate);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -37,6 +47,7 @@ class tGetPasswInfoOutput
 
 
     /**
+     * @param \DateTime $pswExpDate
      * @return \Defr\CzechDataBox\Api\tGetPasswInfoOutput
      */
     public function setPswExpDate(DateTime $pswExpDate)

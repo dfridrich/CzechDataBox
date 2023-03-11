@@ -2,19 +2,34 @@
 
 namespace Defr\CzechDataBox\Api;
 
-class tIdDbInput
+class tIdDBDUInput
 {
 
-    protected tIdDb $dbID = null;
+    /**
+     * @var tIdDb $dbID
+     */
+    protected $dbID = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
 
     /**
      * @param tIdDb $dbID
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbID = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbID = null, $dbApproved = null, $dbExternRefNumber = null)
     {
         $this->dbID = $dbID;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 
@@ -29,7 +44,7 @@ class tIdDbInput
 
     /**
      * @param tIdDb $dbID
-     * @return \Defr\CzechDataBox\Api\tIdDbInput
+     * @return \Defr\CzechDataBox\Api\tIdDBDUInput
      */
     public function setDbID($dbID)
     {
@@ -49,7 +64,7 @@ class tIdDbInput
 
     /**
      * @param boolean $dbApproved
-     * @return \Defr\CzechDataBox\Api\tIdDbInput
+     * @return \Defr\CzechDataBox\Api\tIdDBDUInput
      */
     public function setDbApproved($dbApproved)
     {
@@ -69,7 +84,7 @@ class tIdDbInput
 
     /**
      * @param string $dbExternRefNumber
-     * @return \Defr\CzechDataBox\Api\tIdDbInput
+     * @return \Defr\CzechDataBox\Api\tIdDBDUInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {

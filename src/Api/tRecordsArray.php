@@ -6,10 +6,16 @@ class tRecordsArray
 {
 
     /**
+     * @var tRecord $dmRecord
+     */
+    protected $dmRecord = null;
+
+    /**
      * @param tRecord $dmRecord
      */
-    public function __construct(protected $dmRecord = null)
+    public function __construct($dmRecord = null)
     {
+        $this->dmRecord = $dmRecord;
     }
 
 

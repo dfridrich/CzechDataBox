@@ -6,10 +6,16 @@ class tEraseMessageOutput
 {
 
     /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmStatus = null)
+    public function __construct($dmStatus = null)
     {
+        $this->dmStatus = $dmStatus;
     }
 
 

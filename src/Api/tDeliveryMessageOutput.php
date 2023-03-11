@@ -6,11 +6,23 @@ class tDeliveryMessageOutput
 {
 
     /**
+     * @var tDelivery $dmDelivery
+     */
+    protected $dmDelivery = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param tDelivery $dmDelivery
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmDelivery = null, protected $dmStatus = null)
+    public function __construct($dmDelivery = null, $dmStatus = null)
     {
+        $this->dmDelivery = $dmDelivery;
+        $this->dmStatus = $dmStatus;
     }
 
 

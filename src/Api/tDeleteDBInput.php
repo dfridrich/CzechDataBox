@@ -5,7 +5,25 @@ namespace Defr\CzechDataBox\Api;
 class tDeleteDBInput
 {
 
-    protected date $dbOwnerTerminationDate = null;
+    /**
+     * @var tDbOwnerInfo $dbOwnerInfo
+     */
+    protected $dbOwnerInfo = null;
+
+    /**
+     * @var date $dbOwnerTerminationDate
+     */
+    protected $dbOwnerTerminationDate = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
 
     /**
      * @param tDbOwnerInfo $dbOwnerInfo
@@ -13,9 +31,12 @@ class tDeleteDBInput
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, $dbOwnerTerminationDate = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbOwnerInfo = null, $dbOwnerTerminationDate = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbOwnerInfo = $dbOwnerInfo;
         $this->dbOwnerTerminationDate = $dbOwnerTerminationDate;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 

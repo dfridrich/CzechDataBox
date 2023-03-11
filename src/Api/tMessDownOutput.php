@@ -6,11 +6,23 @@ class tMessDownOutput
 {
 
     /**
+     * @var tReturnedMessage $dmReturnedMessage
+     */
+    protected $dmReturnedMessage = null;
+
+    /**
+     * @var tStatus $dmStatus
+     */
+    protected $dmStatus = null;
+
+    /**
      * @param tReturnedMessage $dmReturnedMessage
      * @param tStatus $dmStatus
      */
-    public function __construct(protected $dmReturnedMessage = null, protected $dmStatus = null)
+    public function __construct($dmReturnedMessage = null, $dmStatus = null)
     {
+        $this->dmReturnedMessage = $dmReturnedMessage;
+        $this->dmStatus = $dmStatus;
     }
 
 

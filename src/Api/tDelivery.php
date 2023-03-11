@@ -8,24 +8,59 @@ use Exception;
 class tDelivery
 {
 
-    protected base64Binary $dmQTimestamp = null;
+    /**
+     * @var dmDm $dmDm
+     */
+    protected $dmDm = null;
 
-    protected DateTime $dmDeliveryTime = null;
+    /**
+     * @var tHash $dmHash
+     */
+    protected $dmHash = null;
 
-    protected DateTime $dmAcceptanceTime = null;
+    /**
+     * @var base64Binary $dmQTimestamp
+     */
+    protected $dmQTimestamp = null;
+
+    /**
+     * @var \DateTime $dmDeliveryTime
+     */
+    protected $dmDeliveryTime = null;
+
+    /**
+     * @var \DateTime $dmAcceptanceTime
+     */
+    protected $dmAcceptanceTime = null;
+
+    /**
+     * @var int $dmMessageStatus
+     */
+    protected $dmMessageStatus = null;
+
+    /**
+     * @var tEventsArray $dmEvents
+     */
+    protected $dmEvents = null;
 
     /**
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
+     * @param \DateTime $dmDeliveryTime
+     * @param \DateTime $dmAcceptanceTime
      * @param int $dmMessageStatus
      * @param tEventsArray $dmEvents
      */
-    public function __construct(protected $dmDm = null, protected $dmHash = null, $dmQTimestamp = null, DateTime $dmDeliveryTime = null, DateTime $dmAcceptanceTime = null, protected $dmMessageStatus = null, protected $dmEvents = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, DateTime $dmDeliveryTime = null, DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmEvents = null)
     {
+        $this->dmDm = $dmDm;
+        $this->dmHash = $dmHash;
         $this->dmQTimestamp = $dmQTimestamp;
-        $this->dmDeliveryTime = $dmDeliveryTime !== null ? $dmDeliveryTime->format(DateTime::ATOM) : null;
-        $this->dmAcceptanceTime = $dmAcceptanceTime !== null ? $dmAcceptanceTime->format(DateTime::ATOM) : null;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(DateTime::ATOM) : null;
+        $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmEvents = $dmEvents;
     }
 
 
@@ -99,7 +134,7 @@ class tDelivery
         } else {
             try {
                 return new DateTime($this->dmDeliveryTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -107,6 +142,7 @@ class tDelivery
 
 
     /**
+     * @param \DateTime $dmDeliveryTime
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmDeliveryTime(DateTime $dmDeliveryTime)
@@ -126,7 +162,7 @@ class tDelivery
         } else {
             try {
                 return new DateTime($this->dmAcceptanceTime);
-            } catch (Exception) {
+            } catch (Exception $e) {
                 return false;
             }
         }
@@ -134,6 +170,7 @@ class tDelivery
 
 
     /**
+     * @param \DateTime $dmAcceptanceTime
      * @return \Defr\CzechDataBox\Api\tDelivery
      */
     public function setDmAcceptanceTime(DateTime $dmAcceptanceTime)

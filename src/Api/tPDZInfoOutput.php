@@ -6,11 +6,23 @@ class tPDZInfoOutput
 {
 
     /**
+     * @var tPDZRecArray $dbPDZRecords
+     */
+    protected $dbPDZRecords = null;
+
+    /**
+     * @var tDbReqStatus $dbStatus
+     */
+    protected $dbStatus = null;
+
+    /**
      * @param tPDZRecArray $dbPDZRecords
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(protected $dbPDZRecords = null, protected $dbStatus = null)
+    public function __construct($dbPDZRecords = null, $dbStatus = null)
     {
+        $this->dbPDZRecords = $dbPDZRecords;
+        $this->dbStatus = $dbStatus;
     }
 
 

@@ -6,31 +6,49 @@ class tDeleteDBPromptlyInput
 {
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @var tIdDb $dbID
+     */
+    protected $dbID = null;
+
+    /**
+     * @var boolean $dbApproved
+     */
+    protected $dbApproved = null;
+
+    /**
+     * @var string $dbExternRefNumber
+     */
+    protected $dbExternRefNumber = null;
+
+    /**
+     * @param tIdDb $dbID
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct(protected $dbOwnerInfo = null, protected $dbApproved = null, protected $dbExternRefNumber = null)
+    public function __construct($dbID = null, $dbApproved = null, $dbExternRefNumber = null)
     {
+        $this->dbID = $dbID;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
 
     /**
-     * @return tDbOwnerInfo
+     * @return tIdDb
      */
-    public function getDbOwnerInfo()
+    public function getDbID()
     {
-        return $this->dbOwnerInfo;
+        return $this->dbID;
     }
 
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param tIdDb $dbID
      * @return \Defr\CzechDataBox\Api\tDeleteDBPromptlyInput
      */
-    public function setDbOwnerInfo($dbOwnerInfo)
+    public function setDbID($dbID)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbID = $dbID;
         return $this;
     }
 
