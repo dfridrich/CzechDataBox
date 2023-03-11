@@ -27,6 +27,7 @@ jobs:
                 with:
                     php-version: ${{ matrix.php-versions }}
                     tools: phpunit:9.6
+                    coverage: none
 
             -   name: Install dependencies
                 run: composer install --prefer-dist --dev
