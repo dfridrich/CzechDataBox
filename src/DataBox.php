@@ -7,6 +7,10 @@ use Defr\CzechDataBox\Api\DataBoxSearch;
 use Defr\CzechDataBox\Api\DmInfoWebService;
 use Defr\CzechDataBox\Api\DmOperationsWebService;
 use Defr\CzechDataBox\Api\IsdsStat;
+use Exception;
+use SoapClient;
+use function sprintf;
+use function sys_get_temp_dir;
 
 /**
  * Class DataBox.
@@ -17,61 +21,56 @@ class DataBox
      * true = Ostrá verze, produkce
      * false = Testovací rozhraní datových schránek.
      *
-     * @var bool
      */
-    protected $productionMode = true;
+    protected bool $productionMode = true;
 
     /**
      * 0 = Heslo
      * 1 = Certifikát
      *
-     * @var int
      */
-    protected $loginType;
+    protected int $loginType;
 
     protected $serviceUrl;
 
     protected $loginName;
+
     protected $password;
 
-    protected $certFileName = null;
-    protected $passPhrase = null;
+    protected $certFileName;
 
-    protected $proxyAddress = null;
-    protected $proxyPort = null;
-    protected $proxyLogin = null;
-    protected $proxyPassword = null;
+    protected $passPhrase;
+
+    protected $proxyAddress;
+
+    protected $proxyPort;
+
+    protected $proxyLogin;
+
+    protected $proxyPassword;
 
     protected $actualWsdl;
+
     protected $actualOptions;
 
-    /**
-     * @var \SoapClient
-     */
-    protected $actualSoap;
+    protected SoapClient $actualSoap;
 
     /**
      * @var string Adresář pro ukládání datových zpráv
      */
-    protected $directory;
+    protected string $directory;
 
-    /**
-     * @var DataBoxSimpleApi
-     */
-    protected $simpleApi;
+    protected DataBoxSimpleApi $simpleApi;
 
     /**
      * @param null $directory
      */
     public function __construct($directory = null)
     {
-        if ($directory === null) {
-            $this->directory = sys_get_temp_dir() . '/DataBox';
-        } else {
-            $this->directory = $directory;
-        }
+        $this->directory = $directory ?: sys_get_temp_dir().'/DataBox';
         $this->simpleApi = new DataBoxSimpleApi($this);
     }
+
 
     /**
      * Zapne testovaci mod.
@@ -85,6 +84,7 @@ class DataBox
         return $this;
     }
 
+
     /**
      * Vypne testovaci mod a zapne produkci.
      *
@@ -96,6 +96,7 @@ class DataBox
 
         return $this;
     }
+
 
     /**
      * Prihlaseni do DS pomoci loginu a hesla.
@@ -117,6 +118,7 @@ class DataBox
         return $this;
     }
 
+
     /**
      * Prihlaseni do DS pomoci certifikatu a hesla (neni povinne).
      * Tato medota neudela prihlaseni, ale do instance tridy ulozi potrebne informace.
@@ -137,22 +139,23 @@ class DataBox
         return $this;
     }
 
+
     /**
      * Vyzkousi spojeni s ISDS.
      *
-     * @return bool
      * @throws DataBoxException
      */
-    public function testConnection()
+    public function testConnection(): bool
     {
         try {
             $this->simpleApi->getStats();
-        } catch (\Exception $e) {
-            throw new DataBoxException('Can\'t connect to service.');
+        } catch (Exception) {
+            throw new DataBoxException("Can't connect to service.");
         }
 
         return true;
     }
+
 
     /**
      * Sestavi URL pro danou WS (WebService).
@@ -165,39 +168,34 @@ class DataBox
     {
         $res = 'https://ws1';
         if (0 !== $this->loginType) {
-            $res = $res . 'c';
+            $res .= 'c';
         }
 
-        switch ($this->productionMode) {
-            case 0:
-                $res = $res . '.czebox.cz/';
-                break;
-            case 1:
-                $res = $res . '.mojedatovaschranka.cz/';
-                break;
+        if ($this->productionMode == 0) {
+            $res .= '.czebox.cz/';
+        } elseif ($this->productionMode == 1) {
+            $res .= '.mojedatovaschranka.cz/';
         }
 
-        switch ($this->loginType) {
-            case 1:
-                $res = $res . 'cert/';
-                break;
+        if ($this->loginType === 1) {
+            $res .= 'cert/';
         }
 
-        $res = $res . 'DS/';
+        $res .= 'DS/';
 
         switch ($serviceType) {
             case DataBoxHelper::OPERATIONS_WS:
-                $res = $res . 'dz';
+                $res .= 'dz';
                 break;
             case DataBoxHelper::INFO_WS:
-                $res = $res . 'dx';
+                $res .= 'dx';
                 break;
             case DataBoxHelper::SEARCH_WS:
-                $res = $res . 'df';
+                $res .= 'df';
                 break;
             case DataBoxHelper::ACCESS_WS:
             case DataBoxHelper::STAT_WS:
-                $res = $res . 'DsManage';
+                $res .= 'DsManage';
                 break;
         }
 
@@ -205,6 +203,7 @@ class DataBox
 
         return $res;
     }
+
 
     /**
      * Vrati WSDL soubor pro dany typ WS.
@@ -217,36 +216,25 @@ class DataBox
      */
     private function getServiceWSDL($serviceType)
     {
-        $directory = __DIR__ . '/../Resources/';
+        $directory = __DIR__.'/../Resources/';
 
-        switch ($serviceType) {
-            case DataBoxHelper::OPERATIONS_WS:
-                return $directory . 'dm_operations.wsdl';
-                break;
-            case DataBoxHelper::INFO_WS:
-                return $directory . 'dm_info.wsdl';
-                break;
-            case DataBoxHelper::SEARCH_WS:
-                return $directory . 'db_search.wsdl';
-                break;
-            case DataBoxHelper::ACCESS_WS:
-                return $directory . 'db_access.wsdl';
-                break;
-            case DataBoxHelper::STAT_WS:
-                return $directory . 'isds_stat.wsdl';
-                break;
-            default:
-                throw new DataBoxException(sprintf('Service type %s not implemented.', $serviceType));
-                break;
-        }
+        return match ($serviceType) {
+            DataBoxHelper::OPERATIONS_WS => $directory.'dm_operations.wsdl',
+            DataBoxHelper::INFO_WS => $directory.'dm_info.wsdl',
+            DataBoxHelper::SEARCH_WS => $directory.'db_search.wsdl',
+            DataBoxHelper::ACCESS_WS => $directory.'db_access.wsdl',
+            DataBoxHelper::STAT_WS => $directory.'isds_stat.wsdl',
+            default => throw new DataBoxException(sprintf('Service type %s not implemented.', $serviceType)),
+        };
     }
+
 
     /**
      * @param $service
      *
      * @return array
      */
-    private function getSoapOptions($service)
+    public function getSoapOptions($service)
     {
         return [
             'login'          => $this->loginName,
@@ -260,6 +248,7 @@ class DataBox
         ];
     }
 
+
     /**
      * @param $service
      *
@@ -270,6 +259,7 @@ class DataBox
         $this->actualWsdl = $this->getServiceWSDL($service);
         $this->actualOptions = $this->getSoapOptions($service);
     }
+
 
     /**
      * @return DmOperationsWebService
@@ -283,6 +273,7 @@ class DataBox
         return $soap;
     }
 
+
     /**
      * @return DmInfoWebService
      */
@@ -294,6 +285,7 @@ class DataBox
 
         return $soap;
     }
+
 
     /**
      * @return DataBoxSearch
@@ -307,6 +299,7 @@ class DataBox
         return $soap;
     }
 
+
     /**
      * @return DataBoxAccess
      */
@@ -318,6 +311,7 @@ class DataBox
 
         return $soap;
     }
+
 
     /**
      * @return IsdsStat
@@ -331,6 +325,7 @@ class DataBox
         return $soap;
     }
 
+
     /**
      * @return DataBoxSimpleApi
      */
@@ -338,6 +333,7 @@ class DataBox
     {
         return $this->simpleApi;
     }
+
 
     /**
      * @return string

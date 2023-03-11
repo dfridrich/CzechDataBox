@@ -6,12 +6,12 @@ class tUpdateDBInput
 {
 
     /**
-     * @var tDbOwnerInfo $dbOldOwnerInfo
+     * @var tDbOwnerInfoExt $dbOldOwnerInfo
      */
     protected $dbOldOwnerInfo = null;
 
     /**
-     * @var tDbOwnerInfo $dbNewOwnerInfo
+     * @var tDbOwnerInfoExt $dbNewOwnerInfo
      */
     protected $dbNewOwnerInfo = null;
 
@@ -26,53 +26,53 @@ class tUpdateDBInput
     protected $dbExternRefNumber = null;
 
     /**
-     * @param tDbOwnerInfo $dbOldOwnerInfo
-     * @param tDbOwnerInfo $dbNewOwnerInfo
+     * @param tDbOwnerInfoExt $dbOldOwnerInfo
+     * @param tDbOwnerInfoExt $dbNewOwnerInfo
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
     public function __construct($dbOldOwnerInfo = null, $dbNewOwnerInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-      $this->dbOldOwnerInfo = $dbOldOwnerInfo;
-      $this->dbNewOwnerInfo = $dbNewOwnerInfo;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbOldOwnerInfo = $dbOldOwnerInfo;
+        $this->dbNewOwnerInfo = $dbNewOwnerInfo;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbOldOwnerInfo()
     {
-      return $this->dbOldOwnerInfo;
+        return $this->dbOldOwnerInfo;
     }
 
     /**
-     * @param tDbOwnerInfo $dbOldOwnerInfo
+     * @param tDbOwnerInfoExt $dbOldOwnerInfo
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbOldOwnerInfo($dbOldOwnerInfo)
     {
-      $this->dbOldOwnerInfo = $dbOldOwnerInfo;
-      return $this;
+        $this->dbOldOwnerInfo = $dbOldOwnerInfo;
+        return $this;
     }
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbNewOwnerInfo()
     {
-      return $this->dbNewOwnerInfo;
+        return $this->dbNewOwnerInfo;
     }
 
     /**
-     * @param tDbOwnerInfo $dbNewOwnerInfo
+     * @param tDbOwnerInfoExt $dbNewOwnerInfo
      * @return \Defr\CzechDataBox\Api\tUpdateDBInput
      */
     public function setDbNewOwnerInfo($dbNewOwnerInfo)
     {
-      $this->dbNewOwnerInfo = $dbNewOwnerInfo;
-      return $this;
+        $this->dbNewOwnerInfo = $dbNewOwnerInfo;
+        return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tUpdateDBInput
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
 
     /**
@@ -89,8 +89,8 @@ class tUpdateDBInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tUpdateDBInput
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
 
     /**
@@ -107,8 +107,7 @@ class tUpdateDBInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
-
 }

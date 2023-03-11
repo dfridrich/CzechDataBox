@@ -1,101 +1,106 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <!--  *********************************************************************
 
-   verze: 2.31
-   klasifikace: Veřejný dokument
+   verze: 3.03
+   klasifikace: Veřejný dokument    
 
      WSDL pro služby
         1. Vytvoření/odeslání datové zprávy - CreateMessage
         2. stažení kompletní přijaté zprávy v čitelné podobě - MessageDownload
         3. stažení podepsané přijaté zprávy - SignedMessageDownload
         4. stažení podepsané odeslané zprávy - SignedSentMessageDownload
-        5. vytvoření hromadné zprávy (oběžníku) - CreateMultipleMessage
-        6. ověření zprávy - AuthenticateMessage
+        5. vytvoření hromadné zprávy - CreateMultipleMessage   
+        6. ověření zprávy - AuthenticateMessage 
         7. přepodepsání zprávy či doručenky - Re-signISDSDocument
-
-   Změny:
-     4.2.2009 verze 0.1
-    20.3.2009 verze 1.0  - formální úpravy vyhovující WS-I Basic Profile
-     8.4.2009 verze 1.2  - změna názvů WSDL, rozložení operací mezi WSDL
-    16.4.2009 verze 1.3  - přidána DummyOperation pro navazování a udržování spojení
-     3.6.2009 verze 2.0  - novela
-    1.10.2009 verze 2.5  - přidána WS CreateMultipleMessage
-    1.11.2009 verze 2.6  - komerční provoz
-    14.4.2010 verze 2.9  - přidána WS AuthenticateMessage
-    18.9.2010 verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
-    27.6.2012 verze 2.17 - přidána WS Re-signISDSDocument
-    18.9.2015 verze 2.21 - sjednocení verzí
+     
+   Změny:  
+    04.02.2009 verze 0.1
+    20.03.2009 verze 1.0  - formální úpravy vyhovující WS-I Basic Profile
+    08.04.2009 verze 1.2  - změna názvů WSDL, rozložení operací mezi WSDL
+    16.04.2009 verze 1.3  - přidána DummyOperation pro navazování a udržování spojení
+    03.06.2009 verze 2.0  - novela
+    01.10.2009 verze 2.5  - přidána WS CreateMultipleMessage
+    01.11.2009 verze 2.6  - komerční provoz
+    14.04.2010 verze 2.9  - přidána WS AuthenticateMessage                              
+    18.09.2010 verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
+    27.06.2012 verze 2.17 - přidána WS Re-signISDSDocument
+    18.09.2015 verze 2.21 - sjednocení verzí 
     14.10.2015 verze 2.22 - sjednocení verzí
-    31.1.2017 verze 2.26  - sjednocení verzí
+    31.01.2017 verze 2.26  - sjednocení verzí
     21.11.2017 verze 2.27 - sjednocení verzí
-    2.9.2018 verze 2.30 - sjednocení verzí
-    4.9.2018 verze 2.31 - sjednocení verzí
+    02.09.2018 verze 2.30 - sjednocení verzí
+    04.09.2018 verze 2.31 - sjednocení verzí
+    27.07.2021 verze 2.33 - sjednocení verzí
+    25.04.2022 verze 2.35 - sjednocení verzí
+    
+    31.10.2022 verze 3.03 - sjednocení verzí
+    
 ************************************************************************ -->
 
-<definitions name="ISDS_dmOperations" targetNamespace="http://isds.czechpoint.cz/v20"
-             xmlns="http://schemas.xmlsoap.org/wsdl/"
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"
-             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-             xmlns:tns="http://isds.czechpoint.cz/v20">
-
+<definitions name="ISDS_dmOperations" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20">
+                                
   <types>
     <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
       <xs:include schemaLocation="dmBaseTypes.xsd" />
     </xs:schema>
   </types>
-
+  
   <!-- ******************************************************************* -->
   <message name="MessageCreateRequest">
-    <part name="parameter" element="tns:CreateMessage" />
+    <part name="parameter" element="tns:CreateMessage" />        
   </message>
   <message name="MessageCreateResponse">
-    <part name="parameter" element="tns:CreateMessageResponse" />
+    <part name="parameter" element="tns:CreateMessageResponse" />        
   </message>
 
   <message name="MessageDownloadRequest">
-    <part name="parameter" element="tns:MessageDownload" />
+    <part name="parameter" element="tns:MessageDownload" />        
   </message>
   <message name="MessageDownloadResponse">
-    <part name="parameter" element="tns:MessageDownloadResponse" />
+    <part name="parameter" element="tns:MessageDownloadResponse" />        
   </message>
 
   <message name="SignedMessageDownloadRequest">
-    <part name="parameter" element="tns:SignedMessageDownload" />
+    <part name="parameter" element="tns:SignedMessageDownload" />        
   </message>
   <message name="SignedMessageDownloadResponse">
-    <part name="parameter" element="tns:SignedMessageDownloadResponse" />
+    <part name="parameter" element="tns:SignedMessageDownloadResponse" />        
   </message>
 
   <message name="SignedSentMessageDownloadRequest">
-    <part name="parameter" element="tns:SignedSentMessageDownload" />
-  </message>
+    <part name="parameter" element="tns:SignedSentMessageDownload" />        
+  </message>                            
   <message name="SignedSentMessageDownloadResponse">
-    <part name="parameter" element="tns:SignedSentMessageDownloadResponse" />
+    <part name="parameter" element="tns:SignedSentMessageDownloadResponse" />        
   </message>
 
   <message name="DummyOperationRequest">
-    <part name="parameter" element="tns:DummyOperation" />
-  </message>
+    <part name="parameter" element="tns:DummyOperation" />        
+  </message>                            
 
   <message name="MultipleMessageCreateRequest">
-    <part name="parameter" element="tns:CreateMultipleMessage" />
+    <part name="parameter" element="tns:CreateMultipleMessage" />        
   </message>
   <message name="MultipleMessageCreateResponse">
-    <part name="parameter" element="tns:CreateMultipleMessageResponse" />
+    <part name="parameter" element="tns:CreateMultipleMessageResponse" />        
   </message>
 
   <message name="AuthenticateMessageRequest">
-    <part name="parameter" element="tns:AuthenticateMessage" />
+    <part name="parameter" element="tns:AuthenticateMessage" />        
   </message>
   <message name="AuthenticateMessageResponse">
-    <part name="parameter" element="tns:AuthenticateMessageResponse" />
+    <part name="parameter" element="tns:AuthenticateMessageResponse" />        
   </message>
 
   <message name="Re-signISDSDocumentRequest">
-    <part name="parameter" element="tns:Re-signISDSDocument" />
+    <part name="parameter" element="tns:Re-signISDSDocument" />        
   </message>
   <message name="Re-signISDSDocumentResponse">
-    <part name="parameter" element="tns:Re-signISDSDocumentResponse" />
+    <part name="parameter" element="tns:Re-signISDSDocumentResponse" />        
   </message>
 
   <!-- ******************************************************************* -->
@@ -143,7 +148,7 @@
   </portType>
 
   <!-- ******************************************************************* -->
-  <binding name="dmOperationsBinding" type="tns:dmOperationsPortType">
+ <binding name="dmOperationsBinding" type="tns:dmOperationsPortType">
 
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <operation name="CreateMessage">

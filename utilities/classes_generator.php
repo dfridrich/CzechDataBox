@@ -1,6 +1,6 @@
 <?php
 
-require "../vendor/autoload.php";
+require "vendor/autoload.php";
 
 use Defr\CzechDataBox\DataBoxHelper;
 use Wsdl2PhpGenerator\Generator;

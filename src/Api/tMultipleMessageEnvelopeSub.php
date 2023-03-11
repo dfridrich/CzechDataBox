@@ -81,7 +81,7 @@ class tMultipleMessageEnvelopeSub
     protected $dmOVM = null;
 
     /**
-     * @var boolean $dmPublishOwnID
+     * @var dmPublishOwnID $dmPublishOwnID
      */
     protected $dmPublishOwnID = null;
 
@@ -101,26 +101,26 @@ class tMultipleMessageEnvelopeSub
      * @param boolean $dmPersonalDelivery
      * @param boolean $dmAllowSubstDelivery
      * @param boolean $dmOVM
-     * @param boolean $dmPublishOwnID
+     * @param dmPublishOwnID $dmPublishOwnID
      */
     public function __construct($dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmOVM = null, $dmPublishOwnID = null)
     {
-      $this->dmSenderOrgUnit = $dmSenderOrgUnit;
-      $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
-      $this->dmAnnotation = $dmAnnotation;
-      $this->dmRecipientRefNumber = $dmRecipientRefNumber;
-      $this->dmSenderRefNumber = $dmSenderRefNumber;
-      $this->dmRecipientIdent = $dmRecipientIdent;
-      $this->dmSenderIdent = $dmSenderIdent;
-      $this->dmLegalTitleLaw = $dmLegalTitleLaw;
-      $this->dmLegalTitleYear = $dmLegalTitleYear;
-      $this->dmLegalTitleSect = $dmLegalTitleSect;
-      $this->dmLegalTitlePar = $dmLegalTitlePar;
-      $this->dmLegalTitlePoint = $dmLegalTitlePoint;
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
-      $this->dmOVM = $dmOVM;
-      $this->dmPublishOwnID = $dmPublishOwnID;
+        $this->dmSenderOrgUnit = $dmSenderOrgUnit;
+        $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
+        $this->dmAnnotation = $dmAnnotation;
+        $this->dmRecipientRefNumber = $dmRecipientRefNumber;
+        $this->dmSenderRefNumber = $dmSenderRefNumber;
+        $this->dmRecipientIdent = $dmRecipientIdent;
+        $this->dmSenderIdent = $dmSenderIdent;
+        $this->dmLegalTitleLaw = $dmLegalTitleLaw;
+        $this->dmLegalTitleYear = $dmLegalTitleYear;
+        $this->dmLegalTitleSect = $dmLegalTitleSect;
+        $this->dmLegalTitlePar = $dmLegalTitlePar;
+        $this->dmLegalTitlePoint = $dmLegalTitlePoint;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        $this->dmOVM = $dmOVM;
+        $this->dmPublishOwnID = $dmPublishOwnID;
     }
 
     /**
@@ -128,7 +128,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmSenderOrgUnit()
     {
-      return $this->dmSenderOrgUnit;
+        return $this->dmSenderOrgUnit;
     }
 
     /**
@@ -137,8 +137,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmSenderOrgUnit($dmSenderOrgUnit)
     {
-      $this->dmSenderOrgUnit = $dmSenderOrgUnit;
-      return $this;
+        $this->dmSenderOrgUnit = $dmSenderOrgUnit;
+        return $this;
     }
 
     /**
@@ -146,7 +146,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmSenderOrgUnitNum()
     {
-      return $this->dmSenderOrgUnitNum;
+        return $this->dmSenderOrgUnitNum;
     }
 
     /**
@@ -155,8 +155,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmSenderOrgUnitNum($dmSenderOrgUnitNum)
     {
-      $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
-      return $this;
+        $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
+        return $this;
     }
 
     /**
@@ -164,7 +164,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmAnnotation()
     {
-      return $this->dmAnnotation;
+        return $this->dmAnnotation;
     }
 
     /**
@@ -173,8 +173,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmAnnotation($dmAnnotation)
     {
-      $this->dmAnnotation = $dmAnnotation;
-      return $this;
+        $this->dmAnnotation = $dmAnnotation;
+        return $this;
     }
 
     /**
@@ -182,7 +182,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmRecipientRefNumber()
     {
-      return $this->dmRecipientRefNumber;
+        return $this->dmRecipientRefNumber;
     }
 
     /**
@@ -191,8 +191,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmRecipientRefNumber($dmRecipientRefNumber)
     {
-      $this->dmRecipientRefNumber = $dmRecipientRefNumber;
-      return $this;
+        $this->dmRecipientRefNumber = $dmRecipientRefNumber;
+        return $this;
     }
 
     /**
@@ -200,7 +200,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmSenderRefNumber()
     {
-      return $this->dmSenderRefNumber;
+        return $this->dmSenderRefNumber;
     }
 
     /**
@@ -209,8 +209,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmSenderRefNumber($dmSenderRefNumber)
     {
-      $this->dmSenderRefNumber = $dmSenderRefNumber;
-      return $this;
+        $this->dmSenderRefNumber = $dmSenderRefNumber;
+        return $this;
     }
 
     /**
@@ -218,7 +218,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmRecipientIdent()
     {
-      return $this->dmRecipientIdent;
+        return $this->dmRecipientIdent;
     }
 
     /**
@@ -227,8 +227,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmRecipientIdent($dmRecipientIdent)
     {
-      $this->dmRecipientIdent = $dmRecipientIdent;
-      return $this;
+        $this->dmRecipientIdent = $dmRecipientIdent;
+        return $this;
     }
 
     /**
@@ -236,7 +236,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmSenderIdent()
     {
-      return $this->dmSenderIdent;
+        return $this->dmSenderIdent;
     }
 
     /**
@@ -245,8 +245,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmSenderIdent($dmSenderIdent)
     {
-      $this->dmSenderIdent = $dmSenderIdent;
-      return $this;
+        $this->dmSenderIdent = $dmSenderIdent;
+        return $this;
     }
 
     /**
@@ -254,7 +254,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmLegalTitleLaw()
     {
-      return $this->dmLegalTitleLaw;
+        return $this->dmLegalTitleLaw;
     }
 
     /**
@@ -263,8 +263,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmLegalTitleLaw($dmLegalTitleLaw)
     {
-      $this->dmLegalTitleLaw = $dmLegalTitleLaw;
-      return $this;
+        $this->dmLegalTitleLaw = $dmLegalTitleLaw;
+        return $this;
     }
 
     /**
@@ -272,7 +272,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmLegalTitleYear()
     {
-      return $this->dmLegalTitleYear;
+        return $this->dmLegalTitleYear;
     }
 
     /**
@@ -281,8 +281,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmLegalTitleYear($dmLegalTitleYear)
     {
-      $this->dmLegalTitleYear = $dmLegalTitleYear;
-      return $this;
+        $this->dmLegalTitleYear = $dmLegalTitleYear;
+        return $this;
     }
 
     /**
@@ -290,7 +290,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmLegalTitleSect()
     {
-      return $this->dmLegalTitleSect;
+        return $this->dmLegalTitleSect;
     }
 
     /**
@@ -299,8 +299,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmLegalTitleSect($dmLegalTitleSect)
     {
-      $this->dmLegalTitleSect = $dmLegalTitleSect;
-      return $this;
+        $this->dmLegalTitleSect = $dmLegalTitleSect;
+        return $this;
     }
 
     /**
@@ -308,7 +308,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmLegalTitlePar()
     {
-      return $this->dmLegalTitlePar;
+        return $this->dmLegalTitlePar;
     }
 
     /**
@@ -317,8 +317,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmLegalTitlePar($dmLegalTitlePar)
     {
-      $this->dmLegalTitlePar = $dmLegalTitlePar;
-      return $this;
+        $this->dmLegalTitlePar = $dmLegalTitlePar;
+        return $this;
     }
 
     /**
@@ -326,7 +326,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmLegalTitlePoint()
     {
-      return $this->dmLegalTitlePoint;
+        return $this->dmLegalTitlePoint;
     }
 
     /**
@@ -335,8 +335,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmLegalTitlePoint($dmLegalTitlePoint)
     {
-      $this->dmLegalTitlePoint = $dmLegalTitlePoint;
-      return $this;
+        $this->dmLegalTitlePoint = $dmLegalTitlePoint;
+        return $this;
     }
 
     /**
@@ -344,7 +344,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmPersonalDelivery()
     {
-      return $this->dmPersonalDelivery;
+        return $this->dmPersonalDelivery;
     }
 
     /**
@@ -353,8 +353,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmPersonalDelivery($dmPersonalDelivery)
     {
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      return $this;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        return $this;
     }
 
     /**
@@ -362,7 +362,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmAllowSubstDelivery()
     {
-      return $this->dmAllowSubstDelivery;
+        return $this->dmAllowSubstDelivery;
     }
 
     /**
@@ -371,8 +371,8 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmAllowSubstDelivery($dmAllowSubstDelivery)
     {
-      $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
-      return $this;
+        $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        return $this;
     }
 
     /**
@@ -380,7 +380,7 @@ class tMultipleMessageEnvelopeSub
      */
     public function getDmOVM()
     {
-      return $this->dmOVM;
+        return $this->dmOVM;
     }
 
     /**
@@ -389,26 +389,25 @@ class tMultipleMessageEnvelopeSub
      */
     public function setDmOVM($dmOVM)
     {
-      $this->dmOVM = $dmOVM;
-      return $this;
+        $this->dmOVM = $dmOVM;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return dmPublishOwnID
      */
     public function getDmPublishOwnID()
     {
-      return $this->dmPublishOwnID;
+        return $this->dmPublishOwnID;
     }
 
     /**
-     * @param boolean $dmPublishOwnID
+     * @param dmPublishOwnID $dmPublishOwnID
      * @return \Defr\CzechDataBox\Api\tMultipleMessageEnvelopeSub
      */
     public function setDmPublishOwnID($dmPublishOwnID)
     {
-      $this->dmPublishOwnID = $dmPublishOwnID;
-      return $this;
+        $this->dmPublishOwnID = $dmPublishOwnID;
+        return $this;
     }
-
 }

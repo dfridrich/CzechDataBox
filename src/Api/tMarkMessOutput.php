@@ -15,7 +15,7 @@ class tMarkMessOutput
      */
     public function __construct($dmStatus = null)
     {
-      $this->dmStatus = $dmStatus;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -23,7 +23,7 @@ class tMarkMessOutput
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -32,8 +32,7 @@ class tMarkMessOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

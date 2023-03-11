@@ -2,18 +2,38 @@
 
 namespace Defr\CzechDataBox;
 
+use function realpath;
+
 /**
  * Class DataBoxHelper
- * @package Defr\CzechDataBox
  */
 class DataBoxHelper
 {
     // Typy WS operací dle manuálu.
-    const OPERATIONS_WS = 0;
-    const INFO_WS = 1;
-    const SEARCH_WS = 2;
-    const ACCESS_WS = 3;
-    const STAT_WS = 4;
+    /**
+     * @var int
+     */
+    public const OPERATIONS_WS = 0;
+
+    /**
+     * @var int
+     */
+    public const INFO_WS = 1;
+
+    /**
+     * @var int
+     */
+    public const SEARCH_WS = 2;
+
+    /**
+     * @var int
+     */
+    public const ACCESS_WS = 3;
+
+    /**
+     * @var int
+     */
+    public const STAT_WS = 4;
 
     /**
      * Vrátí seznam všech WS včetně umístění WSDL souboru.
@@ -22,16 +42,17 @@ class DataBoxHelper
      */
     public static function getServiceWSDLList()
     {
-        $directory = __DIR__ . '/../Resources/';
+        $directory = __DIR__.'/../Resources/';
 
         return [
-            self::OPERATIONS_WS => realpath($directory . 'dm_operations.wsdl'),
-            self::INFO_WS       => realpath($directory . 'dm_info.wsdl'),
-            self::SEARCH_WS     => realpath($directory . 'db_search.wsdl'),
-            self::ACCESS_WS     => realpath($directory . 'db_access.wsdl'),
-            self::STAT_WS       => realpath($directory . 'isds_stat.wsdl'),
+            self::OPERATIONS_WS => realpath($directory.'dm_operations.wsdl'),
+            self::INFO_WS       => realpath($directory.'dm_info.wsdl'),
+            self::SEARCH_WS     => realpath($directory.'db_search.wsdl'),
+            self::ACCESS_WS     => realpath($directory.'db_access.wsdl'),
+            self::STAT_WS       => realpath($directory.'isds_stat.wsdl'),
         ];
     }
+
 
     /**
      * Prelouska hnusny nazev klice a vrati pekny, cesky.
@@ -42,7 +63,7 @@ class DataBoxHelper
      */
     public static function getKeyName($key)
     {
-        $replaces = array(
+        $replaces = [
             'dbID'                   => 'ID datové schránky',
             'dbType'                 => 'Typ datové schránky',
             'ic'                     => 'IČ',
@@ -67,10 +88,11 @@ class DataBoxHelper
             'userID'                 => 'ID osoby',
             'userType'               => 'Typ uživatele',
             'userPrivils'            => 'Oprávnění',
-        );
+        ];
 
-        return isset($replaces[$key]) ? $replaces[$key] : $key;
+        return $replaces[$key] ?? $key;
     }
+
 
     /**
      * Typy datových schránek.
@@ -91,9 +113,10 @@ class DataBoxHelper
             "OVM"        => 'Orgán veřejné moci',
             "OVM_NOTAR"  => 'Notář',
             "OVM_EXEKUT" => 'Exekutor',
-            "OVM_REQ"    => 'OVM_REQ'
+            "OVM_REQ"    => 'OVM_REQ',
         ];
     }
+
 
     /**
      * Typy datových zpráv.
@@ -102,12 +125,13 @@ class DataBoxHelper
      */
     public static function getMessagesTypes()
     {
-        return array(
+        return [
             "recieved"     => 'Přijatá zpráva',
             "sent"         => 'Odeslaná zpráva',
-            "confirmation" => 'Doručenka'
-        );
+            "confirmation" => 'Doručenka',
+        ];
     }
+
 
     /**
      * Vysvětlivky stavů datových zpráv.
@@ -116,7 +140,7 @@ class DataBoxHelper
      */
     public static function getDataBoxMessagesStatesNotes()
     {
-        return array(
+        return [
             1  => 'Zpráva byla podána (vznikla v ISDS)',
             2  => 'Datová zpráva včetně písemností podepsána časovým razítkem',
             3  => 'Zpráva neprošla AV kontrolou; nakažená písemnost je smazána; konečný stav zprávy před smazáním',
@@ -127,8 +151,9 @@ class DataBoxHelper
             8  => 'Zpráva byla označena jako nedoručitelná, protože DS adresáta byla zpětně znepřístupněna',
             9  => 'Obsah zprávy byl smazán, obálka zprávy včetně hashů přesunuta do archivu',
             10 => 'Zpráva je v Datovém trezoru',
-        );
+        ];
     }
+
 
     /**
      * Stavy datových zpráv.
@@ -137,7 +162,7 @@ class DataBoxHelper
      */
     public static function getDataBoxMessagesStates()
     {
-        return array(
+        return [
             1  => 'Podáno',
             2  => 'Odeslána',
             3  => 'Chyba - vir',
@@ -148,6 +173,6 @@ class DataBoxHelper
             8  => 'Nedoručitelné',
             9  => 'Smazáno',
             10 => 'Datový trezor',
-        );
+        ];
     }
 }

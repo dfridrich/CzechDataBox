@@ -25,7 +25,7 @@ class tNumOfMessagesOutput
      */
     public function __construct(\DateTime $statTime = null)
     {
-      $this->statTime = $statTime ? $statTime->format(\DateTime::ATOM) : null;
+        $this->statTime = $statTime ? $statTime->format(\DateTime::ATOM) : null;
     }
 
     /**
@@ -33,7 +33,7 @@ class tNumOfMessagesOutput
      */
     public function getStatResult()
     {
-      return $this->statResult;
+        return $this->statResult;
     }
 
     /**
@@ -42,8 +42,8 @@ class tNumOfMessagesOutput
      */
     public function setStatResult($statResult)
     {
-      $this->statResult = $statResult;
-      return $this;
+        $this->statResult = $statResult;
+        return $this;
     }
 
     /**
@@ -51,15 +51,15 @@ class tNumOfMessagesOutput
      */
     public function getStatTime()
     {
-      if ($this->statTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->statTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->statTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->statTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -68,8 +68,8 @@ class tNumOfMessagesOutput
      */
     public function setStatTime(\DateTime $statTime)
     {
-      $this->statTime = $statTime->format(\DateTime::ATOM);
-      return $this;
+        $this->statTime = $statTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -77,7 +77,7 @@ class tNumOfMessagesOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -86,8 +86,7 @@ class tNumOfMessagesOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

@@ -21,8 +21,8 @@ class tStatReqStatus
      */
     public function __construct($dbStatusCode = null, $dbStatusMessage = null)
     {
-      $this->dbStatusCode = $dbStatusCode;
-      $this->dbStatusMessage = $dbStatusMessage;
+        $this->dbStatusCode = $dbStatusCode;
+        $this->dbStatusMessage = $dbStatusMessage;
     }
 
     /**
@@ -30,7 +30,7 @@ class tStatReqStatus
      */
     public function getDbStatusCode()
     {
-      return $this->dbStatusCode;
+        return $this->dbStatusCode;
     }
 
     /**
@@ -39,8 +39,8 @@ class tStatReqStatus
      */
     public function setDbStatusCode($dbStatusCode)
     {
-      $this->dbStatusCode = $dbStatusCode;
-      return $this;
+        $this->dbStatusCode = $dbStatusCode;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tStatReqStatus
      */
     public function getDbStatusMessage()
     {
-      return $this->dbStatusMessage;
+        return $this->dbStatusMessage;
     }
 
     /**
@@ -57,8 +57,7 @@ class tStatReqStatus
      */
     public function setDbStatusMessage($dbStatusMessage)
     {
-      $this->dbStatusMessage = $dbStatusMessage;
-      return $this;
+        $this->dbStatusMessage = $dbStatusMessage;
+        return $this;
     }
-
 }

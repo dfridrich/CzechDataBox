@@ -161,9 +161,14 @@ class tRecord
     protected $dmAcceptanceTime = null;
 
     /**
-     * @var anonymous48 $dmType
+     * @var anonymous50 $dmType
      */
     protected $dmType = null;
+
+    /**
+     * @var boolean $dmVODZ
+     */
+    protected $dmVODZ = null;
 
     /**
      * @param dmOrdinal $dmOrdinal
@@ -197,42 +202,44 @@ class tRecord
      * @param int $dmAttachmentSize
      * @param \DateTime $dmDeliveryTime
      * @param \DateTime $dmAcceptanceTime
-     * @param anonymous48 $dmType
+     * @param anonymous50 $dmType
+     * @param boolean $dmVODZ
      */
-    public function __construct($dmOrdinal = null, $dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, $dmAmbiguousRecipient = null, $dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmMessageStatus = null, $dmAttachmentSize = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmType = null)
+    public function __construct($dmOrdinal = null, $dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, $dmAmbiguousRecipient = null, $dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmMessageStatus = null, $dmAttachmentSize = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmType = null, $dmVODZ = null)
     {
-      $this->dmOrdinal = $dmOrdinal;
-      $this->dmID = $dmID;
-      $this->dbIDSender = $dbIDSender;
-      $this->dmSender = $dmSender;
-      $this->dmSenderAddress = $dmSenderAddress;
-      $this->dmSenderType = $dmSenderType;
-      $this->dmRecipient = $dmRecipient;
-      $this->dmRecipientAddress = $dmRecipientAddress;
-      $this->dmAmbiguousRecipient = $dmAmbiguousRecipient;
-      $this->dmSenderOrgUnit = $dmSenderOrgUnit;
-      $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
-      $this->dbIDRecipient = $dbIDRecipient;
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      $this->dmToHands = $dmToHands;
-      $this->dmAnnotation = $dmAnnotation;
-      $this->dmRecipientRefNumber = $dmRecipientRefNumber;
-      $this->dmSenderRefNumber = $dmSenderRefNumber;
-      $this->dmRecipientIdent = $dmRecipientIdent;
-      $this->dmSenderIdent = $dmSenderIdent;
-      $this->dmLegalTitleLaw = $dmLegalTitleLaw;
-      $this->dmLegalTitleYear = $dmLegalTitleYear;
-      $this->dmLegalTitleSect = $dmLegalTitleSect;
-      $this->dmLegalTitlePar = $dmLegalTitlePar;
-      $this->dmLegalTitlePoint = $dmLegalTitlePoint;
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
-      $this->dmMessageStatus = $dmMessageStatus;
-      $this->dmAttachmentSize = $dmAttachmentSize;
-      $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
-      $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
-      $this->dmType = $dmType;
+        $this->dmOrdinal = $dmOrdinal;
+        $this->dmID = $dmID;
+        $this->dbIDSender = $dbIDSender;
+        $this->dmSender = $dmSender;
+        $this->dmSenderAddress = $dmSenderAddress;
+        $this->dmSenderType = $dmSenderType;
+        $this->dmRecipient = $dmRecipient;
+        $this->dmRecipientAddress = $dmRecipientAddress;
+        $this->dmAmbiguousRecipient = $dmAmbiguousRecipient;
+        $this->dmSenderOrgUnit = $dmSenderOrgUnit;
+        $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
+        $this->dbIDRecipient = $dbIDRecipient;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        $this->dmToHands = $dmToHands;
+        $this->dmAnnotation = $dmAnnotation;
+        $this->dmRecipientRefNumber = $dmRecipientRefNumber;
+        $this->dmSenderRefNumber = $dmSenderRefNumber;
+        $this->dmRecipientIdent = $dmRecipientIdent;
+        $this->dmSenderIdent = $dmSenderIdent;
+        $this->dmLegalTitleLaw = $dmLegalTitleLaw;
+        $this->dmLegalTitleYear = $dmLegalTitleYear;
+        $this->dmLegalTitleSect = $dmLegalTitleSect;
+        $this->dmLegalTitlePar = $dmLegalTitlePar;
+        $this->dmLegalTitlePoint = $dmLegalTitlePoint;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmAttachmentSize = $dmAttachmentSize;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
+        $this->dmType = $dmType;
+        $this->dmVODZ = $dmVODZ;
     }
 
     /**
@@ -240,7 +247,7 @@ class tRecord
      */
     public function getDmOrdinal()
     {
-      return $this->dmOrdinal;
+        return $this->dmOrdinal;
     }
 
     /**
@@ -249,8 +256,8 @@ class tRecord
      */
     public function setDmOrdinal($dmOrdinal)
     {
-      $this->dmOrdinal = $dmOrdinal;
-      return $this;
+        $this->dmOrdinal = $dmOrdinal;
+        return $this;
     }
 
     /**
@@ -258,7 +265,7 @@ class tRecord
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
 
     /**
@@ -267,8 +274,8 @@ class tRecord
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
 
     /**
@@ -276,7 +283,7 @@ class tRecord
      */
     public function getDbIDSender()
     {
-      return $this->dbIDSender;
+        return $this->dbIDSender;
     }
 
     /**
@@ -285,8 +292,8 @@ class tRecord
      */
     public function setDbIDSender($dbIDSender)
     {
-      $this->dbIDSender = $dbIDSender;
-      return $this;
+        $this->dbIDSender = $dbIDSender;
+        return $this;
     }
 
     /**
@@ -294,7 +301,7 @@ class tRecord
      */
     public function getDmSender()
     {
-      return $this->dmSender;
+        return $this->dmSender;
     }
 
     /**
@@ -303,8 +310,8 @@ class tRecord
      */
     public function setDmSender($dmSender)
     {
-      $this->dmSender = $dmSender;
-      return $this;
+        $this->dmSender = $dmSender;
+        return $this;
     }
 
     /**
@@ -312,7 +319,7 @@ class tRecord
      */
     public function getDmSenderAddress()
     {
-      return $this->dmSenderAddress;
+        return $this->dmSenderAddress;
     }
 
     /**
@@ -321,8 +328,8 @@ class tRecord
      */
     public function setDmSenderAddress($dmSenderAddress)
     {
-      $this->dmSenderAddress = $dmSenderAddress;
-      return $this;
+        $this->dmSenderAddress = $dmSenderAddress;
+        return $this;
     }
 
     /**
@@ -330,7 +337,7 @@ class tRecord
      */
     public function getDmSenderType()
     {
-      return $this->dmSenderType;
+        return $this->dmSenderType;
     }
 
     /**
@@ -339,8 +346,8 @@ class tRecord
      */
     public function setDmSenderType($dmSenderType)
     {
-      $this->dmSenderType = $dmSenderType;
-      return $this;
+        $this->dmSenderType = $dmSenderType;
+        return $this;
     }
 
     /**
@@ -348,7 +355,7 @@ class tRecord
      */
     public function getDmRecipient()
     {
-      return $this->dmRecipient;
+        return $this->dmRecipient;
     }
 
     /**
@@ -357,8 +364,8 @@ class tRecord
      */
     public function setDmRecipient($dmRecipient)
     {
-      $this->dmRecipient = $dmRecipient;
-      return $this;
+        $this->dmRecipient = $dmRecipient;
+        return $this;
     }
 
     /**
@@ -366,7 +373,7 @@ class tRecord
      */
     public function getDmRecipientAddress()
     {
-      return $this->dmRecipientAddress;
+        return $this->dmRecipientAddress;
     }
 
     /**
@@ -375,8 +382,8 @@ class tRecord
      */
     public function setDmRecipientAddress($dmRecipientAddress)
     {
-      $this->dmRecipientAddress = $dmRecipientAddress;
-      return $this;
+        $this->dmRecipientAddress = $dmRecipientAddress;
+        return $this;
     }
 
     /**
@@ -384,7 +391,7 @@ class tRecord
      */
     public function getDmAmbiguousRecipient()
     {
-      return $this->dmAmbiguousRecipient;
+        return $this->dmAmbiguousRecipient;
     }
 
     /**
@@ -393,8 +400,8 @@ class tRecord
      */
     public function setDmAmbiguousRecipient($dmAmbiguousRecipient)
     {
-      $this->dmAmbiguousRecipient = $dmAmbiguousRecipient;
-      return $this;
+        $this->dmAmbiguousRecipient = $dmAmbiguousRecipient;
+        return $this;
     }
 
     /**
@@ -402,7 +409,7 @@ class tRecord
      */
     public function getDmSenderOrgUnit()
     {
-      return $this->dmSenderOrgUnit;
+        return $this->dmSenderOrgUnit;
     }
 
     /**
@@ -411,8 +418,8 @@ class tRecord
      */
     public function setDmSenderOrgUnit($dmSenderOrgUnit)
     {
-      $this->dmSenderOrgUnit = $dmSenderOrgUnit;
-      return $this;
+        $this->dmSenderOrgUnit = $dmSenderOrgUnit;
+        return $this;
     }
 
     /**
@@ -420,7 +427,7 @@ class tRecord
      */
     public function getDmSenderOrgUnitNum()
     {
-      return $this->dmSenderOrgUnitNum;
+        return $this->dmSenderOrgUnitNum;
     }
 
     /**
@@ -429,8 +436,8 @@ class tRecord
      */
     public function setDmSenderOrgUnitNum($dmSenderOrgUnitNum)
     {
-      $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
-      return $this;
+        $this->dmSenderOrgUnitNum = $dmSenderOrgUnitNum;
+        return $this;
     }
 
     /**
@@ -438,7 +445,7 @@ class tRecord
      */
     public function getDbIDRecipient()
     {
-      return $this->dbIDRecipient;
+        return $this->dbIDRecipient;
     }
 
     /**
@@ -447,8 +454,8 @@ class tRecord
      */
     public function setDbIDRecipient($dbIDRecipient)
     {
-      $this->dbIDRecipient = $dbIDRecipient;
-      return $this;
+        $this->dbIDRecipient = $dbIDRecipient;
+        return $this;
     }
 
     /**
@@ -456,7 +463,7 @@ class tRecord
      */
     public function getDmRecipientOrgUnit()
     {
-      return $this->dmRecipientOrgUnit;
+        return $this->dmRecipientOrgUnit;
     }
 
     /**
@@ -465,8 +472,8 @@ class tRecord
      */
     public function setDmRecipientOrgUnit($dmRecipientOrgUnit)
     {
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      return $this;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        return $this;
     }
 
     /**
@@ -474,7 +481,7 @@ class tRecord
      */
     public function getDmRecipientOrgUnitNum()
     {
-      return $this->dmRecipientOrgUnitNum;
+        return $this->dmRecipientOrgUnitNum;
     }
 
     /**
@@ -483,8 +490,8 @@ class tRecord
      */
     public function setDmRecipientOrgUnitNum($dmRecipientOrgUnitNum)
     {
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      return $this;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        return $this;
     }
 
     /**
@@ -492,7 +499,7 @@ class tRecord
      */
     public function getDmToHands()
     {
-      return $this->dmToHands;
+        return $this->dmToHands;
     }
 
     /**
@@ -501,8 +508,8 @@ class tRecord
      */
     public function setDmToHands($dmToHands)
     {
-      $this->dmToHands = $dmToHands;
-      return $this;
+        $this->dmToHands = $dmToHands;
+        return $this;
     }
 
     /**
@@ -510,7 +517,7 @@ class tRecord
      */
     public function getDmAnnotation()
     {
-      return $this->dmAnnotation;
+        return $this->dmAnnotation;
     }
 
     /**
@@ -519,8 +526,8 @@ class tRecord
      */
     public function setDmAnnotation($dmAnnotation)
     {
-      $this->dmAnnotation = $dmAnnotation;
-      return $this;
+        $this->dmAnnotation = $dmAnnotation;
+        return $this;
     }
 
     /**
@@ -528,7 +535,7 @@ class tRecord
      */
     public function getDmRecipientRefNumber()
     {
-      return $this->dmRecipientRefNumber;
+        return $this->dmRecipientRefNumber;
     }
 
     /**
@@ -537,8 +544,8 @@ class tRecord
      */
     public function setDmRecipientRefNumber($dmRecipientRefNumber)
     {
-      $this->dmRecipientRefNumber = $dmRecipientRefNumber;
-      return $this;
+        $this->dmRecipientRefNumber = $dmRecipientRefNumber;
+        return $this;
     }
 
     /**
@@ -546,7 +553,7 @@ class tRecord
      */
     public function getDmSenderRefNumber()
     {
-      return $this->dmSenderRefNumber;
+        return $this->dmSenderRefNumber;
     }
 
     /**
@@ -555,8 +562,8 @@ class tRecord
      */
     public function setDmSenderRefNumber($dmSenderRefNumber)
     {
-      $this->dmSenderRefNumber = $dmSenderRefNumber;
-      return $this;
+        $this->dmSenderRefNumber = $dmSenderRefNumber;
+        return $this;
     }
 
     /**
@@ -564,7 +571,7 @@ class tRecord
      */
     public function getDmRecipientIdent()
     {
-      return $this->dmRecipientIdent;
+        return $this->dmRecipientIdent;
     }
 
     /**
@@ -573,8 +580,8 @@ class tRecord
      */
     public function setDmRecipientIdent($dmRecipientIdent)
     {
-      $this->dmRecipientIdent = $dmRecipientIdent;
-      return $this;
+        $this->dmRecipientIdent = $dmRecipientIdent;
+        return $this;
     }
 
     /**
@@ -582,7 +589,7 @@ class tRecord
      */
     public function getDmSenderIdent()
     {
-      return $this->dmSenderIdent;
+        return $this->dmSenderIdent;
     }
 
     /**
@@ -591,8 +598,8 @@ class tRecord
      */
     public function setDmSenderIdent($dmSenderIdent)
     {
-      $this->dmSenderIdent = $dmSenderIdent;
-      return $this;
+        $this->dmSenderIdent = $dmSenderIdent;
+        return $this;
     }
 
     /**
@@ -600,7 +607,7 @@ class tRecord
      */
     public function getDmLegalTitleLaw()
     {
-      return $this->dmLegalTitleLaw;
+        return $this->dmLegalTitleLaw;
     }
 
     /**
@@ -609,8 +616,8 @@ class tRecord
      */
     public function setDmLegalTitleLaw($dmLegalTitleLaw)
     {
-      $this->dmLegalTitleLaw = $dmLegalTitleLaw;
-      return $this;
+        $this->dmLegalTitleLaw = $dmLegalTitleLaw;
+        return $this;
     }
 
     /**
@@ -618,7 +625,7 @@ class tRecord
      */
     public function getDmLegalTitleYear()
     {
-      return $this->dmLegalTitleYear;
+        return $this->dmLegalTitleYear;
     }
 
     /**
@@ -627,8 +634,8 @@ class tRecord
      */
     public function setDmLegalTitleYear($dmLegalTitleYear)
     {
-      $this->dmLegalTitleYear = $dmLegalTitleYear;
-      return $this;
+        $this->dmLegalTitleYear = $dmLegalTitleYear;
+        return $this;
     }
 
     /**
@@ -636,7 +643,7 @@ class tRecord
      */
     public function getDmLegalTitleSect()
     {
-      return $this->dmLegalTitleSect;
+        return $this->dmLegalTitleSect;
     }
 
     /**
@@ -645,8 +652,8 @@ class tRecord
      */
     public function setDmLegalTitleSect($dmLegalTitleSect)
     {
-      $this->dmLegalTitleSect = $dmLegalTitleSect;
-      return $this;
+        $this->dmLegalTitleSect = $dmLegalTitleSect;
+        return $this;
     }
 
     /**
@@ -654,7 +661,7 @@ class tRecord
      */
     public function getDmLegalTitlePar()
     {
-      return $this->dmLegalTitlePar;
+        return $this->dmLegalTitlePar;
     }
 
     /**
@@ -663,8 +670,8 @@ class tRecord
      */
     public function setDmLegalTitlePar($dmLegalTitlePar)
     {
-      $this->dmLegalTitlePar = $dmLegalTitlePar;
-      return $this;
+        $this->dmLegalTitlePar = $dmLegalTitlePar;
+        return $this;
     }
 
     /**
@@ -672,7 +679,7 @@ class tRecord
      */
     public function getDmLegalTitlePoint()
     {
-      return $this->dmLegalTitlePoint;
+        return $this->dmLegalTitlePoint;
     }
 
     /**
@@ -681,8 +688,8 @@ class tRecord
      */
     public function setDmLegalTitlePoint($dmLegalTitlePoint)
     {
-      $this->dmLegalTitlePoint = $dmLegalTitlePoint;
-      return $this;
+        $this->dmLegalTitlePoint = $dmLegalTitlePoint;
+        return $this;
     }
 
     /**
@@ -690,7 +697,7 @@ class tRecord
      */
     public function getDmPersonalDelivery()
     {
-      return $this->dmPersonalDelivery;
+        return $this->dmPersonalDelivery;
     }
 
     /**
@@ -699,8 +706,8 @@ class tRecord
      */
     public function setDmPersonalDelivery($dmPersonalDelivery)
     {
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      return $this;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        return $this;
     }
 
     /**
@@ -708,7 +715,7 @@ class tRecord
      */
     public function getDmAllowSubstDelivery()
     {
-      return $this->dmAllowSubstDelivery;
+        return $this->dmAllowSubstDelivery;
     }
 
     /**
@@ -717,8 +724,8 @@ class tRecord
      */
     public function setDmAllowSubstDelivery($dmAllowSubstDelivery)
     {
-      $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
-      return $this;
+        $this->dmAllowSubstDelivery = $dmAllowSubstDelivery;
+        return $this;
     }
 
     /**
@@ -726,7 +733,7 @@ class tRecord
      */
     public function getDmMessageStatus()
     {
-      return $this->dmMessageStatus;
+        return $this->dmMessageStatus;
     }
 
     /**
@@ -735,8 +742,8 @@ class tRecord
      */
     public function setDmMessageStatus($dmMessageStatus)
     {
-      $this->dmMessageStatus = $dmMessageStatus;
-      return $this;
+        $this->dmMessageStatus = $dmMessageStatus;
+        return $this;
     }
 
     /**
@@ -744,7 +751,7 @@ class tRecord
      */
     public function getDmAttachmentSize()
     {
-      return $this->dmAttachmentSize;
+        return $this->dmAttachmentSize;
     }
 
     /**
@@ -753,8 +760,8 @@ class tRecord
      */
     public function setDmAttachmentSize($dmAttachmentSize)
     {
-      $this->dmAttachmentSize = $dmAttachmentSize;
-      return $this;
+        $this->dmAttachmentSize = $dmAttachmentSize;
+        return $this;
     }
 
     /**
@@ -762,15 +769,15 @@ class tRecord
      */
     public function getDmDeliveryTime()
     {
-      if ($this->dmDeliveryTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmDeliveryTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmDeliveryTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -779,8 +786,8 @@ class tRecord
      */
     public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-      $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -788,15 +795,15 @@ class tRecord
      */
     public function getDmAcceptanceTime()
     {
-      if ($this->dmAcceptanceTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmAcceptanceTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmAcceptanceTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmAcceptanceTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -805,26 +812,43 @@ class tRecord
      */
     public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-      $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
-     * @return anonymous48
+     * @return anonymous50
      */
     public function getDmType()
     {
-      return $this->dmType;
+        return $this->dmType;
     }
 
     /**
-     * @param anonymous48 $dmType
+     * @param anonymous50 $dmType
      * @return \Defr\CzechDataBox\Api\tRecord
      */
     public function setDmType($dmType)
     {
-      $this->dmType = $dmType;
-      return $this;
+        $this->dmType = $dmType;
+        return $this;
     }
 
+    /**
+     * @return boolean
+     */
+    public function getDmVODZ()
+    {
+        return $this->dmVODZ;
+    }
+
+    /**
+     * @param boolean $dmVODZ
+     * @return \Defr\CzechDataBox\Api\tRecord
+     */
+    public function setDmVODZ($dmVODZ)
+    {
+        $this->dmVODZ = $dmVODZ;
+        return $this;
+    }
 }

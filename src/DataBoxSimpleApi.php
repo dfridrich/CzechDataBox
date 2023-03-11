@@ -2,6 +2,8 @@
 
 namespace Defr\CzechDataBox;
 
+use DateInterval;
+use DateTime;
 use Defr\CzechDataBox\Api\tDbOwnerInfo;
 use Defr\CzechDataBox\Api\tDbOwnersArray;
 use Defr\CzechDataBox\Api\tDbUserInfo;
@@ -17,25 +19,26 @@ use Defr\CzechDataBox\Api\tMessageEnvelopeSub;
 use Defr\CzechDataBox\Api\tNumOfMessagesInput;
 use Defr\CzechDataBox\Api\tRecord;
 use Defr\CzechDataBox\ApiExtensions\dmFile;
+use function array_filter;
+use function array_map;
+use function basename;
+use function file_get_contents;
+use function is_array;
+use function is_string;
+use function md5;
+use function mime_content_type;
+use function strtoupper;
+use function substr;
 
 /**
  * Class DataBoxSimpleApi
- * @package Defr\CzechDataBox
  */
 class DataBoxSimpleApi
 {
-    /**
-     * @var DataBox
-     */
-    private $dataBox;
-
-    /**
-     * @param DataBox $dataBox
-     */
-    public function __construct(DataBox $dataBox)
+    public function __construct(private DataBox $dataBox)
     {
-        $this->dataBox = $dataBox;
     }
+
 
     /**
      * Vrátí informace o aktuální datové schránce.
@@ -47,6 +50,7 @@ class DataBoxSimpleApi
         return $this->dataBox->DataBoxAccess()->GetOwnerInfoFromLogin(new tDummyInput(null))->getDbOwnerInfo();
     }
 
+
     /**
      * Vratí datum expirace hesla.
      *
@@ -57,6 +61,7 @@ class DataBoxSimpleApi
         return $this->dataBox->DataBoxAccess()->GetPasswordInfo(new tDummyInput(null))->getPswExpDate();
     }
 
+
     /**
      * Vrátí informace o aktuálním uživateli.
      *
@@ -66,6 +71,7 @@ class DataBoxSimpleApi
     {
         return $this->dataBox->DataBoxAccess()->GetUserInfoFromLogin(new tDummyInput(null))->getDbUserInfo();
     }
+
 
     /**
      * Stahne seznam prijatych zprav v DS.
@@ -79,23 +85,23 @@ class DataBoxSimpleApi
      */
     public function getListOfReceivedMessages($days = 90, $limit = 1000)
     {
-        if ($days < 0 or $limit < 1) {
+        if ($days < 0 || $limit < 1) {
             throw new DataBoxException();
         }
 
         $params = new tListOfFReceivedInput();
-        $params->setDmToTime(new \DateTime())
-            ->setDmFromTime((new \DateTime())->sub(new \DateInterval('P'.$days.'D')))
+        $params->setDmToTime(new DateTime())
+            ->setDmFromTime((new DateTime())->sub(new DateInterval('P'.$days.'D')))
             ->setDmLimit($limit)
             ->setDmOffset(0)
             ->setDmRecipientOrgUnitNum(null)
             ->setDmStatusFilter(-1);
 
         $result = $this->dataBox->DmInfoWebService()->GetListOfReceivedMessages($params)->getDmRecords()->getDmRecord();
-        $result = $this->returnAsArray($result);
 
-        return $result;
+        return $this->returnAsArray($result);
     }
+
 
     /**
      * Vrati zmeny odeslanych DZ.
@@ -109,23 +115,23 @@ class DataBoxSimpleApi
      */
     public function getListOfSentMessages($days = 90, $limit = 1000)
     {
-        if ($days < 0 or $limit < 1) {
+        if ($days < 0 || $limit < 1) {
             throw new DataBoxException();
         }
 
         $params = new tListOfSentInput();
-        $params->setDmToTime(new \DateTime())
-            ->setDmFromTime((new \DateTime())->sub(new \DateInterval('P'.$days.'D')))
+        $params->setDmToTime(new DateTime())
+            ->setDmFromTime((new DateTime())->sub(new DateInterval('P'.$days.'D')))
             ->setDmLimit($limit)
             ->setDmOffset(0)
             ->setDmSenderOrgUnitNum(null)
             ->setDmStatusFilter(-1);
 
         $result = $this->dataBox->DmInfoWebService()->GetListOfSentMessages($params)->getDmRecords()->getDmRecord();
-        $result = $this->returnAsArray($result);
 
-        return $result;
+        return $this->returnAsArray($result);
     }
+
 
     /**
      * Vyhleda DS na zaklade ID.
@@ -139,10 +145,12 @@ class DataBoxSimpleApi
         $params = new tFindDBInput();
         $owner = new tDbOwnerInfo();
         $owner->setDbID($dataBoxId);
+
         $params->setDbOwnerInfo($owner);
 
         return $this->dataBox->DataBoxSearch()->FindDataBox($params)->getDbResults();
     }
+
 
     /**
      * Stáhne přijatou DZ ve formátu ZFO.
@@ -156,15 +164,16 @@ class DataBoxSimpleApi
     public function downloadSignedReceivedMessage($dataMessageId)
     {
         $file = $this->getLocationForMessage($dataMessageId, 'r');
-        if (false === $file->getIsExist()) {
+        if (!$file->getIsExist()) {
             $content = $this->dataBox->DmOperationsWebService()->SignedMessageDownload(
-                (new tIDMessInput())->setDmID($dataMessageId)
+                (new tIDMessInput())->setDmID($dataMessageId),
             )->getDmSignature();
             $file->save($content);
         }
 
         return $file;
     }
+
 
     /**
      * Stáhne odeslanou DZ ve formátu ZFO.
@@ -178,15 +187,16 @@ class DataBoxSimpleApi
     public function downloadSignedSentMessage($dataMessageId)
     {
         $file = $this->getLocationForMessage($dataMessageId, 's');
-        if (false === $file->getIsExist()) {
+        if (!$file->getIsExist()) {
             $content = $this->dataBox->DmOperationsWebService()->SignedSentMessageDownload(
-                (new tIDMessInput())->setDmID($dataMessageId)
+                (new tIDMessInput())->setDmID($dataMessageId),
             )->getDmSignature();
             $file->save($content);
         }
 
         return $file;
     }
+
 
     /**
      * Stáhne doručenku odeslané zprávy.
@@ -200,15 +210,16 @@ class DataBoxSimpleApi
     public function downloadDeliveryInfo($dataMessageId)
     {
         $file = $this->getLocationForMessage($dataMessageId, 'di');
-        if (false === $file->getIsExist()) {
+        if (!$file->getIsExist()) {
             $content = $this->dataBox->DmInfoWebService()->GetSignedDeliveryInfo(
-                (new tIDMessInput())->setDmID($dataMessageId)
+                (new tIDMessInput())->setDmID($dataMessageId),
             )->getDmSignature();
             $file->save($content);
         }
 
         return $file;
     }
+
 
     /**
      * Stáhne všechny přílohy datové zprávy.
@@ -224,21 +235,23 @@ class DataBoxSimpleApi
 
         /** @var dmFile[] $attachments */
         $attachments = $this->dataBox->DmOperationsWebService()->MessageDownload(
-            new tIDMessInput($dataMessageId)
-        )->getDmReturnedMessage()->getDmDm()->dmFiles->getDmFile();
+            new tIDMessInput($dataMessageId),
+        )->getDmReturnedMessage()->getDmDm()->getDmFiles()->getDmFile();
         $files = [];
 
         foreach ($attachments as $attachment) {
             $file = $this->getLocationForAttachment($dataMessageId, $attachment->getDmFileDescr());
-            if (false === $file->getIsExist()) {
-                $content = $attachment->dmEncodedContent;
+            if (!$file->getIsExist()) {
+                $content = $attachment->getDmEncodedContent();
                 $file->save($content);
             }
+
             $files[] = $file;
         }
 
         return $files;
     }
+
 
     /**
      * Vytvoří základní zprávu k odeslání
@@ -267,31 +280,30 @@ class DataBoxSimpleApi
             null,
             null,
             null,
-            $subject
+            $subject,
         );
 
         // Make sure the attachments exist. If you have files stored in the memory
         // just do not pass any attachments and create the dmFile object yourself,
         // then set it as an array to dmFiles
-        $attachments = \array_filter($attachments, '\file_exists');
+        $attachments = array_filter($attachments, '\file_exists');
 
         // Creates the dmFile object for each of the attachments, gets mime
         // type and file name from the file
-        $attachments = \array_map(
-            function ($filePath) {
+        $attachments = array_map(
+            static function ($filePath) {
                 $file = new dmFile();
-                $file->setDmMimeType(\mime_content_type($filePath));
-                $file->setDmFileDescr(\basename($filePath));
-                $file->setDmEncodedContent(\file_get_contents($filePath));
-
+                $file->setDmMimeType(mime_content_type($filePath));
+                $file->setDmFileDescr(basename($filePath));
+                $file->setDmEncodedContent(file_get_contents($filePath));
                 return $file;
             },
-            $attachments
+            $attachments,
         );
 
 
         $dmFiles = new tFilesArray();
-        if (!empty($attachments)) {
+        if ($attachments !== []) {
             // tFilesArray is not properly generated, it should accept an array of dmFile objects
             $dmFiles->setDmFile($attachments);
         }
@@ -299,10 +311,10 @@ class DataBoxSimpleApi
         return new tMessageCreateInput($envelope, $dmFiles);
     }
 
+
     /**
      * Pošle datovou zprávu.
      *
-     * @param tMessageCreateInput $messageToSent
      *
      * @return tMessageCreateOutput
      * @throws DataBoxException
@@ -311,6 +323,7 @@ class DataBoxSimpleApi
     {
         return $this->dataBox->DmOperationsWebService()->CreateMessage($messageToSent);
     }
+
 
     /**
      * Počet zpráv odeslaných v celém systému ISDS.
@@ -323,6 +336,7 @@ class DataBoxSimpleApi
 
         return $this->dataBox->IsdsStat()->NumOfMessages($input)->getStatResult();
     }
+
 
     /**
      * @param $input
@@ -337,6 +351,7 @@ class DataBoxSimpleApi
             return [$input];
         }
     }
+
 
     /**
      * @param $messageId
@@ -356,6 +371,7 @@ class DataBoxSimpleApi
 
         return new DataBoxMessageFile($location);
     }
+
 
     /**
      * @param $messageId

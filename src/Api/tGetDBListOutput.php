@@ -21,8 +21,8 @@ class tGetDBListOutput
      */
     public function __construct($dblData = null, $dbStatus = null)
     {
-      $this->dblData = $dblData;
-      $this->dbStatus = $dbStatus;
+        $this->dblData = $dblData;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tGetDBListOutput
      */
     public function getDblData()
     {
-      return $this->dblData;
+        return $this->dblData;
     }
 
     /**
@@ -39,8 +39,8 @@ class tGetDBListOutput
      */
     public function setDblData($dblData)
     {
-      $this->dblData = $dblData;
-      return $this;
+        $this->dblData = $dblData;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tGetDBListOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class tGetDBListOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

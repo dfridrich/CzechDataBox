@@ -1,0 +1,14 @@
+{
+    "require": {
+        "php": "7.4.*"
+    },
+    "require-dev": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
+        "symfony/var-dumper": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Defr\\CzechDataBox\\": "../src/"
+        }
+    }
+}

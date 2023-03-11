@@ -21,8 +21,8 @@ class tMultipleMessageCreateOutput
      */
     public function __construct($dmMultipleStatus = null, $dmStatus = null)
     {
-      $this->dmMultipleStatus = $dmMultipleStatus;
-      $this->dmStatus = $dmStatus;
+        $this->dmMultipleStatus = $dmMultipleStatus;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tMultipleMessageCreateOutput
      */
     public function getDmMultipleStatus()
     {
-      return $this->dmMultipleStatus;
+        return $this->dmMultipleStatus;
     }
 
     /**
@@ -39,8 +39,8 @@ class tMultipleMessageCreateOutput
      */
     public function setDmMultipleStatus($dmMultipleStatus)
     {
-      $this->dmMultipleStatus = $dmMultipleStatus;
-      return $this;
+        $this->dmMultipleStatus = $dmMultipleStatus;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tMultipleMessageCreateOutput
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class tMultipleMessageCreateOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

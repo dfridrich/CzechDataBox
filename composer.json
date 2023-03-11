@@ -1,32 +1,61 @@
 {
-  "name": "dfridrich/czech-data-box",
-  "type": "library",
-  "description": "Knihovna pro komunikaci s datovou schránkou v PHP.",
-  "keywords": [
-    "php",
-    "library",
-    "ISDS",
-    "Datové schránky"
-  ],
-  "homepage": "https://github.com/dfridrich/CzechDataBox",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Dennis Fridrich",
-      "email": "fridrich.dennis@gmail.com"
+    "name": "dfridrich/czech-data-box",
+    "type": "library",
+    "description": "Knihovna pro komunikaci s datovou schránkou v PHP.",
+    "keywords": [
+        "php",
+        "library",
+        "ISDS",
+        "Datové schránky"
+    ],
+    "homepage": "https://github.com/dfridrich/CzechDataBox",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis Fridrich",
+            "email": "fridrich.dennis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0",
+        "ext-soap": "*"
+    },
+    "require-dev": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2",
+        "phpunit/phpunit": "^9",
+        "symfony/var-dumper": "^6.0",
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7",
+        "slevomat/coding-standard": "^8.8",
+        "wsdltophp/packagegenerator": "^4.1",
+        "rector/rector": "^0.15.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "Defr\\CzechDataBox\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Defr\\CzechDataBox\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpcs": "@php -d memor_limit=2G vendor/bin/phpcs -sp",
+        "phpcbf": "@php -d memor_limit=2G vendor/bin/phpcbf -sp",
+        "phpstan": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php -d memory_limit=2G vendor/bin/phpstan analyse -c phpstan.neon"
+        ],
+        "check": [
+            "@phpcs",
+            "@phpstan"
+        ]
+
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
-  ],
-  "require": {
-    "php": ">=5.6.0",
-    "ext-soap": "*"
-  },
-  "require-dev": {
-    "wsdl2phpgenerator/wsdl2phpgenerator": "^3.2",
-    "phpunit/phpunit": "^5"
-  },
-  "autoload": {
-    "psr-4": {
-      "Defr\\CzechDataBox\\": "src/"
-    }
-  }
 }

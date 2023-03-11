@@ -15,7 +15,7 @@ class tReqStatusOutput
      */
     public function __construct($dbStatus = null)
     {
-      $this->dbStatus = $dbStatus;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -23,7 +23,7 @@ class tReqStatusOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -32,8 +32,7 @@ class tReqStatusOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

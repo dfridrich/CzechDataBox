@@ -6,9 +6,9 @@ class tDeleteDBPromptlyInput
 {
 
     /**
-     * @var tDbOwnerInfo $dbOwnerInfo
+     * @var tIdDb $dbID
      */
-    protected $dbOwnerInfo = null;
+    protected $dbID = null;
 
     /**
      * @var boolean $dbApproved
@@ -21,33 +21,33 @@ class tDeleteDBPromptlyInput
     protected $dbExternRefNumber = null;
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param tIdDb $dbID
      * @param boolean $dbApproved
      * @param string $dbExternRefNumber
      */
-    public function __construct($dbOwnerInfo = null, $dbApproved = null, $dbExternRefNumber = null)
+    public function __construct($dbID = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbID = $dbID;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
-     * @return tDbOwnerInfo
+     * @return tIdDb
      */
-    public function getDbOwnerInfo()
+    public function getDbID()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbID;
     }
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param tIdDb $dbID
      * @return \Defr\CzechDataBox\Api\tDeleteDBPromptlyInput
      */
-    public function setDbOwnerInfo($dbOwnerInfo)
+    public function setDbID($dbID)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbID = $dbID;
+        return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tDeleteDBPromptlyInput
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
 
     /**
@@ -64,8 +64,8 @@ class tDeleteDBPromptlyInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tDeleteDBPromptlyInput
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
 
     /**
@@ -82,8 +82,7 @@ class tDeleteDBPromptlyInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
-
 }

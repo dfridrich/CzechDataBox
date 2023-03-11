@@ -6,7 +6,7 @@ class tCreateDBInput
 {
 
     /**
-     * @var tDbOwnerInfo $dbOwnerInfo
+     * @var dbOwnerInfo $dbOwnerInfo
      */
     protected $dbOwnerInfo = null;
 
@@ -51,7 +51,7 @@ class tCreateDBInput
     protected $dbExternRefNumber = null;
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param dbOwnerInfo $dbOwnerInfo
      * @param tDbUsersArray $dbPrimaryUsers
      * @param string $dbFormerNames
      * @param tIdDb $dbUpperDBId
@@ -63,33 +63,33 @@ class tCreateDBInput
      */
     public function __construct($dbOwnerInfo = null, $dbPrimaryUsers = null, $dbFormerNames = null, $dbUpperDBId = null, $dbCEOLabel = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbPrimaryUsers = $dbPrimaryUsers;
-      $this->dbFormerNames = $dbFormerNames;
-      $this->dbUpperDBId = $dbUpperDBId;
-      $this->dbCEOLabel = $dbCEOLabel;
-      $this->dbVirtual = $dbVirtual;
-      $this->email = $email;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbPrimaryUsers = $dbPrimaryUsers;
+        $this->dbFormerNames = $dbFormerNames;
+        $this->dbUpperDBId = $dbUpperDBId;
+        $this->dbCEOLabel = $dbCEOLabel;
+        $this->dbVirtual = $dbVirtual;
+        $this->email = $email;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
-     * @return tDbOwnerInfo
+     * @return dbOwnerInfo
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
+     * @param dbOwnerInfo $dbOwnerInfo
      * @return \Defr\CzechDataBox\Api\tCreateDBInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
 
     /**
@@ -97,7 +97,7 @@ class tCreateDBInput
      */
     public function getDbPrimaryUsers()
     {
-      return $this->dbPrimaryUsers;
+        return $this->dbPrimaryUsers;
     }
 
     /**
@@ -106,8 +106,8 @@ class tCreateDBInput
      */
     public function setDbPrimaryUsers($dbPrimaryUsers)
     {
-      $this->dbPrimaryUsers = $dbPrimaryUsers;
-      return $this;
+        $this->dbPrimaryUsers = $dbPrimaryUsers;
+        return $this;
     }
 
     /**
@@ -115,7 +115,7 @@ class tCreateDBInput
      */
     public function getDbFormerNames()
     {
-      return $this->dbFormerNames;
+        return $this->dbFormerNames;
     }
 
     /**
@@ -124,8 +124,8 @@ class tCreateDBInput
      */
     public function setDbFormerNames($dbFormerNames)
     {
-      $this->dbFormerNames = $dbFormerNames;
-      return $this;
+        $this->dbFormerNames = $dbFormerNames;
+        return $this;
     }
 
     /**
@@ -133,7 +133,7 @@ class tCreateDBInput
      */
     public function getDbUpperDBId()
     {
-      return $this->dbUpperDBId;
+        return $this->dbUpperDBId;
     }
 
     /**
@@ -142,8 +142,8 @@ class tCreateDBInput
      */
     public function setDbUpperDBId($dbUpperDBId)
     {
-      $this->dbUpperDBId = $dbUpperDBId;
-      return $this;
+        $this->dbUpperDBId = $dbUpperDBId;
+        return $this;
     }
 
     /**
@@ -151,7 +151,7 @@ class tCreateDBInput
      */
     public function getDbCEOLabel()
     {
-      return $this->dbCEOLabel;
+        return $this->dbCEOLabel;
     }
 
     /**
@@ -160,8 +160,8 @@ class tCreateDBInput
      */
     public function setDbCEOLabel($dbCEOLabel)
     {
-      $this->dbCEOLabel = $dbCEOLabel;
-      return $this;
+        $this->dbCEOLabel = $dbCEOLabel;
+        return $this;
     }
 
     /**
@@ -169,7 +169,7 @@ class tCreateDBInput
      */
     public function getDbVirtual()
     {
-      return $this->dbVirtual;
+        return $this->dbVirtual;
     }
 
     /**
@@ -178,8 +178,8 @@ class tCreateDBInput
      */
     public function setDbVirtual($dbVirtual)
     {
-      $this->dbVirtual = $dbVirtual;
-      return $this;
+        $this->dbVirtual = $dbVirtual;
+        return $this;
     }
 
     /**
@@ -187,7 +187,7 @@ class tCreateDBInput
      */
     public function getEmail()
     {
-      return $this->email;
+        return $this->email;
     }
 
     /**
@@ -196,8 +196,8 @@ class tCreateDBInput
      */
     public function setEmail($email)
     {
-      $this->email = $email;
-      return $this;
+        $this->email = $email;
+        return $this;
     }
 
     /**
@@ -205,7 +205,7 @@ class tCreateDBInput
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
 
     /**
@@ -214,8 +214,8 @@ class tCreateDBInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
 
     /**
@@ -223,7 +223,7 @@ class tCreateDBInput
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
 
     /**
@@ -232,8 +232,7 @@ class tCreateDBInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
-
 }

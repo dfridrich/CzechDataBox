@@ -27,9 +27,9 @@ class tResignDocOutput
      */
     public function __construct($dmResultDoc = null, $dmValidTo = null, $dmStatus = null)
     {
-      $this->dmResultDoc = $dmResultDoc;
-      $this->dmValidTo = $dmValidTo;
-      $this->dmStatus = $dmStatus;
+        $this->dmResultDoc = $dmResultDoc;
+        $this->dmValidTo = $dmValidTo;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tResignDocOutput
      */
     public function getDmResultDoc()
     {
-      return $this->dmResultDoc;
+        return $this->dmResultDoc;
     }
 
     /**
@@ -46,8 +46,8 @@ class tResignDocOutput
      */
     public function setDmResultDoc($dmResultDoc)
     {
-      $this->dmResultDoc = $dmResultDoc;
-      return $this;
+        $this->dmResultDoc = $dmResultDoc;
+        return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tResignDocOutput
      */
     public function getDmValidTo()
     {
-      return $this->dmValidTo;
+        return $this->dmValidTo;
     }
 
     /**
@@ -64,8 +64,8 @@ class tResignDocOutput
      */
     public function setDmValidTo($dmValidTo)
     {
-      $this->dmValidTo = $dmValidTo;
-      return $this;
+        $this->dmValidTo = $dmValidTo;
+        return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tResignDocOutput
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -82,8 +82,7 @@ class tResignDocOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

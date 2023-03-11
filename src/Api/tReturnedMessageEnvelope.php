@@ -46,6 +46,16 @@ class tReturnedMessageEnvelope
     protected $dmType = null;
 
     /**
+     * @var boolean $dmVODZ
+     */
+    protected $dmVODZ = null;
+
+    /**
+     * @var int $attsNum
+     */
+    protected $attsNum = null;
+
+    /**
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
@@ -54,17 +64,21 @@ class tReturnedMessageEnvelope
      * @param int $dmMessageStatus
      * @param int $dmAttachmentSize
      * @param tDmType $dmType
+     * @param boolean $dmVODZ
+     * @param int $attsNum
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $dmVODZ = null, $attsNum = null)
     {
-      $this->dmDm = $dmDm;
-      $this->dmHash = $dmHash;
-      $this->dmQTimestamp = $dmQTimestamp;
-      $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
-      $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
-      $this->dmMessageStatus = $dmMessageStatus;
-      $this->dmAttachmentSize = $dmAttachmentSize;
-      $this->dmType = $dmType;
+        $this->dmDm = $dmDm;
+        $this->dmHash = $dmHash;
+        $this->dmQTimestamp = $dmQTimestamp;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
+        $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmAttachmentSize = $dmAttachmentSize;
+        $this->dmType = $dmType;
+        $this->dmVODZ = $dmVODZ;
+        $this->attsNum = $attsNum;
     }
 
     /**
@@ -72,7 +86,7 @@ class tReturnedMessageEnvelope
      */
     public function getDmDm()
     {
-      return $this->dmDm;
+        return $this->dmDm;
     }
 
     /**
@@ -81,8 +95,8 @@ class tReturnedMessageEnvelope
      */
     public function setDmDm($dmDm)
     {
-      $this->dmDm = $dmDm;
-      return $this;
+        $this->dmDm = $dmDm;
+        return $this;
     }
 
     /**
@@ -90,7 +104,7 @@ class tReturnedMessageEnvelope
      */
     public function getDmHash()
     {
-      return $this->dmHash;
+        return $this->dmHash;
     }
 
     /**
@@ -99,8 +113,8 @@ class tReturnedMessageEnvelope
      */
     public function setDmHash($dmHash)
     {
-      $this->dmHash = $dmHash;
-      return $this;
+        $this->dmHash = $dmHash;
+        return $this;
     }
 
     /**
@@ -108,7 +122,7 @@ class tReturnedMessageEnvelope
      */
     public function getDmQTimestamp()
     {
-      return $this->dmQTimestamp;
+        return $this->dmQTimestamp;
     }
 
     /**
@@ -117,8 +131,8 @@ class tReturnedMessageEnvelope
      */
     public function setDmQTimestamp($dmQTimestamp)
     {
-      $this->dmQTimestamp = $dmQTimestamp;
-      return $this;
+        $this->dmQTimestamp = $dmQTimestamp;
+        return $this;
     }
 
     /**
@@ -126,15 +140,15 @@ class tReturnedMessageEnvelope
      */
     public function getDmDeliveryTime()
     {
-      if ($this->dmDeliveryTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmDeliveryTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmDeliveryTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -143,8 +157,8 @@ class tReturnedMessageEnvelope
      */
     public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-      $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -152,15 +166,15 @@ class tReturnedMessageEnvelope
      */
     public function getDmAcceptanceTime()
     {
-      if ($this->dmAcceptanceTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmAcceptanceTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmAcceptanceTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmAcceptanceTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -169,8 +183,8 @@ class tReturnedMessageEnvelope
      */
     public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-      $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -178,7 +192,7 @@ class tReturnedMessageEnvelope
      */
     public function getDmMessageStatus()
     {
-      return $this->dmMessageStatus;
+        return $this->dmMessageStatus;
     }
 
     /**
@@ -187,8 +201,8 @@ class tReturnedMessageEnvelope
      */
     public function setDmMessageStatus($dmMessageStatus)
     {
-      $this->dmMessageStatus = $dmMessageStatus;
-      return $this;
+        $this->dmMessageStatus = $dmMessageStatus;
+        return $this;
     }
 
     /**
@@ -196,7 +210,7 @@ class tReturnedMessageEnvelope
      */
     public function getDmAttachmentSize()
     {
-      return $this->dmAttachmentSize;
+        return $this->dmAttachmentSize;
     }
 
     /**
@@ -205,8 +219,8 @@ class tReturnedMessageEnvelope
      */
     public function setDmAttachmentSize($dmAttachmentSize)
     {
-      $this->dmAttachmentSize = $dmAttachmentSize;
-      return $this;
+        $this->dmAttachmentSize = $dmAttachmentSize;
+        return $this;
     }
 
     /**
@@ -214,7 +228,7 @@ class tReturnedMessageEnvelope
      */
     public function getDmType()
     {
-      return $this->dmType;
+        return $this->dmType;
     }
 
     /**
@@ -223,8 +237,43 @@ class tReturnedMessageEnvelope
      */
     public function setDmType($dmType)
     {
-      $this->dmType = $dmType;
-      return $this;
+        $this->dmType = $dmType;
+        return $this;
     }
 
+    /**
+     * @return boolean
+     */
+    public function getDmVODZ()
+    {
+        return $this->dmVODZ;
+    }
+
+    /**
+     * @param boolean $dmVODZ
+     * @return \Defr\CzechDataBox\Api\tReturnedMessageEnvelope
+     */
+    public function setDmVODZ($dmVODZ)
+    {
+        $this->dmVODZ = $dmVODZ;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAttsNum()
+    {
+        return $this->attsNum;
+    }
+
+    /**
+     * @param int $attsNum
+     * @return \Defr\CzechDataBox\Api\tReturnedMessageEnvelope
+     */
+    public function setAttsNum($attsNum)
+    {
+        $this->attsNum = $attsNum;
+        return $this;
+    }
 }

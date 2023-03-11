@@ -1,6 +1,7 @@
-composer.phar
-composer.lock
 vendor/
 .git/
 .idea/
 config.ini
+.phpunit.result.cache
+.phpcs-cache
+phpunit.xml

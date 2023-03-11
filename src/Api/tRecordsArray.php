@@ -15,7 +15,7 @@ class tRecordsArray
      */
     public function __construct($dmRecord = null)
     {
-      $this->dmRecord = $dmRecord;
+        $this->dmRecord = $dmRecord;
     }
 
     /**
@@ -23,7 +23,7 @@ class tRecordsArray
      */
     public function getDmRecord()
     {
-      return $this->dmRecord;
+        return $this->dmRecord;
     }
 
     /**
@@ -32,8 +32,7 @@ class tRecordsArray
      */
     public function setDmRecord($dmRecord)
     {
-      $this->dmRecord = $dmRecord;
-      return $this;
+        $this->dmRecord = $dmRecord;
+        return $this;
     }
-
 }

@@ -21,8 +21,8 @@ class tEraseMessageIntput
      */
     public function __construct($dmID = null, $dmIncoming = null)
     {
-      $this->dmID = $dmID;
-      $this->dmIncoming = $dmIncoming;
+        $this->dmID = $dmID;
+        $this->dmIncoming = $dmIncoming;
     }
 
     /**
@@ -30,7 +30,7 @@ class tEraseMessageIntput
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
 
     /**
@@ -39,8 +39,8 @@ class tEraseMessageIntput
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tEraseMessageIntput
      */
     public function getDmIncoming()
     {
-      return $this->dmIncoming;
+        return $this->dmIncoming;
     }
 
     /**
@@ -57,8 +57,7 @@ class tEraseMessageIntput
      */
     public function setDmIncoming($dmIncoming)
     {
-      $this->dmIncoming = $dmIncoming;
-      return $this;
+        $this->dmIncoming = $dmIncoming;
+        return $this;
     }
-
 }

@@ -1,0 +1,211 @@
+﻿<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  *********************************************************************
+
+   verze: 3.03 (pouze pro Veřejný test ISDS)
+   klasifikace: Veřejný dokument    
+ 
+     WSDL pro služby manipulující s Velkoobjemovými zprávami (VoDZ)
+        CreateBigMessage
+        AutenticateBigMessage
+        UploadAttachment
+        DownloadAttachment
+        SignedBigMessageDownload
+        SignedSentBigMessageDownload
+        BigMessageDownload
+              
+   Změny:  
+     24.11.2021 verze 3.0 
+     24.05.2022 verze 3.01 - sjednocení verzí
+     31.10.2022 verze 3.03 - sjednocení verzí
+     
+************************************************************************ -->
+
+<definitions name="ISDS_VoDZ" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20"
+                                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                                   >
+                                
+  <types>
+    <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
+      <xs:include schemaLocation="dmBaseTypes.xsd" />
+    </xs:schema>
+  </types>
+  
+  <!-- ******************************************************************* -->
+
+  <message name="UploadAttachmentRequest">
+    <part name="parameter" element="tns:UploadAttachment" />        
+  </message>
+  <message name="UploadAttachmentResponse">
+    <part name="parameter" element="tns:UploadAttachmentResponse" />        
+  </message>
+
+    <message name="DownloadAttachmentRequest">
+        <part name="parameter" element="tns:DownloadAttachment" />
+    </message>
+    <message name="DownloadAttachmentResponse">
+        <part name="parameter" element="tns:DownloadAttachmentResponse" />
+    </message>
+
+    <message name="CreateBigMessageRequest">
+        <part name="parameter" element="tns:CreateBigMessage" />
+    </message>
+    <message name="CreateBigMessageResponse">
+        <part name="parameter" element="tns:CreateBigMessageResponse" />
+    </message>
+
+    <message name="AuthenticateBigMessageRequest">
+        <part name="parameter" element="tns:AuthenticateBigMessage" />
+    </message>
+    <message name="AuthenticateBigMessageResponse">
+        <part name="parameter" element="tns:AuthenticateBigMessageResponse" />
+    </message>
+
+    <message name="SignedBigMessageDownloadRequest">
+        <part name="parameter" element="tns:SignedBigMessageDownload" />
+    </message>
+    <message name="SignedBigMessageDownloadResponse">
+        <part name="parameter" element="tns:SignedBigMessageDownloadResponse" />
+    </message>
+
+    <message name="SignedSentBigMessageDownloadRequest">
+        <part name="parameter" element="tns:SignedSentBigMessageDownload" />
+    </message>
+    <message name="SignedSentBigMessageDownloadResponse">
+        <part name="parameter" element="tns:SignedSentBigMessageDownloadResponse" />
+    </message>
+
+    <message name="BigMessageDownloadRequest">
+        <part name="parameter" element="tns:BigMessageDownload" />
+    </message>
+    <message name="BigMessageDownloadResponse">
+        <part name="parameter" element="tns:BigMessageDownloadResponse" />
+    </message>
+
+    <!-- ******************************************************************* -->
+  <portType name="dmVoDZPortType">
+
+    <operation name="UploadAttachment">
+      <input message="tns:UploadAttachmentRequest"/>
+      <output message="tns:UploadAttachmentResponse"/>
+    </operation>
+
+      <operation name="DownloadAttachment">
+          <input message="tns:DownloadAttachmentRequest"/>
+          <output message="tns:DownloadAttachmentResponse"/>
+      </operation>
+
+      <operation name="CreateBigMessage">
+          <input message="tns:CreateBigMessageRequest"/>
+          <output message="tns:CreateBigMessageResponse"/>
+      </operation>
+
+      <operation name="AuthenticateBigMessage">
+          <input message="tns:AuthenticateBigMessageRequest"/>
+          <output message="tns:AuthenticateBigMessageResponse"/>
+      </operation>
+
+      <operation name="SignedBigMessageDownload">
+          <input message="tns:SignedBigMessageDownloadRequest"/>
+          <output message="tns:SignedBigMessageDownloadResponse"/>
+      </operation>
+
+      <operation name="SignedSentBigMessageDownload">
+          <input message="tns:SignedSentBigMessageDownloadRequest"/>
+          <output message="tns:SignedSentBigMessageDownloadResponse"/>
+      </operation>
+
+      <operation name="BigMessageDownload">
+          <input message="tns:BigMessageDownloadRequest"/>
+          <output message="tns:BigMessageDownloadResponse"/>
+      </operation>
+
+  </portType>
+
+  <!-- ******************************************************************* -->
+ <binding name="dmVoDZBinding" type="tns:dmVoDZPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+    <operation name="UploadAttachment">
+      <soap12:operation soapAction="" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+
+     <operation name="DownloadAttachment">
+         <soap12:operation soapAction="" />
+         <input>
+             <soap12:body use="literal" />
+         </input>
+         <output>
+             <soap12:body use="literal" />
+         </output>
+     </operation>
+
+     <operation name="CreateBigMessage">
+         <soap12:operation soapAction="" />
+         <input>
+             <soap12:body use="literal" />
+         </input>
+         <output>
+             <soap12:body use="literal" />
+         </output>
+     </operation>
+
+     <operation name="AuthenticateBigMessage">
+         <soap12:operation soapAction="" />
+         <input>
+             <soap12:body use="literal" />
+         </input>
+         <output>
+             <soap12:body use="literal" />
+         </output>
+     </operation>
+
+     <operation name="SignedBigMessageDownload">
+         <soap12:operation soapAction="" />
+         <input>
+             <soap12:body use="literal" />
+         </input>
+         <output>
+             <soap12:body use="literal" />
+         </output>
+     </operation>
+
+     <operation name="SignedSentBigMessageDownload">
+         <soap12:operation soapAction="" />
+         <input>
+             <soap12:body use="literal" />
+         </input>
+         <output>
+             <soap12:body use="literal" />
+         </output>
+     </operation>
+
+     <operation name="BigMessageDownload">
+         <soap12:operation soapAction="" />
+         <input>
+             <soap12:body use="literal" />
+         </input>
+         <output>
+             <soap12:body use="literal" />
+         </output>
+     </operation>
+
+ </binding>
+
+  <!-- ******************************************************************* -->
+  <service name="dmVoDZWebService">
+    <port name="dmVoDZPortType" binding="tns:dmVoDZBinding">
+      <soap12:address location="https://ws2.czebox.cz/DS/vodz"/>
+    </port>
+  </service>
+
+</definitions>
+

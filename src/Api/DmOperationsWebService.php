@@ -19,6 +19,7 @@ class DmOperationsWebService extends \SoapClient
       'tEventsArray' => 'Defr\\CzechDataBox\\Api\\tEventsArray',
       'tRecipients' => 'Defr\\CzechDataBox\\Api\\tRecipients',
       'tMultipleMessageEnvelopeSub' => 'Defr\\CzechDataBox\\Api\\tMultipleMessageEnvelopeSub',
+      'dmPublishOwnID' => 'Defr\\CzechDataBox\\Api\\dmPublishOwnID',
       'tMultipleMessageRecipients' => 'Defr\\CzechDataBox\\Api\\tMultipleMessageRecipients',
       'tMultipleMessageCreateInput' => 'Defr\\CzechDataBox\\Api\\tMultipleMessageCreateInput',
       'dmEnvelope' => 'Defr\\CzechDataBox\\Api\\dmEnvelope',
@@ -45,7 +46,6 @@ class DmOperationsWebService extends \SoapClient
       'tMessEnvelDownOutput' => 'Defr\\CzechDataBox\\Api\\tMessEnvelDownOutput',
       'tSignedMessDownOutput' => 'Defr\\CzechDataBox\\Api\\tSignedMessDownOutput',
       'tMarkMessOutput' => 'Defr\\CzechDataBox\\Api\\tMarkMessOutput',
-      'tConfirmDeliveryOutput' => 'Defr\\CzechDataBox\\Api\\tConfirmDeliveryOutput',
       'tAuthenticateMessageInput' => 'Defr\\CzechDataBox\\Api\\tAuthenticateMessageInput',
       'tAuthenticateMessageOutput' => 'Defr\\CzechDataBox\\Api\\tAuthenticateMessageOutput',
       'tGetStateChangesInput' => 'Defr\\CzechDataBox\\Api\\tGetStateChangesInput',
@@ -58,6 +58,39 @@ class DmOperationsWebService extends \SoapClient
       'tEraseMessageOutput' => 'Defr\\CzechDataBox\\Api\\tEraseMessageOutput',
       'tResignDocInput' => 'Defr\\CzechDataBox\\Api\\tResignDocInput',
       'tResignDocOutput' => 'Defr\\CzechDataBox\\Api\\tResignDocOutput',
+      'tGetListOfErasedInput' => 'Defr\\CzechDataBox\\Api\\tGetListOfErasedInput',
+      'tGetListOfErasedOutput' => 'Defr\\CzechDataBox\\Api\\tGetListOfErasedOutput',
+      'tPickUpAsyncInput' => 'Defr\\CzechDataBox\\Api\\tPickUpAsyncInput',
+      'tPickUpAsyncOutput' => 'Defr\\CzechDataBox\\Api\\tPickUpAsyncOutput',
+      'tListForNotifInput' => 'Defr\\CzechDataBox\\Api\\tListForNotifInput',
+      'tListForNotifOutput' => 'Defr\\CzechDataBox\\Api\\tListForNotifOutput',
+      'tNtfRecordsArray' => 'Defr\\CzechDataBox\\Api\\tNtfRecordsArray',
+      'tNtfRecord' => 'Defr\\CzechDataBox\\Api\\tNtfRecord',
+      'RegisterForNotifications' => 'Defr\\CzechDataBox\\Api\\RegisterForNotifications',
+      'RegisterForNotificationsResponse' => 'Defr\\CzechDataBox\\Api\\RegisterForNotificationsResponse',
+      'UploadAttachment' => 'Defr\\CzechDataBox\\Api\\UploadAttachment',
+      'UploadAttachmentResponse' => 'Defr\\CzechDataBox\\Api\\UploadAttachmentResponse',
+      'dmAttHash1' => 'Defr\\CzechDataBox\\Api\\dmAttHash1',
+      'dmAttHash2' => 'Defr\\CzechDataBox\\Api\\dmAttHash2',
+      'DownloadAttachment' => 'Defr\\CzechDataBox\\Api\\DownloadAttachment',
+      'DownloadAttachmentResponse' => 'Defr\\CzechDataBox\\Api\\DownloadAttachmentResponse',
+      'tBigMessageInput' => 'Defr\\CzechDataBox\\Api\\tBigMessageInput',
+      'dmFiles' => 'Defr\\CzechDataBox\\Api\\dmFiles',
+      'dmExtFile' => 'Defr\\CzechDataBox\\Api\\dmExtFile',
+      'tBigMessEnvelope' => 'Defr\\CzechDataBox\\Api\\tBigMessEnvelope',
+      'tBigMessageOutput' => 'Defr\\CzechDataBox\\Api\\tBigMessageOutput',
+      'AuthenticateBigMessage' => 'Defr\\CzechDataBox\\Api\\AuthenticateBigMessage',
+      'AuthenticateBigMessageResponse' => 'Defr\\CzechDataBox\\Api\\AuthenticateBigMessageResponse',
+      'SignedBigMessageDownload' => 'Defr\\CzechDataBox\\Api\\SignedBigMessageDownload',
+      'SignedBigMessageDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SignedBigMessageDownloadResponse',
+      'SignedSentBigMessageDownload' => 'Defr\\CzechDataBox\\Api\\SignedSentBigMessageDownload',
+      'SignedSentBigMessageDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SignedSentBigMessageDownloadResponse',
+      'BigMessageDownload' => 'Defr\\CzechDataBox\\Api\\BigMessageDownload',
+      'BigMessageDownloadResponse' => 'Defr\\CzechDataBox\\Api\\BigMessageDownloadResponse',
+      'dmReturnedMessage' => 'Defr\\CzechDataBox\\Api\\dmReturnedMessage',
+      'GetMessageAuthor2Response' => 'Defr\\CzechDataBox\\Api\\GetMessageAuthor2Response',
+      'dmMessageAuthor' => 'Defr\\CzechDataBox\\Api\\dmMessageAuthor',
+      'maItem' => 'Defr\\CzechDataBox\\Api\\maItem',
     );
 
     /**
@@ -66,18 +99,18 @@ class DmOperationsWebService extends \SoapClient
      */
     public function __construct(array $options = array(), $wsdl = null)
     {
-      foreach (self::$classmap as $key => $value) {
-        if (!isset($options['classmap'][$key])) {
-          $options['classmap'][$key] = $value;
+        foreach (self::$classmap as $key => $value) {
+            if (!isset($options['classmap'][$key])) {
+                $options['classmap'][$key] = $value;
+            }
         }
-      }
-      $options = array_merge(array (
-      'features' => 1,
-    ), $options);
-      if (!$wsdl) {
-        $wsdl = '/Users/dennis/sites/isas/vendor/dfridrich/czech-data-box/Resources/dm_operations.wsdl';
-      }
-      parent::__construct($wsdl, $options);
+        $options = array_merge(array (
+        'features' => 1,
+        ), $options);
+        if (!$wsdl) {
+            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/dm_operations.wsdl';
+        }
+        parent::__construct($wsdl, $options);
     }
 
     /**
@@ -86,7 +119,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function CreateMessage(tMessageCreateInput $parameter)
     {
-      return $this->__soapCall('CreateMessage', array($parameter));
+        return $this->__soapCall('CreateMessage', array($parameter));
     }
 
     /**
@@ -95,7 +128,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function MessageDownload(tIDMessInput $parameter)
     {
-      return $this->__soapCall('MessageDownload', array($parameter));
+        return $this->__soapCall('MessageDownload', array($parameter));
     }
 
     /**
@@ -104,7 +137,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function SignedMessageDownload(tIDMessInput $parameter)
     {
-      return $this->__soapCall('SignedMessageDownload', array($parameter));
+        return $this->__soapCall('SignedMessageDownload', array($parameter));
     }
 
     /**
@@ -113,7 +146,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function SignedSentMessageDownload(tIDMessInput $parameter)
     {
-      return $this->__soapCall('SignedSentMessageDownload', array($parameter));
+        return $this->__soapCall('SignedSentMessageDownload', array($parameter));
     }
 
     /**
@@ -122,7 +155,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function DummyOperation($parameter)
     {
-      return $this->__soapCall('DummyOperation', array($parameter));
+        return $this->__soapCall('DummyOperation', array($parameter));
     }
 
     /**
@@ -131,7 +164,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function CreateMultipleMessage(tMultipleMessageCreateInput $parameter)
     {
-      return $this->__soapCall('CreateMultipleMessage', array($parameter));
+        return $this->__soapCall('CreateMultipleMessage', array($parameter));
     }
 
     /**
@@ -140,7 +173,6 @@ class DmOperationsWebService extends \SoapClient
      */
     public function AuthenticateMessage(tAuthenticateMessageInput $parameter)
     {
-      return $this->__soapCall('AuthenticateMessage', array($parameter));
+        return $this->__soapCall('AuthenticateMessage', array($parameter));
     }
-
 }

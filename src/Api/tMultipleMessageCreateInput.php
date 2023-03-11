@@ -27,9 +27,9 @@ class tMultipleMessageCreateInput
      */
     public function __construct($dmRecipients = null, $dmEnvelope = null, $dmFiles = null)
     {
-      $this->dmRecipients = $dmRecipients;
-      $this->dmEnvelope = $dmEnvelope;
-      $this->dmFiles = $dmFiles;
+        $this->dmRecipients = $dmRecipients;
+        $this->dmEnvelope = $dmEnvelope;
+        $this->dmFiles = $dmFiles;
     }
 
     /**
@@ -37,7 +37,7 @@ class tMultipleMessageCreateInput
      */
     public function getDmRecipients()
     {
-      return $this->dmRecipients;
+        return $this->dmRecipients;
     }
 
     /**
@@ -46,8 +46,8 @@ class tMultipleMessageCreateInput
      */
     public function setDmRecipients($dmRecipients)
     {
-      $this->dmRecipients = $dmRecipients;
-      return $this;
+        $this->dmRecipients = $dmRecipients;
+        return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tMultipleMessageCreateInput
      */
     public function getDmEnvelope()
     {
-      return $this->dmEnvelope;
+        return $this->dmEnvelope;
     }
 
     /**
@@ -64,8 +64,8 @@ class tMultipleMessageCreateInput
      */
     public function setDmEnvelope($dmEnvelope)
     {
-      $this->dmEnvelope = $dmEnvelope;
-      return $this;
+        $this->dmEnvelope = $dmEnvelope;
+        return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tMultipleMessageCreateInput
      */
     public function getDmFiles()
     {
-      return $this->dmFiles;
+        return $this->dmFiles;
     }
 
     /**
@@ -82,8 +82,7 @@ class tMultipleMessageCreateInput
      */
     public function setDmFiles($dmFiles)
     {
-      $this->dmFiles = $dmFiles;
-      return $this;
+        $this->dmFiles = $dmFiles;
+        return $this;
     }
-
 }

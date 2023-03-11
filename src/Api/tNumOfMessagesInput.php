@@ -13,7 +13,6 @@ class tNumOfMessagesInput
     
     public function __construct()
     {
-    
     }
 
     /**
@@ -21,7 +20,7 @@ class tNumOfMessagesInput
      */
     public function getStatType()
     {
-      return $this->statType;
+        return $this->statType;
     }
 
     /**
@@ -30,8 +29,7 @@ class tNumOfMessagesInput
      */
     public function setStatType($statType)
     {
-      $this->statType = $statType;
-      return $this;
+        $this->statType = $statType;
+        return $this;
     }
-
 }

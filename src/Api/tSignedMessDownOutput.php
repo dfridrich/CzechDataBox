@@ -21,8 +21,8 @@ class tSignedMessDownOutput
      */
     public function __construct($dmSignature = null, $dmStatus = null)
     {
-      $this->dmSignature = $dmSignature;
-      $this->dmStatus = $dmStatus;
+        $this->dmSignature = $dmSignature;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tSignedMessDownOutput
      */
     public function getDmSignature()
     {
-      return $this->dmSignature;
+        return $this->dmSignature;
     }
 
     /**
@@ -39,8 +39,8 @@ class tSignedMessDownOutput
      */
     public function setDmSignature($dmSignature)
     {
-      $this->dmSignature = $dmSignature;
-      return $this;
+        $this->dmSignature = $dmSignature;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tSignedMessDownOutput
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class tSignedMessDownOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }
