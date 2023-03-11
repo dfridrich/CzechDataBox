@@ -31,6 +31,8 @@ jobs:
             -   name: Install dependencies
                 run: composer install --prefer-dist --dev
 
+            -   run: composer check
+
             -   run: phpunit
                 env:
                     DATABOX_LOGIN: ${{ secrets.DATABOX_LOGIN }}
