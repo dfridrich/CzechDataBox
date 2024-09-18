@@ -131,6 +131,38 @@ if ($sentMessage->getDmStatus()->getDmStatusCode() !== "0000") {
 }
 ```
 
+### Odeslání VODz datové zprávy včetně přílohy
+
+Příklad odeslání VoDZ. Nejprve se provádí nahrání přílohy metodou UploadAttachment, v response jsou vrácené HASH řetězce které se následně odesílají při sestavení VoDZ zprávy.
+
+```php
+
+// nahrani souboru VoDZ
+$uploadAttachment = $this->getUploadAttachment();
+$responseUploadAttachment = $vodzClient->UploadAttachment($uploadAttachment);
+
+$envelope = $this->getBigEnvelope();
+$dmExtFile = $this->getDmExtFile($responseUploadAttachment);
+
+// nahrani běžné přílohy
+$attachments2 = $this->getDmFile();
+
+$dmFiles = new dmFiles();
+$dmFiles->setDmExtFile($dmExtFile);
+$dmFiles->setDmFile($attachments2[0]);
+
+// vytvoření VoDZ zprávy
+$bigMessage = new tBigMessageInput();
+$bigMessage->setDmEnvelope($envelope);
+$bigMessage->setDmFiles($dmFiles);
+
+// odeslání zprávy
+$sentMessage = $vodzClient->CreateBigMessage($bigMessage);
+if ($sentMessage->getDmStatus()->getDmStatusCode() !== "0000") {
+    // Handle errors
+}
+```
+
 ## Závěrem
 
 Všechny příklady nejdete ve složce examples. Pro připojení k datové schránce budete potřebovat login a heslo nebo testovací přístup, který lze získat na základě vyplnění [tohoto formuláře](https://www.datoveschranky.info/documents/1744842/1746073/zadost_zrizeni_testovaci_ds.zfo/4b75d5bf-0272-4305-9cef-8ec8f019e9d3).

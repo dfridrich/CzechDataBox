@@ -1,5 +1,5 @@
 {
-    "name": "dfridrich/czech-data-box",
+    "name": "davidfoltyn/czech-data-box",
     "type": "library",
     "description": "Knihovna pro komunikaci s datovou schránkou v PHP.",
     "keywords": [
@@ -8,12 +8,16 @@
         "ISDS",
         "Datové schránky"
     ],
-    "homepage": "https://github.com/dfridrich/CzechDataBox",
+    "homepage": "https://github.com/davidfoltyn/CzechDataBox",
     "license": "MIT",
     "authors": [
         {
             "name": "Dennis Fridrich",
             "email": "fridrich.dennis@gmail.com"
+        },
+        {
+            "name": "David Foltýn",
+            "email": "mail@davidfoltyn.cz"
         }
     ],
     "require": {
