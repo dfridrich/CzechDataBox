@@ -1,10 +1,9 @@
 # CzechDataBox
 
-[![PHPUnit](https://github.com/dfridrich/CzechDataBox/actions/workflows/test.yaml/badge.svg)](https://github.com/dfridrich/CzechDataBox/actions/workflows/test.yaml)
-[![Latest Stable Version](https://poser.pugx.org/dfridrich/czech-data-box/v/stable)](https://packagist.org/packages/dfridrich/czech-data-box)
-[![Total Downloads](https://poser.pugx.org/dfridrich/czech-data-box/downloads)](https://packagist.org/packages/dfridrich/czech-data-box)
-[![Monthly Downloads](https://poser.pugx.org/dfridrich/czech-data-box/d/monthly)](https://packagist.org/packages/dfridrich/czech-data-box)
-[![License](https://poser.pugx.org/dfridrich/czech-data-box/license)](https://packagist.org/packages/dfridrich/czech-data-box)
+[![Latest Stable Version](https://poser.pugx.org/davidfoltyn/czech-data-box/v/stable)](https://packagist.org/packages/davidfoltyn/czech-data-box)
+[![Total Downloads](https://poser.pugx.org/davidfoltyn/czech-data-box/downloads)](https://packagist.org/packages/davidfoltyn/czech-data-box)
+[![Monthly Downloads](https://poser.pugx.org/davidfoltyn/czech-data-box/d/monthly)](https://packagist.org/packages/davidfoltyn/czech-data-box)
+[![License](https://poser.pugx.org/davidfoltyn/czech-data-box/license)](https://packagist.org/packages/davidfoltyn/czech-data-box)
 
 
 Knihovna pro komunikaci s datovou schránkou v PHP.
@@ -13,7 +12,7 @@ Knihovna pro komunikaci s datovou schránkou v PHP.
 
 ## Instalace pomocí Composeru
 
-`composer require dfridrich/czech-data-box`
+`composer require davidfoltyn/czech-data-box`
 
 ## Příklady
 
@@ -174,10 +173,4 @@ Jakmile přístupové údaje budete mít, vytvořte config.ini (z config.ini.dis
 - Testovací prostředí datových schránek - https://www.czebox.cz/
 - Ostré prostředí datových schránek - https://www.mojedatovaschranka.cz/
 
-## Contributing
 
-Budu rád za každý návrh na vylepšení :-)
-
-## @TODO
-
-- Jednoduché hledání na základě jména, příjmení nebo názvu firmy nebo úřadu
