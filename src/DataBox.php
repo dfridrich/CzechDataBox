@@ -6,6 +6,7 @@ use Defr\CzechDataBox\Api\DataBoxAccess;
 use Defr\CzechDataBox\Api\DataBoxSearch;
 use Defr\CzechDataBox\Api\DmInfoWebService;
 use Defr\CzechDataBox\Api\DmOperationsWebService;
+use Defr\CzechDataBox\Api\DmVoDZWebService;
 use Defr\CzechDataBox\Api\IsdsStat;
 use Exception;
 use SoapClient;
@@ -167,6 +168,10 @@ class DataBox
     private function getServiceURL($serviceType)
     {
         $res = 'https://ws1';
+        if ($serviceType === DataBoxHelper::VODZ_WS) {
+            $res = 'https://ws2';
+        }
+
         if (0 !== $this->loginType) {
             $res .= 'c';
         }
@@ -184,6 +189,9 @@ class DataBox
         $res .= 'DS/';
 
         switch ($serviceType) {
+            case DataBoxHelper::VODZ_WS:
+                $res .= 'vodz';
+                break;
             case DataBoxHelper::OPERATIONS_WS:
                 $res .= 'dz';
                 break;
@@ -224,6 +232,7 @@ class DataBox
             DataBoxHelper::SEARCH_WS => $directory.'db_search.wsdl',
             DataBoxHelper::ACCESS_WS => $directory.'db_access.wsdl',
             DataBoxHelper::STAT_WS => $directory.'isds_stat.wsdl',
+            DataBoxHelper::VODZ_WS => $directory.'dm_VoDZ.wsdl',
             default => throw new DataBoxException(sprintf('Service type %s not implemented.', $serviceType)),
         };
     }
@@ -258,6 +267,18 @@ class DataBox
     {
         $this->actualWsdl = $this->getServiceWSDL($service);
         $this->actualOptions = $this->getSoapOptions($service);
+    }
+
+    /**
+     * @return DmVoDZWebService
+     */
+    public function DmVoDZWebService()
+    {
+        $this->setActualService(DataBoxHelper::VODZ_WS);
+        $soap = new DmVoDZWebService($this->actualOptions, $this->actualWsdl);
+        $this->actualSoap = $soap;
+
+        return $soap;
     }
 
 

@@ -11,9 +11,10 @@ class tBigMessageInput
     protected $dmEnvelope = null;
 
     /**
-     * @var dmFiles $dmFiles
+     * @var dmFiles $dmFile
      */
     protected $dmFiles = null;
+
 
     /**
      * @param tBigMessEnvelope $dmEnvelope
