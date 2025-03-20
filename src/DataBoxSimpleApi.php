@@ -293,7 +293,7 @@ class DataBoxSimpleApi
         $attachments = array_map(
             static function ($filePath) {
                 $file = new dmFile();
-                $file->setDmMimeType(mime_content_type($filePath));
+                $file->setDmMimeType(self::mimeType($filePath));
                 $file->setDmFileDescr(basename($filePath));
                 $file->setDmEncodedContent(file_get_contents($filePath));
                 return $file;
@@ -386,5 +386,32 @@ class DataBoxSimpleApi
         $location = $this->dataBox->getDirectory().'/'.$subFolder.'/'.$messageId.'/'.$fileName;
 
         return new DataBoxMessageAttachment($location);
+    }
+
+
+    /**
+     * @param $fileName
+     * @return false|string
+     */
+    private static function mimeType($fileName): bool|string
+    {
+        $mime_types = array(
+            'isdoc' => 'application/zip',
+            'isdocx' => 'text/xml',
+            'zfo' => 'application/vnd.software602.filler.form-xml-zip',
+        );
+
+        if (!str_contains($fileName, '.')) {
+            $ext = '';
+        } else {
+            $a = explode('.', $fileName);
+            $ext = strtolower(array_pop($a));
+        }
+
+        if (array_key_exists($ext, $mime_types)) {
+            return $mime_types[$ext];
+        }
+
+        return mime_content_type($fileName);
     }
 }
