@@ -16,10 +16,10 @@ class tListForNotifInput
     protected $ntfScope = null;
 
     /**
-     * @param \DateTime $ntfFromTime
+     * @param \DateTime|null $ntfFromTime
      * @param string $ntfScope
      */
-    public function __construct(\DateTime $ntfFromTime = null, $ntfScope = null)
+    public function __construct(?\DateTime $ntfFromTime = null, $ntfScope = null)
     {
         $this->ntfFromTime = $ntfFromTime ? $ntfFromTime->format(\DateTime::ATOM) : null;
         $this->ntfScope = $ntfScope;

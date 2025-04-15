@@ -59,15 +59,15 @@ class tReturnedMessageEnvelope
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
-     * @param \DateTime $dmDeliveryTime
-     * @param \DateTime $dmAcceptanceTime
+     * @param \DateTime|null $dmDeliveryTime
+     * @param \DateTime|null $dmAcceptanceTime
      * @param int $dmMessageStatus
      * @param int $dmAttachmentSize
      * @param tDmType $dmType
      * @param boolean $dmVODZ
      * @param int $attsNum
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $dmVODZ = null, $attsNum = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, ?\DateTime $dmDeliveryTime = null, ?\DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $dmVODZ = null, $attsNum = null)
     {
         $this->dmDm = $dmDm;
         $this->dmHash = $dmHash;

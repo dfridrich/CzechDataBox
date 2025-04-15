@@ -21,9 +21,9 @@ class tNumOfMessagesOutput
     protected $dbStatus = null;
 
     /**
-     * @param \DateTime $statTime
+     * @param \DateTime|null $statTime
      */
-    public function __construct(\DateTime $statTime = null)
+    public function __construct(?\DateTime $statTime = null)
     {
         $this->statTime = $statTime ? $statTime->format(\DateTime::ATOM) : null;
     }

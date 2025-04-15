@@ -16,10 +16,10 @@ class tGetPasswInfoOutput
     protected $dbStatus = null;
 
     /**
-     * @param \DateTime $pswExpDate
+     * @param \DateTime|null $pswExpDate
      * @param tDbReqStatus $dbStatus
      */
-    public function __construct(\DateTime $pswExpDate = null, $dbStatus = null)
+    public function __construct(?\DateTime $pswExpDate = null, $dbStatus = null)
     {
         $this->pswExpDate = $pswExpDate ? $pswExpDate->format(\DateTime::ATOM) : null;
         $this->dbStatus = $dbStatus;

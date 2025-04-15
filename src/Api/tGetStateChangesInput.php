@@ -16,10 +16,10 @@ class tGetStateChangesInput
     protected $dmToTime = null;
 
     /**
-     * @param \DateTime $dmFromTime
-     * @param \DateTime $dmToTime
+     * @param \DateTime|null $dmFromTime
+     * @param \DateTime|null $dmToTime
      */
-    public function __construct(\DateTime $dmFromTime = null, \DateTime $dmToTime = null)
+    public function __construct(?\DateTime $dmFromTime = null, ?\DateTime $dmToTime = null)
     {
         $this->dmFromTime = $dmFromTime ? $dmFromTime->format(\DateTime::ATOM) : null;
         $this->dmToTime = $dmToTime ? $dmToTime->format(\DateTime::ATOM) : null;

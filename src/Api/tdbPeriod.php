@@ -25,7 +25,7 @@ class tdbPeriod
      * @param \DateTime $PeriodTo
      * @param int $DbState
      */
-    public function __construct(\DateTime $PeriodFrom = null, \DateTime $PeriodTo = null, $DbState = null)
+    public function __construct(?\DateTime $PeriodFrom = null, ?\DateTime $PeriodTo = null, $DbState = null)
     {
         $this->PeriodFrom = $PeriodFrom ? $PeriodFrom->format(\DateTime::ATOM) : null;
         $this->PeriodTo = $PeriodTo ? $PeriodTo->format(\DateTime::ATOM) : null;
