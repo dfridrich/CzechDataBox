@@ -76,7 +76,7 @@ class tCiRecord
     protected $ciDoneBy = null;
 
     /**
-     * @param \DateTime $ciEventTime
+     * @param \DateTime|null $ciEventTime
      * @param int $ciEventType
      * @param int $ciCreditChange
      * @param int $ciCreditAfter
@@ -91,7 +91,7 @@ class tCiRecord
      * @param date $ciOldTo
      * @param string $ciDoneBy
      */
-    public function __construct(\DateTime $ciEventTime = null, $ciEventType = null, $ciCreditChange = null, $ciCreditAfter = null, $ciTransID = null, $ciRecipientID = null, $ciPDZID = null, $ciNewCapacity = null, $ciNewFrom = null, $ciNewTo = null, $ciOldCapacity = null, $ciOldFrom = null, $ciOldTo = null, $ciDoneBy = null)
+    public function __construct(?\DateTime $ciEventTime = null, $ciEventType = null, $ciCreditChange = null, $ciCreditAfter = null, $ciTransID = null, $ciRecipientID = null, $ciPDZID = null, $ciNewCapacity = null, $ciNewFrom = null, $ciNewTo = null, $ciOldCapacity = null, $ciOldFrom = null, $ciOldTo = null, $ciDoneBy = null)
     {
         $this->ciEventTime = $ciEventTime ? $ciEventTime->format(\DateTime::ATOM) : null;
         $this->ciEventType = $ciEventType;

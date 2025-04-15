@@ -36,14 +36,14 @@ class tListOfSentInput
     protected $dmLimit = null;
 
     /**
-     * @param \DateTime $dmFromTime
-     * @param \DateTime $dmToTime
+     * @param \DateTime|null $dmFromTime
+     * @param \DateTime|null $dmToTime
      * @param int $dmSenderOrgUnitNum
      * @param string $dmStatusFilter
      * @param int $dmOffset
      * @param int $dmLimit
      */
-    public function __construct(\DateTime $dmFromTime = null, \DateTime $dmToTime = null, $dmSenderOrgUnitNum = null, $dmStatusFilter = null, $dmOffset = null, $dmLimit = null)
+    public function __construct(?\DateTime $dmFromTime = null, ?\DateTime $dmToTime = null, $dmSenderOrgUnitNum = null, $dmStatusFilter = null, $dmOffset = null, $dmLimit = null)
     {
         $this->dmFromTime = $dmFromTime ? $dmFromTime->format(\DateTime::ATOM) : null;
         $this->dmToTime = $dmToTime ? $dmToTime->format(\DateTime::ATOM) : null;

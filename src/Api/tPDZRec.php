@@ -39,11 +39,11 @@ class tPDZRec
      * @param string $PDZType
      * @param tIdDb $PDZRecip
      * @param tIdDb $PDZPayer
-     * @param \DateTime $PDZExpire
+     * @param \DateTime|null $PDZExpire
      * @param int $PDZCnt
      * @param string $ODZIdent
      */
-    public function __construct($PDZType = null, $PDZRecip = null, $PDZPayer = null, \DateTime $PDZExpire = null, $PDZCnt = null, $ODZIdent = null)
+    public function __construct($PDZType = null, $PDZRecip = null, $PDZPayer = null, ?\DateTime $PDZExpire = null, $PDZCnt = null, $ODZIdent = null)
     {
         $this->PDZType = $PDZType;
         $this->PDZRecip = $PDZRecip;

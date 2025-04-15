@@ -49,13 +49,13 @@ class tNtfRecord
      * @param int $ntfType
      * @param tIdDm $dmID
      * @param int $dmPersonalDelivery
-     * @param \DateTime $dmDeliveryTime
+     * @param \DateTime|null $dmDeliveryTime
      * @param tIdDb $dbIDRecipient
      * @param string $dmAnnotation
      * @param tIdDb $dbIDSender
      * @param string $dmSender
      */
-    public function __construct($ntfType = null, $dmID = null, $dmPersonalDelivery = null, \DateTime $dmDeliveryTime = null, $dbIDRecipient = null, $dmAnnotation = null, $dbIDSender = null, $dmSender = null)
+    public function __construct($ntfType = null, $dmID = null, $dmPersonalDelivery = null, ?\DateTime $dmDeliveryTime = null, $dbIDRecipient = null, $dmAnnotation = null, $dbIDSender = null, $dmSender = null)
     {
         $this->ntfType = $ntfType;
         $this->dmID = $dmID;

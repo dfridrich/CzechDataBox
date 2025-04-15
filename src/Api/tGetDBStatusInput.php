@@ -22,10 +22,10 @@ class tGetDBStatusInput
 
     /**
      * @param tIdDb $dbID
-     * @param \DateTime $baFrom
-     * @param \DateTime $baTo
+     * @param \DateTime|null $baFrom
+     * @param \DateTime|null $baTo
      */
-    public function __construct($dbID = null, \DateTime $baFrom = null, \DateTime $baTo = null)
+    public function __construct($dbID = null, ?\DateTime $baFrom = null, ?\DateTime $baTo = null)
     {
         $this->dbID = $dbID;
         $this->baFrom = $baFrom ? $baFrom->format(\DateTime::ATOM) : null;

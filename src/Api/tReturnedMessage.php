@@ -49,13 +49,13 @@ class tReturnedMessage
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
-     * @param \DateTime $dmDeliveryTime
-     * @param \DateTime $dmAcceptanceTime
+     * @param \DateTime|null $dmDeliveryTime
+     * @param \DateTime|null $dmAcceptanceTime
      * @param int $dmMessageStatus
      * @param int $dmAttachmentSize
      * @param tDmType $dmType
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, ?\DateTime $dmDeliveryTime = null, ?\DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null)
     {
         $this->dmDm = $dmDm;
         $this->dmHash = $dmHash;
