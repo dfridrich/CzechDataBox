@@ -22,10 +22,10 @@ class tStateChangesRecord
 
     /**
      * @param tIdDm $dmID
-     * @param \DateTime $dmEventTime
+     * @param \DateTime|null $dmEventTime
      * @param int $dmMessageStatus
      */
-    public function __construct($dmID = null, \DateTime $dmEventTime = null, $dmMessageStatus = null)
+    public function __construct($dmID = null, ?\DateTime $dmEventTime = null, $dmMessageStatus = null)
     {
         $this->dmID = $dmID;
         $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;

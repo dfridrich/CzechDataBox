@@ -44,12 +44,12 @@ class tDelivery
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
-     * @param \DateTime $dmDeliveryTime
-     * @param \DateTime $dmAcceptanceTime
+     * @param \DateTime|null $dmDeliveryTime
+     * @param \DateTime|null $dmAcceptanceTime
      * @param int $dmMessageStatus
      * @param tEventsArray $dmEvents
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmEvents = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, ?\DateTime $dmDeliveryTime = null, ?\DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmEvents = null)
     {
         $this->dmDm = $dmDm;
         $this->dmHash = $dmHash;

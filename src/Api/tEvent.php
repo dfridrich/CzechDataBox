@@ -16,10 +16,10 @@ class tEvent
     protected $dmEventDescr = null;
 
     /**
-     * @param \DateTime $dmEventTime
+     * @param \DateTime|null $dmEventTime
      * @param string $dmEventDescr
      */
-    public function __construct(\DateTime $dmEventTime = null, $dmEventDescr = null)
+    public function __construct(?\DateTime $dmEventTime = null, $dmEventDescr = null)
     {
         $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
         $this->dmEventDescr = $dmEventDescr;
