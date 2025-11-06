@@ -2,8 +2,22 @@
 
 namespace Defr\CzechDataBox\Api;
 
+use Defr\CzechDataBox\DataBoxException;
+
 class DataBoxSearch extends \SoapClient
 {
+
+    #[\ReturnTypeWillChange]
+    public function __doRequest($request, $location, $action, $version, $oneWay = false)
+    {
+        $response = parent::__doRequest($request, $location, $action, $version, $oneWay);
+
+        if (false !== strpos($response, 'Authentication required!')) {
+            throw new DataBoxException('Authentication required, check your credentials.');
+        }
+
+        return $response;
+    }
 
     /**
      * @var array $classmap The defined classes
