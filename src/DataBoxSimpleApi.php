@@ -35,8 +35,14 @@ use function substr;
  */
 class DataBoxSimpleApi
 {
-    public function __construct(private DataBox $dataBox)
+    /**
+     * @var DataBox
+     */
+    private $dataBox;
+
+    public function __construct(DataBox $dataBox)
     {
+        $this->dataBox = $dataBox;
     }
 
 

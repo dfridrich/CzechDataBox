@@ -149,7 +149,7 @@ class DataBox
     {
         try {
             $this->simpleApi->getStats();
-        } catch (Exception) {
+        } catch (Exception $exception) {
             throw new DataBoxException("Can't connect to service.");
         }
 
@@ -218,14 +218,20 @@ class DataBox
     {
         $directory = __DIR__.'/../Resources/';
 
-        return match ($serviceType) {
-            DataBoxHelper::OPERATIONS_WS => $directory.'dm_operations.wsdl',
-            DataBoxHelper::INFO_WS => $directory.'dm_info.wsdl',
-            DataBoxHelper::SEARCH_WS => $directory.'db_search.wsdl',
-            DataBoxHelper::ACCESS_WS => $directory.'db_access.wsdl',
-            DataBoxHelper::STAT_WS => $directory.'isds_stat.wsdl',
-            default => throw new DataBoxException(sprintf('Service type %s not implemented.', $serviceType)),
-        };
+        switch ($serviceType) {
+            case DataBoxHelper::OPERATIONS_WS:
+                return $directory.'dm_operations.wsdl';
+            case DataBoxHelper::INFO_WS:
+                return $directory.'dm_info.wsdl';
+            case DataBoxHelper::SEARCH_WS:
+                return $directory.'db_search.wsdl';
+            case DataBoxHelper::ACCESS_WS:
+                return $directory.'db_access.wsdl';
+            case DataBoxHelper::STAT_WS:
+                return $directory.'isds_stat.wsdl';
+            default:
+                throw new DataBoxException(sprintf('Service type %s not implemented.', $serviceType));
+        }
     }
 
 
