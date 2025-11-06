@@ -1,0 +1,141 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#4 \\$dmDeliveryTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/dmReturnedMessage.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#5 \\$dmAcceptanceTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/dmReturnedMessage.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$ciEventTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tCiRecord.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#4 \\$dmDeliveryTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tDelivery.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#5 \\$dmAcceptanceTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tDelivery.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$dmEventTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tEvent.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$baFrom \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tGetDBStatusInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#3 \\$baTo \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tGetDBStatusInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$pswExpDate \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tGetPasswInfoOutput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$dmFromTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tGetStateChangesInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$dmToTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tGetStateChangesInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$ntfFromTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tListForNotifInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$dmFromTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tListOfFReceivedInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$dmToTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tListOfFReceivedInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$dmFromTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tListOfSentInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$dmToTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tListOfSentInput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#4 \\$dmDeliveryTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tNtfRecord.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$statTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tNumOfMessagesOutput.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#4 \\$PDZExpire \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tPDZRec.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#30 \\$dmDeliveryTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tRecord.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#31 \\$dmAcceptanceTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tRecord.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#4 \\$dmDeliveryTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tReturnedMessage.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#5 \\$dmAcceptanceTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tReturnedMessage.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#4 \\$dmDeliveryTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tReturnedMessageEnvelope.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#5 \\$dmAcceptanceTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tReturnedMessageEnvelope.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$dmEventTime \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tStateChangesRecord.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#1 \\$PeriodFrom \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tdbPeriod.php
+
+		-
+			message: "#^Deprecated in PHP 8\\.4\\: Parameter \\#2 \\$PeriodTo \\(DateTime\\) is implicitly nullable via default value null\\.$#"
+			count: 1
+			path: src/Api/tdbPeriod.php
