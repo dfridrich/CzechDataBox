@@ -22,7 +22,7 @@ class DataBoxSimpleApiTest extends TestCase
         $dataBox->loginWithUsernameAndPassword(
             getenv('DATABOX_LOGIN'),
             getenv('DATABOX_PASSWORD'),
-            getenv('DATABOX_PRODUCTION'),
+            getenv('DATABOX_PRODUCTION')
         );
 
         return $dataBox;

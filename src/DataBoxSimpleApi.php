@@ -172,7 +172,7 @@ class DataBoxSimpleApi
         $file = $this->getLocationForMessage($dataMessageId, 'r');
         if (!$file->getIsExist()) {
             $content = $this->dataBox->DmOperationsWebService()->SignedMessageDownload(
-                (new tIDMessInput())->setDmID($dataMessageId),
+                (new tIDMessInput())->setDmID($dataMessageId)
             )->getDmSignature();
             $file->save($content);
         }
@@ -195,7 +195,7 @@ class DataBoxSimpleApi
         $file = $this->getLocationForMessage($dataMessageId, 's');
         if (!$file->getIsExist()) {
             $content = $this->dataBox->DmOperationsWebService()->SignedSentMessageDownload(
-                (new tIDMessInput())->setDmID($dataMessageId),
+                (new tIDMessInput())->setDmID($dataMessageId)
             )->getDmSignature();
             $file->save($content);
         }
@@ -218,7 +218,7 @@ class DataBoxSimpleApi
         $file = $this->getLocationForMessage($dataMessageId, 'di');
         if (!$file->getIsExist()) {
             $content = $this->dataBox->DmInfoWebService()->GetSignedDeliveryInfo(
-                (new tIDMessInput())->setDmID($dataMessageId),
+                (new tIDMessInput())->setDmID($dataMessageId)
             )->getDmSignature();
             $file->save($content);
         }
@@ -241,7 +241,7 @@ class DataBoxSimpleApi
 
         /** @var dmFile[] $attachments */
         $attachments = $this->dataBox->DmOperationsWebService()->MessageDownload(
-            new tIDMessInput($dataMessageId),
+            new tIDMessInput($dataMessageId)
         )->getDmReturnedMessage()->getDmDm()->getDmFiles()->getDmFile();
         $files = [];
 
@@ -286,7 +286,7 @@ class DataBoxSimpleApi
             null,
             null,
             null,
-            $subject,
+            $subject
         );
 
         // Make sure the attachments exist. If you have files stored in the memory
@@ -304,7 +304,7 @@ class DataBoxSimpleApi
                 $file->setDmEncodedContent(file_get_contents($filePath));
                 return $file;
             },
-            $attachments,
+            $attachments
         );
 
 

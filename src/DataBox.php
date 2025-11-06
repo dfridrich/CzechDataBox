@@ -20,16 +20,16 @@ class DataBox
     /**
      * true = Ostrá verze, produkce
      * false = Testovací rozhraní datových schránek.
-     *
+     * @var bool
      */
-    protected bool $productionMode = true;
+    protected $productionMode = true;
 
     /**
      * 0 = Heslo
      * 1 = Certifikát
-     *
+     * @var int
      */
-    protected int $loginType;
+    protected $loginType;
 
     protected $serviceUrl;
 
@@ -53,14 +53,20 @@ class DataBox
 
     protected $actualOptions;
 
-    protected SoapClient $actualSoap;
+    /**
+     * @var SoapClient
+     */
+    protected $actualSoap;
 
     /**
      * @var string Adresář pro ukládání datových zpráv
      */
-    protected string $directory;
+    protected $directory;
 
-    protected DataBoxSimpleApi $simpleApi;
+    /**
+     * @var DataBoxSimpleApi
+     */
+    protected $simpleApi;
 
     /**
      * @param null $directory
