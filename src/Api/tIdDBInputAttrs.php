@@ -27,9 +27,9 @@ class tIdDBInputAttrs
      */
     public function __construct($dbID = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbID = $dbID;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbID = $dbID;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -37,7 +37,7 @@ class tIdDBInputAttrs
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -46,8 +46,8 @@ class tIdDBInputAttrs
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tIdDBInputAttrs
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -64,8 +64,8 @@ class tIdDBInputAttrs
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tIdDBInputAttrs
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -82,7 +82,8 @@ class tIdDBInputAttrs
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

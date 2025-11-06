@@ -15,7 +15,7 @@ class tPDZInfoInput
      */
     public function __construct($PDZSender = null)
     {
-        $this->PDZSender = $PDZSender;
+      $this->PDZSender = $PDZSender;
     }
 
     /**
@@ -23,7 +23,7 @@ class tPDZInfoInput
      */
     public function getPDZSender()
     {
-        return $this->PDZSender;
+      return $this->PDZSender;
     }
 
     /**
@@ -32,7 +32,8 @@ class tPDZInfoInput
      */
     public function setPDZSender($PDZSender)
     {
-        $this->PDZSender = $PDZSender;
-        return $this;
+      $this->PDZSender = $PDZSender;
+      return $this;
     }
+
 }

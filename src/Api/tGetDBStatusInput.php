@@ -27,9 +27,9 @@ class tGetDBStatusInput
      */
     public function __construct($dbID = null, \DateTime $baFrom = null, \DateTime $baTo = null)
     {
-        $this->dbID = $dbID;
-        $this->baFrom = $baFrom ? $baFrom->format(\DateTime::ATOM) : null;
-        $this->baTo = $baTo ? $baTo->format(\DateTime::ATOM) : null;
+      $this->dbID = $dbID;
+      $this->baFrom = $baFrom ? $baFrom->format(\DateTime::ATOM) : null;
+      $this->baTo = $baTo ? $baTo->format(\DateTime::ATOM) : null;
     }
 
     /**
@@ -37,7 +37,7 @@ class tGetDBStatusInput
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -46,8 +46,8 @@ class tGetDBStatusInput
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -55,15 +55,15 @@ class tGetDBStatusInput
      */
     public function getBaFrom()
     {
-        if ($this->baFrom == null) {
-            return null;
-        } else {
-            try {
-                return new \DateTime($this->baFrom);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->baFrom == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->baFrom);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
@@ -72,8 +72,8 @@ class tGetDBStatusInput
      */
     public function setBaFrom(\DateTime $baFrom)
     {
-        $this->baFrom = $baFrom->format(\DateTime::ATOM);
-        return $this;
+      $this->baFrom = $baFrom->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -81,15 +81,15 @@ class tGetDBStatusInput
      */
     public function getBaTo()
     {
-        if ($this->baTo == null) {
-            return null;
-        } else {
-            try {
-                return new \DateTime($this->baTo);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->baTo == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->baTo);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
@@ -98,7 +98,8 @@ class tGetDBStatusInput
      */
     public function setBaTo(\DateTime $baTo)
     {
-        $this->baTo = $baTo->format(\DateTime::ATOM);
-        return $this;
+      $this->baTo = $baTo->format(\DateTime::ATOM);
+      return $this;
     }
+
 }

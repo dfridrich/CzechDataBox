@@ -36,21 +36,35 @@ class dmExtFile
     protected $dmAttHash2Alg = null;
 
     /**
+     * @var string $dmFileGuid
+     */
+    protected $dmFileGuid = null;
+
+    /**
+     * @var string $dmUpFileGuid
+     */
+    protected $dmUpFileGuid = null;
+
+    /**
      * @param string $dmFileMetaType
      * @param string $dmAttID
      * @param string $dmAttHash1
      * @param string $dmAttHash1Alg
      * @param string $dmAttHash2
      * @param string $dmAttHash2Alg
+     * @param string $dmFileGuid
+     * @param string $dmUpFileGuid
      */
-    public function __construct($dmFileMetaType = null, $dmAttID = null, $dmAttHash1 = null, $dmAttHash1Alg = null, $dmAttHash2 = null, $dmAttHash2Alg = null)
+    public function __construct($dmFileMetaType = null, $dmAttID = null, $dmAttHash1 = null, $dmAttHash1Alg = null, $dmAttHash2 = null, $dmAttHash2Alg = null, $dmFileGuid = null, $dmUpFileGuid = null)
     {
-        $this->dmFileMetaType = $dmFileMetaType;
-        $this->dmAttID = $dmAttID;
-        $this->dmAttHash1 = $dmAttHash1;
-        $this->dmAttHash1Alg = $dmAttHash1Alg;
-        $this->dmAttHash2 = $dmAttHash2;
-        $this->dmAttHash2Alg = $dmAttHash2Alg;
+      $this->dmFileMetaType = $dmFileMetaType;
+      $this->dmAttID = $dmAttID;
+      $this->dmAttHash1 = $dmAttHash1;
+      $this->dmAttHash1Alg = $dmAttHash1Alg;
+      $this->dmAttHash2 = $dmAttHash2;
+      $this->dmAttHash2Alg = $dmAttHash2Alg;
+      $this->dmFileGuid = $dmFileGuid;
+      $this->dmUpFileGuid = $dmUpFileGuid;
     }
 
     /**
@@ -58,7 +72,7 @@ class dmExtFile
      */
     public function getDmFileMetaType()
     {
-        return $this->dmFileMetaType;
+      return $this->dmFileMetaType;
     }
 
     /**
@@ -67,8 +81,8 @@ class dmExtFile
      */
     public function setDmFileMetaType($dmFileMetaType)
     {
-        $this->dmFileMetaType = $dmFileMetaType;
-        return $this;
+      $this->dmFileMetaType = $dmFileMetaType;
+      return $this;
     }
 
     /**
@@ -76,7 +90,7 @@ class dmExtFile
      */
     public function getDmAttID()
     {
-        return $this->dmAttID;
+      return $this->dmAttID;
     }
 
     /**
@@ -85,8 +99,8 @@ class dmExtFile
      */
     public function setDmAttID($dmAttID)
     {
-        $this->dmAttID = $dmAttID;
-        return $this;
+      $this->dmAttID = $dmAttID;
+      return $this;
     }
 
     /**
@@ -94,7 +108,7 @@ class dmExtFile
      */
     public function getDmAttHash1()
     {
-        return $this->dmAttHash1;
+      return $this->dmAttHash1;
     }
 
     /**
@@ -103,8 +117,8 @@ class dmExtFile
      */
     public function setDmAttHash1($dmAttHash1)
     {
-        $this->dmAttHash1 = $dmAttHash1;
-        return $this;
+      $this->dmAttHash1 = $dmAttHash1;
+      return $this;
     }
 
     /**
@@ -112,7 +126,7 @@ class dmExtFile
      */
     public function getDmAttHash1Alg()
     {
-        return $this->dmAttHash1Alg;
+      return $this->dmAttHash1Alg;
     }
 
     /**
@@ -121,8 +135,8 @@ class dmExtFile
      */
     public function setDmAttHash1Alg($dmAttHash1Alg)
     {
-        $this->dmAttHash1Alg = $dmAttHash1Alg;
-        return $this;
+      $this->dmAttHash1Alg = $dmAttHash1Alg;
+      return $this;
     }
 
     /**
@@ -130,7 +144,7 @@ class dmExtFile
      */
     public function getDmAttHash2()
     {
-        return $this->dmAttHash2;
+      return $this->dmAttHash2;
     }
 
     /**
@@ -139,8 +153,8 @@ class dmExtFile
      */
     public function setDmAttHash2($dmAttHash2)
     {
-        $this->dmAttHash2 = $dmAttHash2;
-        return $this;
+      $this->dmAttHash2 = $dmAttHash2;
+      return $this;
     }
 
     /**
@@ -148,7 +162,7 @@ class dmExtFile
      */
     public function getDmAttHash2Alg()
     {
-        return $this->dmAttHash2Alg;
+      return $this->dmAttHash2Alg;
     }
 
     /**
@@ -157,7 +171,44 @@ class dmExtFile
      */
     public function setDmAttHash2Alg($dmAttHash2Alg)
     {
-        $this->dmAttHash2Alg = $dmAttHash2Alg;
-        return $this;
+      $this->dmAttHash2Alg = $dmAttHash2Alg;
+      return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getDmFileGuid()
+    {
+      return $this->dmFileGuid;
+    }
+
+    /**
+     * @param string $dmFileGuid
+     * @return \Defr\CzechDataBox\Api\dmExtFile
+     */
+    public function setDmFileGuid($dmFileGuid)
+    {
+      $this->dmFileGuid = $dmFileGuid;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDmUpFileGuid()
+    {
+      return $this->dmUpFileGuid;
+    }
+
+    /**
+     * @param string $dmUpFileGuid
+     * @return \Defr\CzechDataBox\Api\dmExtFile
+     */
+    public function setDmUpFileGuid($dmUpFileGuid)
+    {
+      $this->dmUpFileGuid = $dmUpFileGuid;
+      return $this;
+    }
+
 }

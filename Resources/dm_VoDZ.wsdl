@@ -1,8 +1,8 @@
 ﻿<?xml version = '1.0' encoding = 'UTF-8'?>
 <!--  *********************************************************************
 
-   verze: 3.03 (pouze pro Veřejný test ISDS)
-   klasifikace: Veřejný dokument    
+   verze: 3.09 
+   klasifikace: Veřejný dokument     
  
      WSDL pro služby manipulující s Velkoobjemovými zprávami (VoDZ)
         CreateBigMessage
@@ -17,7 +17,11 @@
      24.11.2021 verze 3.0 
      24.05.2022 verze 3.01 - sjednocení verzí
      31.10.2022 verze 3.03 - sjednocení verzí
-     
+     20.10.2023 verze 3.04 - sjednocení verzí
+     26.01.2024 verze 3.05 - sjednocení verzí
+     21.10.2024 verze 3.07 - sjednocení verzí 
+     20.02.2025 verze 3.09 - sjednocení verzí
+
 ************************************************************************ -->
 
 <definitions name="ISDS_VoDZ" targetNamespace="http://isds.czechpoint.cz/v20" 
@@ -203,7 +207,7 @@
   <!-- ******************************************************************* -->
   <service name="dmVoDZWebService">
     <port name="dmVoDZPortType" binding="tns:dmVoDZBinding">
-      <soap12:address location="https://ws2.czebox.cz/DS/vodz"/>
+      <soap12:address location="https://ws2.mojedatovaschranka.cz/DS/vodz"/>
     </port>
   </service>
 

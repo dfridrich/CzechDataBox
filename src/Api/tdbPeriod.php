@@ -27,9 +27,9 @@ class tdbPeriod
      */
     public function __construct(\DateTime $PeriodFrom = null, \DateTime $PeriodTo = null, $DbState = null)
     {
-        $this->PeriodFrom = $PeriodFrom ? $PeriodFrom->format(\DateTime::ATOM) : null;
-        $this->PeriodTo = $PeriodTo ? $PeriodTo->format(\DateTime::ATOM) : null;
-        $this->DbState = $DbState;
+      $this->PeriodFrom = $PeriodFrom ? $PeriodFrom->format(\DateTime::ATOM) : null;
+      $this->PeriodTo = $PeriodTo ? $PeriodTo->format(\DateTime::ATOM) : null;
+      $this->DbState = $DbState;
     }
 
     /**
@@ -37,15 +37,15 @@ class tdbPeriod
      */
     public function getPeriodFrom()
     {
-        if ($this->PeriodFrom == null) {
-            return null;
-        } else {
-            try {
-                return new \DateTime($this->PeriodFrom);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->PeriodFrom == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->PeriodFrom);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
@@ -54,8 +54,8 @@ class tdbPeriod
      */
     public function setPeriodFrom(\DateTime $PeriodFrom)
     {
-        $this->PeriodFrom = $PeriodFrom->format(\DateTime::ATOM);
-        return $this;
+      $this->PeriodFrom = $PeriodFrom->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -63,15 +63,15 @@ class tdbPeriod
      */
     public function getPeriodTo()
     {
-        if ($this->PeriodTo == null) {
-            return null;
-        } else {
-            try {
-                return new \DateTime($this->PeriodTo);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->PeriodTo == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->PeriodTo);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
@@ -80,8 +80,8 @@ class tdbPeriod
      */
     public function setPeriodTo(\DateTime $PeriodTo)
     {
-        $this->PeriodTo = $PeriodTo->format(\DateTime::ATOM);
-        return $this;
+      $this->PeriodTo = $PeriodTo->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -89,7 +89,7 @@ class tdbPeriod
      */
     public function getDbState()
     {
-        return $this->DbState;
+      return $this->DbState;
     }
 
     /**
@@ -98,7 +98,8 @@ class tdbPeriod
      */
     public function setDbState($DbState)
     {
-        $this->DbState = $DbState;
-        return $this;
+      $this->DbState = $DbState;
+      return $this;
     }
+
 }

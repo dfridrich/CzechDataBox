@@ -45,12 +45,12 @@ class tISDSSearchInput
      */
     public function __construct($searchText = null, $searchType = null, $searchScope = null, $page = null, $pageSize = null, $highlighting = null)
     {
-        $this->searchText = $searchText;
-        $this->searchType = $searchType;
-        $this->searchScope = $searchScope;
-        $this->page = $page;
-        $this->pageSize = $pageSize;
-        $this->highlighting = $highlighting;
+      $this->searchText = $searchText;
+      $this->searchType = $searchType;
+      $this->searchScope = $searchScope;
+      $this->page = $page;
+      $this->pageSize = $pageSize;
+      $this->highlighting = $highlighting;
     }
 
     /**
@@ -58,7 +58,7 @@ class tISDSSearchInput
      */
     public function getSearchText()
     {
-        return $this->searchText;
+      return $this->searchText;
     }
 
     /**
@@ -67,8 +67,8 @@ class tISDSSearchInput
      */
     public function setSearchText($searchText)
     {
-        $this->searchText = $searchText;
-        return $this;
+      $this->searchText = $searchText;
+      return $this;
     }
 
     /**
@@ -76,7 +76,7 @@ class tISDSSearchInput
      */
     public function getSearchType()
     {
-        return $this->searchType;
+      return $this->searchType;
     }
 
     /**
@@ -85,8 +85,8 @@ class tISDSSearchInput
      */
     public function setSearchType($searchType)
     {
-        $this->searchType = $searchType;
-        return $this;
+      $this->searchType = $searchType;
+      return $this;
     }
 
     /**
@@ -94,7 +94,7 @@ class tISDSSearchInput
      */
     public function getSearchScope()
     {
-        return $this->searchScope;
+      return $this->searchScope;
     }
 
     /**
@@ -103,8 +103,8 @@ class tISDSSearchInput
      */
     public function setSearchScope($searchScope)
     {
-        $this->searchScope = $searchScope;
-        return $this;
+      $this->searchScope = $searchScope;
+      return $this;
     }
 
     /**
@@ -112,7 +112,7 @@ class tISDSSearchInput
      */
     public function getPage()
     {
-        return $this->page;
+      return $this->page;
     }
 
     /**
@@ -121,8 +121,8 @@ class tISDSSearchInput
      */
     public function setPage($page)
     {
-        $this->page = $page;
-        return $this;
+      $this->page = $page;
+      return $this;
     }
 
     /**
@@ -130,7 +130,7 @@ class tISDSSearchInput
      */
     public function getPageSize()
     {
-        return $this->pageSize;
+      return $this->pageSize;
     }
 
     /**
@@ -139,8 +139,8 @@ class tISDSSearchInput
      */
     public function setPageSize($pageSize)
     {
-        $this->pageSize = $pageSize;
-        return $this;
+      $this->pageSize = $pageSize;
+      return $this;
     }
 
     /**
@@ -148,7 +148,7 @@ class tISDSSearchInput
      */
     public function getHighlighting()
     {
-        return $this->highlighting;
+      return $this->highlighting;
     }
 
     /**
@@ -157,7 +157,8 @@ class tISDSSearchInput
      */
     public function setHighlighting($highlighting)
     {
-        $this->highlighting = $highlighting;
-        return $this;
+      $this->highlighting = $highlighting;
+      return $this;
     }
+
 }

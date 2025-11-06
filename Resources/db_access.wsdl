@@ -2,9 +2,9 @@
 <!--  *********************************************************************
      WSDL pro doplňkové služby související s přihlašováním 
 
-     verze: 3.03
+     verze: 3.09
      klasifikace: Veřejný dokument    
-      *********************************************************************                    
+      ********************************************************************* 
 Seznam služeb: 
 ==============
   GetOwnerInfoFromLogin
@@ -19,13 +19,16 @@ Seznam služeb:
     18.09.2010  verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
     18.09.2015  verze 2.21 - sjednocení verzí 
     14.10.2015 verze 2.22 - sjednocení verzí
-    31.01.2017  verze 2.26 - sjednocení verzí                                  
+    31.01.2017  verze 2.26 - sjednocení verzí   
     21.11.2017 verze 2.27 - sjednocení verzí
     04.09.2018  verze 2.31 - přidány "dvojkové" verze GetOwnerInfoFromLogin2 a GetUserInfoFromLogin2
     27.07.2021  verze 2.33 - sjednocení verzí
     25.04.2022  verze 2.35 - sjednocení verzí
     
     31.10.2022 verze 3.03 - sjednocení verzí
+    20.10.2023 verze 3.04 - sjednocení verzí
+    21.10.2024 verze 3.07 - sjednocení verzí
+    29.07.2025 verze 3.09 - sjednocení verzí 
     
 ************************************************************************ -->
 

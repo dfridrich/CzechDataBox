@@ -21,8 +21,8 @@ class tMessageCreateOutput
      */
     public function __construct($dmID = null, $dmStatus = null)
     {
-        $this->dmID = $dmID;
-        $this->dmStatus = $dmStatus;
+      $this->dmID = $dmID;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tMessageCreateOutput
      */
     public function getDmID()
     {
-        return $this->dmID;
+      return $this->dmID;
     }
 
     /**
@@ -39,8 +39,8 @@ class tMessageCreateOutput
      */
     public function setDmID($dmID)
     {
-        $this->dmID = $dmID;
-        return $this;
+      $this->dmID = $dmID;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tMessageCreateOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tMessageCreateOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

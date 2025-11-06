@@ -21,8 +21,8 @@ class tPDZSendOutput
      */
     public function __construct($PDZsiResult = null, $dbStatus = null)
     {
-        $this->PDZsiResult = $PDZsiResult;
-        $this->dbStatus = $dbStatus;
+      $this->PDZsiResult = $PDZsiResult;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tPDZSendOutput
      */
     public function getPDZsiResult()
     {
-        return $this->PDZsiResult;
+      return $this->PDZsiResult;
     }
 
     /**
@@ -39,8 +39,8 @@ class tPDZSendOutput
      */
     public function setPDZsiResult($PDZsiResult)
     {
-        $this->PDZsiResult = $PDZsiResult;
-        return $this;
+      $this->PDZsiResult = $PDZsiResult;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tPDZSendOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tPDZSendOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

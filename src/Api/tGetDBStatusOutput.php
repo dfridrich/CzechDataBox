@@ -27,9 +27,9 @@ class tGetDBStatusOutput
      */
     public function __construct($dbID = null, $Periods = null, $dbStatus = null)
     {
-        $this->dbID = $dbID;
-        $this->Periods = $Periods;
-        $this->dbStatus = $dbStatus;
+      $this->dbID = $dbID;
+      $this->Periods = $Periods;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tGetDBStatusOutput
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -46,8 +46,8 @@ class tGetDBStatusOutput
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tGetDBStatusOutput
      */
     public function getPeriods()
     {
-        return $this->Periods;
+      return $this->Periods;
     }
 
     /**
@@ -64,8 +64,8 @@ class tGetDBStatusOutput
      */
     public function setPeriods($Periods)
     {
-        $this->Periods = $Periods;
-        return $this;
+      $this->Periods = $Periods;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tGetDBStatusOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
@@ -82,7 +82,8 @@ class tGetDBStatusOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

@@ -33,10 +33,10 @@ class dbID
      */
     public function __construct($_ = null, $guid = null, $subject = null, $branch = null)
     {
-        $this->_ = $_;
-        $this->guid = $guid;
-        $this->subject = $subject;
-        $this->branch = $branch;
+      $this->_ = $_;
+      $this->guid = $guid;
+      $this->subject = $subject;
+      $this->branch = $branch;
     }
 
     /**
@@ -44,7 +44,7 @@ class dbID
      */
     public function get_()
     {
-        return $this->_;
+      return $this->_;
     }
 
     /**
@@ -53,8 +53,8 @@ class dbID
      */
     public function set_($_)
     {
-        $this->_ = $_;
-        return $this;
+      $this->_ = $_;
+      return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class dbID
      */
     public function getGuid()
     {
-        return $this->guid;
+      return $this->guid;
     }
 
     /**
@@ -71,8 +71,8 @@ class dbID
      */
     public function setGuid($guid)
     {
-        $this->guid = $guid;
-        return $this;
+      $this->guid = $guid;
+      return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class dbID
      */
     public function getSubject()
     {
-        return $this->subject;
+      return $this->subject;
     }
 
     /**
@@ -89,8 +89,8 @@ class dbID
      */
     public function setSubject($subject)
     {
-        $this->subject = $subject;
-        return $this;
+      $this->subject = $subject;
+      return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class dbID
      */
     public function getBranch()
     {
-        return $this->branch;
+      return $this->branch;
     }
 
     /**
@@ -107,7 +107,8 @@ class dbID
      */
     public function setBranch($branch)
     {
-        $this->branch = $branch;
-        return $this;
+      $this->branch = $branch;
+      return $this;
     }
+
 }

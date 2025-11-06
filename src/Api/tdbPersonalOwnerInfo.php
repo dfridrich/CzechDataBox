@@ -117,24 +117,24 @@ class tdbPersonalOwnerInfo
      */
     public function __construct($dbID = null, $aifoIsds = null, $pnFirstName = null, $pnMiddleName = null, $pnLastName = null, $biDate = null, $biCity = null, $biCounty = null, $biState = null, $adCode = null, $adCity = null, $adDistrict = null, $adStreet = null, $adNumberInStreet = null, $adNumberInMunicipality = null, $adZipCode = null, $adState = null, $nationality = null)
     {
-        $this->dbID = $dbID;
-        $this->aifoIsds = $aifoIsds;
-        $this->pnFirstName = $pnFirstName;
-        $this->pnMiddleName = $pnMiddleName;
-        $this->pnLastName = $pnLastName;
-        $this->biDate = $biDate;
-        $this->biCity = $biCity;
-        $this->biCounty = $biCounty;
-        $this->biState = $biState;
-        $this->adCode = $adCode;
-        $this->adCity = $adCity;
-        $this->adDistrict = $adDistrict;
-        $this->adStreet = $adStreet;
-        $this->adNumberInStreet = $adNumberInStreet;
-        $this->adNumberInMunicipality = $adNumberInMunicipality;
-        $this->adZipCode = $adZipCode;
-        $this->adState = $adState;
-        $this->nationality = $nationality;
+      $this->dbID = $dbID;
+      $this->aifoIsds = $aifoIsds;
+      $this->pnFirstName = $pnFirstName;
+      $this->pnMiddleName = $pnMiddleName;
+      $this->pnLastName = $pnLastName;
+      $this->biDate = $biDate;
+      $this->biCity = $biCity;
+      $this->biCounty = $biCounty;
+      $this->biState = $biState;
+      $this->adCode = $adCode;
+      $this->adCity = $adCity;
+      $this->adDistrict = $adDistrict;
+      $this->adStreet = $adStreet;
+      $this->adNumberInStreet = $adNumberInStreet;
+      $this->adNumberInMunicipality = $adNumberInMunicipality;
+      $this->adZipCode = $adZipCode;
+      $this->adState = $adState;
+      $this->nationality = $nationality;
     }
 
     /**
@@ -142,7 +142,7 @@ class tdbPersonalOwnerInfo
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -151,8 +151,8 @@ class tdbPersonalOwnerInfo
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -160,7 +160,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAifoIsds()
     {
-        return $this->aifoIsds;
+      return $this->aifoIsds;
     }
 
     /**
@@ -169,8 +169,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAifoIsds($aifoIsds)
     {
-        $this->aifoIsds = $aifoIsds;
-        return $this;
+      $this->aifoIsds = $aifoIsds;
+      return $this;
     }
 
     /**
@@ -178,7 +178,7 @@ class tdbPersonalOwnerInfo
      */
     public function getPnFirstName()
     {
-        return $this->pnFirstName;
+      return $this->pnFirstName;
     }
 
     /**
@@ -187,8 +187,8 @@ class tdbPersonalOwnerInfo
      */
     public function setPnFirstName($pnFirstName)
     {
-        $this->pnFirstName = $pnFirstName;
-        return $this;
+      $this->pnFirstName = $pnFirstName;
+      return $this;
     }
 
     /**
@@ -196,7 +196,7 @@ class tdbPersonalOwnerInfo
      */
     public function getPnMiddleName()
     {
-        return $this->pnMiddleName;
+      return $this->pnMiddleName;
     }
 
     /**
@@ -205,8 +205,8 @@ class tdbPersonalOwnerInfo
      */
     public function setPnMiddleName($pnMiddleName)
     {
-        $this->pnMiddleName = $pnMiddleName;
-        return $this;
+      $this->pnMiddleName = $pnMiddleName;
+      return $this;
     }
 
     /**
@@ -214,7 +214,7 @@ class tdbPersonalOwnerInfo
      */
     public function getPnLastName()
     {
-        return $this->pnLastName;
+      return $this->pnLastName;
     }
 
     /**
@@ -223,8 +223,8 @@ class tdbPersonalOwnerInfo
      */
     public function setPnLastName($pnLastName)
     {
-        $this->pnLastName = $pnLastName;
-        return $this;
+      $this->pnLastName = $pnLastName;
+      return $this;
     }
 
     /**
@@ -232,7 +232,7 @@ class tdbPersonalOwnerInfo
      */
     public function getBiDate()
     {
-        return $this->biDate;
+      return $this->biDate;
     }
 
     /**
@@ -241,8 +241,8 @@ class tdbPersonalOwnerInfo
      */
     public function setBiDate($biDate)
     {
-        $this->biDate = $biDate;
-        return $this;
+      $this->biDate = $biDate;
+      return $this;
     }
 
     /**
@@ -250,7 +250,7 @@ class tdbPersonalOwnerInfo
      */
     public function getBiCity()
     {
-        return $this->biCity;
+      return $this->biCity;
     }
 
     /**
@@ -259,8 +259,8 @@ class tdbPersonalOwnerInfo
      */
     public function setBiCity($biCity)
     {
-        $this->biCity = $biCity;
-        return $this;
+      $this->biCity = $biCity;
+      return $this;
     }
 
     /**
@@ -268,7 +268,7 @@ class tdbPersonalOwnerInfo
      */
     public function getBiCounty()
     {
-        return $this->biCounty;
+      return $this->biCounty;
     }
 
     /**
@@ -277,8 +277,8 @@ class tdbPersonalOwnerInfo
      */
     public function setBiCounty($biCounty)
     {
-        $this->biCounty = $biCounty;
-        return $this;
+      $this->biCounty = $biCounty;
+      return $this;
     }
 
     /**
@@ -286,7 +286,7 @@ class tdbPersonalOwnerInfo
      */
     public function getBiState()
     {
-        return $this->biState;
+      return $this->biState;
     }
 
     /**
@@ -295,8 +295,8 @@ class tdbPersonalOwnerInfo
      */
     public function setBiState($biState)
     {
-        $this->biState = $biState;
-        return $this;
+      $this->biState = $biState;
+      return $this;
     }
 
     /**
@@ -304,7 +304,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdCode()
     {
-        return $this->adCode;
+      return $this->adCode;
     }
 
     /**
@@ -313,8 +313,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdCode($adCode)
     {
-        $this->adCode = $adCode;
-        return $this;
+      $this->adCode = $adCode;
+      return $this;
     }
 
     /**
@@ -322,7 +322,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdCity()
     {
-        return $this->adCity;
+      return $this->adCity;
     }
 
     /**
@@ -331,8 +331,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdCity($adCity)
     {
-        $this->adCity = $adCity;
-        return $this;
+      $this->adCity = $adCity;
+      return $this;
     }
 
     /**
@@ -340,7 +340,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdDistrict()
     {
-        return $this->adDistrict;
+      return $this->adDistrict;
     }
 
     /**
@@ -349,8 +349,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdDistrict($adDistrict)
     {
-        $this->adDistrict = $adDistrict;
-        return $this;
+      $this->adDistrict = $adDistrict;
+      return $this;
     }
 
     /**
@@ -358,7 +358,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdStreet()
     {
-        return $this->adStreet;
+      return $this->adStreet;
     }
 
     /**
@@ -367,8 +367,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdStreet($adStreet)
     {
-        $this->adStreet = $adStreet;
-        return $this;
+      $this->adStreet = $adStreet;
+      return $this;
     }
 
     /**
@@ -376,7 +376,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdNumberInStreet()
     {
-        return $this->adNumberInStreet;
+      return $this->adNumberInStreet;
     }
 
     /**
@@ -385,8 +385,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdNumberInStreet($adNumberInStreet)
     {
-        $this->adNumberInStreet = $adNumberInStreet;
-        return $this;
+      $this->adNumberInStreet = $adNumberInStreet;
+      return $this;
     }
 
     /**
@@ -394,7 +394,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdNumberInMunicipality()
     {
-        return $this->adNumberInMunicipality;
+      return $this->adNumberInMunicipality;
     }
 
     /**
@@ -403,8 +403,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdNumberInMunicipality($adNumberInMunicipality)
     {
-        $this->adNumberInMunicipality = $adNumberInMunicipality;
-        return $this;
+      $this->adNumberInMunicipality = $adNumberInMunicipality;
+      return $this;
     }
 
     /**
@@ -412,7 +412,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdZipCode()
     {
-        return $this->adZipCode;
+      return $this->adZipCode;
     }
 
     /**
@@ -421,8 +421,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdZipCode($adZipCode)
     {
-        $this->adZipCode = $adZipCode;
-        return $this;
+      $this->adZipCode = $adZipCode;
+      return $this;
     }
 
     /**
@@ -430,7 +430,7 @@ class tdbPersonalOwnerInfo
      */
     public function getAdState()
     {
-        return $this->adState;
+      return $this->adState;
     }
 
     /**
@@ -439,8 +439,8 @@ class tdbPersonalOwnerInfo
      */
     public function setAdState($adState)
     {
-        $this->adState = $adState;
-        return $this;
+      $this->adState = $adState;
+      return $this;
     }
 
     /**
@@ -448,7 +448,7 @@ class tdbPersonalOwnerInfo
      */
     public function getNationality()
     {
-        return $this->nationality;
+      return $this->nationality;
     }
 
     /**
@@ -457,7 +457,8 @@ class tdbPersonalOwnerInfo
      */
     public function setNationality($nationality)
     {
-        $this->nationality = $nationality;
-        return $this;
+      $this->nationality = $nationality;
+      return $this;
     }
+
 }

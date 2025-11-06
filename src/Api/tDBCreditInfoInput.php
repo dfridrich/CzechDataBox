@@ -27,9 +27,9 @@ class tDBCreditInfoInput
      */
     public function __construct($dbID = null, $ciFromDate = null, $ciTodate = null)
     {
-        $this->dbID = $dbID;
-        $this->ciFromDate = $ciFromDate;
-        $this->ciTodate = $ciTodate;
+      $this->dbID = $dbID;
+      $this->ciFromDate = $ciFromDate;
+      $this->ciTodate = $ciTodate;
     }
 
     /**
@@ -37,7 +37,7 @@ class tDBCreditInfoInput
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -46,8 +46,8 @@ class tDBCreditInfoInput
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tDBCreditInfoInput
      */
     public function getCiFromDate()
     {
-        return $this->ciFromDate;
+      return $this->ciFromDate;
     }
 
     /**
@@ -64,8 +64,8 @@ class tDBCreditInfoInput
      */
     public function setCiFromDate($ciFromDate)
     {
-        $this->ciFromDate = $ciFromDate;
-        return $this;
+      $this->ciFromDate = $ciFromDate;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tDBCreditInfoInput
      */
     public function getCiTodate()
     {
-        return $this->ciTodate;
+      return $this->ciTodate;
     }
 
     /**
@@ -82,7 +82,8 @@ class tDBCreditInfoInput
      */
     public function setCiTodate($ciTodate)
     {
-        $this->ciTodate = $ciTodate;
-        return $this;
+      $this->ciTodate = $ciTodate;
+      return $this;
     }
+
 }

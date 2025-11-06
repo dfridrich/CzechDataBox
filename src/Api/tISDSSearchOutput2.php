@@ -45,12 +45,12 @@ class tISDSSearchOutput2
      */
     public function __construct($totalCount = null, $currentCount = null, $position = null, $lastPage = null, $dbResults = null, $dbStatus = null)
     {
-        $this->totalCount = $totalCount;
-        $this->currentCount = $currentCount;
-        $this->position = $position;
-        $this->lastPage = $lastPage;
-        $this->dbResults = $dbResults;
-        $this->dbStatus = $dbStatus;
+      $this->totalCount = $totalCount;
+      $this->currentCount = $currentCount;
+      $this->position = $position;
+      $this->lastPage = $lastPage;
+      $this->dbResults = $dbResults;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -58,7 +58,7 @@ class tISDSSearchOutput2
      */
     public function getTotalCount()
     {
-        return $this->totalCount;
+      return $this->totalCount;
     }
 
     /**
@@ -67,8 +67,8 @@ class tISDSSearchOutput2
      */
     public function setTotalCount($totalCount)
     {
-        $this->totalCount = $totalCount;
-        return $this;
+      $this->totalCount = $totalCount;
+      return $this;
     }
 
     /**
@@ -76,7 +76,7 @@ class tISDSSearchOutput2
      */
     public function getCurrentCount()
     {
-        return $this->currentCount;
+      return $this->currentCount;
     }
 
     /**
@@ -85,8 +85,8 @@ class tISDSSearchOutput2
      */
     public function setCurrentCount($currentCount)
     {
-        $this->currentCount = $currentCount;
-        return $this;
+      $this->currentCount = $currentCount;
+      return $this;
     }
 
     /**
@@ -94,7 +94,7 @@ class tISDSSearchOutput2
      */
     public function getPosition()
     {
-        return $this->position;
+      return $this->position;
     }
 
     /**
@@ -103,8 +103,8 @@ class tISDSSearchOutput2
      */
     public function setPosition($position)
     {
-        $this->position = $position;
-        return $this;
+      $this->position = $position;
+      return $this;
     }
 
     /**
@@ -112,7 +112,7 @@ class tISDSSearchOutput2
      */
     public function getLastPage()
     {
-        return $this->lastPage;
+      return $this->lastPage;
     }
 
     /**
@@ -121,8 +121,8 @@ class tISDSSearchOutput2
      */
     public function setLastPage($lastPage)
     {
-        $this->lastPage = $lastPage;
-        return $this;
+      $this->lastPage = $lastPage;
+      return $this;
     }
 
     /**
@@ -130,7 +130,7 @@ class tISDSSearchOutput2
      */
     public function getDbResults()
     {
-        return $this->dbResults;
+      return $this->dbResults;
     }
 
     /**
@@ -139,8 +139,8 @@ class tISDSSearchOutput2
      */
     public function setDbResults($dbResults)
     {
-        $this->dbResults = $dbResults;
-        return $this;
+      $this->dbResults = $dbResults;
+      return $this;
     }
 
     /**
@@ -148,7 +148,7 @@ class tISDSSearchOutput2
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
@@ -157,7 +157,8 @@ class tISDSSearchOutput2
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

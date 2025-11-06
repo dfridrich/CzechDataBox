@@ -21,8 +21,8 @@ class DownloadAttachment
      */
     public function __construct($dmID = null, $attNum = null)
     {
-        $this->dmID = $dmID;
-        $this->attNum = $attNum;
+      $this->dmID = $dmID;
+      $this->attNum = $attNum;
     }
 
     /**
@@ -30,7 +30,7 @@ class DownloadAttachment
      */
     public function getDmID()
     {
-        return $this->dmID;
+      return $this->dmID;
     }
 
     /**
@@ -39,8 +39,8 @@ class DownloadAttachment
      */
     public function setDmID($dmID)
     {
-        $this->dmID = $dmID;
-        return $this;
+      $this->dmID = $dmID;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class DownloadAttachment
      */
     public function getAttNum()
     {
-        return $this->attNum;
+      return $this->attNum;
     }
 
     /**
@@ -57,7 +57,8 @@ class DownloadAttachment
      */
     public function setAttNum($attNum)
     {
-        $this->attNum = $attNum;
-        return $this;
+      $this->attNum = $attNum;
+      return $this;
     }
+
 }

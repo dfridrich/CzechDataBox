@@ -21,8 +21,8 @@ class tListOfMessOutput
      */
     public function __construct($dmRecords = null, $dmStatus = null)
     {
-        $this->dmRecords = $dmRecords;
-        $this->dmStatus = $dmStatus;
+      $this->dmRecords = $dmRecords;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tListOfMessOutput
      */
     public function getDmRecords()
     {
-        return $this->dmRecords;
+      return $this->dmRecords;
     }
 
     /**
@@ -39,8 +39,8 @@ class tListOfMessOutput
      */
     public function setDmRecords($dmRecords)
     {
-        $this->dmRecords = $dmRecords;
-        return $this;
+      $this->dmRecords = $dmRecords;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tListOfMessOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tListOfMessOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

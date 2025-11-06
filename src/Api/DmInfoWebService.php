@@ -52,6 +52,7 @@ class DmInfoWebService extends \SoapClient
       'tStateChangesRecord' => 'Defr\\CzechDataBox\\Api\\tStateChangesRecord',
       'tStateChangesArray' => 'Defr\\CzechDataBox\\Api\\tStateChangesArray',
       'tGetStateChangesOutput' => 'Defr\\CzechDataBox\\Api\\tGetStateChangesOutput',
+      'tDummyOutput' => 'Defr\\CzechDataBox\\Api\\tDummyOutput',
       'tGetAuthorInput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorInput',
       'tGetAuthorOutput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorOutput',
       'tEraseMessageIntput' => 'Defr\\CzechDataBox\\Api\\tEraseMessageIntput',
@@ -91,6 +92,12 @@ class DmInfoWebService extends \SoapClient
       'GetMessageAuthor2Response' => 'Defr\\CzechDataBox\\Api\\GetMessageAuthor2Response',
       'dmMessageAuthor' => 'Defr\\CzechDataBox\\Api\\dmMessageAuthor',
       'maItem' => 'Defr\\CzechDataBox\\Api\\maItem',
+      'SentMessageEnvelopeDownload' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownload',
+      'SentMessageEnvelopeDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownloadResponse',
+      'SuspMessageReport' => 'Defr\\CzechDataBox\\Api\\SuspMessageReport',
+      'SuspMessageReportResponse' => 'Defr\\CzechDataBox\\Api\\SuspMessageReportResponse',
+      'ArchiveISDSDocument' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocument',
+      'ArchiveISDSDocumentResponse' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocumentResponse',
     );
 
     /**
@@ -99,18 +106,18 @@ class DmInfoWebService extends \SoapClient
      */
     public function __construct(array $options = array(), $wsdl = null)
     {
-        foreach (self::$classmap as $key => $value) {
-            if (!isset($options['classmap'][$key])) {
-                $options['classmap'][$key] = $value;
-            }
+      foreach (self::$classmap as $key => $value) {
+        if (!isset($options['classmap'][$key])) {
+          $options['classmap'][$key] = $value;
         }
-        $options = array_merge(array (
-        'features' => 1,
-        ), $options);
-        if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/dm_info.wsdl';
-        }
-        parent::__construct($wsdl, $options);
+      }
+      $options = array_merge(array (
+      'features' => 1,
+    ), $options);
+      if (!$wsdl) {
+        $wsdl = '/var/www/html/Resources/dm_info.wsdl';
+      }
+      parent::__construct($wsdl, $options);
     }
 
     /**
@@ -119,7 +126,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function VerifyMessage(tIDMessInput $parameter)
     {
-        return $this->__soapCall('VerifyMessage', array($parameter));
+      return $this->__soapCall('VerifyMessage', array($parameter));
     }
 
     /**
@@ -128,7 +135,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function MessageEnvelopeDownload(tIDMessInput $parameter)
     {
-        return $this->__soapCall('MessageEnvelopeDownload', array($parameter));
+      return $this->__soapCall('MessageEnvelopeDownload', array($parameter));
     }
 
     /**
@@ -137,7 +144,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function MarkMessageAsDownloaded(tIDMessInput $parameter)
     {
-        return $this->__soapCall('MarkMessageAsDownloaded', array($parameter));
+      return $this->__soapCall('MarkMessageAsDownloaded', array($parameter));
     }
 
     /**
@@ -146,7 +153,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetDeliveryInfo(tIDMessInput $parameter)
     {
-        return $this->__soapCall('GetDeliveryInfo', array($parameter));
+      return $this->__soapCall('GetDeliveryInfo', array($parameter));
     }
 
     /**
@@ -155,7 +162,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetSignedDeliveryInfo(tIDMessInput $parameter)
     {
-        return $this->__soapCall('GetSignedDeliveryInfo', array($parameter));
+      return $this->__soapCall('GetSignedDeliveryInfo', array($parameter));
     }
 
     /**
@@ -164,7 +171,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetListOfSentMessages(tListOfSentInput $parameter)
     {
-        return $this->__soapCall('GetListOfSentMessages', array($parameter));
+      return $this->__soapCall('GetListOfSentMessages', array($parameter));
     }
 
     /**
@@ -173,7 +180,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetListOfReceivedMessages(tListOfFReceivedInput $parameter)
     {
-        return $this->__soapCall('GetListOfReceivedMessages', array($parameter));
+      return $this->__soapCall('GetListOfReceivedMessages', array($parameter));
     }
 
     /**
@@ -182,7 +189,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetMessageStateChanges(tGetStateChangesInput $parameter)
     {
-        return $this->__soapCall('GetMessageStateChanges', array($parameter));
+      return $this->__soapCall('GetMessageStateChanges', array($parameter));
     }
 
     /**
@@ -191,7 +198,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetMessageAuthor(tGetAuthorInput $parameter)
     {
-        return $this->__soapCall('GetMessageAuthor', array($parameter));
+      return $this->__soapCall('GetMessageAuthor', array($parameter));
     }
 
     /**
@@ -200,7 +207,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetMessageAuthor2(tGetAuthorInput $parameter)
     {
-        return $this->__soapCall('GetMessageAuthor2', array($parameter));
+      return $this->__soapCall('GetMessageAuthor2', array($parameter));
     }
 
     /**
@@ -209,7 +216,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function EraseMessage(tEraseMessageIntput $parameter)
     {
-        return $this->__soapCall('EraseMessage', array($parameter));
+      return $this->__soapCall('EraseMessage', array($parameter));
     }
 
     /**
@@ -218,7 +225,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetListOfErasedMessages(tGetListOfErasedInput $parameter)
     {
-        return $this->__soapCall('GetListOfErasedMessages', array($parameter));
+      return $this->__soapCall('GetListOfErasedMessages', array($parameter));
     }
 
     /**
@@ -227,7 +234,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function PickUpAsyncResponse(tPickUpAsyncInput $parameter)
     {
-        return $this->__soapCall('PickUpAsyncResponse', array($parameter));
+      return $this->__soapCall('PickUpAsyncResponse', array($parameter));
     }
 
     /**
@@ -236,7 +243,7 @@ class DmInfoWebService extends \SoapClient
      */
     public function GetListForNotifications(tListForNotifInput $parameter)
     {
-        return $this->__soapCall('GetListForNotifications', array($parameter));
+      return $this->__soapCall('GetListForNotifications', array($parameter));
     }
 
     /**
@@ -245,6 +252,25 @@ class DmInfoWebService extends \SoapClient
      */
     public function RegisterForNotifications(RegisterForNotifications $parameter)
     {
-        return $this->__soapCall('RegisterForNotifications', array($parameter));
+      return $this->__soapCall('RegisterForNotifications', array($parameter));
     }
+
+    /**
+     * @param SentMessageEnvelopeDownload $parameter
+     * @return SentMessageEnvelopeDownloadResponse
+     */
+    public function SentMessageEnvelopeDownload(SentMessageEnvelopeDownload $parameter)
+    {
+      return $this->__soapCall('SentMessageEnvelopeDownload', array($parameter));
+    }
+
+    /**
+     * @param SuspMessageReport $parameter
+     * @return SuspMessageReportResponse
+     */
+    public function SuspMessageReport(SuspMessageReport $parameter)
+    {
+      return $this->__soapCall('SuspMessageReport', array($parameter));
+    }
+
 }

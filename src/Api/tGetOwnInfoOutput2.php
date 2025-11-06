@@ -21,8 +21,8 @@ class tGetOwnInfoOutput2
      */
     public function __construct($dbOwnerInfo = null, $dbStatus = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbStatus = $dbStatus;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tGetOwnInfoOutput2
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
@@ -39,8 +39,8 @@ class tGetOwnInfoOutput2
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tGetOwnInfoOutput2
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tGetOwnInfoOutput2
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

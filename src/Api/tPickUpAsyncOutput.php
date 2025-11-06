@@ -27,9 +27,9 @@ class tPickUpAsyncOutput
      */
     public function __construct($asyncReqType = null, $asyncResponse = null, $dmStatus = null)
     {
-        $this->asyncReqType = $asyncReqType;
-        $this->asyncResponse = $asyncResponse;
-        $this->dmStatus = $dmStatus;
+      $this->asyncReqType = $asyncReqType;
+      $this->asyncResponse = $asyncResponse;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tPickUpAsyncOutput
      */
     public function getAsyncReqType()
     {
-        return $this->asyncReqType;
+      return $this->asyncReqType;
     }
 
     /**
@@ -46,8 +46,8 @@ class tPickUpAsyncOutput
      */
     public function setAsyncReqType($asyncReqType)
     {
-        $this->asyncReqType = $asyncReqType;
-        return $this;
+      $this->asyncReqType = $asyncReqType;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tPickUpAsyncOutput
      */
     public function getAsyncResponse()
     {
-        return $this->asyncResponse;
+      return $this->asyncResponse;
     }
 
     /**
@@ -64,8 +64,8 @@ class tPickUpAsyncOutput
      */
     public function setAsyncResponse($asyncResponse)
     {
-        $this->asyncResponse = $asyncResponse;
-        return $this;
+      $this->asyncResponse = $asyncResponse;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tPickUpAsyncOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -82,7 +82,8 @@ class tPickUpAsyncOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

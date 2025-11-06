@@ -102,6 +102,8 @@ class DataBoxAccess extends \SoapClient
       'tGetConstsOutput' => 'Defr\\CzechDataBox\\Api\\tGetConstsOutput',
       'constRecords' => 'Defr\\CzechDataBox\\Api\\constRecords',
       'tConstRecord' => 'Defr\\CzechDataBox\\Api\\tConstRecord',
+      'GetDataBoxAddress' => 'Defr\\CzechDataBox\\Api\\GetDataBoxAddress',
+      'tGetAddressOutput' => 'Defr\\CzechDataBox\\Api\\tGetAddressOutput',
     );
 
     /**
@@ -110,18 +112,18 @@ class DataBoxAccess extends \SoapClient
      */
     public function __construct(array $options = array(), $wsdl = null)
     {
-        foreach (self::$classmap as $key => $value) {
-            if (!isset($options['classmap'][$key])) {
-                $options['classmap'][$key] = $value;
-            }
+      foreach (self::$classmap as $key => $value) {
+        if (!isset($options['classmap'][$key])) {
+          $options['classmap'][$key] = $value;
         }
-        $options = array_merge(array (
-        'features' => 1,
-        ), $options);
-        if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/db_access.wsdl';
-        }
-        parent::__construct($wsdl, $options);
+      }
+      $options = array_merge(array (
+      'features' => 1,
+    ), $options);
+      if (!$wsdl) {
+        $wsdl = '/var/www/html/Resources/db_access.wsdl';
+      }
+      parent::__construct($wsdl, $options);
     }
 
     /**
@@ -130,7 +132,7 @@ class DataBoxAccess extends \SoapClient
      */
     public function GetOwnerInfoFromLogin(tDummyInput $parameter)
     {
-        return $this->__soapCall('GetOwnerInfoFromLogin', array($parameter));
+      return $this->__soapCall('GetOwnerInfoFromLogin', array($parameter));
     }
 
     /**
@@ -139,7 +141,7 @@ class DataBoxAccess extends \SoapClient
      */
     public function GetOwnerInfoFromLogin2(tDummyInput $parameter)
     {
-        return $this->__soapCall('GetOwnerInfoFromLogin2', array($parameter));
+      return $this->__soapCall('GetOwnerInfoFromLogin2', array($parameter));
     }
 
     /**
@@ -148,7 +150,7 @@ class DataBoxAccess extends \SoapClient
      */
     public function GetUserInfoFromLogin(tDummyInput $parameter)
     {
-        return $this->__soapCall('GetUserInfoFromLogin', array($parameter));
+      return $this->__soapCall('GetUserInfoFromLogin', array($parameter));
     }
 
     /**
@@ -157,7 +159,7 @@ class DataBoxAccess extends \SoapClient
      */
     public function GetUserInfoFromLogin2(tDummyInput $parameter)
     {
-        return $this->__soapCall('GetUserInfoFromLogin2', array($parameter));
+      return $this->__soapCall('GetUserInfoFromLogin2', array($parameter));
     }
 
     /**
@@ -166,7 +168,7 @@ class DataBoxAccess extends \SoapClient
      */
     public function ChangeISDSPassword(tChngPasswInput $parameter)
     {
-        return $this->__soapCall('ChangeISDSPassword', array($parameter));
+      return $this->__soapCall('ChangeISDSPassword', array($parameter));
     }
 
     /**
@@ -175,6 +177,7 @@ class DataBoxAccess extends \SoapClient
      */
     public function GetPasswordInfo(tDummyInput $parameter)
     {
-        return $this->__soapCall('GetPasswordInfo', array($parameter));
+      return $this->__soapCall('GetPasswordInfo', array($parameter));
     }
+
 }

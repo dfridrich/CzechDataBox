@@ -21,8 +21,8 @@ class tChangeDBsTypeOutput
      */
     public function __construct($changeLogFile = null, $dbStatus = null)
     {
-        $this->changeLogFile = $changeLogFile;
-        $this->dbStatus = $dbStatus;
+      $this->changeLogFile = $changeLogFile;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tChangeDBsTypeOutput
      */
     public function getChangeLogFile()
     {
-        return $this->changeLogFile;
+      return $this->changeLogFile;
     }
 
     /**
@@ -39,8 +39,8 @@ class tChangeDBsTypeOutput
      */
     public function setChangeLogFile($changeLogFile)
     {
-        $this->changeLogFile = $changeLogFile;
-        return $this;
+      $this->changeLogFile = $changeLogFile;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tChangeDBsTypeOutput
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tChangeDBsTypeOutput
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

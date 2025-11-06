@@ -21,8 +21,8 @@ class tDeliveryMessageOutput
      */
     public function __construct($dmDelivery = null, $dmStatus = null)
     {
-        $this->dmDelivery = $dmDelivery;
-        $this->dmStatus = $dmStatus;
+      $this->dmDelivery = $dmDelivery;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tDeliveryMessageOutput
      */
     public function getDmDelivery()
     {
-        return $this->dmDelivery;
+      return $this->dmDelivery;
     }
 
     /**
@@ -39,8 +39,8 @@ class tDeliveryMessageOutput
      */
     public function setDmDelivery($dmDelivery)
     {
-        $this->dmDelivery = $dmDelivery;
-        return $this;
+      $this->dmDelivery = $dmDelivery;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tDeliveryMessageOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tDeliveryMessageOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

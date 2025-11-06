@@ -57,14 +57,14 @@ class tdbResult
      */
     public function __construct($dbID = null, $dbType = null, $dbName = null, $dbAddress = null, $dbBiDate = null, $dbICO = null, $dbEffectiveOVM = null, $dbSendOptions = null)
     {
-        $this->dbID = $dbID;
-        $this->dbType = $dbType;
-        $this->dbName = $dbName;
-        $this->dbAddress = $dbAddress;
-        $this->dbBiDate = $dbBiDate;
-        $this->dbICO = $dbICO;
-        $this->dbEffectiveOVM = $dbEffectiveOVM;
-        $this->dbSendOptions = $dbSendOptions;
+      $this->dbID = $dbID;
+      $this->dbType = $dbType;
+      $this->dbName = $dbName;
+      $this->dbAddress = $dbAddress;
+      $this->dbBiDate = $dbBiDate;
+      $this->dbICO = $dbICO;
+      $this->dbEffectiveOVM = $dbEffectiveOVM;
+      $this->dbSendOptions = $dbSendOptions;
     }
 
     /**
@@ -72,7 +72,7 @@ class tdbResult
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -81,8 +81,8 @@ class tdbResult
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -90,7 +90,7 @@ class tdbResult
      */
     public function getDbType()
     {
-        return $this->dbType;
+      return $this->dbType;
     }
 
     /**
@@ -99,8 +99,8 @@ class tdbResult
      */
     public function setDbType($dbType)
     {
-        $this->dbType = $dbType;
-        return $this;
+      $this->dbType = $dbType;
+      return $this;
     }
 
     /**
@@ -108,7 +108,7 @@ class tdbResult
      */
     public function getDbName()
     {
-        return $this->dbName;
+      return $this->dbName;
     }
 
     /**
@@ -117,8 +117,8 @@ class tdbResult
      */
     public function setDbName($dbName)
     {
-        $this->dbName = $dbName;
-        return $this;
+      $this->dbName = $dbName;
+      return $this;
     }
 
     /**
@@ -126,7 +126,7 @@ class tdbResult
      */
     public function getDbAddress()
     {
-        return $this->dbAddress;
+      return $this->dbAddress;
     }
 
     /**
@@ -135,8 +135,8 @@ class tdbResult
      */
     public function setDbAddress($dbAddress)
     {
-        $this->dbAddress = $dbAddress;
-        return $this;
+      $this->dbAddress = $dbAddress;
+      return $this;
     }
 
     /**
@@ -144,7 +144,7 @@ class tdbResult
      */
     public function getDbBiDate()
     {
-        return $this->dbBiDate;
+      return $this->dbBiDate;
     }
 
     /**
@@ -153,8 +153,8 @@ class tdbResult
      */
     public function setDbBiDate($dbBiDate)
     {
-        $this->dbBiDate = $dbBiDate;
-        return $this;
+      $this->dbBiDate = $dbBiDate;
+      return $this;
     }
 
     /**
@@ -162,7 +162,7 @@ class tdbResult
      */
     public function getDbICO()
     {
-        return $this->dbICO;
+      return $this->dbICO;
     }
 
     /**
@@ -171,8 +171,8 @@ class tdbResult
      */
     public function setDbICO($dbICO)
     {
-        $this->dbICO = $dbICO;
-        return $this;
+      $this->dbICO = $dbICO;
+      return $this;
     }
 
     /**
@@ -180,7 +180,7 @@ class tdbResult
      */
     public function getDbEffectiveOVM()
     {
-        return $this->dbEffectiveOVM;
+      return $this->dbEffectiveOVM;
     }
 
     /**
@@ -189,8 +189,8 @@ class tdbResult
      */
     public function setDbEffectiveOVM($dbEffectiveOVM)
     {
-        $this->dbEffectiveOVM = $dbEffectiveOVM;
-        return $this;
+      $this->dbEffectiveOVM = $dbEffectiveOVM;
+      return $this;
     }
 
     /**
@@ -198,7 +198,7 @@ class tdbResult
      */
     public function getDbSendOptions()
     {
-        return $this->dbSendOptions;
+      return $this->dbSendOptions;
     }
 
     /**
@@ -207,7 +207,8 @@ class tdbResult
      */
     public function setDbSendOptions($dbSendOptions)
     {
-        $this->dbSendOptions = $dbSendOptions;
-        return $this;
+      $this->dbSendOptions = $dbSendOptions;
+      return $this;
     }
+
 }

@@ -21,8 +21,8 @@ class tMessageVerifyOutput
      */
     public function __construct($dmHash = null, $dmStatus = null)
     {
-        $this->dmHash = $dmHash;
-        $this->dmStatus = $dmStatus;
+      $this->dmHash = $dmHash;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tMessageVerifyOutput
      */
     public function getDmHash()
     {
-        return $this->dmHash;
+      return $this->dmHash;
     }
 
     /**
@@ -39,8 +39,8 @@ class tMessageVerifyOutput
      */
     public function setDmHash($dmHash)
     {
-        $this->dmHash = $dmHash;
-        return $this;
+      $this->dmHash = $dmHash;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tMessageVerifyOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tMessageVerifyOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

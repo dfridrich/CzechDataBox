@@ -51,13 +51,13 @@ class tNewAccDataInput2
      */
     public function __construct($dbID = null, $isdsID = null, $dbFeePaid = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbID = $dbID;
-        $this->isdsID = $isdsID;
-        $this->dbFeePaid = $dbFeePaid;
-        $this->dbVirtual = $dbVirtual;
-        $this->email = $email;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbID = $dbID;
+      $this->isdsID = $isdsID;
+      $this->dbFeePaid = $dbFeePaid;
+      $this->dbVirtual = $dbVirtual;
+      $this->email = $email;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -65,7 +65,7 @@ class tNewAccDataInput2
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -74,8 +74,8 @@ class tNewAccDataInput2
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -83,7 +83,7 @@ class tNewAccDataInput2
      */
     public function getIsdsID()
     {
-        return $this->isdsID;
+      return $this->isdsID;
     }
 
     /**
@@ -92,8 +92,8 @@ class tNewAccDataInput2
      */
     public function setIsdsID($isdsID)
     {
-        $this->isdsID = $isdsID;
-        return $this;
+      $this->isdsID = $isdsID;
+      return $this;
     }
 
     /**
@@ -101,7 +101,7 @@ class tNewAccDataInput2
      */
     public function getDbFeePaid()
     {
-        return $this->dbFeePaid;
+      return $this->dbFeePaid;
     }
 
     /**
@@ -110,8 +110,8 @@ class tNewAccDataInput2
      */
     public function setDbFeePaid($dbFeePaid)
     {
-        $this->dbFeePaid = $dbFeePaid;
-        return $this;
+      $this->dbFeePaid = $dbFeePaid;
+      return $this;
     }
 
     /**
@@ -119,7 +119,7 @@ class tNewAccDataInput2
      */
     public function getDbVirtual()
     {
-        return $this->dbVirtual;
+      return $this->dbVirtual;
     }
 
     /**
@@ -128,8 +128,8 @@ class tNewAccDataInput2
      */
     public function setDbVirtual($dbVirtual)
     {
-        $this->dbVirtual = $dbVirtual;
-        return $this;
+      $this->dbVirtual = $dbVirtual;
+      return $this;
     }
 
     /**
@@ -137,7 +137,7 @@ class tNewAccDataInput2
      */
     public function getEmail()
     {
-        return $this->email;
+      return $this->email;
     }
 
     /**
@@ -146,8 +146,8 @@ class tNewAccDataInput2
      */
     public function setEmail($email)
     {
-        $this->email = $email;
-        return $this;
+      $this->email = $email;
+      return $this;
     }
 
     /**
@@ -155,7 +155,7 @@ class tNewAccDataInput2
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -164,8 +164,8 @@ class tNewAccDataInput2
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -173,7 +173,7 @@ class tNewAccDataInput2
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -182,7 +182,8 @@ class tNewAccDataInput2
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

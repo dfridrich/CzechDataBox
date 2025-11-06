@@ -15,7 +15,7 @@ class tResignDocInput
      */
     public function __construct($dmDoc = null)
     {
-        $this->dmDoc = $dmDoc;
+      $this->dmDoc = $dmDoc;
     }
 
     /**
@@ -23,7 +23,7 @@ class tResignDocInput
      */
     public function getDmDoc()
     {
-        return $this->dmDoc;
+      return $this->dmDoc;
     }
 
     /**
@@ -32,7 +32,8 @@ class tResignDocInput
      */
     public function setDmDoc($dmDoc)
     {
-        $this->dmDoc = $dmDoc;
-        return $this;
+      $this->dmDoc = $dmDoc;
+      return $this;
     }
+
 }

@@ -26,17 +26,31 @@ class dmFile
     protected $dmMimeType = null;
 
     /**
+     * @var string $dmFileGuid
+     */
+    protected $dmFileGuid = null;
+
+    /**
+     * @var string $dmUpFileGuid
+     */
+    protected $dmUpFileGuid = null;
+
+    /**
      * @param base64Binary $dmEncodedContent
      * @param string $dmFileMetaType
      * @param string $dmFileDescr
      * @param string $dmMimeType
+     * @param string $dmFileGuid
+     * @param string $dmUpFileGuid
      */
-    public function __construct($dmEncodedContent = null, $dmFileMetaType = null, $dmFileDescr = null, $dmMimeType = null)
+    public function __construct($dmEncodedContent = null, $dmFileMetaType = null, $dmFileDescr = null, $dmMimeType = null, $dmFileGuid = null, $dmUpFileGuid = null)
     {
-        $this->dmEncodedContent = $dmEncodedContent;
-        $this->dmFileMetaType = $dmFileMetaType;
-        $this->dmFileDescr = $dmFileDescr;
-        $this->dmMimeType = $dmMimeType;
+      $this->dmEncodedContent = $dmEncodedContent;
+      $this->dmFileMetaType = $dmFileMetaType;
+      $this->dmFileDescr = $dmFileDescr;
+      $this->dmMimeType = $dmMimeType;
+      $this->dmFileGuid = $dmFileGuid;
+      $this->dmUpFileGuid = $dmUpFileGuid;
     }
 
     /**
@@ -44,7 +58,7 @@ class dmFile
      */
     public function getDmEncodedContent()
     {
-        return $this->dmEncodedContent;
+      return $this->dmEncodedContent;
     }
 
     /**
@@ -53,8 +67,8 @@ class dmFile
      */
     public function setDmEncodedContent($dmEncodedContent)
     {
-        $this->dmEncodedContent = $dmEncodedContent;
-        return $this;
+      $this->dmEncodedContent = $dmEncodedContent;
+      return $this;
     }
 
     /**
@@ -62,7 +76,7 @@ class dmFile
      */
     public function getDmFileMetaType()
     {
-        return $this->dmFileMetaType;
+      return $this->dmFileMetaType;
     }
 
     /**
@@ -71,8 +85,8 @@ class dmFile
      */
     public function setDmFileMetaType($dmFileMetaType)
     {
-        $this->dmFileMetaType = $dmFileMetaType;
-        return $this;
+      $this->dmFileMetaType = $dmFileMetaType;
+      return $this;
     }
 
     /**
@@ -80,7 +94,7 @@ class dmFile
      */
     public function getDmFileDescr()
     {
-        return $this->dmFileDescr;
+      return $this->dmFileDescr;
     }
 
     /**
@@ -89,8 +103,8 @@ class dmFile
      */
     public function setDmFileDescr($dmFileDescr)
     {
-        $this->dmFileDescr = $dmFileDescr;
-        return $this;
+      $this->dmFileDescr = $dmFileDescr;
+      return $this;
     }
 
     /**
@@ -98,7 +112,7 @@ class dmFile
      */
     public function getDmMimeType()
     {
-        return $this->dmMimeType;
+      return $this->dmMimeType;
     }
 
     /**
@@ -107,7 +121,44 @@ class dmFile
      */
     public function setDmMimeType($dmMimeType)
     {
-        $this->dmMimeType = $dmMimeType;
-        return $this;
+      $this->dmMimeType = $dmMimeType;
+      return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getDmFileGuid()
+    {
+      return $this->dmFileGuid;
+    }
+
+    /**
+     * @param string $dmFileGuid
+     * @return \Defr\CzechDataBox\Api\dmFile
+     */
+    public function setDmFileGuid($dmFileGuid)
+    {
+      $this->dmFileGuid = $dmFileGuid;
+      return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDmUpFileGuid()
+    {
+      return $this->dmUpFileGuid;
+    }
+
+    /**
+     * @param string $dmUpFileGuid
+     * @return \Defr\CzechDataBox\Api\dmFile
+     */
+    public function setDmUpFileGuid($dmUpFileGuid)
+    {
+      $this->dmUpFileGuid = $dmUpFileGuid;
+      return $this;
+    }
+
 }

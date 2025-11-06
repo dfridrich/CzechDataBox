@@ -57,14 +57,14 @@ class tCreateDBInput2
      */
     public function __construct($dbOwnerInfo = null, $pnLastNameAtBirth = null, $notifEmail = null, $dbPrimaryUsers = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->pnLastNameAtBirth = $pnLastNameAtBirth;
-        $this->notifEmail = $notifEmail;
-        $this->dbPrimaryUsers = $dbPrimaryUsers;
-        $this->dbVirtual = $dbVirtual;
-        $this->email = $email;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->pnLastNameAtBirth = $pnLastNameAtBirth;
+      $this->notifEmail = $notifEmail;
+      $this->dbPrimaryUsers = $dbPrimaryUsers;
+      $this->dbVirtual = $dbVirtual;
+      $this->email = $email;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -72,7 +72,7 @@ class tCreateDBInput2
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
@@ -81,8 +81,8 @@ class tCreateDBInput2
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
@@ -90,7 +90,7 @@ class tCreateDBInput2
      */
     public function getPnLastNameAtBirth()
     {
-        return $this->pnLastNameAtBirth;
+      return $this->pnLastNameAtBirth;
     }
 
     /**
@@ -99,8 +99,8 @@ class tCreateDBInput2
      */
     public function setPnLastNameAtBirth($pnLastNameAtBirth)
     {
-        $this->pnLastNameAtBirth = $pnLastNameAtBirth;
-        return $this;
+      $this->pnLastNameAtBirth = $pnLastNameAtBirth;
+      return $this;
     }
 
     /**
@@ -108,7 +108,7 @@ class tCreateDBInput2
      */
     public function getNotifEmail()
     {
-        return $this->notifEmail;
+      return $this->notifEmail;
     }
 
     /**
@@ -117,8 +117,8 @@ class tCreateDBInput2
      */
     public function setNotifEmail($notifEmail)
     {
-        $this->notifEmail = $notifEmail;
-        return $this;
+      $this->notifEmail = $notifEmail;
+      return $this;
     }
 
     /**
@@ -126,7 +126,7 @@ class tCreateDBInput2
      */
     public function getDbPrimaryUsers()
     {
-        return $this->dbPrimaryUsers;
+      return $this->dbPrimaryUsers;
     }
 
     /**
@@ -135,8 +135,8 @@ class tCreateDBInput2
      */
     public function setDbPrimaryUsers($dbPrimaryUsers)
     {
-        $this->dbPrimaryUsers = $dbPrimaryUsers;
-        return $this;
+      $this->dbPrimaryUsers = $dbPrimaryUsers;
+      return $this;
     }
 
     /**
@@ -144,7 +144,7 @@ class tCreateDBInput2
      */
     public function getDbVirtual()
     {
-        return $this->dbVirtual;
+      return $this->dbVirtual;
     }
 
     /**
@@ -153,8 +153,8 @@ class tCreateDBInput2
      */
     public function setDbVirtual($dbVirtual)
     {
-        $this->dbVirtual = $dbVirtual;
-        return $this;
+      $this->dbVirtual = $dbVirtual;
+      return $this;
     }
 
     /**
@@ -162,7 +162,7 @@ class tCreateDBInput2
      */
     public function getEmail()
     {
-        return $this->email;
+      return $this->email;
     }
 
     /**
@@ -171,8 +171,8 @@ class tCreateDBInput2
      */
     public function setEmail($email)
     {
-        $this->email = $email;
-        return $this;
+      $this->email = $email;
+      return $this;
     }
 
     /**
@@ -180,7 +180,7 @@ class tCreateDBInput2
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -189,8 +189,8 @@ class tCreateDBInput2
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -198,7 +198,7 @@ class tCreateDBInput2
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -207,7 +207,8 @@ class tCreateDBInput2
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

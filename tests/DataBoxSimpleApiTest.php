@@ -32,7 +32,7 @@ class DataBoxSimpleApiTest extends TestCase
     public function testSimpleApiFindDataBox()
     {
         $api = $this->__getDataBox()->getSimpleApi();
-        $foundDataBox = $api->findDataBoxById('wucb4dd')->getDbOwnerInfo();
+        $foundDataBox = $api->findDataBoxById('q58xh5w')->getDbOwnerInfo();
         $this->assertEquals("Dennis", $foundDataBox->getPnFirstName());
         $this->assertEquals("Fridrich", $foundDataBox->getPnLastName());
     }

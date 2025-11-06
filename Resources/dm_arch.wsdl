@@ -1,0 +1,71 @@
+﻿<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--  *********************************************************************
+
+   verze: 3.09 
+   klasifikace: Veřejný dokument    
+ 
+     WSDL pro služby archivace     
+        ArchiveISDSDocument - platí i pro běžné zprávy i VoDZ
+              
+   Změny:  
+     20.02.2025 verze 3.09 - nová služba ArchiveISDSDocument
+
+************************************************************************ -->
+
+<definitions name="ISDS_VoDZ" targetNamespace="http://isds.czechpoint.cz/v20" 
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                                  xmlns:tns="http://isds.czechpoint.cz/v20"
+                                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                                   >
+                                
+  <types>
+    <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
+      <xs:include schemaLocation="dmBaseTypes.xsd" />
+    </xs:schema>
+  </types>
+  
+  <!-- ******************************************************************* -->
+
+    <message name="ArchiveISDSDocumentRequest">
+        <part name="parameter" element="tns:ArchiveISDSDocument" />
+    </message>
+    <message name="ArchiveISDSDocumentResponse">
+        <part name="parameter" element="tns:ArchiveISDSDocumentResponse" />
+    </message>
+
+    <!-- ******************************************************************* -->
+  <portType name="dmVoDZPortType">
+
+      <operation name="ArchiveISDSDocument">
+          <input message="tns:ArchiveISDSDocumentRequest"/>
+          <output message="tns:ArchiveISDSDocumentResponse"/>
+      </operation>
+
+  </portType>
+
+  <!-- ******************************************************************* -->
+ <binding name="dmVoDZBinding" type="tns:dmVoDZPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <operation name="ArchiveISDSDocument">
+         <soap12:operation soapAction="" />
+         <input>
+             <soap12:body use="literal" />
+         </input>
+         <output>
+             <soap12:body use="literal" />
+         </output>
+     </operation>
+
+ </binding>
+
+  <!-- ******************************************************************* -->
+  <service name="dmArchWebService">
+    <port name="dmVoDZPortType" binding="tns:dmVoDZBinding">
+      <soap12:address location="https://ws2.mojedatovaschranka.cz/DS/arch"/>
+    </port>
+  </service>
+
+</definitions>
+

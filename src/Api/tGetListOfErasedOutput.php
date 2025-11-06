@@ -21,8 +21,8 @@ class tGetListOfErasedOutput
      */
     public function __construct($asyncID = null, $dmStatus = null)
     {
-        $this->asyncID = $asyncID;
-        $this->dmStatus = $dmStatus;
+      $this->asyncID = $asyncID;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tGetListOfErasedOutput
      */
     public function getAsyncID()
     {
-        return $this->asyncID;
+      return $this->asyncID;
     }
 
     /**
@@ -39,8 +39,8 @@ class tGetListOfErasedOutput
      */
     public function setAsyncID($asyncID)
     {
-        $this->asyncID = $asyncID;
-        return $this;
+      $this->asyncID = $asyncID;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tGetListOfErasedOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tGetListOfErasedOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

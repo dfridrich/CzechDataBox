@@ -8,5 +8,7 @@ class dmEnvelope
     
     public function __construct()
     {
+    
     }
+
 }

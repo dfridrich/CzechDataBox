@@ -13,4 +13,6 @@ class tUserType
     const LIQUIDATOR = 'LIQUIDATOR';
     const RECEIVER = 'RECEIVER';
     const GUARDIAN = 'GUARDIAN';
+
+
 }

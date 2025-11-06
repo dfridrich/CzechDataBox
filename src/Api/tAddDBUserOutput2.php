@@ -27,9 +27,9 @@ class tAddDBUserOutput2
      */
     public function __construct($dbID = null, $dbAccessDataId = null, $dbStatus = null)
     {
-        $this->dbID = $dbID;
-        $this->dbAccessDataId = $dbAccessDataId;
-        $this->dbStatus = $dbStatus;
+      $this->dbID = $dbID;
+      $this->dbAccessDataId = $dbAccessDataId;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tAddDBUserOutput2
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -46,8 +46,8 @@ class tAddDBUserOutput2
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tAddDBUserOutput2
      */
     public function getDbAccessDataId()
     {
-        return $this->dbAccessDataId;
+      return $this->dbAccessDataId;
     }
 
     /**
@@ -64,8 +64,8 @@ class tAddDBUserOutput2
      */
     public function setDbAccessDataId($dbAccessDataId)
     {
-        $this->dbAccessDataId = $dbAccessDataId;
-        return $this;
+      $this->dbAccessDataId = $dbAccessDataId;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tAddDBUserOutput2
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
@@ -82,7 +82,8 @@ class tAddDBUserOutput2
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

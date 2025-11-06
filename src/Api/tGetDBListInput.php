@@ -15,7 +15,7 @@ class tGetDBListInput
      */
     public function __construct($dblType = null)
     {
-        $this->dblType = $dblType;
+      $this->dblType = $dblType;
     }
 
     /**
@@ -23,7 +23,7 @@ class tGetDBListInput
      */
     public function getDblType()
     {
-        return $this->dblType;
+      return $this->dblType;
     }
 
     /**
@@ -32,7 +32,8 @@ class tGetDBListInput
      */
     public function setDblType($dblType)
     {
-        $this->dblType = $dblType;
-        return $this;
+      $this->dblType = $dblType;
+      return $this;
     }
+
 }

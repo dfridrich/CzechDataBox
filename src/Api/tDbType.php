@@ -7,13 +7,16 @@ class tDbType
     const __default = 'FO';
     const FO = 'FO';
     const PFO = 'PFO';
+    const PFO_REQ = 'PFO_REQ';
     const PFO_ADVOK = 'PFO_ADVOK';
     const PFO_DANPOR = 'PFO_DANPOR';
     const PFO_INSSPR = 'PFO_INSSPR';
     const PFO_AUDITOR = 'PFO_AUDITOR';
     const PFO_ZNALEC = 'PFO_ZNALEC';
     const PFO_TLUMOCNIK = 'PFO_TLUMOCNIK';
-    const PFO_REQ = 'PFO_REQ';
+    const PFO_ARCH = 'PFO_ARCH';
+    const PFO_AIAT = 'PFO_AIAT';
+    const PFO_AZI = 'PFO_AZI';
     const PO = 'PO';
     const PO_ZAK = 'PO_ZAK';
     const PO_REQ = 'PO_REQ';
@@ -24,4 +27,6 @@ class tDbType
     const OVM_FO = 'OVM_FO';
     const OVM_PFO = 'OVM_PFO';
     const OVM_PO = 'OVM_PO';
+
+
 }

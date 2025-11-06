@@ -15,7 +15,7 @@ class tDbUsersArray
      */
     public function __construct($dbUserInfo = null)
     {
-        $this->dbUserInfo = $dbUserInfo;
+      $this->dbUserInfo = $dbUserInfo;
     }
 
     /**
@@ -23,7 +23,7 @@ class tDbUsersArray
      */
     public function getDbUserInfo()
     {
-        return $this->dbUserInfo;
+      return $this->dbUserInfo;
     }
 
     /**
@@ -32,7 +32,8 @@ class tDbUsersArray
      */
     public function setDbUserInfo($dbUserInfo)
     {
-        $this->dbUserInfo = $dbUserInfo;
-        return $this;
+      $this->dbUserInfo = $dbUserInfo;
+      return $this;
     }
+
 }

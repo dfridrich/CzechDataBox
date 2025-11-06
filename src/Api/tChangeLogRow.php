@@ -15,7 +15,7 @@ class tChangeLogRow
      */
     public function __construct($changeLogRow = null)
     {
-        $this->changeLogRow = $changeLogRow;
+      $this->changeLogRow = $changeLogRow;
     }
 
     /**
@@ -23,7 +23,7 @@ class tChangeLogRow
      */
     public function getChangeLogRow()
     {
-        return $this->changeLogRow;
+      return $this->changeLogRow;
     }
 
     /**
@@ -32,7 +32,8 @@ class tChangeLogRow
      */
     public function setChangeLogRow($changeLogRow)
     {
-        $this->changeLogRow = $changeLogRow;
-        return $this;
+      $this->changeLogRow = $changeLogRow;
+      return $this;
     }
+
 }

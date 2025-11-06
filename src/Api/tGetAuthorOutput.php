@@ -27,9 +27,9 @@ class tGetAuthorOutput
      */
     public function __construct($userType = null, $authorName = null, $dmStatus = null)
     {
-        $this->userType = $userType;
-        $this->authorName = $authorName;
-        $this->dmStatus = $dmStatus;
+      $this->userType = $userType;
+      $this->authorName = $authorName;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tGetAuthorOutput
      */
     public function getUserType()
     {
-        return $this->userType;
+      return $this->userType;
     }
 
     /**
@@ -46,8 +46,8 @@ class tGetAuthorOutput
      */
     public function setUserType($userType)
     {
-        $this->userType = $userType;
-        return $this;
+      $this->userType = $userType;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tGetAuthorOutput
      */
     public function getAuthorName()
     {
-        return $this->authorName;
+      return $this->authorName;
     }
 
     /**
@@ -64,8 +64,8 @@ class tGetAuthorOutput
      */
     public function setAuthorName($authorName)
     {
-        $this->authorName = $authorName;
-        return $this;
+      $this->authorName = $authorName;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tGetAuthorOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -82,7 +82,8 @@ class tGetAuthorOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

@@ -27,9 +27,9 @@ class tDbReqStatus
      */
     public function __construct($dbStatusCode = null, $dbStatusMessage = null, $dbStatusRefNumber = null)
     {
-        $this->dbStatusCode = $dbStatusCode;
-        $this->dbStatusMessage = $dbStatusMessage;
-        $this->dbStatusRefNumber = $dbStatusRefNumber;
+      $this->dbStatusCode = $dbStatusCode;
+      $this->dbStatusMessage = $dbStatusMessage;
+      $this->dbStatusRefNumber = $dbStatusRefNumber;
     }
 
     /**
@@ -37,7 +37,7 @@ class tDbReqStatus
      */
     public function getDbStatusCode()
     {
-        return $this->dbStatusCode;
+      return $this->dbStatusCode;
     }
 
     /**
@@ -46,8 +46,8 @@ class tDbReqStatus
      */
     public function setDbStatusCode($dbStatusCode)
     {
-        $this->dbStatusCode = $dbStatusCode;
-        return $this;
+      $this->dbStatusCode = $dbStatusCode;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tDbReqStatus
      */
     public function getDbStatusMessage()
     {
-        return $this->dbStatusMessage;
+      return $this->dbStatusMessage;
     }
 
     /**
@@ -64,8 +64,8 @@ class tDbReqStatus
      */
     public function setDbStatusMessage($dbStatusMessage)
     {
-        $this->dbStatusMessage = $dbStatusMessage;
-        return $this;
+      $this->dbStatusMessage = $dbStatusMessage;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tDbReqStatus
      */
     public function getDbStatusRefNumber()
     {
-        return $this->dbStatusRefNumber;
+      return $this->dbStatusRefNumber;
     }
 
     /**
@@ -82,7 +82,8 @@ class tDbReqStatus
      */
     public function setDbStatusRefNumber($dbStatusRefNumber)
     {
-        $this->dbStatusRefNumber = $dbStatusRefNumber;
-        return $this;
+      $this->dbStatusRefNumber = $dbStatusRefNumber;
+      return $this;
     }
+
 }

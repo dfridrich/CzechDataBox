@@ -15,7 +15,7 @@ class dmMessageAuthor
      */
     public function __construct($maItem = null)
     {
-        $this->maItem = $maItem;
+      $this->maItem = $maItem;
     }
 
     /**
@@ -23,7 +23,7 @@ class dmMessageAuthor
      */
     public function getMaItem()
     {
-        return $this->maItem;
+      return $this->maItem;
     }
 
     /**
@@ -32,7 +32,8 @@ class dmMessageAuthor
      */
     public function setMaItem($maItem)
     {
-        $this->maItem = $maItem;
-        return $this;
+      $this->maItem = $maItem;
+      return $this;
     }
+
 }

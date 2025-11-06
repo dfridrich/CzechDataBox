@@ -21,8 +21,8 @@ class tGetDBUsers2Output
      */
     public function __construct($dbUsers = null, $dbStatus = null)
     {
-        $this->dbUsers = $dbUsers;
-        $this->dbStatus = $dbStatus;
+      $this->dbUsers = $dbUsers;
+      $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tGetDBUsers2Output
      */
     public function getDbUsers()
     {
-        return $this->dbUsers;
+      return $this->dbUsers;
     }
 
     /**
@@ -39,8 +39,8 @@ class tGetDBUsers2Output
      */
     public function setDbUsers($dbUsers)
     {
-        $this->dbUsers = $dbUsers;
-        return $this;
+      $this->dbUsers = $dbUsers;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tGetDBUsers2Output
      */
     public function getDbStatus()
     {
-        return $this->dbStatus;
+      return $this->dbStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tGetDBUsers2Output
      */
     public function setDbStatus($dbStatus)
     {
-        $this->dbStatus = $dbStatus;
-        return $this;
+      $this->dbStatus = $dbStatus;
+      return $this;
     }
+
 }

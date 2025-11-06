@@ -52,6 +52,7 @@ class DmOperationsWebService extends \SoapClient
       'tStateChangesRecord' => 'Defr\\CzechDataBox\\Api\\tStateChangesRecord',
       'tStateChangesArray' => 'Defr\\CzechDataBox\\Api\\tStateChangesArray',
       'tGetStateChangesOutput' => 'Defr\\CzechDataBox\\Api\\tGetStateChangesOutput',
+      'tDummyOutput' => 'Defr\\CzechDataBox\\Api\\tDummyOutput',
       'tGetAuthorInput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorInput',
       'tGetAuthorOutput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorOutput',
       'tEraseMessageIntput' => 'Defr\\CzechDataBox\\Api\\tEraseMessageIntput',
@@ -91,6 +92,12 @@ class DmOperationsWebService extends \SoapClient
       'GetMessageAuthor2Response' => 'Defr\\CzechDataBox\\Api\\GetMessageAuthor2Response',
       'dmMessageAuthor' => 'Defr\\CzechDataBox\\Api\\dmMessageAuthor',
       'maItem' => 'Defr\\CzechDataBox\\Api\\maItem',
+      'SentMessageEnvelopeDownload' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownload',
+      'SentMessageEnvelopeDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownloadResponse',
+      'SuspMessageReport' => 'Defr\\CzechDataBox\\Api\\SuspMessageReport',
+      'SuspMessageReportResponse' => 'Defr\\CzechDataBox\\Api\\SuspMessageReportResponse',
+      'ArchiveISDSDocument' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocument',
+      'ArchiveISDSDocumentResponse' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocumentResponse',
     );
 
     /**
@@ -99,18 +106,18 @@ class DmOperationsWebService extends \SoapClient
      */
     public function __construct(array $options = array(), $wsdl = null)
     {
-        foreach (self::$classmap as $key => $value) {
-            if (!isset($options['classmap'][$key])) {
-                $options['classmap'][$key] = $value;
-            }
+      foreach (self::$classmap as $key => $value) {
+        if (!isset($options['classmap'][$key])) {
+          $options['classmap'][$key] = $value;
         }
-        $options = array_merge(array (
-        'features' => 1,
-        ), $options);
-        if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/dm_operations.wsdl';
-        }
-        parent::__construct($wsdl, $options);
+      }
+      $options = array_merge(array (
+      'features' => 1,
+    ), $options);
+      if (!$wsdl) {
+        $wsdl = '/var/www/html/Resources/dm_operations.wsdl';
+      }
+      parent::__construct($wsdl, $options);
     }
 
     /**
@@ -119,7 +126,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function CreateMessage(tMessageCreateInput $parameter)
     {
-        return $this->__soapCall('CreateMessage', array($parameter));
+      return $this->__soapCall('CreateMessage', array($parameter));
     }
 
     /**
@@ -128,7 +135,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function MessageDownload(tIDMessInput $parameter)
     {
-        return $this->__soapCall('MessageDownload', array($parameter));
+      return $this->__soapCall('MessageDownload', array($parameter));
     }
 
     /**
@@ -137,7 +144,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function SignedMessageDownload(tIDMessInput $parameter)
     {
-        return $this->__soapCall('SignedMessageDownload', array($parameter));
+      return $this->__soapCall('SignedMessageDownload', array($parameter));
     }
 
     /**
@@ -146,16 +153,16 @@ class DmOperationsWebService extends \SoapClient
      */
     public function SignedSentMessageDownload(tIDMessInput $parameter)
     {
-        return $this->__soapCall('SignedSentMessageDownload', array($parameter));
+      return $this->__soapCall('SignedSentMessageDownload', array($parameter));
     }
 
     /**
      * @param string $parameter
-     * @return void
+     * @return tDummyOutput
      */
     public function DummyOperation($parameter)
     {
-        return $this->__soapCall('DummyOperation', array($parameter));
+      return $this->__soapCall('DummyOperation', array($parameter));
     }
 
     /**
@@ -164,7 +171,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function CreateMultipleMessage(tMultipleMessageCreateInput $parameter)
     {
-        return $this->__soapCall('CreateMultipleMessage', array($parameter));
+      return $this->__soapCall('CreateMultipleMessage', array($parameter));
     }
 
     /**
@@ -173,6 +180,7 @@ class DmOperationsWebService extends \SoapClient
      */
     public function AuthenticateMessage(tAuthenticateMessageInput $parameter)
     {
-        return $this->__soapCall('AuthenticateMessage', array($parameter));
+      return $this->__soapCall('AuthenticateMessage', array($parameter));
     }
+
 }

@@ -45,12 +45,12 @@ class tAddDBUserInput2
      */
     public function __construct($dbID = null, $dbUserInfo = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbID = $dbID;
-        $this->dbUserInfo = $dbUserInfo;
-        $this->dbVirtual = $dbVirtual;
-        $this->email = $email;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbID = $dbID;
+      $this->dbUserInfo = $dbUserInfo;
+      $this->dbVirtual = $dbVirtual;
+      $this->email = $email;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -58,7 +58,7 @@ class tAddDBUserInput2
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -67,8 +67,8 @@ class tAddDBUserInput2
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -76,7 +76,7 @@ class tAddDBUserInput2
      */
     public function getDbUserInfo()
     {
-        return $this->dbUserInfo;
+      return $this->dbUserInfo;
     }
 
     /**
@@ -85,8 +85,8 @@ class tAddDBUserInput2
      */
     public function setDbUserInfo($dbUserInfo)
     {
-        $this->dbUserInfo = $dbUserInfo;
-        return $this;
+      $this->dbUserInfo = $dbUserInfo;
+      return $this;
     }
 
     /**
@@ -94,7 +94,7 @@ class tAddDBUserInput2
      */
     public function getDbVirtual()
     {
-        return $this->dbVirtual;
+      return $this->dbVirtual;
     }
 
     /**
@@ -103,8 +103,8 @@ class tAddDBUserInput2
      */
     public function setDbVirtual($dbVirtual)
     {
-        $this->dbVirtual = $dbVirtual;
-        return $this;
+      $this->dbVirtual = $dbVirtual;
+      return $this;
     }
 
     /**
@@ -112,7 +112,7 @@ class tAddDBUserInput2
      */
     public function getEmail()
     {
-        return $this->email;
+      return $this->email;
     }
 
     /**
@@ -121,8 +121,8 @@ class tAddDBUserInput2
      */
     public function setEmail($email)
     {
-        $this->email = $email;
-        return $this;
+      $this->email = $email;
+      return $this;
     }
 
     /**
@@ -130,7 +130,7 @@ class tAddDBUserInput2
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -139,8 +139,8 @@ class tAddDBUserInput2
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -148,7 +148,7 @@ class tAddDBUserInput2
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -157,7 +157,8 @@ class tAddDBUserInput2
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

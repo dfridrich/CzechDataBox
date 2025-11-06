@@ -21,8 +21,8 @@ class tMessDownOutput
      */
     public function __construct($dmReturnedMessage = null, $dmStatus = null)
     {
-        $this->dmReturnedMessage = $dmReturnedMessage;
-        $this->dmStatus = $dmStatus;
+      $this->dmReturnedMessage = $dmReturnedMessage;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tMessDownOutput
      */
     public function getDmReturnedMessage()
     {
-        return $this->dmReturnedMessage;
+      return $this->dmReturnedMessage;
     }
 
     /**
@@ -39,8 +39,8 @@ class tMessDownOutput
      */
     public function setDmReturnedMessage($dmReturnedMessage)
     {
-        $this->dmReturnedMessage = $dmReturnedMessage;
-        return $this;
+      $this->dmReturnedMessage = $dmReturnedMessage;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tMessDownOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tMessDownOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

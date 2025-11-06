@@ -21,8 +21,8 @@ class tAuthenticateMessageOutput
      */
     public function __construct($dmAuthResult = null, $dmStatus = null)
     {
-        $this->dmAuthResult = $dmAuthResult;
-        $this->dmStatus = $dmStatus;
+      $this->dmAuthResult = $dmAuthResult;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tAuthenticateMessageOutput
      */
     public function getDmAuthResult()
     {
-        return $this->dmAuthResult;
+      return $this->dmAuthResult;
     }
 
     /**
@@ -39,8 +39,8 @@ class tAuthenticateMessageOutput
      */
     public function setDmAuthResult($dmAuthResult)
     {
-        $this->dmAuthResult = $dmAuthResult;
-        return $this;
+      $this->dmAuthResult = $dmAuthResult;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tAuthenticateMessageOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tAuthenticateMessageOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

@@ -33,10 +33,10 @@ class tConstRecord
      */
     public function __construct($cName = null, $cValue = null, $cFrom = null, $cTo = null)
     {
-        $this->cName = $cName;
-        $this->cValue = $cValue;
-        $this->cFrom = $cFrom;
-        $this->cTo = $cTo;
+      $this->cName = $cName;
+      $this->cValue = $cValue;
+      $this->cFrom = $cFrom;
+      $this->cTo = $cTo;
     }
 
     /**
@@ -44,7 +44,7 @@ class tConstRecord
      */
     public function getCName()
     {
-        return $this->cName;
+      return $this->cName;
     }
 
     /**
@@ -53,8 +53,8 @@ class tConstRecord
      */
     public function setCName($cName)
     {
-        $this->cName = $cName;
-        return $this;
+      $this->cName = $cName;
+      return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class tConstRecord
      */
     public function getCValue()
     {
-        return $this->cValue;
+      return $this->cValue;
     }
 
     /**
@@ -71,8 +71,8 @@ class tConstRecord
      */
     public function setCValue($cValue)
     {
-        $this->cValue = $cValue;
-        return $this;
+      $this->cValue = $cValue;
+      return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tConstRecord
      */
     public function getCFrom()
     {
-        return $this->cFrom;
+      return $this->cFrom;
     }
 
     /**
@@ -89,8 +89,8 @@ class tConstRecord
      */
     public function setCFrom($cFrom)
     {
-        $this->cFrom = $cFrom;
-        return $this;
+      $this->cFrom = $cFrom;
+      return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tConstRecord
      */
     public function getCTo()
     {
-        return $this->cTo;
+      return $this->cTo;
     }
 
     /**
@@ -107,7 +107,8 @@ class tConstRecord
      */
     public function setCTo($cTo)
     {
-        $this->cTo = $cTo;
-        return $this;
+      $this->cTo = $cTo;
+      return $this;
     }
+
 }

@@ -33,10 +33,10 @@ class tDelDBUserInput
      */
     public function __construct($dbOwnerInfo = null, $dbUserInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbUserInfo = $dbUserInfo;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbUserInfo = $dbUserInfo;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -44,7 +44,7 @@ class tDelDBUserInput
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
@@ -53,8 +53,8 @@ class tDelDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class tDelDBUserInput
      */
     public function getDbUserInfo()
     {
-        return $this->dbUserInfo;
+      return $this->dbUserInfo;
     }
 
     /**
@@ -71,8 +71,8 @@ class tDelDBUserInput
      */
     public function setDbUserInfo($dbUserInfo)
     {
-        $this->dbUserInfo = $dbUserInfo;
-        return $this;
+      $this->dbUserInfo = $dbUserInfo;
+      return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tDelDBUserInput
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -89,8 +89,8 @@ class tDelDBUserInput
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tDelDBUserInput
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -107,7 +107,8 @@ class tDelDBUserInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

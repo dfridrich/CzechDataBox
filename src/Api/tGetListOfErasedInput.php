@@ -45,12 +45,12 @@ class tGetListOfErasedInput
      */
     public function __construct($dmFromDate = null, $dmToDate = null, $dmYear = null, $dmMonth = null, $dmMessageType = null, $dmOutFormat = null)
     {
-        $this->dmFromDate = $dmFromDate;
-        $this->dmToDate = $dmToDate;
-        $this->dmYear = $dmYear;
-        $this->dmMonth = $dmMonth;
-        $this->dmMessageType = $dmMessageType;
-        $this->dmOutFormat = $dmOutFormat;
+      $this->dmFromDate = $dmFromDate;
+      $this->dmToDate = $dmToDate;
+      $this->dmYear = $dmYear;
+      $this->dmMonth = $dmMonth;
+      $this->dmMessageType = $dmMessageType;
+      $this->dmOutFormat = $dmOutFormat;
     }
 
     /**
@@ -58,7 +58,7 @@ class tGetListOfErasedInput
      */
     public function getDmFromDate()
     {
-        return $this->dmFromDate;
+      return $this->dmFromDate;
     }
 
     /**
@@ -67,8 +67,8 @@ class tGetListOfErasedInput
      */
     public function setDmFromDate($dmFromDate)
     {
-        $this->dmFromDate = $dmFromDate;
-        return $this;
+      $this->dmFromDate = $dmFromDate;
+      return $this;
     }
 
     /**
@@ -76,7 +76,7 @@ class tGetListOfErasedInput
      */
     public function getDmToDate()
     {
-        return $this->dmToDate;
+      return $this->dmToDate;
     }
 
     /**
@@ -85,8 +85,8 @@ class tGetListOfErasedInput
      */
     public function setDmToDate($dmToDate)
     {
-        $this->dmToDate = $dmToDate;
-        return $this;
+      $this->dmToDate = $dmToDate;
+      return $this;
     }
 
     /**
@@ -94,7 +94,7 @@ class tGetListOfErasedInput
      */
     public function getDmYear()
     {
-        return $this->dmYear;
+      return $this->dmYear;
     }
 
     /**
@@ -103,8 +103,8 @@ class tGetListOfErasedInput
      */
     public function setDmYear($dmYear)
     {
-        $this->dmYear = $dmYear;
-        return $this;
+      $this->dmYear = $dmYear;
+      return $this;
     }
 
     /**
@@ -112,7 +112,7 @@ class tGetListOfErasedInput
      */
     public function getDmMonth()
     {
-        return $this->dmMonth;
+      return $this->dmMonth;
     }
 
     /**
@@ -121,8 +121,8 @@ class tGetListOfErasedInput
      */
     public function setDmMonth($dmMonth)
     {
-        $this->dmMonth = $dmMonth;
-        return $this;
+      $this->dmMonth = $dmMonth;
+      return $this;
     }
 
     /**
@@ -130,7 +130,7 @@ class tGetListOfErasedInput
      */
     public function getDmMessageType()
     {
-        return $this->dmMessageType;
+      return $this->dmMessageType;
     }
 
     /**
@@ -139,8 +139,8 @@ class tGetListOfErasedInput
      */
     public function setDmMessageType($dmMessageType)
     {
-        $this->dmMessageType = $dmMessageType;
-        return $this;
+      $this->dmMessageType = $dmMessageType;
+      return $this;
     }
 
     /**
@@ -148,7 +148,7 @@ class tGetListOfErasedInput
      */
     public function getDmOutFormat()
     {
-        return $this->dmOutFormat;
+      return $this->dmOutFormat;
     }
 
     /**
@@ -157,7 +157,8 @@ class tGetListOfErasedInput
      */
     public function setDmOutFormat($dmOutFormat)
     {
-        $this->dmOutFormat = $dmOutFormat;
-        return $this;
+      $this->dmOutFormat = $dmOutFormat;
+      return $this;
     }
+
 }

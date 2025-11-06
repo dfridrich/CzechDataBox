@@ -45,12 +45,12 @@ class tPDZRec
      */
     public function __construct($PDZType = null, $PDZRecip = null, $PDZPayer = null, \DateTime $PDZExpire = null, $PDZCnt = null, $ODZIdent = null)
     {
-        $this->PDZType = $PDZType;
-        $this->PDZRecip = $PDZRecip;
-        $this->PDZPayer = $PDZPayer;
-        $this->PDZExpire = $PDZExpire ? $PDZExpire->format(\DateTime::ATOM) : null;
-        $this->PDZCnt = $PDZCnt;
-        $this->ODZIdent = $ODZIdent;
+      $this->PDZType = $PDZType;
+      $this->PDZRecip = $PDZRecip;
+      $this->PDZPayer = $PDZPayer;
+      $this->PDZExpire = $PDZExpire ? $PDZExpire->format(\DateTime::ATOM) : null;
+      $this->PDZCnt = $PDZCnt;
+      $this->ODZIdent = $ODZIdent;
     }
 
     /**
@@ -58,7 +58,7 @@ class tPDZRec
      */
     public function getPDZType()
     {
-        return $this->PDZType;
+      return $this->PDZType;
     }
 
     /**
@@ -67,8 +67,8 @@ class tPDZRec
      */
     public function setPDZType($PDZType)
     {
-        $this->PDZType = $PDZType;
-        return $this;
+      $this->PDZType = $PDZType;
+      return $this;
     }
 
     /**
@@ -76,7 +76,7 @@ class tPDZRec
      */
     public function getPDZRecip()
     {
-        return $this->PDZRecip;
+      return $this->PDZRecip;
     }
 
     /**
@@ -85,8 +85,8 @@ class tPDZRec
      */
     public function setPDZRecip($PDZRecip)
     {
-        $this->PDZRecip = $PDZRecip;
-        return $this;
+      $this->PDZRecip = $PDZRecip;
+      return $this;
     }
 
     /**
@@ -94,7 +94,7 @@ class tPDZRec
      */
     public function getPDZPayer()
     {
-        return $this->PDZPayer;
+      return $this->PDZPayer;
     }
 
     /**
@@ -103,8 +103,8 @@ class tPDZRec
      */
     public function setPDZPayer($PDZPayer)
     {
-        $this->PDZPayer = $PDZPayer;
-        return $this;
+      $this->PDZPayer = $PDZPayer;
+      return $this;
     }
 
     /**
@@ -112,15 +112,15 @@ class tPDZRec
      */
     public function getPDZExpire()
     {
-        if ($this->PDZExpire == null) {
-            return null;
-        } else {
-            try {
-                return new \DateTime($this->PDZExpire);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->PDZExpire == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->PDZExpire);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
@@ -129,8 +129,8 @@ class tPDZRec
      */
     public function setPDZExpire(\DateTime $PDZExpire)
     {
-        $this->PDZExpire = $PDZExpire->format(\DateTime::ATOM);
-        return $this;
+      $this->PDZExpire = $PDZExpire->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -138,7 +138,7 @@ class tPDZRec
      */
     public function getPDZCnt()
     {
-        return $this->PDZCnt;
+      return $this->PDZCnt;
     }
 
     /**
@@ -147,8 +147,8 @@ class tPDZRec
      */
     public function setPDZCnt($PDZCnt)
     {
-        $this->PDZCnt = $PDZCnt;
-        return $this;
+      $this->PDZCnt = $PDZCnt;
+      return $this;
     }
 
     /**
@@ -156,7 +156,7 @@ class tPDZRec
      */
     public function getODZIdent()
     {
-        return $this->ODZIdent;
+      return $this->ODZIdent;
     }
 
     /**
@@ -165,7 +165,8 @@ class tPDZRec
      */
     public function setODZIdent($ODZIdent)
     {
-        $this->ODZIdent = $ODZIdent;
-        return $this;
+      $this->ODZIdent = $ODZIdent;
+      return $this;
     }
+
 }

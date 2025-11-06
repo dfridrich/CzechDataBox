@@ -45,12 +45,12 @@ class tListOfFReceivedInput
      */
     public function __construct(\DateTime $dmFromTime = null, \DateTime $dmToTime = null, $dmRecipientOrgUnitNum = null, $dmStatusFilter = null, $dmOffset = null, $dmLimit = null)
     {
-        $this->dmFromTime = $dmFromTime ? $dmFromTime->format(\DateTime::ATOM) : null;
-        $this->dmToTime = $dmToTime ? $dmToTime->format(\DateTime::ATOM) : null;
-        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-        $this->dmStatusFilter = $dmStatusFilter;
-        $this->dmOffset = $dmOffset;
-        $this->dmLimit = $dmLimit;
+      $this->dmFromTime = $dmFromTime ? $dmFromTime->format(\DateTime::ATOM) : null;
+      $this->dmToTime = $dmToTime ? $dmToTime->format(\DateTime::ATOM) : null;
+      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+      $this->dmStatusFilter = $dmStatusFilter;
+      $this->dmOffset = $dmOffset;
+      $this->dmLimit = $dmLimit;
     }
 
     /**
@@ -58,15 +58,15 @@ class tListOfFReceivedInput
      */
     public function getDmFromTime()
     {
-        if ($this->dmFromTime == null) {
-            return null;
-        } else {
-            try {
-                return new \DateTime($this->dmFromTime);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->dmFromTime == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->dmFromTime);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
@@ -75,8 +75,8 @@ class tListOfFReceivedInput
      */
     public function setDmFromTime(\DateTime $dmFromTime)
     {
-        $this->dmFromTime = $dmFromTime->format(\DateTime::ATOM);
-        return $this;
+      $this->dmFromTime = $dmFromTime->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -84,15 +84,15 @@ class tListOfFReceivedInput
      */
     public function getDmToTime()
     {
-        if ($this->dmToTime == null) {
-            return null;
-        } else {
-            try {
-                return new \DateTime($this->dmToTime);
-            } catch (\Exception $e) {
-                return false;
-            }
+      if ($this->dmToTime == null) {
+        return null;
+      } else {
+        try {
+          return new \DateTime($this->dmToTime);
+        } catch (\Exception $e) {
+          return false;
         }
+      }
     }
 
     /**
@@ -101,8 +101,8 @@ class tListOfFReceivedInput
      */
     public function setDmToTime(\DateTime $dmToTime)
     {
-        $this->dmToTime = $dmToTime->format(\DateTime::ATOM);
-        return $this;
+      $this->dmToTime = $dmToTime->format(\DateTime::ATOM);
+      return $this;
     }
 
     /**
@@ -110,7 +110,7 @@ class tListOfFReceivedInput
      */
     public function getDmRecipientOrgUnitNum()
     {
-        return $this->dmRecipientOrgUnitNum;
+      return $this->dmRecipientOrgUnitNum;
     }
 
     /**
@@ -119,8 +119,8 @@ class tListOfFReceivedInput
      */
     public function setDmRecipientOrgUnitNum($dmRecipientOrgUnitNum)
     {
-        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-        return $this;
+      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+      return $this;
     }
 
     /**
@@ -128,7 +128,7 @@ class tListOfFReceivedInput
      */
     public function getDmStatusFilter()
     {
-        return $this->dmStatusFilter;
+      return $this->dmStatusFilter;
     }
 
     /**
@@ -137,8 +137,8 @@ class tListOfFReceivedInput
      */
     public function setDmStatusFilter($dmStatusFilter)
     {
-        $this->dmStatusFilter = $dmStatusFilter;
-        return $this;
+      $this->dmStatusFilter = $dmStatusFilter;
+      return $this;
     }
 
     /**
@@ -146,7 +146,7 @@ class tListOfFReceivedInput
      */
     public function getDmOffset()
     {
-        return $this->dmOffset;
+      return $this->dmOffset;
     }
 
     /**
@@ -155,8 +155,8 @@ class tListOfFReceivedInput
      */
     public function setDmOffset($dmOffset)
     {
-        $this->dmOffset = $dmOffset;
-        return $this;
+      $this->dmOffset = $dmOffset;
+      return $this;
     }
 
     /**
@@ -164,7 +164,7 @@ class tListOfFReceivedInput
      */
     public function getDmLimit()
     {
-        return $this->dmLimit;
+      return $this->dmLimit;
     }
 
     /**
@@ -173,7 +173,8 @@ class tListOfFReceivedInput
      */
     public function setDmLimit($dmLimit)
     {
-        $this->dmLimit = $dmLimit;
-        return $this;
+      $this->dmLimit = $dmLimit;
+      return $this;
     }
+
 }

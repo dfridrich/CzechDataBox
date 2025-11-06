@@ -21,8 +21,8 @@ class dmPublishOwnID
      */
     public function __construct($_ = null, $IdLevel = null)
     {
-        $this->_ = $_;
-        $this->IdLevel = $IdLevel;
+      $this->_ = $_;
+      $this->IdLevel = $IdLevel;
     }
 
     /**
@@ -30,7 +30,7 @@ class dmPublishOwnID
      */
     public function get_()
     {
-        return $this->_;
+      return $this->_;
     }
 
     /**
@@ -39,8 +39,8 @@ class dmPublishOwnID
      */
     public function set_($_)
     {
-        $this->_ = $_;
-        return $this;
+      $this->_ = $_;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class dmPublishOwnID
      */
     public function getIdLevel()
     {
-        return $this->IdLevel;
+      return $this->IdLevel;
     }
 
     /**
@@ -57,7 +57,8 @@ class dmPublishOwnID
      */
     public function setIdLevel($IdLevel)
     {
-        $this->IdLevel = $IdLevel;
-        return $this;
+      $this->IdLevel = $IdLevel;
+      return $this;
     }
+
 }

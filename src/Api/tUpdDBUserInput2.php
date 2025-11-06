@@ -39,11 +39,11 @@ class tUpdDBUserInput2
      */
     public function __construct($dbID = null, $isdsID = null, $dbNewUserInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbID = $dbID;
-        $this->isdsID = $isdsID;
-        $this->dbNewUserInfo = $dbNewUserInfo;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbID = $dbID;
+      $this->isdsID = $isdsID;
+      $this->dbNewUserInfo = $dbNewUserInfo;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -51,7 +51,7 @@ class tUpdDBUserInput2
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -60,8 +60,8 @@ class tUpdDBUserInput2
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -69,7 +69,7 @@ class tUpdDBUserInput2
      */
     public function getIsdsID()
     {
-        return $this->isdsID;
+      return $this->isdsID;
     }
 
     /**
@@ -78,8 +78,8 @@ class tUpdDBUserInput2
      */
     public function setIsdsID($isdsID)
     {
-        $this->isdsID = $isdsID;
-        return $this;
+      $this->isdsID = $isdsID;
+      return $this;
     }
 
     /**
@@ -87,7 +87,7 @@ class tUpdDBUserInput2
      */
     public function getDbNewUserInfo()
     {
-        return $this->dbNewUserInfo;
+      return $this->dbNewUserInfo;
     }
 
     /**
@@ -96,8 +96,8 @@ class tUpdDBUserInput2
      */
     public function setDbNewUserInfo($dbNewUserInfo)
     {
-        $this->dbNewUserInfo = $dbNewUserInfo;
-        return $this;
+      $this->dbNewUserInfo = $dbNewUserInfo;
+      return $this;
     }
 
     /**
@@ -105,7 +105,7 @@ class tUpdDBUserInput2
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -114,8 +114,8 @@ class tUpdDBUserInput2
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -123,7 +123,7 @@ class tUpdDBUserInput2
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -132,7 +132,8 @@ class tUpdDBUserInput2
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

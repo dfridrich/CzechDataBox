@@ -15,7 +15,7 @@ class RegisterForNotifications
      */
     public function __construct($action = null)
     {
-        $this->action = $action;
+      $this->action = $action;
     }
 
     /**
@@ -23,7 +23,7 @@ class RegisterForNotifications
      */
     public function getAction()
     {
-        return $this->action;
+      return $this->action;
     }
 
     /**
@@ -32,7 +32,8 @@ class RegisterForNotifications
      */
     public function setAction($action)
     {
-        $this->action = $action;
-        return $this;
+      $this->action = $action;
+      return $this;
     }
+
 }

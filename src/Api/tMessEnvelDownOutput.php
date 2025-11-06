@@ -21,8 +21,8 @@ class tMessEnvelDownOutput
      */
     public function __construct($dmReturnedMessageEnvelope = null, $dmStatus = null)
     {
-        $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
-        $this->dmStatus = $dmStatus;
+      $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
+      $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tMessEnvelDownOutput
      */
     public function getDmReturnedMessageEnvelope()
     {
-        return $this->dmReturnedMessageEnvelope;
+      return $this->dmReturnedMessageEnvelope;
     }
 
     /**
@@ -39,8 +39,8 @@ class tMessEnvelDownOutput
      */
     public function setDmReturnedMessageEnvelope($dmReturnedMessageEnvelope)
     {
-        $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
-        return $this;
+      $this->dmReturnedMessageEnvelope = $dmReturnedMessageEnvelope;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tMessEnvelDownOutput
      */
     public function getDmStatus()
     {
-        return $this->dmStatus;
+      return $this->dmStatus;
     }
 
     /**
@@ -57,7 +57,8 @@ class tMessEnvelDownOutput
      */
     public function setDmStatus($dmStatus)
     {
-        $this->dmStatus = $dmStatus;
-        return $this;
+      $this->dmStatus = $dmStatus;
+      return $this;
     }
+
 }

@@ -27,9 +27,9 @@ class tOwnerInfoInput
      */
     public function __construct($dbOwnerInfo = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -37,7 +37,7 @@ class tOwnerInfoInput
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
@@ -46,8 +46,8 @@ class tOwnerInfoInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tOwnerInfoInput
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -64,8 +64,8 @@ class tOwnerInfoInput
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tOwnerInfoInput
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -82,7 +82,8 @@ class tOwnerInfoInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

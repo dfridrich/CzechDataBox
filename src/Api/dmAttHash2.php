@@ -21,8 +21,8 @@ class dmAttHash2
      */
     public function __construct($_ = null, $AttHashAlg = null)
     {
-        $this->_ = $_;
-        $this->AttHashAlg = $AttHashAlg;
+      $this->_ = $_;
+      $this->AttHashAlg = $AttHashAlg;
     }
 
     /**
@@ -30,7 +30,7 @@ class dmAttHash2
      */
     public function get_()
     {
-        return $this->_;
+      return $this->_;
     }
 
     /**
@@ -39,8 +39,8 @@ class dmAttHash2
      */
     public function set_($_)
     {
-        $this->_ = $_;
-        return $this;
+      $this->_ = $_;
+      return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class dmAttHash2
      */
     public function getAttHashAlg()
     {
-        return $this->AttHashAlg;
+      return $this->AttHashAlg;
     }
 
     /**
@@ -57,7 +57,8 @@ class dmAttHash2
      */
     public function setAttHashAlg($AttHashAlg)
     {
-        $this->AttHashAlg = $AttHashAlg;
-        return $this;
+      $this->AttHashAlg = $AttHashAlg;
+      return $this;
     }
+
 }

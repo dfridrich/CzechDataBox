@@ -15,7 +15,7 @@ class tNtfRecordsArray
      */
     public function __construct($ntfRecord = null)
     {
-        $this->ntfRecord = $ntfRecord;
+      $this->ntfRecord = $ntfRecord;
     }
 
     /**
@@ -23,7 +23,7 @@ class tNtfRecordsArray
      */
     public function getNtfRecord()
     {
-        return $this->ntfRecord;
+      return $this->ntfRecord;
     }
 
     /**
@@ -32,7 +32,8 @@ class tNtfRecordsArray
      */
     public function setNtfRecord($ntfRecord)
     {
-        $this->ntfRecord = $ntfRecord;
-        return $this;
+      $this->ntfRecord = $ntfRecord;
+      return $this;
     }
+
 }

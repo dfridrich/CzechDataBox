@@ -33,10 +33,10 @@ class tDelDBUserInput2
      */
     public function __construct($dbID = null, $isdsID = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbID = $dbID;
-        $this->isdsID = $isdsID;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbID = $dbID;
+      $this->isdsID = $isdsID;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -44,7 +44,7 @@ class tDelDBUserInput2
      */
     public function getDbID()
     {
-        return $this->dbID;
+      return $this->dbID;
     }
 
     /**
@@ -53,8 +53,8 @@ class tDelDBUserInput2
      */
     public function setDbID($dbID)
     {
-        $this->dbID = $dbID;
-        return $this;
+      $this->dbID = $dbID;
+      return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class tDelDBUserInput2
      */
     public function getIsdsID()
     {
-        return $this->isdsID;
+      return $this->isdsID;
     }
 
     /**
@@ -71,8 +71,8 @@ class tDelDBUserInput2
      */
     public function setIsdsID($isdsID)
     {
-        $this->isdsID = $isdsID;
-        return $this;
+      $this->isdsID = $isdsID;
+      return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tDelDBUserInput2
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
@@ -89,8 +89,8 @@ class tDelDBUserInput2
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tDelDBUserInput2
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
@@ -107,7 +107,8 @@ class tDelDBUserInput2
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

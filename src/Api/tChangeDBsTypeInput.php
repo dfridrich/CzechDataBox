@@ -27,9 +27,9 @@ class tChangeDBsTypeInput
      */
     public function __construct($refNumber = null, $newDBType = null, $IDsFile = null)
     {
-        $this->refNumber = $refNumber;
-        $this->newDBType = $newDBType;
-        $this->IDsFile = $IDsFile;
+      $this->refNumber = $refNumber;
+      $this->newDBType = $newDBType;
+      $this->IDsFile = $IDsFile;
     }
 
     /**
@@ -37,7 +37,7 @@ class tChangeDBsTypeInput
      */
     public function getRefNumber()
     {
-        return $this->refNumber;
+      return $this->refNumber;
     }
 
     /**
@@ -46,8 +46,8 @@ class tChangeDBsTypeInput
      */
     public function setRefNumber($refNumber)
     {
-        $this->refNumber = $refNumber;
-        return $this;
+      $this->refNumber = $refNumber;
+      return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tChangeDBsTypeInput
      */
     public function getNewDBType()
     {
-        return $this->newDBType;
+      return $this->newDBType;
     }
 
     /**
@@ -64,8 +64,8 @@ class tChangeDBsTypeInput
      */
     public function setNewDBType($newDBType)
     {
-        $this->newDBType = $newDBType;
-        return $this;
+      $this->newDBType = $newDBType;
+      return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tChangeDBsTypeInput
      */
     public function getIDsFile()
     {
-        return $this->IDsFile;
+      return $this->IDsFile;
     }
 
     /**
@@ -82,7 +82,8 @@ class tChangeDBsTypeInput
      */
     public function setIDsFile($IDsFile)
     {
-        $this->IDsFile = $IDsFile;
-        return $this;
+      $this->IDsFile = $IDsFile;
+      return $this;
     }
+
 }
