@@ -27,9 +27,9 @@ class ArchiveISDSDocumentResponse
      */
     public function __construct($dmResultDoc = null, $nextStampTo = null, $dmStatus = null)
     {
-      $this->dmResultDoc = $dmResultDoc;
-      $this->nextStampTo = $nextStampTo;
-      $this->dmStatus = $dmStatus;
+        $this->dmResultDoc = $dmResultDoc;
+        $this->nextStampTo = $nextStampTo;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class ArchiveISDSDocumentResponse
      */
     public function getDmResultDoc()
     {
-      return $this->dmResultDoc;
+        return $this->dmResultDoc;
     }
 
     /**
@@ -46,8 +46,8 @@ class ArchiveISDSDocumentResponse
      */
     public function setDmResultDoc($dmResultDoc)
     {
-      $this->dmResultDoc = $dmResultDoc;
-      return $this;
+        $this->dmResultDoc = $dmResultDoc;
+        return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class ArchiveISDSDocumentResponse
      */
     public function getNextStampTo()
     {
-      return $this->nextStampTo;
+        return $this->nextStampTo;
     }
 
     /**
@@ -64,8 +64,8 @@ class ArchiveISDSDocumentResponse
      */
     public function setNextStampTo($nextStampTo)
     {
-      $this->nextStampTo = $nextStampTo;
-      return $this;
+        $this->nextStampTo = $nextStampTo;
+        return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class ArchiveISDSDocumentResponse
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -82,8 +82,7 @@ class ArchiveISDSDocumentResponse
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

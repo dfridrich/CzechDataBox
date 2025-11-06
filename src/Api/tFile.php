@@ -21,8 +21,8 @@ class tFile
      */
     public function __construct($dmEncodedContent = null, $dmXMLContent = null)
     {
-      $this->dmEncodedContent = $dmEncodedContent;
-      $this->dmXMLContent = $dmXMLContent;
+        $this->dmEncodedContent = $dmEncodedContent;
+        $this->dmXMLContent = $dmXMLContent;
     }
 
     /**
@@ -30,7 +30,7 @@ class tFile
      */
     public function getDmEncodedContent()
     {
-      return $this->dmEncodedContent;
+        return $this->dmEncodedContent;
     }
 
     /**
@@ -39,8 +39,8 @@ class tFile
      */
     public function setDmEncodedContent($dmEncodedContent)
     {
-      $this->dmEncodedContent = $dmEncodedContent;
-      return $this;
+        $this->dmEncodedContent = $dmEncodedContent;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tFile
      */
     public function getDmXMLContent()
     {
-      return $this->dmXMLContent;
+        return $this->dmXMLContent;
     }
 
     /**
@@ -57,8 +57,7 @@ class tFile
      */
     public function setDmXMLContent($dmXMLContent)
     {
-      $this->dmXMLContent = $dmXMLContent;
-      return $this;
+        $this->dmXMLContent = $dmXMLContent;
+        return $this;
     }
-
 }

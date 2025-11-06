@@ -15,7 +15,7 @@ class dbUserInfo
      */
     public function __construct($AIFOTicket = null)
     {
-      $this->AIFOTicket = $AIFOTicket;
+        $this->AIFOTicket = $AIFOTicket;
     }
 
     /**
@@ -23,7 +23,7 @@ class dbUserInfo
      */
     public function getAIFOTicket()
     {
-      return $this->AIFOTicket;
+        return $this->AIFOTicket;
     }
 
     /**
@@ -32,8 +32,7 @@ class dbUserInfo
      */
     public function setAIFOTicket($AIFOTicket)
     {
-      $this->AIFOTicket = $AIFOTicket;
-      return $this;
+        $this->AIFOTicket = $AIFOTicket;
+        return $this;
     }
-
 }

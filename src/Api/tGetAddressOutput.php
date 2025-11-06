@@ -75,17 +75,17 @@ class tGetAddressOutput
      */
     public function __construct($adCode = null, $adCity = null, $adDistrict = null, $adStreet = null, $adNumberInStreet = null, $adNumberInMunicipality = null, $adZipCode = null, $adState = null, $adRegistrationNumber = null, $adFullAddress1 = null, $adFullAddress2 = null)
     {
-      $this->adCode = $adCode;
-      $this->adCity = $adCity;
-      $this->adDistrict = $adDistrict;
-      $this->adStreet = $adStreet;
-      $this->adNumberInStreet = $adNumberInStreet;
-      $this->adNumberInMunicipality = $adNumberInMunicipality;
-      $this->adZipCode = $adZipCode;
-      $this->adState = $adState;
-      $this->adRegistrationNumber = $adRegistrationNumber;
-      $this->adFullAddress1 = $adFullAddress1;
-      $this->adFullAddress2 = $adFullAddress2;
+        $this->adCode = $adCode;
+        $this->adCity = $adCity;
+        $this->adDistrict = $adDistrict;
+        $this->adStreet = $adStreet;
+        $this->adNumberInStreet = $adNumberInStreet;
+        $this->adNumberInMunicipality = $adNumberInMunicipality;
+        $this->adZipCode = $adZipCode;
+        $this->adState = $adState;
+        $this->adRegistrationNumber = $adRegistrationNumber;
+        $this->adFullAddress1 = $adFullAddress1;
+        $this->adFullAddress2 = $adFullAddress2;
     }
 
     /**
@@ -93,7 +93,7 @@ class tGetAddressOutput
      */
     public function getAdCode()
     {
-      return $this->adCode;
+        return $this->adCode;
     }
 
     /**
@@ -102,8 +102,8 @@ class tGetAddressOutput
      */
     public function setAdCode($adCode)
     {
-      $this->adCode = $adCode;
-      return $this;
+        $this->adCode = $adCode;
+        return $this;
     }
 
     /**
@@ -111,7 +111,7 @@ class tGetAddressOutput
      */
     public function getAdCity()
     {
-      return $this->adCity;
+        return $this->adCity;
     }
 
     /**
@@ -120,8 +120,8 @@ class tGetAddressOutput
      */
     public function setAdCity($adCity)
     {
-      $this->adCity = $adCity;
-      return $this;
+        $this->adCity = $adCity;
+        return $this;
     }
 
     /**
@@ -129,7 +129,7 @@ class tGetAddressOutput
      */
     public function getAdDistrict()
     {
-      return $this->adDistrict;
+        return $this->adDistrict;
     }
 
     /**
@@ -138,8 +138,8 @@ class tGetAddressOutput
      */
     public function setAdDistrict($adDistrict)
     {
-      $this->adDistrict = $adDistrict;
-      return $this;
+        $this->adDistrict = $adDistrict;
+        return $this;
     }
 
     /**
@@ -147,7 +147,7 @@ class tGetAddressOutput
      */
     public function getAdStreet()
     {
-      return $this->adStreet;
+        return $this->adStreet;
     }
 
     /**
@@ -156,8 +156,8 @@ class tGetAddressOutput
      */
     public function setAdStreet($adStreet)
     {
-      $this->adStreet = $adStreet;
-      return $this;
+        $this->adStreet = $adStreet;
+        return $this;
     }
 
     /**
@@ -165,7 +165,7 @@ class tGetAddressOutput
      */
     public function getAdNumberInStreet()
     {
-      return $this->adNumberInStreet;
+        return $this->adNumberInStreet;
     }
 
     /**
@@ -174,8 +174,8 @@ class tGetAddressOutput
      */
     public function setAdNumberInStreet($adNumberInStreet)
     {
-      $this->adNumberInStreet = $adNumberInStreet;
-      return $this;
+        $this->adNumberInStreet = $adNumberInStreet;
+        return $this;
     }
 
     /**
@@ -183,7 +183,7 @@ class tGetAddressOutput
      */
     public function getAdNumberInMunicipality()
     {
-      return $this->adNumberInMunicipality;
+        return $this->adNumberInMunicipality;
     }
 
     /**
@@ -192,8 +192,8 @@ class tGetAddressOutput
      */
     public function setAdNumberInMunicipality($adNumberInMunicipality)
     {
-      $this->adNumberInMunicipality = $adNumberInMunicipality;
-      return $this;
+        $this->adNumberInMunicipality = $adNumberInMunicipality;
+        return $this;
     }
 
     /**
@@ -201,7 +201,7 @@ class tGetAddressOutput
      */
     public function getAdZipCode()
     {
-      return $this->adZipCode;
+        return $this->adZipCode;
     }
 
     /**
@@ -210,8 +210,8 @@ class tGetAddressOutput
      */
     public function setAdZipCode($adZipCode)
     {
-      $this->adZipCode = $adZipCode;
-      return $this;
+        $this->adZipCode = $adZipCode;
+        return $this;
     }
 
     /**
@@ -219,7 +219,7 @@ class tGetAddressOutput
      */
     public function getAdState()
     {
-      return $this->adState;
+        return $this->adState;
     }
 
     /**
@@ -228,8 +228,8 @@ class tGetAddressOutput
      */
     public function setAdState($adState)
     {
-      $this->adState = $adState;
-      return $this;
+        $this->adState = $adState;
+        return $this;
     }
 
     /**
@@ -237,7 +237,7 @@ class tGetAddressOutput
      */
     public function getAdRegistrationNumber()
     {
-      return $this->adRegistrationNumber;
+        return $this->adRegistrationNumber;
     }
 
     /**
@@ -246,8 +246,8 @@ class tGetAddressOutput
      */
     public function setAdRegistrationNumber($adRegistrationNumber)
     {
-      $this->adRegistrationNumber = $adRegistrationNumber;
-      return $this;
+        $this->adRegistrationNumber = $adRegistrationNumber;
+        return $this;
     }
 
     /**
@@ -255,7 +255,7 @@ class tGetAddressOutput
      */
     public function getAdFullAddress1()
     {
-      return $this->adFullAddress1;
+        return $this->adFullAddress1;
     }
 
     /**
@@ -264,8 +264,8 @@ class tGetAddressOutput
      */
     public function setAdFullAddress1($adFullAddress1)
     {
-      $this->adFullAddress1 = $adFullAddress1;
-      return $this;
+        $this->adFullAddress1 = $adFullAddress1;
+        return $this;
     }
 
     /**
@@ -273,7 +273,7 @@ class tGetAddressOutput
      */
     public function getAdFullAddress2()
     {
-      return $this->adFullAddress2;
+        return $this->adFullAddress2;
     }
 
     /**
@@ -282,8 +282,7 @@ class tGetAddressOutput
      */
     public function setAdFullAddress2($adFullAddress2)
     {
-      $this->adFullAddress2 = $adFullAddress2;
-      return $this;
+        $this->adFullAddress2 = $adFullAddress2;
+        return $this;
     }
-
 }

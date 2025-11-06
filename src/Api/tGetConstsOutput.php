@@ -21,8 +21,8 @@ class tGetConstsOutput
      */
     public function __construct($constRecords = null, $dbStatus = null)
     {
-      $this->constRecords = $constRecords;
-      $this->dbStatus = $dbStatus;
+        $this->constRecords = $constRecords;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tGetConstsOutput
      */
     public function getConstRecords()
     {
-      return $this->constRecords;
+        return $this->constRecords;
     }
 
     /**
@@ -39,8 +39,8 @@ class tGetConstsOutput
      */
     public function setConstRecords($constRecords)
     {
-      $this->constRecords = $constRecords;
-      return $this;
+        $this->constRecords = $constRecords;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tGetConstsOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class tGetConstsOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

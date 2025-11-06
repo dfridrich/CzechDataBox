@@ -21,8 +21,8 @@ class tPickUpAsyncInput
      */
     public function __construct($asyncID = null, $asyncReqType = null)
     {
-      $this->asyncID = $asyncID;
-      $this->asyncReqType = $asyncReqType;
+        $this->asyncID = $asyncID;
+        $this->asyncReqType = $asyncReqType;
     }
 
     /**
@@ -30,7 +30,7 @@ class tPickUpAsyncInput
      */
     public function getAsyncID()
     {
-      return $this->asyncID;
+        return $this->asyncID;
     }
 
     /**
@@ -39,8 +39,8 @@ class tPickUpAsyncInput
      */
     public function setAsyncID($asyncID)
     {
-      $this->asyncID = $asyncID;
-      return $this;
+        $this->asyncID = $asyncID;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tPickUpAsyncInput
      */
     public function getAsyncReqType()
     {
-      return $this->asyncReqType;
+        return $this->asyncReqType;
     }
 
     /**
@@ -57,8 +57,7 @@ class tPickUpAsyncInput
      */
     public function setAsyncReqType($asyncReqType)
     {
-      $this->asyncReqType = $asyncReqType;
-      return $this;
+        $this->asyncReqType = $asyncReqType;
+        return $this;
     }
-
 }

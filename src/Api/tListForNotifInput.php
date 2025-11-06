@@ -21,8 +21,8 @@ class tListForNotifInput
      */
     public function __construct(\DateTime $ntfFromTime = null, $ntfScope = null)
     {
-      $this->ntfFromTime = $ntfFromTime ? $ntfFromTime->format(\DateTime::ATOM) : null;
-      $this->ntfScope = $ntfScope;
+        $this->ntfFromTime = $ntfFromTime ? $ntfFromTime->format(\DateTime::ATOM) : null;
+        $this->ntfScope = $ntfScope;
     }
 
     /**
@@ -30,15 +30,15 @@ class tListForNotifInput
      */
     public function getNtfFromTime()
     {
-      if ($this->ntfFromTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->ntfFromTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->ntfFromTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->ntfFromTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -47,8 +47,8 @@ class tListForNotifInput
      */
     public function setNtfFromTime(\DateTime $ntfFromTime)
     {
-      $this->ntfFromTime = $ntfFromTime->format(\DateTime::ATOM);
-      return $this;
+        $this->ntfFromTime = $ntfFromTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -56,7 +56,7 @@ class tListForNotifInput
      */
     public function getNtfScope()
     {
-      return $this->ntfScope;
+        return $this->ntfScope;
     }
 
     /**
@@ -65,8 +65,7 @@ class tListForNotifInput
      */
     public function setNtfScope($ntfScope)
     {
-      $this->ntfScope = $ntfScope;
-      return $this;
+        $this->ntfScope = $ntfScope;
+        return $this;
     }
-
 }

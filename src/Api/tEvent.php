@@ -21,8 +21,8 @@ class tEvent
      */
     public function __construct(\DateTime $dmEventTime = null, $dmEventDescr = null)
     {
-      $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
-      $this->dmEventDescr = $dmEventDescr;
+        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
+        $this->dmEventDescr = $dmEventDescr;
     }
 
     /**
@@ -30,15 +30,15 @@ class tEvent
      */
     public function getDmEventTime()
     {
-      if ($this->dmEventTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmEventTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmEventTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmEventTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -47,8 +47,8 @@ class tEvent
      */
     public function setDmEventTime(\DateTime $dmEventTime)
     {
-      $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -56,7 +56,7 @@ class tEvent
      */
     public function getDmEventDescr()
     {
-      return $this->dmEventDescr;
+        return $this->dmEventDescr;
     }
 
     /**
@@ -65,8 +65,7 @@ class tEvent
      */
     public function setDmEventDescr($dmEventDescr)
     {
-      $this->dmEventDescr = $dmEventDescr;
-      return $this;
+        $this->dmEventDescr = $dmEventDescr;
+        return $this;
     }
-
 }

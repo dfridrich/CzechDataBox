@@ -15,7 +15,7 @@ class GetConstants
      */
     public function __construct($constDate = null)
     {
-      $this->constDate = $constDate;
+        $this->constDate = $constDate;
     }
 
     /**
@@ -23,7 +23,7 @@ class GetConstants
      */
     public function getConstDate()
     {
-      return $this->constDate;
+        return $this->constDate;
     }
 
     /**
@@ -32,8 +32,7 @@ class GetConstants
      */
     public function setConstDate($constDate)
     {
-      $this->constDate = $constDate;
-      return $this;
+        $this->constDate = $constDate;
+        return $this;
     }
-
 }

@@ -15,7 +15,7 @@ class GetDataBoxAddress
      */
     public function __construct($dbID = null)
     {
-      $this->dbID = $dbID;
+        $this->dbID = $dbID;
     }
 
     /**
@@ -23,7 +23,7 @@ class GetDataBoxAddress
      */
     public function getDbID()
     {
-      return $this->dbID;
+        return $this->dbID;
     }
 
     /**
@@ -32,8 +32,7 @@ class GetDataBoxAddress
      */
     public function setDbID($dbID)
     {
-      $this->dbID = $dbID;
-      return $this;
+        $this->dbID = $dbID;
+        return $this;
     }
-
 }

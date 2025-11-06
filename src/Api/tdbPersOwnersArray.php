@@ -15,7 +15,7 @@ class tdbPersOwnersArray
      */
     public function __construct($dbOwnerInfo = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbOwnerInfo = $dbOwnerInfo;
     }
 
     /**
@@ -23,7 +23,7 @@ class tdbPersOwnersArray
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
 
     /**
@@ -32,8 +32,7 @@ class tdbPersOwnersArray
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
-
 }

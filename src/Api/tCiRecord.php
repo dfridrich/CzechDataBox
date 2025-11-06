@@ -93,20 +93,20 @@ class tCiRecord
      */
     public function __construct(\DateTime $ciEventTime = null, $ciEventType = null, $ciCreditChange = null, $ciCreditAfter = null, $ciTransID = null, $ciRecipientID = null, $ciPDZID = null, $ciNewCapacity = null, $ciNewFrom = null, $ciNewTo = null, $ciOldCapacity = null, $ciOldFrom = null, $ciOldTo = null, $ciDoneBy = null)
     {
-      $this->ciEventTime = $ciEventTime ? $ciEventTime->format(\DateTime::ATOM) : null;
-      $this->ciEventType = $ciEventType;
-      $this->ciCreditChange = $ciCreditChange;
-      $this->ciCreditAfter = $ciCreditAfter;
-      $this->ciTransID = $ciTransID;
-      $this->ciRecipientID = $ciRecipientID;
-      $this->ciPDZID = $ciPDZID;
-      $this->ciNewCapacity = $ciNewCapacity;
-      $this->ciNewFrom = $ciNewFrom;
-      $this->ciNewTo = $ciNewTo;
-      $this->ciOldCapacity = $ciOldCapacity;
-      $this->ciOldFrom = $ciOldFrom;
-      $this->ciOldTo = $ciOldTo;
-      $this->ciDoneBy = $ciDoneBy;
+        $this->ciEventTime = $ciEventTime ? $ciEventTime->format(\DateTime::ATOM) : null;
+        $this->ciEventType = $ciEventType;
+        $this->ciCreditChange = $ciCreditChange;
+        $this->ciCreditAfter = $ciCreditAfter;
+        $this->ciTransID = $ciTransID;
+        $this->ciRecipientID = $ciRecipientID;
+        $this->ciPDZID = $ciPDZID;
+        $this->ciNewCapacity = $ciNewCapacity;
+        $this->ciNewFrom = $ciNewFrom;
+        $this->ciNewTo = $ciNewTo;
+        $this->ciOldCapacity = $ciOldCapacity;
+        $this->ciOldFrom = $ciOldFrom;
+        $this->ciOldTo = $ciOldTo;
+        $this->ciDoneBy = $ciDoneBy;
     }
 
     /**
@@ -114,15 +114,15 @@ class tCiRecord
      */
     public function getCiEventTime()
     {
-      if ($this->ciEventTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->ciEventTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->ciEventTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->ciEventTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -131,8 +131,8 @@ class tCiRecord
      */
     public function setCiEventTime(\DateTime $ciEventTime)
     {
-      $this->ciEventTime = $ciEventTime->format(\DateTime::ATOM);
-      return $this;
+        $this->ciEventTime = $ciEventTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -140,7 +140,7 @@ class tCiRecord
      */
     public function getCiEventType()
     {
-      return $this->ciEventType;
+        return $this->ciEventType;
     }
 
     /**
@@ -149,8 +149,8 @@ class tCiRecord
      */
     public function setCiEventType($ciEventType)
     {
-      $this->ciEventType = $ciEventType;
-      return $this;
+        $this->ciEventType = $ciEventType;
+        return $this;
     }
 
     /**
@@ -158,7 +158,7 @@ class tCiRecord
      */
     public function getCiCreditChange()
     {
-      return $this->ciCreditChange;
+        return $this->ciCreditChange;
     }
 
     /**
@@ -167,8 +167,8 @@ class tCiRecord
      */
     public function setCiCreditChange($ciCreditChange)
     {
-      $this->ciCreditChange = $ciCreditChange;
-      return $this;
+        $this->ciCreditChange = $ciCreditChange;
+        return $this;
     }
 
     /**
@@ -176,7 +176,7 @@ class tCiRecord
      */
     public function getCiCreditAfter()
     {
-      return $this->ciCreditAfter;
+        return $this->ciCreditAfter;
     }
 
     /**
@@ -185,8 +185,8 @@ class tCiRecord
      */
     public function setCiCreditAfter($ciCreditAfter)
     {
-      $this->ciCreditAfter = $ciCreditAfter;
-      return $this;
+        $this->ciCreditAfter = $ciCreditAfter;
+        return $this;
     }
 
     /**
@@ -194,7 +194,7 @@ class tCiRecord
      */
     public function getCiTransID()
     {
-      return $this->ciTransID;
+        return $this->ciTransID;
     }
 
     /**
@@ -203,8 +203,8 @@ class tCiRecord
      */
     public function setCiTransID($ciTransID)
     {
-      $this->ciTransID = $ciTransID;
-      return $this;
+        $this->ciTransID = $ciTransID;
+        return $this;
     }
 
     /**
@@ -212,7 +212,7 @@ class tCiRecord
      */
     public function getCiRecipientID()
     {
-      return $this->ciRecipientID;
+        return $this->ciRecipientID;
     }
 
     /**
@@ -221,8 +221,8 @@ class tCiRecord
      */
     public function setCiRecipientID($ciRecipientID)
     {
-      $this->ciRecipientID = $ciRecipientID;
-      return $this;
+        $this->ciRecipientID = $ciRecipientID;
+        return $this;
     }
 
     /**
@@ -230,7 +230,7 @@ class tCiRecord
      */
     public function getCiPDZID()
     {
-      return $this->ciPDZID;
+        return $this->ciPDZID;
     }
 
     /**
@@ -239,8 +239,8 @@ class tCiRecord
      */
     public function setCiPDZID($ciPDZID)
     {
-      $this->ciPDZID = $ciPDZID;
-      return $this;
+        $this->ciPDZID = $ciPDZID;
+        return $this;
     }
 
     /**
@@ -248,7 +248,7 @@ class tCiRecord
      */
     public function getCiNewCapacity()
     {
-      return $this->ciNewCapacity;
+        return $this->ciNewCapacity;
     }
 
     /**
@@ -257,8 +257,8 @@ class tCiRecord
      */
     public function setCiNewCapacity($ciNewCapacity)
     {
-      $this->ciNewCapacity = $ciNewCapacity;
-      return $this;
+        $this->ciNewCapacity = $ciNewCapacity;
+        return $this;
     }
 
     /**
@@ -266,7 +266,7 @@ class tCiRecord
      */
     public function getCiNewFrom()
     {
-      return $this->ciNewFrom;
+        return $this->ciNewFrom;
     }
 
     /**
@@ -275,8 +275,8 @@ class tCiRecord
      */
     public function setCiNewFrom($ciNewFrom)
     {
-      $this->ciNewFrom = $ciNewFrom;
-      return $this;
+        $this->ciNewFrom = $ciNewFrom;
+        return $this;
     }
 
     /**
@@ -284,7 +284,7 @@ class tCiRecord
      */
     public function getCiNewTo()
     {
-      return $this->ciNewTo;
+        return $this->ciNewTo;
     }
 
     /**
@@ -293,8 +293,8 @@ class tCiRecord
      */
     public function setCiNewTo($ciNewTo)
     {
-      $this->ciNewTo = $ciNewTo;
-      return $this;
+        $this->ciNewTo = $ciNewTo;
+        return $this;
     }
 
     /**
@@ -302,7 +302,7 @@ class tCiRecord
      */
     public function getCiOldCapacity()
     {
-      return $this->ciOldCapacity;
+        return $this->ciOldCapacity;
     }
 
     /**
@@ -311,8 +311,8 @@ class tCiRecord
      */
     public function setCiOldCapacity($ciOldCapacity)
     {
-      $this->ciOldCapacity = $ciOldCapacity;
-      return $this;
+        $this->ciOldCapacity = $ciOldCapacity;
+        return $this;
     }
 
     /**
@@ -320,7 +320,7 @@ class tCiRecord
      */
     public function getCiOldFrom()
     {
-      return $this->ciOldFrom;
+        return $this->ciOldFrom;
     }
 
     /**
@@ -329,8 +329,8 @@ class tCiRecord
      */
     public function setCiOldFrom($ciOldFrom)
     {
-      $this->ciOldFrom = $ciOldFrom;
-      return $this;
+        $this->ciOldFrom = $ciOldFrom;
+        return $this;
     }
 
     /**
@@ -338,7 +338,7 @@ class tCiRecord
      */
     public function getCiOldTo()
     {
-      return $this->ciOldTo;
+        return $this->ciOldTo;
     }
 
     /**
@@ -347,8 +347,8 @@ class tCiRecord
      */
     public function setCiOldTo($ciOldTo)
     {
-      $this->ciOldTo = $ciOldTo;
-      return $this;
+        $this->ciOldTo = $ciOldTo;
+        return $this;
     }
 
     /**
@@ -356,7 +356,7 @@ class tCiRecord
      */
     public function getCiDoneBy()
     {
-      return $this->ciDoneBy;
+        return $this->ciDoneBy;
     }
 
     /**
@@ -365,8 +365,7 @@ class tCiRecord
      */
     public function setCiDoneBy($ciDoneBy)
     {
-      $this->ciDoneBy = $ciDoneBy;
-      return $this;
+        $this->ciDoneBy = $ciDoneBy;
+        return $this;
     }
-
 }

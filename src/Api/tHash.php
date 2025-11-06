@@ -21,8 +21,8 @@ class tHash
      */
     public function __construct($_ = null, $algorithm = null)
     {
-      $this->_ = $_;
-      $this->algorithm = $algorithm;
+        $this->_ = $_;
+        $this->algorithm = $algorithm;
     }
 
     /**
@@ -30,7 +30,7 @@ class tHash
      */
     public function get_()
     {
-      return $this->_;
+        return $this->_;
     }
 
     /**
@@ -39,8 +39,8 @@ class tHash
      */
     public function set_($_)
     {
-      $this->_ = $_;
-      return $this;
+        $this->_ = $_;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tHash
      */
     public function getAlgorithm()
     {
-      return $this->algorithm;
+        return $this->algorithm;
     }
 
     /**
@@ -57,8 +57,7 @@ class tHash
      */
     public function setAlgorithm($algorithm)
     {
-      $this->algorithm = $algorithm;
-      return $this;
+        $this->algorithm = $algorithm;
+        return $this;
     }
-
 }

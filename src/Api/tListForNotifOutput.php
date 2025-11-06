@@ -27,9 +27,9 @@ class tListForNotifOutput
      */
     public function __construct($ntfRecords = null, $ntfListContinues = null, $dmStatus = null)
     {
-      $this->ntfRecords = $ntfRecords;
-      $this->ntfListContinues = $ntfListContinues;
-      $this->dmStatus = $dmStatus;
+        $this->ntfRecords = $ntfRecords;
+        $this->ntfListContinues = $ntfListContinues;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tListForNotifOutput
      */
     public function getNtfRecords()
     {
-      return $this->ntfRecords;
+        return $this->ntfRecords;
     }
 
     /**
@@ -46,8 +46,8 @@ class tListForNotifOutput
      */
     public function setNtfRecords($ntfRecords)
     {
-      $this->ntfRecords = $ntfRecords;
-      return $this;
+        $this->ntfRecords = $ntfRecords;
+        return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tListForNotifOutput
      */
     public function getNtfListContinues()
     {
-      return $this->ntfListContinues;
+        return $this->ntfListContinues;
     }
 
     /**
@@ -64,8 +64,8 @@ class tListForNotifOutput
      */
     public function setNtfListContinues($ntfListContinues)
     {
-      $this->ntfListContinues = $ntfListContinues;
-      return $this;
+        $this->ntfListContinues = $ntfListContinues;
+        return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tListForNotifOutput
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -82,8 +82,7 @@ class tListForNotifOutput
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

@@ -21,8 +21,8 @@ class tPDZSendInput
      */
     public function __construct($dbId = null, $PDZType = null)
     {
-      $this->dbId = $dbId;
-      $this->PDZType = $PDZType;
+        $this->dbId = $dbId;
+        $this->PDZType = $PDZType;
     }
 
     /**
@@ -30,7 +30,7 @@ class tPDZSendInput
      */
     public function getDbId()
     {
-      return $this->dbId;
+        return $this->dbId;
     }
 
     /**
@@ -39,8 +39,8 @@ class tPDZSendInput
      */
     public function setDbId($dbId)
     {
-      $this->dbId = $dbId;
-      return $this;
+        $this->dbId = $dbId;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tPDZSendInput
      */
     public function getPDZType()
     {
-      return $this->PDZType;
+        return $this->PDZType;
     }
 
     /**
@@ -57,8 +57,7 @@ class tPDZSendInput
      */
     public function setPDZType($PDZType)
     {
-      $this->PDZType = $PDZType;
-      return $this;
+        $this->PDZType = $PDZType;
+        return $this;
     }
-
 }

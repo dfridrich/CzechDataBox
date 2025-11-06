@@ -51,13 +51,13 @@ class dbOwnerInfo
      */
     public function __construct($formdataid = null, $identityDocumentNum = null, $identityDocumentType = null, $PDZ = null, $guid = null, $subject = null, $branch = null)
     {
-      $this->formdataid = $formdataid;
-      $this->identityDocumentNum = $identityDocumentNum;
-      $this->identityDocumentType = $identityDocumentType;
-      $this->PDZ = $PDZ;
-      $this->guid = $guid;
-      $this->subject = $subject;
-      $this->branch = $branch;
+        $this->formdataid = $formdataid;
+        $this->identityDocumentNum = $identityDocumentNum;
+        $this->identityDocumentType = $identityDocumentType;
+        $this->PDZ = $PDZ;
+        $this->guid = $guid;
+        $this->subject = $subject;
+        $this->branch = $branch;
     }
 
     /**
@@ -65,7 +65,7 @@ class dbOwnerInfo
      */
     public function getFormdataid()
     {
-      return $this->formdataid;
+        return $this->formdataid;
     }
 
     /**
@@ -74,8 +74,8 @@ class dbOwnerInfo
      */
     public function setFormdataid($formdataid)
     {
-      $this->formdataid = $formdataid;
-      return $this;
+        $this->formdataid = $formdataid;
+        return $this;
     }
 
     /**
@@ -83,7 +83,7 @@ class dbOwnerInfo
      */
     public function getIdentityDocumentNum()
     {
-      return $this->identityDocumentNum;
+        return $this->identityDocumentNum;
     }
 
     /**
@@ -92,8 +92,8 @@ class dbOwnerInfo
      */
     public function setIdentityDocumentNum($identityDocumentNum)
     {
-      $this->identityDocumentNum = $identityDocumentNum;
-      return $this;
+        $this->identityDocumentNum = $identityDocumentNum;
+        return $this;
     }
 
     /**
@@ -101,7 +101,7 @@ class dbOwnerInfo
      */
     public function getIdentityDocumentType()
     {
-      return $this->identityDocumentType;
+        return $this->identityDocumentType;
     }
 
     /**
@@ -110,8 +110,8 @@ class dbOwnerInfo
      */
     public function setIdentityDocumentType($identityDocumentType)
     {
-      $this->identityDocumentType = $identityDocumentType;
-      return $this;
+        $this->identityDocumentType = $identityDocumentType;
+        return $this;
     }
 
     /**
@@ -119,7 +119,7 @@ class dbOwnerInfo
      */
     public function getPDZ()
     {
-      return $this->PDZ;
+        return $this->PDZ;
     }
 
     /**
@@ -128,8 +128,8 @@ class dbOwnerInfo
      */
     public function setPDZ($PDZ)
     {
-      $this->PDZ = $PDZ;
-      return $this;
+        $this->PDZ = $PDZ;
+        return $this;
     }
 
     /**
@@ -137,7 +137,7 @@ class dbOwnerInfo
      */
     public function getGuid()
     {
-      return $this->guid;
+        return $this->guid;
     }
 
     /**
@@ -146,8 +146,8 @@ class dbOwnerInfo
      */
     public function setGuid($guid)
     {
-      $this->guid = $guid;
-      return $this;
+        $this->guid = $guid;
+        return $this;
     }
 
     /**
@@ -155,7 +155,7 @@ class dbOwnerInfo
      */
     public function getSubject()
     {
-      return $this->subject;
+        return $this->subject;
     }
 
     /**
@@ -164,8 +164,8 @@ class dbOwnerInfo
      */
     public function setSubject($subject)
     {
-      $this->subject = $subject;
-      return $this;
+        $this->subject = $subject;
+        return $this;
     }
 
     /**
@@ -173,7 +173,7 @@ class dbOwnerInfo
      */
     public function getBranch()
     {
-      return $this->branch;
+        return $this->branch;
     }
 
     /**
@@ -182,8 +182,7 @@ class dbOwnerInfo
      */
     public function setBranch($branch)
     {
-      $this->branch = $branch;
-      return $this;
+        $this->branch = $branch;
+        return $this;
     }
-
 }

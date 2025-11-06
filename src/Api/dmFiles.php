@@ -21,8 +21,8 @@ class dmFiles
      */
     public function __construct($dmExtFile = null, $dmFile = null)
     {
-      $this->dmExtFile = $dmExtFile;
-      $this->dmFile = $dmFile;
+        $this->dmExtFile = $dmExtFile;
+        $this->dmFile = $dmFile;
     }
 
     /**
@@ -30,7 +30,7 @@ class dmFiles
      */
     public function getDmExtFile()
     {
-      return $this->dmExtFile;
+        return $this->dmExtFile;
     }
 
     /**
@@ -39,8 +39,8 @@ class dmFiles
      */
     public function setDmExtFile($dmExtFile)
     {
-      $this->dmExtFile = $dmExtFile;
-      return $this;
+        $this->dmExtFile = $dmExtFile;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class dmFiles
      */
     public function getDmFile()
     {
-      return $this->dmFile;
+        return $this->dmFile;
     }
 
     /**
@@ -57,8 +57,7 @@ class dmFiles
      */
     public function setDmFile($dmFile)
     {
-      $this->dmFile = $dmFile;
-      return $this;
+        $this->dmFile = $dmFile;
+        return $this;
     }
-
 }

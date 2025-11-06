@@ -21,8 +21,8 @@ class tFindDBOuput2
      */
     public function __construct($dbResults = null, $dbStatus = null)
     {
-      $this->dbResults = $dbResults;
-      $this->dbStatus = $dbStatus;
+        $this->dbResults = $dbResults;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tFindDBOuput2
      */
     public function getDbResults()
     {
-      return $this->dbResults;
+        return $this->dbResults;
     }
 
     /**
@@ -39,8 +39,8 @@ class tFindDBOuput2
      */
     public function setDbResults($dbResults)
     {
-      $this->dbResults = $dbResults;
-      return $this;
+        $this->dbResults = $dbResults;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tFindDBOuput2
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class tFindDBOuput2
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

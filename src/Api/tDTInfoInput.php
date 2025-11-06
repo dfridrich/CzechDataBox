@@ -15,7 +15,7 @@ class tDTInfoInput
      */
     public function __construct($dbId = null)
     {
-      $this->dbId = $dbId;
+        $this->dbId = $dbId;
     }
 
     /**
@@ -23,7 +23,7 @@ class tDTInfoInput
      */
     public function getDbId()
     {
-      return $this->dbId;
+        return $this->dbId;
     }
 
     /**
@@ -32,8 +32,7 @@ class tDTInfoInput
      */
     public function setDbId($dbId)
     {
-      $this->dbId = $dbId;
-      return $this;
+        $this->dbId = $dbId;
+        return $this;
     }
-
 }

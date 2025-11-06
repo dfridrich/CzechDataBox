@@ -63,15 +63,15 @@ class tReturnedMessage
      */
     public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $specMessFlag = null)
     {
-      $this->dmDm = $dmDm;
-      $this->dmHash = $dmHash;
-      $this->dmQTimestamp = $dmQTimestamp;
-      $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
-      $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
-      $this->dmMessageStatus = $dmMessageStatus;
-      $this->dmAttachmentSize = $dmAttachmentSize;
-      $this->dmType = $dmType;
-      $this->specMessFlag = $specMessFlag;
+        $this->dmDm = $dmDm;
+        $this->dmHash = $dmHash;
+        $this->dmQTimestamp = $dmQTimestamp;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
+        $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmAttachmentSize = $dmAttachmentSize;
+        $this->dmType = $dmType;
+        $this->specMessFlag = $specMessFlag;
     }
 
     /**
@@ -79,7 +79,7 @@ class tReturnedMessage
      */
     public function getDmDm()
     {
-      return $this->dmDm;
+        return $this->dmDm;
     }
 
     /**
@@ -88,8 +88,8 @@ class tReturnedMessage
      */
     public function setDmDm($dmDm)
     {
-      $this->dmDm = $dmDm;
-      return $this;
+        $this->dmDm = $dmDm;
+        return $this;
     }
 
     /**
@@ -97,7 +97,7 @@ class tReturnedMessage
      */
     public function getDmHash()
     {
-      return $this->dmHash;
+        return $this->dmHash;
     }
 
     /**
@@ -106,8 +106,8 @@ class tReturnedMessage
      */
     public function setDmHash($dmHash)
     {
-      $this->dmHash = $dmHash;
-      return $this;
+        $this->dmHash = $dmHash;
+        return $this;
     }
 
     /**
@@ -115,7 +115,7 @@ class tReturnedMessage
      */
     public function getDmQTimestamp()
     {
-      return $this->dmQTimestamp;
+        return $this->dmQTimestamp;
     }
 
     /**
@@ -124,8 +124,8 @@ class tReturnedMessage
      */
     public function setDmQTimestamp($dmQTimestamp)
     {
-      $this->dmQTimestamp = $dmQTimestamp;
-      return $this;
+        $this->dmQTimestamp = $dmQTimestamp;
+        return $this;
     }
 
     /**
@@ -133,15 +133,15 @@ class tReturnedMessage
      */
     public function getDmDeliveryTime()
     {
-      if ($this->dmDeliveryTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmDeliveryTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmDeliveryTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -150,8 +150,8 @@ class tReturnedMessage
      */
     public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-      $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -159,15 +159,15 @@ class tReturnedMessage
      */
     public function getDmAcceptanceTime()
     {
-      if ($this->dmAcceptanceTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmAcceptanceTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmAcceptanceTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmAcceptanceTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -176,8 +176,8 @@ class tReturnedMessage
      */
     public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-      $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -185,7 +185,7 @@ class tReturnedMessage
      */
     public function getDmMessageStatus()
     {
-      return $this->dmMessageStatus;
+        return $this->dmMessageStatus;
     }
 
     /**
@@ -194,8 +194,8 @@ class tReturnedMessage
      */
     public function setDmMessageStatus($dmMessageStatus)
     {
-      $this->dmMessageStatus = $dmMessageStatus;
-      return $this;
+        $this->dmMessageStatus = $dmMessageStatus;
+        return $this;
     }
 
     /**
@@ -203,7 +203,7 @@ class tReturnedMessage
      */
     public function getDmAttachmentSize()
     {
-      return $this->dmAttachmentSize;
+        return $this->dmAttachmentSize;
     }
 
     /**
@@ -212,8 +212,8 @@ class tReturnedMessage
      */
     public function setDmAttachmentSize($dmAttachmentSize)
     {
-      $this->dmAttachmentSize = $dmAttachmentSize;
-      return $this;
+        $this->dmAttachmentSize = $dmAttachmentSize;
+        return $this;
     }
 
     /**
@@ -221,7 +221,7 @@ class tReturnedMessage
      */
     public function getDmType()
     {
-      return $this->dmType;
+        return $this->dmType;
     }
 
     /**
@@ -230,8 +230,8 @@ class tReturnedMessage
      */
     public function setDmType($dmType)
     {
-      $this->dmType = $dmType;
-      return $this;
+        $this->dmType = $dmType;
+        return $this;
     }
 
     /**
@@ -239,7 +239,7 @@ class tReturnedMessage
      */
     public function getSpecMessFlag()
     {
-      return $this->specMessFlag;
+        return $this->specMessFlag;
     }
 
     /**
@@ -248,8 +248,7 @@ class tReturnedMessage
      */
     public function setSpecMessFlag($specMessFlag)
     {
-      $this->specMessFlag = $specMessFlag;
-      return $this;
+        $this->specMessFlag = $specMessFlag;
+        return $this;
     }
-
 }

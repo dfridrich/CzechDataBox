@@ -15,7 +15,7 @@ class tFilesArray
      */
     public function __construct($dmFile = null)
     {
-      $this->dmFile = $dmFile;
+        $this->dmFile = $dmFile;
     }
 
     /**
@@ -23,7 +23,7 @@ class tFilesArray
      */
     public function getDmFile()
     {
-      return $this->dmFile;
+        return $this->dmFile;
     }
 
     /**
@@ -32,8 +32,7 @@ class tFilesArray
      */
     public function setDmFile($dmFile)
     {
-      $this->dmFile = $dmFile;
-      return $this;
+        $this->dmFile = $dmFile;
+        return $this;
     }
-
 }

@@ -57,14 +57,14 @@ class tNtfRecord
      */
     public function __construct($ntfType = null, $dmID = null, $dmPersonalDelivery = null, \DateTime $dmDeliveryTime = null, $dbIDRecipient = null, $dmAnnotation = null, $dbIDSender = null, $dmSender = null)
     {
-      $this->ntfType = $ntfType;
-      $this->dmID = $dmID;
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
-      $this->dbIDRecipient = $dbIDRecipient;
-      $this->dmAnnotation = $dmAnnotation;
-      $this->dbIDSender = $dbIDSender;
-      $this->dmSender = $dmSender;
+        $this->ntfType = $ntfType;
+        $this->dmID = $dmID;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dbIDRecipient = $dbIDRecipient;
+        $this->dmAnnotation = $dmAnnotation;
+        $this->dbIDSender = $dbIDSender;
+        $this->dmSender = $dmSender;
     }
 
     /**
@@ -72,7 +72,7 @@ class tNtfRecord
      */
     public function getNtfType()
     {
-      return $this->ntfType;
+        return $this->ntfType;
     }
 
     /**
@@ -81,8 +81,8 @@ class tNtfRecord
      */
     public function setNtfType($ntfType)
     {
-      $this->ntfType = $ntfType;
-      return $this;
+        $this->ntfType = $ntfType;
+        return $this;
     }
 
     /**
@@ -90,7 +90,7 @@ class tNtfRecord
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
 
     /**
@@ -99,8 +99,8 @@ class tNtfRecord
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
 
     /**
@@ -108,7 +108,7 @@ class tNtfRecord
      */
     public function getDmPersonalDelivery()
     {
-      return $this->dmPersonalDelivery;
+        return $this->dmPersonalDelivery;
     }
 
     /**
@@ -117,8 +117,8 @@ class tNtfRecord
      */
     public function setDmPersonalDelivery($dmPersonalDelivery)
     {
-      $this->dmPersonalDelivery = $dmPersonalDelivery;
-      return $this;
+        $this->dmPersonalDelivery = $dmPersonalDelivery;
+        return $this;
     }
 
     /**
@@ -126,15 +126,15 @@ class tNtfRecord
      */
     public function getDmDeliveryTime()
     {
-      if ($this->dmDeliveryTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmDeliveryTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmDeliveryTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -143,8 +143,8 @@ class tNtfRecord
      */
     public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-      $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -152,7 +152,7 @@ class tNtfRecord
      */
     public function getDbIDRecipient()
     {
-      return $this->dbIDRecipient;
+        return $this->dbIDRecipient;
     }
 
     /**
@@ -161,8 +161,8 @@ class tNtfRecord
      */
     public function setDbIDRecipient($dbIDRecipient)
     {
-      $this->dbIDRecipient = $dbIDRecipient;
-      return $this;
+        $this->dbIDRecipient = $dbIDRecipient;
+        return $this;
     }
 
     /**
@@ -170,7 +170,7 @@ class tNtfRecord
      */
     public function getDmAnnotation()
     {
-      return $this->dmAnnotation;
+        return $this->dmAnnotation;
     }
 
     /**
@@ -179,8 +179,8 @@ class tNtfRecord
      */
     public function setDmAnnotation($dmAnnotation)
     {
-      $this->dmAnnotation = $dmAnnotation;
-      return $this;
+        $this->dmAnnotation = $dmAnnotation;
+        return $this;
     }
 
     /**
@@ -188,7 +188,7 @@ class tNtfRecord
      */
     public function getDbIDSender()
     {
-      return $this->dbIDSender;
+        return $this->dbIDSender;
     }
 
     /**
@@ -197,8 +197,8 @@ class tNtfRecord
      */
     public function setDbIDSender($dbIDSender)
     {
-      $this->dbIDSender = $dbIDSender;
-      return $this;
+        $this->dbIDSender = $dbIDSender;
+        return $this;
     }
 
     /**
@@ -206,7 +206,7 @@ class tNtfRecord
      */
     public function getDmSender()
     {
-      return $this->dmSender;
+        return $this->dmSender;
     }
 
     /**
@@ -215,8 +215,7 @@ class tNtfRecord
      */
     public function setDmSender($dmSender)
     {
-      $this->dmSender = $dmSender;
-      return $this;
+        $this->dmSender = $dmSender;
+        return $this;
     }
-
 }

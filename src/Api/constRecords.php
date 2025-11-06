@@ -15,7 +15,7 @@ class constRecords
      */
     public function __construct($constRecord = null)
     {
-      $this->constRecord = $constRecord;
+        $this->constRecord = $constRecord;
     }
 
     /**
@@ -23,7 +23,7 @@ class constRecords
      */
     public function getConstRecord()
     {
-      return $this->constRecord;
+        return $this->constRecord;
     }
 
     /**
@@ -32,8 +32,7 @@ class constRecords
      */
     public function setConstRecord($constRecord)
     {
-      $this->constRecord = $constRecord;
-      return $this;
+        $this->constRecord = $constRecord;
+        return $this;
     }
-
 }

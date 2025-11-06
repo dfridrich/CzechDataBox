@@ -45,12 +45,12 @@ class SuspMessageReport
      */
     public function __construct($dmID = null, $repName = null, $repMail = null, $repTel = null, $allowComplete = null, $note = null)
     {
-      $this->dmID = $dmID;
-      $this->repName = $repName;
-      $this->repMail = $repMail;
-      $this->repTel = $repTel;
-      $this->allowComplete = $allowComplete;
-      $this->note = $note;
+        $this->dmID = $dmID;
+        $this->repName = $repName;
+        $this->repMail = $repMail;
+        $this->repTel = $repTel;
+        $this->allowComplete = $allowComplete;
+        $this->note = $note;
     }
 
     /**
@@ -58,7 +58,7 @@ class SuspMessageReport
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
 
     /**
@@ -67,8 +67,8 @@ class SuspMessageReport
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
 
     /**
@@ -76,7 +76,7 @@ class SuspMessageReport
      */
     public function getRepName()
     {
-      return $this->repName;
+        return $this->repName;
     }
 
     /**
@@ -85,8 +85,8 @@ class SuspMessageReport
      */
     public function setRepName($repName)
     {
-      $this->repName = $repName;
-      return $this;
+        $this->repName = $repName;
+        return $this;
     }
 
     /**
@@ -94,7 +94,7 @@ class SuspMessageReport
      */
     public function getRepMail()
     {
-      return $this->repMail;
+        return $this->repMail;
     }
 
     /**
@@ -103,8 +103,8 @@ class SuspMessageReport
      */
     public function setRepMail($repMail)
     {
-      $this->repMail = $repMail;
-      return $this;
+        $this->repMail = $repMail;
+        return $this;
     }
 
     /**
@@ -112,7 +112,7 @@ class SuspMessageReport
      */
     public function getRepTel()
     {
-      return $this->repTel;
+        return $this->repTel;
     }
 
     /**
@@ -121,8 +121,8 @@ class SuspMessageReport
      */
     public function setRepTel($repTel)
     {
-      $this->repTel = $repTel;
-      return $this;
+        $this->repTel = $repTel;
+        return $this;
     }
 
     /**
@@ -130,7 +130,7 @@ class SuspMessageReport
      */
     public function getAllowComplete()
     {
-      return $this->allowComplete;
+        return $this->allowComplete;
     }
 
     /**
@@ -139,8 +139,8 @@ class SuspMessageReport
      */
     public function setAllowComplete($allowComplete)
     {
-      $this->allowComplete = $allowComplete;
-      return $this;
+        $this->allowComplete = $allowComplete;
+        return $this;
     }
 
     /**
@@ -148,7 +148,7 @@ class SuspMessageReport
      */
     public function getNote()
     {
-      return $this->note;
+        return $this->note;
     }
 
     /**
@@ -157,8 +157,7 @@ class SuspMessageReport
      */
     public function setNote($note)
     {
-      $this->note = $note;
-      return $this;
+        $this->note = $note;
+        return $this;
     }
-
 }

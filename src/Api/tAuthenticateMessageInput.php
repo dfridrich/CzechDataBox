@@ -15,7 +15,7 @@ class tAuthenticateMessageInput
      */
     public function __construct($dmMessage = null)
     {
-      $this->dmMessage = $dmMessage;
+        $this->dmMessage = $dmMessage;
     }
 
     /**
@@ -23,7 +23,7 @@ class tAuthenticateMessageInput
      */
     public function getDmMessage()
     {
-      return $this->dmMessage;
+        return $this->dmMessage;
     }
 
     /**
@@ -32,8 +32,7 @@ class tAuthenticateMessageInput
      */
     public function setDmMessage($dmMessage)
     {
-      $this->dmMessage = $dmMessage;
-      return $this;
+        $this->dmMessage = $dmMessage;
+        return $this;
     }
-
 }

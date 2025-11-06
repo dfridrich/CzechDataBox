@@ -15,7 +15,7 @@ class SignedSentBigMessageDownload
      */
     public function __construct($dmID = null)
     {
-      $this->dmID = $dmID;
+        $this->dmID = $dmID;
     }
 
     /**
@@ -23,7 +23,7 @@ class SignedSentBigMessageDownload
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
 
     /**
@@ -32,8 +32,7 @@ class SignedSentBigMessageDownload
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
-
 }

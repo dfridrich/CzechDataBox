@@ -15,7 +15,7 @@ class tdbResultsArray
      */
     public function __construct($dbResult = null)
     {
-      $this->dbResult = $dbResult;
+        $this->dbResult = $dbResult;
     }
 
     /**
@@ -23,7 +23,7 @@ class tdbResultsArray
      */
     public function getDbResult()
     {
-      return $this->dbResult;
+        return $this->dbResult;
     }
 
     /**
@@ -32,8 +32,7 @@ class tdbResultsArray
      */
     public function setDbResult($dbResult)
     {
-      $this->dbResult = $dbResult;
-      return $this;
+        $this->dbResult = $dbResult;
+        return $this;
     }
-
 }

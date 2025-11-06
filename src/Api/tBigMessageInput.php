@@ -21,8 +21,8 @@ class tBigMessageInput
      */
     public function __construct($dmEnvelope = null, $dmFiles = null)
     {
-      $this->dmEnvelope = $dmEnvelope;
-      $this->dmFiles = $dmFiles;
+        $this->dmEnvelope = $dmEnvelope;
+        $this->dmFiles = $dmFiles;
     }
 
     /**
@@ -30,7 +30,7 @@ class tBigMessageInput
      */
     public function getDmEnvelope()
     {
-      return $this->dmEnvelope;
+        return $this->dmEnvelope;
     }
 
     /**
@@ -39,8 +39,8 @@ class tBigMessageInput
      */
     public function setDmEnvelope($dmEnvelope)
     {
-      $this->dmEnvelope = $dmEnvelope;
-      return $this;
+        $this->dmEnvelope = $dmEnvelope;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tBigMessageInput
      */
     public function getDmFiles()
     {
-      return $this->dmFiles;
+        return $this->dmFiles;
     }
 
     /**
@@ -57,8 +57,7 @@ class tBigMessageInput
      */
     public function setDmFiles($dmFiles)
     {
-      $this->dmFiles = $dmFiles;
-      return $this;
+        $this->dmFiles = $dmFiles;
+        return $this;
     }
-
 }

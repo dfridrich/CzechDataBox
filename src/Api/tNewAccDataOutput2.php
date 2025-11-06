@@ -27,9 +27,9 @@ class tNewAccDataOutput2
      */
     public function __construct($dbUserID = null, $dbAccessDataId = null, $dbStatus = null)
     {
-      $this->dbUserID = $dbUserID;
-      $this->dbAccessDataId = $dbAccessDataId;
-      $this->dbStatus = $dbStatus;
+        $this->dbUserID = $dbUserID;
+        $this->dbAccessDataId = $dbAccessDataId;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tNewAccDataOutput2
      */
     public function getDbUserID()
     {
-      return $this->dbUserID;
+        return $this->dbUserID;
     }
 
     /**
@@ -46,8 +46,8 @@ class tNewAccDataOutput2
      */
     public function setDbUserID($dbUserID)
     {
-      $this->dbUserID = $dbUserID;
-      return $this;
+        $this->dbUserID = $dbUserID;
+        return $this;
     }
 
     /**
@@ -55,7 +55,7 @@ class tNewAccDataOutput2
      */
     public function getDbAccessDataId()
     {
-      return $this->dbAccessDataId;
+        return $this->dbAccessDataId;
     }
 
     /**
@@ -64,8 +64,8 @@ class tNewAccDataOutput2
      */
     public function setDbAccessDataId($dbAccessDataId)
     {
-      $this->dbAccessDataId = $dbAccessDataId;
-      return $this;
+        $this->dbAccessDataId = $dbAccessDataId;
+        return $this;
     }
 
     /**
@@ -73,7 +73,7 @@ class tNewAccDataOutput2
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -82,8 +82,7 @@ class tNewAccDataOutput2
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

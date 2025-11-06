@@ -21,8 +21,8 @@ class tCheckDBOutput
      */
     public function __construct($dbState = null, $dbStatus = null)
     {
-      $this->dbState = $dbState;
-      $this->dbStatus = $dbStatus;
+        $this->dbState = $dbState;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class tCheckDBOutput
      */
     public function getDbState()
     {
-      return $this->dbState;
+        return $this->dbState;
     }
 
     /**
@@ -39,8 +39,8 @@ class tCheckDBOutput
      */
     public function setDbState($dbState)
     {
-      $this->dbState = $dbState;
-      return $this;
+        $this->dbState = $dbState;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class tCheckDBOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class tCheckDBOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

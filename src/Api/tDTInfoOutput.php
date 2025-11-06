@@ -75,17 +75,17 @@ class tDTInfoOutput
      */
     public function __construct($ActDTType = null, $ActDTCapacity = null, $ActDTFrom = null, $ActDTTo = null, $ActDTCapUsed = null, $FutDTType = null, $FutDTCapacity = null, $FutDTFrom = null, $FutDTTo = null, $FutDTPaid = null, $dbStatus = null)
     {
-      $this->ActDTType = $ActDTType;
-      $this->ActDTCapacity = $ActDTCapacity;
-      $this->ActDTFrom = $ActDTFrom;
-      $this->ActDTTo = $ActDTTo;
-      $this->ActDTCapUsed = $ActDTCapUsed;
-      $this->FutDTType = $FutDTType;
-      $this->FutDTCapacity = $FutDTCapacity;
-      $this->FutDTFrom = $FutDTFrom;
-      $this->FutDTTo = $FutDTTo;
-      $this->FutDTPaid = $FutDTPaid;
-      $this->dbStatus = $dbStatus;
+        $this->ActDTType = $ActDTType;
+        $this->ActDTCapacity = $ActDTCapacity;
+        $this->ActDTFrom = $ActDTFrom;
+        $this->ActDTTo = $ActDTTo;
+        $this->ActDTCapUsed = $ActDTCapUsed;
+        $this->FutDTType = $FutDTType;
+        $this->FutDTCapacity = $FutDTCapacity;
+        $this->FutDTFrom = $FutDTFrom;
+        $this->FutDTTo = $FutDTTo;
+        $this->FutDTPaid = $FutDTPaid;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -93,7 +93,7 @@ class tDTInfoOutput
      */
     public function getActDTType()
     {
-      return $this->ActDTType;
+        return $this->ActDTType;
     }
 
     /**
@@ -102,8 +102,8 @@ class tDTInfoOutput
      */
     public function setActDTType($ActDTType)
     {
-      $this->ActDTType = $ActDTType;
-      return $this;
+        $this->ActDTType = $ActDTType;
+        return $this;
     }
 
     /**
@@ -111,7 +111,7 @@ class tDTInfoOutput
      */
     public function getActDTCapacity()
     {
-      return $this->ActDTCapacity;
+        return $this->ActDTCapacity;
     }
 
     /**
@@ -120,8 +120,8 @@ class tDTInfoOutput
      */
     public function setActDTCapacity($ActDTCapacity)
     {
-      $this->ActDTCapacity = $ActDTCapacity;
-      return $this;
+        $this->ActDTCapacity = $ActDTCapacity;
+        return $this;
     }
 
     /**
@@ -129,7 +129,7 @@ class tDTInfoOutput
      */
     public function getActDTFrom()
     {
-      return $this->ActDTFrom;
+        return $this->ActDTFrom;
     }
 
     /**
@@ -138,8 +138,8 @@ class tDTInfoOutput
      */
     public function setActDTFrom($ActDTFrom)
     {
-      $this->ActDTFrom = $ActDTFrom;
-      return $this;
+        $this->ActDTFrom = $ActDTFrom;
+        return $this;
     }
 
     /**
@@ -147,7 +147,7 @@ class tDTInfoOutput
      */
     public function getActDTTo()
     {
-      return $this->ActDTTo;
+        return $this->ActDTTo;
     }
 
     /**
@@ -156,8 +156,8 @@ class tDTInfoOutput
      */
     public function setActDTTo($ActDTTo)
     {
-      $this->ActDTTo = $ActDTTo;
-      return $this;
+        $this->ActDTTo = $ActDTTo;
+        return $this;
     }
 
     /**
@@ -165,7 +165,7 @@ class tDTInfoOutput
      */
     public function getActDTCapUsed()
     {
-      return $this->ActDTCapUsed;
+        return $this->ActDTCapUsed;
     }
 
     /**
@@ -174,8 +174,8 @@ class tDTInfoOutput
      */
     public function setActDTCapUsed($ActDTCapUsed)
     {
-      $this->ActDTCapUsed = $ActDTCapUsed;
-      return $this;
+        $this->ActDTCapUsed = $ActDTCapUsed;
+        return $this;
     }
 
     /**
@@ -183,7 +183,7 @@ class tDTInfoOutput
      */
     public function getFutDTType()
     {
-      return $this->FutDTType;
+        return $this->FutDTType;
     }
 
     /**
@@ -192,8 +192,8 @@ class tDTInfoOutput
      */
     public function setFutDTType($FutDTType)
     {
-      $this->FutDTType = $FutDTType;
-      return $this;
+        $this->FutDTType = $FutDTType;
+        return $this;
     }
 
     /**
@@ -201,7 +201,7 @@ class tDTInfoOutput
      */
     public function getFutDTCapacity()
     {
-      return $this->FutDTCapacity;
+        return $this->FutDTCapacity;
     }
 
     /**
@@ -210,8 +210,8 @@ class tDTInfoOutput
      */
     public function setFutDTCapacity($FutDTCapacity)
     {
-      $this->FutDTCapacity = $FutDTCapacity;
-      return $this;
+        $this->FutDTCapacity = $FutDTCapacity;
+        return $this;
     }
 
     /**
@@ -219,7 +219,7 @@ class tDTInfoOutput
      */
     public function getFutDTFrom()
     {
-      return $this->FutDTFrom;
+        return $this->FutDTFrom;
     }
 
     /**
@@ -228,8 +228,8 @@ class tDTInfoOutput
      */
     public function setFutDTFrom($FutDTFrom)
     {
-      $this->FutDTFrom = $FutDTFrom;
-      return $this;
+        $this->FutDTFrom = $FutDTFrom;
+        return $this;
     }
 
     /**
@@ -237,7 +237,7 @@ class tDTInfoOutput
      */
     public function getFutDTTo()
     {
-      return $this->FutDTTo;
+        return $this->FutDTTo;
     }
 
     /**
@@ -246,8 +246,8 @@ class tDTInfoOutput
      */
     public function setFutDTTo($FutDTTo)
     {
-      $this->FutDTTo = $FutDTTo;
-      return $this;
+        $this->FutDTTo = $FutDTTo;
+        return $this;
     }
 
     /**
@@ -255,7 +255,7 @@ class tDTInfoOutput
      */
     public function getFutDTPaid()
     {
-      return $this->FutDTPaid;
+        return $this->FutDTPaid;
     }
 
     /**
@@ -264,8 +264,8 @@ class tDTInfoOutput
      */
     public function setFutDTPaid($FutDTPaid)
     {
-      $this->FutDTPaid = $FutDTPaid;
-      return $this;
+        $this->FutDTPaid = $FutDTPaid;
+        return $this;
     }
 
     /**
@@ -273,7 +273,7 @@ class tDTInfoOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -282,8 +282,7 @@ class tDTInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

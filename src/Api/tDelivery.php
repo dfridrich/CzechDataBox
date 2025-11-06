@@ -51,13 +51,13 @@ class tDelivery
      */
     public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmEvents = null)
     {
-      $this->dmDm = $dmDm;
-      $this->dmHash = $dmHash;
-      $this->dmQTimestamp = $dmQTimestamp;
-      $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
-      $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
-      $this->dmMessageStatus = $dmMessageStatus;
-      $this->dmEvents = $dmEvents;
+        $this->dmDm = $dmDm;
+        $this->dmHash = $dmHash;
+        $this->dmQTimestamp = $dmQTimestamp;
+        $this->dmDeliveryTime = $dmDeliveryTime ? $dmDeliveryTime->format(\DateTime::ATOM) : null;
+        $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
+        $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmEvents = $dmEvents;
     }
 
     /**
@@ -65,7 +65,7 @@ class tDelivery
      */
     public function getDmDm()
     {
-      return $this->dmDm;
+        return $this->dmDm;
     }
 
     /**
@@ -74,8 +74,8 @@ class tDelivery
      */
     public function setDmDm($dmDm)
     {
-      $this->dmDm = $dmDm;
-      return $this;
+        $this->dmDm = $dmDm;
+        return $this;
     }
 
     /**
@@ -83,7 +83,7 @@ class tDelivery
      */
     public function getDmHash()
     {
-      return $this->dmHash;
+        return $this->dmHash;
     }
 
     /**
@@ -92,8 +92,8 @@ class tDelivery
      */
     public function setDmHash($dmHash)
     {
-      $this->dmHash = $dmHash;
-      return $this;
+        $this->dmHash = $dmHash;
+        return $this;
     }
 
     /**
@@ -101,7 +101,7 @@ class tDelivery
      */
     public function getDmQTimestamp()
     {
-      return $this->dmQTimestamp;
+        return $this->dmQTimestamp;
     }
 
     /**
@@ -110,8 +110,8 @@ class tDelivery
      */
     public function setDmQTimestamp($dmQTimestamp)
     {
-      $this->dmQTimestamp = $dmQTimestamp;
-      return $this;
+        $this->dmQTimestamp = $dmQTimestamp;
+        return $this;
     }
 
     /**
@@ -119,15 +119,15 @@ class tDelivery
      */
     public function getDmDeliveryTime()
     {
-      if ($this->dmDeliveryTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmDeliveryTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmDeliveryTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmDeliveryTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -136,8 +136,8 @@ class tDelivery
      */
     public function setDmDeliveryTime(\DateTime $dmDeliveryTime)
     {
-      $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmDeliveryTime = $dmDeliveryTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -145,15 +145,15 @@ class tDelivery
      */
     public function getDmAcceptanceTime()
     {
-      if ($this->dmAcceptanceTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmAcceptanceTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmAcceptanceTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmAcceptanceTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -162,8 +162,8 @@ class tDelivery
      */
     public function setDmAcceptanceTime(\DateTime $dmAcceptanceTime)
     {
-      $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmAcceptanceTime = $dmAcceptanceTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -171,7 +171,7 @@ class tDelivery
      */
     public function getDmMessageStatus()
     {
-      return $this->dmMessageStatus;
+        return $this->dmMessageStatus;
     }
 
     /**
@@ -180,8 +180,8 @@ class tDelivery
      */
     public function setDmMessageStatus($dmMessageStatus)
     {
-      $this->dmMessageStatus = $dmMessageStatus;
-      return $this;
+        $this->dmMessageStatus = $dmMessageStatus;
+        return $this;
     }
 
     /**
@@ -189,7 +189,7 @@ class tDelivery
      */
     public function getDmEvents()
     {
-      return $this->dmEvents;
+        return $this->dmEvents;
     }
 
     /**
@@ -198,8 +198,7 @@ class tDelivery
      */
     public function setDmEvents($dmEvents)
     {
-      $this->dmEvents = $dmEvents;
-      return $this;
+        $this->dmEvents = $dmEvents;
+        return $this;
     }
-
 }

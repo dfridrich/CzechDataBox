@@ -33,10 +33,10 @@ class tDBCreditInfoOutput
      */
     public function __construct($currentCredit = null, $notifEmail = null, $ciRecords = null, $dbStatus = null)
     {
-      $this->currentCredit = $currentCredit;
-      $this->notifEmail = $notifEmail;
-      $this->ciRecords = $ciRecords;
-      $this->dbStatus = $dbStatus;
+        $this->currentCredit = $currentCredit;
+        $this->notifEmail = $notifEmail;
+        $this->ciRecords = $ciRecords;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -44,7 +44,7 @@ class tDBCreditInfoOutput
      */
     public function getCurrentCredit()
     {
-      return $this->currentCredit;
+        return $this->currentCredit;
     }
 
     /**
@@ -53,8 +53,8 @@ class tDBCreditInfoOutput
      */
     public function setCurrentCredit($currentCredit)
     {
-      $this->currentCredit = $currentCredit;
-      return $this;
+        $this->currentCredit = $currentCredit;
+        return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class tDBCreditInfoOutput
      */
     public function getNotifEmail()
     {
-      return $this->notifEmail;
+        return $this->notifEmail;
     }
 
     /**
@@ -71,8 +71,8 @@ class tDBCreditInfoOutput
      */
     public function setNotifEmail($notifEmail)
     {
-      $this->notifEmail = $notifEmail;
-      return $this;
+        $this->notifEmail = $notifEmail;
+        return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tDBCreditInfoOutput
      */
     public function getCiRecords()
     {
-      return $this->ciRecords;
+        return $this->ciRecords;
     }
 
     /**
@@ -89,8 +89,8 @@ class tDBCreditInfoOutput
      */
     public function setCiRecords($ciRecords)
     {
-      $this->ciRecords = $ciRecords;
-      return $this;
+        $this->ciRecords = $ciRecords;
+        return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tDBCreditInfoOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -107,8 +107,7 @@ class tDBCreditInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

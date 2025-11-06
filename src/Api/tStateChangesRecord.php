@@ -27,9 +27,9 @@ class tStateChangesRecord
      */
     public function __construct($dmID = null, \DateTime $dmEventTime = null, $dmMessageStatus = null)
     {
-      $this->dmID = $dmID;
-      $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
-      $this->dmMessageStatus = $dmMessageStatus;
+        $this->dmID = $dmID;
+        $this->dmEventTime = $dmEventTime ? $dmEventTime->format(\DateTime::ATOM) : null;
+        $this->dmMessageStatus = $dmMessageStatus;
     }
 
     /**
@@ -37,7 +37,7 @@ class tStateChangesRecord
      */
     public function getDmID()
     {
-      return $this->dmID;
+        return $this->dmID;
     }
 
     /**
@@ -46,8 +46,8 @@ class tStateChangesRecord
      */
     public function setDmID($dmID)
     {
-      $this->dmID = $dmID;
-      return $this;
+        $this->dmID = $dmID;
+        return $this;
     }
 
     /**
@@ -55,15 +55,15 @@ class tStateChangesRecord
      */
     public function getDmEventTime()
     {
-      if ($this->dmEventTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->dmEventTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->dmEventTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->dmEventTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -72,8 +72,8 @@ class tStateChangesRecord
      */
     public function setDmEventTime(\DateTime $dmEventTime)
     {
-      $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
-      return $this;
+        $this->dmEventTime = $dmEventTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -81,7 +81,7 @@ class tStateChangesRecord
      */
     public function getDmMessageStatus()
     {
-      return $this->dmMessageStatus;
+        return $this->dmMessageStatus;
     }
 
     /**
@@ -90,8 +90,7 @@ class tStateChangesRecord
      */
     public function setDmMessageStatus($dmMessageStatus)
     {
-      $this->dmMessageStatus = $dmMessageStatus;
-      return $this;
+        $this->dmMessageStatus = $dmMessageStatus;
+        return $this;
     }
-
 }

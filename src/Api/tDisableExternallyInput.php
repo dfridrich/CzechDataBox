@@ -33,10 +33,10 @@ class tDisableExternallyInput
      */
     public function __construct($dbOwnerInfo = null, $dbOwnerDisableDate = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      $this->dbOwnerDisableDate = $dbOwnerDisableDate;
-      $this->dbApproved = $dbApproved;
-      $this->dbExternRefNumber = $dbExternRefNumber;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        $this->dbOwnerDisableDate = $dbOwnerDisableDate;
+        $this->dbApproved = $dbApproved;
+        $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
@@ -44,7 +44,7 @@ class tDisableExternallyInput
      */
     public function getDbOwnerInfo()
     {
-      return $this->dbOwnerInfo;
+        return $this->dbOwnerInfo;
     }
 
     /**
@@ -53,8 +53,8 @@ class tDisableExternallyInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-      $this->dbOwnerInfo = $dbOwnerInfo;
-      return $this;
+        $this->dbOwnerInfo = $dbOwnerInfo;
+        return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class tDisableExternallyInput
      */
     public function getDbOwnerDisableDate()
     {
-      return $this->dbOwnerDisableDate;
+        return $this->dbOwnerDisableDate;
     }
 
     /**
@@ -71,8 +71,8 @@ class tDisableExternallyInput
      */
     public function setDbOwnerDisableDate($dbOwnerDisableDate)
     {
-      $this->dbOwnerDisableDate = $dbOwnerDisableDate;
-      return $this;
+        $this->dbOwnerDisableDate = $dbOwnerDisableDate;
+        return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tDisableExternallyInput
      */
     public function getDbApproved()
     {
-      return $this->dbApproved;
+        return $this->dbApproved;
     }
 
     /**
@@ -89,8 +89,8 @@ class tDisableExternallyInput
      */
     public function setDbApproved($dbApproved)
     {
-      $this->dbApproved = $dbApproved;
-      return $this;
+        $this->dbApproved = $dbApproved;
+        return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tDisableExternallyInput
      */
     public function getDbExternRefNumber()
     {
-      return $this->dbExternRefNumber;
+        return $this->dbExternRefNumber;
     }
 
     /**
@@ -107,8 +107,7 @@ class tDisableExternallyInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-      $this->dbExternRefNumber = $dbExternRefNumber;
-      return $this;
+        $this->dbExternRefNumber = $dbExternRefNumber;
+        return $this;
     }
-
 }

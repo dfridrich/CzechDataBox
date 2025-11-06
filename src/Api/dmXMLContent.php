@@ -15,7 +15,7 @@ class dmXMLContent
      */
     public function __construct($any = null)
     {
-      $this->any = $any;
+        $this->any = $any;
     }
 
     /**
@@ -23,7 +23,7 @@ class dmXMLContent
      */
     public function getAny()
     {
-      return $this->any;
+        return $this->any;
     }
 
     /**
@@ -32,8 +32,7 @@ class dmXMLContent
      */
     public function setAny($any)
     {
-      $this->any = $any;
-      return $this;
+        $this->any = $any;
+        return $this;
     }
-
 }

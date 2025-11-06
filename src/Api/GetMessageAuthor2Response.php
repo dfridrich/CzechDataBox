@@ -21,8 +21,8 @@ class GetMessageAuthor2Response
      */
     public function __construct($dmMessageAuthor = null, $dmStatus = null)
     {
-      $this->dmMessageAuthor = $dmMessageAuthor;
-      $this->dmStatus = $dmStatus;
+        $this->dmMessageAuthor = $dmMessageAuthor;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class GetMessageAuthor2Response
      */
     public function getDmMessageAuthor()
     {
-      return $this->dmMessageAuthor;
+        return $this->dmMessageAuthor;
     }
 
     /**
@@ -39,8 +39,8 @@ class GetMessageAuthor2Response
      */
     public function setDmMessageAuthor($dmMessageAuthor)
     {
-      $this->dmMessageAuthor = $dmMessageAuthor;
-      return $this;
+        $this->dmMessageAuthor = $dmMessageAuthor;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class GetMessageAuthor2Response
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class GetMessageAuthor2Response
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

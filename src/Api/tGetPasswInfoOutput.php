@@ -21,8 +21,8 @@ class tGetPasswInfoOutput
      */
     public function __construct(\DateTime $pswExpDate = null, $dbStatus = null)
     {
-      $this->pswExpDate = $pswExpDate ? $pswExpDate->format(\DateTime::ATOM) : null;
-      $this->dbStatus = $dbStatus;
+        $this->pswExpDate = $pswExpDate ? $pswExpDate->format(\DateTime::ATOM) : null;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -30,15 +30,15 @@ class tGetPasswInfoOutput
      */
     public function getPswExpDate()
     {
-      if ($this->pswExpDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->pswExpDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->pswExpDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->pswExpDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -47,8 +47,8 @@ class tGetPasswInfoOutput
      */
     public function setPswExpDate(\DateTime $pswExpDate)
     {
-      $this->pswExpDate = $pswExpDate->format(\DateTime::ATOM);
-      return $this;
+        $this->pswExpDate = $pswExpDate->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -56,7 +56,7 @@ class tGetPasswInfoOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -65,8 +65,7 @@ class tGetPasswInfoOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

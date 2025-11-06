@@ -15,7 +15,7 @@ class ciRecords
      */
     public function __construct($ciRecord = null)
     {
-      $this->ciRecord = $ciRecord;
+        $this->ciRecord = $ciRecord;
     }
 
     /**
@@ -23,7 +23,7 @@ class ciRecords
      */
     public function getCiRecord()
     {
-      return $this->ciRecord;
+        return $this->ciRecord;
     }
 
     /**
@@ -32,8 +32,7 @@ class ciRecords
      */
     public function setCiRecord($ciRecord)
     {
-      $this->ciRecord = $ciRecord;
-      return $this;
+        $this->ciRecord = $ciRecord;
+        return $this;
     }
-
 }

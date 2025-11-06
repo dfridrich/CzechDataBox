@@ -33,10 +33,10 @@ class tCreateDBOutput
      */
     public function __construct($dbID = null, $dbUserID = null, $dbAccessDataId = null, $dbStatus = null)
     {
-      $this->dbID = $dbID;
-      $this->dbUserID = $dbUserID;
-      $this->dbAccessDataId = $dbAccessDataId;
-      $this->dbStatus = $dbStatus;
+        $this->dbID = $dbID;
+        $this->dbUserID = $dbUserID;
+        $this->dbAccessDataId = $dbAccessDataId;
+        $this->dbStatus = $dbStatus;
     }
 
     /**
@@ -44,7 +44,7 @@ class tCreateDBOutput
      */
     public function getDbID()
     {
-      return $this->dbID;
+        return $this->dbID;
     }
 
     /**
@@ -53,8 +53,8 @@ class tCreateDBOutput
      */
     public function setDbID($dbID)
     {
-      $this->dbID = $dbID;
-      return $this;
+        $this->dbID = $dbID;
+        return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class tCreateDBOutput
      */
     public function getDbUserID()
     {
-      return $this->dbUserID;
+        return $this->dbUserID;
     }
 
     /**
@@ -71,8 +71,8 @@ class tCreateDBOutput
      */
     public function setDbUserID($dbUserID)
     {
-      $this->dbUserID = $dbUserID;
-      return $this;
+        $this->dbUserID = $dbUserID;
+        return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tCreateDBOutput
      */
     public function getDbAccessDataId()
     {
-      return $this->dbAccessDataId;
+        return $this->dbAccessDataId;
     }
 
     /**
@@ -89,8 +89,8 @@ class tCreateDBOutput
      */
     public function setDbAccessDataId($dbAccessDataId)
     {
-      $this->dbAccessDataId = $dbAccessDataId;
-      return $this;
+        $this->dbAccessDataId = $dbAccessDataId;
+        return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tCreateDBOutput
      */
     public function getDbStatus()
     {
-      return $this->dbStatus;
+        return $this->dbStatus;
     }
 
     /**
@@ -107,8 +107,7 @@ class tCreateDBOutput
      */
     public function setDbStatus($dbStatus)
     {
-      $this->dbStatus = $dbStatus;
-      return $this;
+        $this->dbStatus = $dbStatus;
+        return $this;
     }
-
 }

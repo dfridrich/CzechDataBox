@@ -21,8 +21,8 @@ class DownloadAttachmentResponse
      */
     public function __construct($dmFile = null, $dmStatus = null)
     {
-      $this->dmFile = $dmFile;
-      $this->dmStatus = $dmStatus;
+        $this->dmFile = $dmFile;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -30,7 +30,7 @@ class DownloadAttachmentResponse
      */
     public function getDmFile()
     {
-      return $this->dmFile;
+        return $this->dmFile;
     }
 
     /**
@@ -39,8 +39,8 @@ class DownloadAttachmentResponse
      */
     public function setDmFile($dmFile)
     {
-      $this->dmFile = $dmFile;
-      return $this;
+        $this->dmFile = $dmFile;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class DownloadAttachmentResponse
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -57,8 +57,7 @@ class DownloadAttachmentResponse
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

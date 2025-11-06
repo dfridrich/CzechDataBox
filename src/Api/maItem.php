@@ -21,8 +21,8 @@ class maItem
      */
     public function __construct($key = null, $value = null)
     {
-      $this->key = $key;
-      $this->value = $value;
+        $this->key = $key;
+        $this->value = $value;
     }
 
     /**
@@ -30,7 +30,7 @@ class maItem
      */
     public function getKey()
     {
-      return $this->key;
+        return $this->key;
     }
 
     /**
@@ -39,8 +39,8 @@ class maItem
      */
     public function setKey($key)
     {
-      $this->key = $key;
-      return $this;
+        $this->key = $key;
+        return $this;
     }
 
     /**
@@ -48,7 +48,7 @@ class maItem
      */
     public function getValue()
     {
-      return $this->value;
+        return $this->value;
     }
 
     /**
@@ -57,8 +57,7 @@ class maItem
      */
     public function setValue($value)
     {
-      $this->value = $value;
-      return $this;
+        $this->value = $value;
+        return $this;
     }
-
 }

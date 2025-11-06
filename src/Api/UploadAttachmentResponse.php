@@ -33,10 +33,10 @@ class UploadAttachmentResponse
      */
     public function __construct($dmAttID = null, $dmAttHash1 = null, $dmAttHash2 = null, $dmStatus = null)
     {
-      $this->dmAttID = $dmAttID;
-      $this->dmAttHash1 = $dmAttHash1;
-      $this->dmAttHash2 = $dmAttHash2;
-      $this->dmStatus = $dmStatus;
+        $this->dmAttID = $dmAttID;
+        $this->dmAttHash1 = $dmAttHash1;
+        $this->dmAttHash2 = $dmAttHash2;
+        $this->dmStatus = $dmStatus;
     }
 
     /**
@@ -44,7 +44,7 @@ class UploadAttachmentResponse
      */
     public function getDmAttID()
     {
-      return $this->dmAttID;
+        return $this->dmAttID;
     }
 
     /**
@@ -53,8 +53,8 @@ class UploadAttachmentResponse
      */
     public function setDmAttID($dmAttID)
     {
-      $this->dmAttID = $dmAttID;
-      return $this;
+        $this->dmAttID = $dmAttID;
+        return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class UploadAttachmentResponse
      */
     public function getDmAttHash1()
     {
-      return $this->dmAttHash1;
+        return $this->dmAttHash1;
     }
 
     /**
@@ -71,8 +71,8 @@ class UploadAttachmentResponse
      */
     public function setDmAttHash1($dmAttHash1)
     {
-      $this->dmAttHash1 = $dmAttHash1;
-      return $this;
+        $this->dmAttHash1 = $dmAttHash1;
+        return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class UploadAttachmentResponse
      */
     public function getDmAttHash2()
     {
-      return $this->dmAttHash2;
+        return $this->dmAttHash2;
     }
 
     /**
@@ -89,8 +89,8 @@ class UploadAttachmentResponse
      */
     public function setDmAttHash2($dmAttHash2)
     {
-      $this->dmAttHash2 = $dmAttHash2;
-      return $this;
+        $this->dmAttHash2 = $dmAttHash2;
+        return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class UploadAttachmentResponse
      */
     public function getDmStatus()
     {
-      return $this->dmStatus;
+        return $this->dmStatus;
     }
 
     /**
@@ -107,8 +107,7 @@ class UploadAttachmentResponse
      */
     public function setDmStatus($dmStatus)
     {
-      $this->dmStatus = $dmStatus;
-      return $this;
+        $this->dmStatus = $dmStatus;
+        return $this;
     }
-
 }

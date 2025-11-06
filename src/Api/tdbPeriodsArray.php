@@ -15,7 +15,7 @@ class tdbPeriodsArray
      */
     public function __construct($Period = null)
     {
-      $this->Period = $Period;
+        $this->Period = $Period;
     }
 
     /**
@@ -23,7 +23,7 @@ class tdbPeriodsArray
      */
     public function getPeriod()
     {
-      return $this->Period;
+        return $this->Period;
     }
 
     /**
@@ -32,8 +32,7 @@ class tdbPeriodsArray
      */
     public function setPeriod($Period)
     {
-      $this->Period = $Period;
-      return $this;
+        $this->Period = $Period;
+        return $this;
     }
-
 }

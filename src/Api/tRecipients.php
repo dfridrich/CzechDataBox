@@ -33,10 +33,10 @@ class tRecipients
      */
     public function __construct($dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null)
     {
-      $this->dbIDRecipient = $dbIDRecipient;
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      $this->dmToHands = $dmToHands;
+        $this->dbIDRecipient = $dbIDRecipient;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        $this->dmToHands = $dmToHands;
     }
 
     /**
@@ -44,7 +44,7 @@ class tRecipients
      */
     public function getDbIDRecipient()
     {
-      return $this->dbIDRecipient;
+        return $this->dbIDRecipient;
     }
 
     /**
@@ -53,8 +53,8 @@ class tRecipients
      */
     public function setDbIDRecipient($dbIDRecipient)
     {
-      $this->dbIDRecipient = $dbIDRecipient;
-      return $this;
+        $this->dbIDRecipient = $dbIDRecipient;
+        return $this;
     }
 
     /**
@@ -62,7 +62,7 @@ class tRecipients
      */
     public function getDmRecipientOrgUnit()
     {
-      return $this->dmRecipientOrgUnit;
+        return $this->dmRecipientOrgUnit;
     }
 
     /**
@@ -71,8 +71,8 @@ class tRecipients
      */
     public function setDmRecipientOrgUnit($dmRecipientOrgUnit)
     {
-      $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
-      return $this;
+        $this->dmRecipientOrgUnit = $dmRecipientOrgUnit;
+        return $this;
     }
 
     /**
@@ -80,7 +80,7 @@ class tRecipients
      */
     public function getDmRecipientOrgUnitNum()
     {
-      return $this->dmRecipientOrgUnitNum;
+        return $this->dmRecipientOrgUnitNum;
     }
 
     /**
@@ -89,8 +89,8 @@ class tRecipients
      */
     public function setDmRecipientOrgUnitNum($dmRecipientOrgUnitNum)
     {
-      $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
-      return $this;
+        $this->dmRecipientOrgUnitNum = $dmRecipientOrgUnitNum;
+        return $this;
     }
 
     /**
@@ -98,7 +98,7 @@ class tRecipients
      */
     public function getDmToHands()
     {
-      return $this->dmToHands;
+        return $this->dmToHands;
     }
 
     /**
@@ -107,8 +107,7 @@ class tRecipients
      */
     public function setDmToHands($dmToHands)
     {
-      $this->dmToHands = $dmToHands;
-      return $this;
+        $this->dmToHands = $dmToHands;
+        return $this;
     }
-
 }

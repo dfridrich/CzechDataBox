@@ -15,7 +15,7 @@ class tPDZRecArray
      */
     public function __construct($dbPDZRecord = null)
     {
-      $this->dbPDZRecord = $dbPDZRecord;
+        $this->dbPDZRecord = $dbPDZRecord;
     }
 
     /**
@@ -23,7 +23,7 @@ class tPDZRecArray
      */
     public function getDbPDZRecord()
     {
-      return $this->dbPDZRecord;
+        return $this->dbPDZRecord;
     }
 
     /**
@@ -32,8 +32,7 @@ class tPDZRecArray
      */
     public function setDbPDZRecord($dbPDZRecord)
     {
-      $this->dbPDZRecord = $dbPDZRecord;
-      return $this;
+        $this->dbPDZRecord = $dbPDZRecord;
+        return $this;
     }
-
 }
