@@ -40,4 +40,4 @@ jobs:
                 env:
                     DATABOX_LOGIN: ${{ secrets.DATABOX_LOGIN }}
                     DATABOX_PASSWORD: ${{ secrets.DATABOX_PASSWORD }}
-                    DATABOX_PRODUCTION: ${{ secrets.DATABOX_PRODUCTION }}
+                    DATABOX_PRODUCTION: ${{ vars.DATABOX_PRODUCTION }}
