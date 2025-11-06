@@ -15,21 +15,20 @@ class DataBoxMessageAttachment
 {
     public $path;
 
-    private string $filename;
+    private $filename;
+    private $location;
 
-    /**
-     * @param $location
-     */
-    public function __construct(private $location)
+    public function __construct($location)
     {
         $this->filename = pathinfo($location)['basename'];
+        $this->location = $location;
     }
 
 
     /**
-     * @return string
+     * @return string|bool
      */
-    public function get(): string|bool
+    public function get()
     {
         return file_get_contents($this->location);
     }

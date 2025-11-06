@@ -10,15 +10,23 @@ on:
 jobs:
     run:
         runs-on: ubuntu-latest
+        continue-on-error: ${{ matrix.experimental }}
         strategy:
             fail-fast: false
             matrix:
-                php-versions:
+                php:
+                    - 7.3
+                    - 7.4
                     - 8.1
                     - 8.2
                     - 8.3
                     - 8.4
-        name: PHP ${{ matrix.php-versions }} test
+                experimental: [false]
+                include:
+                    - php: '7.2'
+                      experimental: true
+
+        name: PHP ${{ matrix.php }} test
 
         steps:
 
@@ -27,7 +35,7 @@ jobs:
             -   name: Setup PHP
                 uses: shivammathur/setup-php@v2
                 with:
-                    php-version: ${{ matrix.php-versions }}
+                    php-version: ${{ matrix.php }}
                     tools: phpunit:9.6
                     coverage: none
 
