@@ -1,6 +1,3 @@
-includes:
-    - phpstan-baseline.neon
-
 parameters:
     level: 2
     paths:
@@ -11,3 +8,4 @@ parameters:
         - '#has invalid type#'
         - '#has invalid return#'
         - '#has unknown class#'
+        - '#Deprecated in PHP 8\.4#'
