@@ -4,7 +4,10 @@ parameters:
       - src
       - tests
 
+    reportUnmatchedIgnoredErrors: false
+
     ignoreErrors:
         - '#has invalid type#'
         - '#has invalid return#'
         - '#has unknown class#'
+        - '#Deprecated in PHP 8\.4#'

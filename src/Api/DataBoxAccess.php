@@ -102,6 +102,8 @@ class DataBoxAccess extends \SoapClient
       'tGetConstsOutput' => 'Defr\\CzechDataBox\\Api\\tGetConstsOutput',
       'constRecords' => 'Defr\\CzechDataBox\\Api\\constRecords',
       'tConstRecord' => 'Defr\\CzechDataBox\\Api\\tConstRecord',
+      'GetDataBoxAddress' => 'Defr\\CzechDataBox\\Api\\GetDataBoxAddress',
+      'tGetAddressOutput' => 'Defr\\CzechDataBox\\Api\\tGetAddressOutput',
     );
 
     /**
@@ -119,7 +121,7 @@ class DataBoxAccess extends \SoapClient
         'features' => 1,
         ), $options);
         if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/db_access.wsdl';
+            $wsdl = '/var/www/html/Resources/db_access.wsdl';
         }
         parent::__construct($wsdl, $options);
     }

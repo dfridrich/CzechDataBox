@@ -52,6 +52,7 @@ class DmInfoWebService extends \SoapClient
       'tStateChangesRecord' => 'Defr\\CzechDataBox\\Api\\tStateChangesRecord',
       'tStateChangesArray' => 'Defr\\CzechDataBox\\Api\\tStateChangesArray',
       'tGetStateChangesOutput' => 'Defr\\CzechDataBox\\Api\\tGetStateChangesOutput',
+      'tDummyOutput' => 'Defr\\CzechDataBox\\Api\\tDummyOutput',
       'tGetAuthorInput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorInput',
       'tGetAuthorOutput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorOutput',
       'tEraseMessageIntput' => 'Defr\\CzechDataBox\\Api\\tEraseMessageIntput',
@@ -91,6 +92,12 @@ class DmInfoWebService extends \SoapClient
       'GetMessageAuthor2Response' => 'Defr\\CzechDataBox\\Api\\GetMessageAuthor2Response',
       'dmMessageAuthor' => 'Defr\\CzechDataBox\\Api\\dmMessageAuthor',
       'maItem' => 'Defr\\CzechDataBox\\Api\\maItem',
+      'SentMessageEnvelopeDownload' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownload',
+      'SentMessageEnvelopeDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownloadResponse',
+      'SuspMessageReport' => 'Defr\\CzechDataBox\\Api\\SuspMessageReport',
+      'SuspMessageReportResponse' => 'Defr\\CzechDataBox\\Api\\SuspMessageReportResponse',
+      'ArchiveISDSDocument' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocument',
+      'ArchiveISDSDocumentResponse' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocumentResponse',
     );
 
     /**
@@ -108,7 +115,7 @@ class DmInfoWebService extends \SoapClient
         'features' => 1,
         ), $options);
         if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/dm_info.wsdl';
+            $wsdl = '/var/www/html/Resources/dm_info.wsdl';
         }
         parent::__construct($wsdl, $options);
     }
@@ -246,5 +253,23 @@ class DmInfoWebService extends \SoapClient
     public function RegisterForNotifications(RegisterForNotifications $parameter)
     {
         return $this->__soapCall('RegisterForNotifications', array($parameter));
+    }
+
+    /**
+     * @param SentMessageEnvelopeDownload $parameter
+     * @return SentMessageEnvelopeDownloadResponse
+     */
+    public function SentMessageEnvelopeDownload(SentMessageEnvelopeDownload $parameter)
+    {
+        return $this->__soapCall('SentMessageEnvelopeDownload', array($parameter));
+    }
+
+    /**
+     * @param SuspMessageReport $parameter
+     * @return SuspMessageReportResponse
+     */
+    public function SuspMessageReport(SuspMessageReport $parameter)
+    {
+        return $this->__soapCall('SuspMessageReport', array($parameter));
     }
 }

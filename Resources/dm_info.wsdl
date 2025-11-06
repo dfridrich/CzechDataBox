@@ -1,7 +1,7 @@
 ﻿<?xml version = '1.0' encoding = 'UTF-8'?>
 <!--  *********************************************************************
 
-   verze: 3.03 (pouze pro Veřejný test ISDS)
+   verze: 3.09 
    klasifikace: Veřejný dokument    
  
      WSDL pro služby
@@ -21,6 +21,8 @@
         14. Vyzvednutí asynchronního požadavku - PickUpAsyncResponse
         15. Registrace externích notifikací - RegisterForNotifications
         16. Stažení záznamů pro notifikace - GetListForNotifications
+        17. Stažení obálky odeslané zprávy - SentMessageEnvelopeDownload
+        18. Oznámení spamu - SuspMessageReport
         
               
    Změny:  
@@ -42,6 +44,12 @@
    25.04.2022 verze 2.35 - přidána WS GetMessageAuthor2
    25.04.2021 verze 3.01 (pro VT) - přidána WS GetMessageAuthor2
    31.10.2022 verze 3.03 - sjednocení verzí 
+   20.10.2023 verze 3.04 - sjednocení verzí
+   21.10.2024 verze 3.07 - přidána služba SentMessageEnvelopeDownload
+   20.12.2024 verze 3.08 - přidána služba SuspMessageReport
+   29.07.2025 verze 3.09 - sjednocení verzí 
+                              
+   
 ************************************************************************ -->
 
 <definitions name="ISDS_dmMessCreate" targetNamespace="http://isds.czechpoint.cz/v20" 
@@ -163,6 +171,20 @@
     <part name="parameter" element="tns:RegisterForNotificationsResponse" />
   </message>
 
+  <message name="SentMessageEnvelopeDownloadRequest">
+    <part name="parameter" element="tns:SentMessageEnvelopeDownload" />
+  </message>
+  <message name="SentMessageEnvelopeDownloadResponse">
+    <part name="parameter" element="tns:SentMessageEnvelopeDownloadResponse" />
+  </message>
+
+  <message name="SuspMessageReportRequest">
+    <part name="parameter" element="tns:SuspMessageReport" />
+  </message>
+  <message name="SuspMessageReportResponse">
+    <part name="parameter" element="tns:SuspMessageReportResponse" />
+  </message>
+
     <!-- ******************************************************************* -->
   <portType name="dmInfoPortType">
 
@@ -239,6 +261,16 @@
     <operation name="RegisterForNotifications">
         <input  message="tns:RegisterForNotificationsRequest"/>
         <output message="tns:RegisterForNotificationsResponse"/>
+    </operation>
+
+    <operation name="SentMessageEnvelopeDownload">
+        <input  message="tns:SentMessageEnvelopeDownloadRequest"/>
+        <output message="tns:SentMessageEnvelopeDownloadResponse"/>
+    </operation>
+
+    <operation name="SuspMessageReport">
+        <input  message="tns:SuspMessageReportRequest"/>
+        <output message="tns:SuspMessageReportResponse"/>
     </operation>
 
   </portType>
@@ -397,12 +429,32 @@
          </output>
      </operation>
 
+     <operation name="SentMessageEnvelopeDownload">
+         <soap:operation soapAction="" />
+         <input>
+             <soap:body use="literal" />
+         </input>
+         <output>
+             <soap:body use="literal" />
+         </output>
+     </operation>
+
+     <operation name="SuspMessageReport">
+         <soap:operation soapAction="" />
+         <input>
+             <soap:body use="literal" />
+         </input>
+         <output>
+             <soap:body use="literal" />
+         </output>
+     </operation>
+
  </binding>
 
   <!-- ******************************************************************* -->
   <service name="dmInfoWebService">
     <port name="dmInfoPortType" binding="tns:dmInfoBinding">
-      <soap:address location="https://ws1.czebox.cz/DS/dx"/>
+      <soap:address location="https://ws1.mojedatovaschranka.cz/DS/dx"/>
     </port>
   </service>
 

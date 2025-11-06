@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--Created with Liquid Studio 2020 (https://www.liquid-technologies.com)-->
+<!--Created with Liquid Studio (https://www.liquid-technologies.com)-->
 <!-- ************************************************************************
    XSD schema typů použitých ve WSDL pro manipulaci s datovými schránkami a ve WSDL pro vyhledávání DS
 
-   verze: 3.03
+   verze: 3.09
    klasifikace: Veřejný dokument    
-
+             
  změny:
   9.2.2009  verze 0.1  základní verze
  20.3.2009  verze 1.0  - přidány elementy (na první úrovni) k jednotlivým typům pro použití jako parametry ve WSDL (document/literal)+komplexní typy pro tyto elementy popisující jednotlivé parametry operací
@@ -70,11 +70,15 @@
  13.1.2021 - verze 2.32 - přidány typy schránek PFO_ZNALEC a PFO_TLUMOCNIK
  29.7.2021 - verze 2.33 - sjednocení verzí
  25.4.2022 - verze 2.35 - sjednocení verzí
- 15.6.2022 - verze 3.02 (na VT) - přidán enum VoDZ na vstupu PDZSendInfo
-                                - nový typ schránky PFO_REQ (50) 
-                                - typy pro novu službu GetConstants  
- 31.10.2022 - verze 3.03 (na VT) - sjednocení verzí, drobné opravy                                
- 
+ 15.6.2022 - verze 3.02 - přidán enum VoDZ na vstupu PDZSendInfo
+                        - nový typ schránky PFO_REQ (50) 
+                        - typy pro novu službu GetConstants  
+ 31.10.2022 - verze 3.03 - sjednocení verzí, drobné opravy    
+ 12.09.2023 - verze 3.04 - nové typy schránek PFO_ARCH, PFO_AIAT a PFO_AZI
+ 13.05.2024 - verze 3.06 - v DataBoxCreditInfoResponse v ciEventType přibyl event č. 7 (obnovení z trezorového koše) a nová větev pro choice element 
+                         - nová služba GetDataBoxAddress      
+ 29.07.2025 - verze 3.09 - sjednocení verzí 
+
 **************************************************************************** -->
 <xs:schema xmlns:tns="http://isds.czechpoint.cz/v20" elementFormDefault="qualified" targetNamespace="http://isds.czechpoint.cz/v20" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:simpleType name="tIdDb">
@@ -207,13 +211,16 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="FO" />
             <xs:enumeration value="PFO" />
+            <xs:enumeration value="PFO_REQ" />
             <xs:enumeration value="PFO_ADVOK" />
             <xs:enumeration value="PFO_DANPOR" />
             <xs:enumeration value="PFO_INSSPR" />
             <xs:enumeration value="PFO_AUDITOR" />
             <xs:enumeration value="PFO_ZNALEC" />
             <xs:enumeration value="PFO_TLUMOCNIK" />
-            <xs:enumeration value="PFO_REQ" />
+            <xs:enumeration value="PFO_ARCH" />
+            <xs:enumeration value="PFO_AIAT" />
+            <xs:enumeration value="PFO_AZI" />
             <xs:enumeration value="PO" />
             <xs:enumeration value="PO_ZAK" />
             <xs:enumeration value="PO_REQ" />
@@ -842,7 +849,7 @@
             </xs:element>
             <xs:element name="notifEmail" type="xs:string" minOccurs="0" maxOccurs="1" nillable="true">
                 <xs:annotation>
-                    <xs:documentation>U schránek s jediným primárním uživatelem se zde uvede mailová adresa pro notifikace (z CzP)</xs:documentation>
+                    <xs:documentation>U schránek s jediným primárním uživatelem zde může být uvedena mailová adresa pro notifikace</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="dbPrimaryUsers" type="tns:tDbUsersArray2" />
@@ -1369,6 +1376,11 @@
                     <xs:element name="ciOldTo" type="xs:date" nillable="true" />
                     <xs:element name="ciDoneBy" type="xs:string" nillable="true" />
                 </xs:sequence>
+                <xs:element name="ciDoneBy" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>pro eventType=7</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
             </xs:choice>
         </xs:sequence>
     </xs:group>
@@ -1679,6 +1691,22 @@
             <xs:element name="cValue" type="xs:string" />
             <xs:element name="cFrom" type="xs:date" />
             <xs:element name="cTo" type="xs:date" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="GetDataBoxAddress">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dbID" type="tns:tIdDb" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDataBoxAddressResponse" type="tns:tGetAddressOutput" />
+    <xs:complexType name="tGetAddressOutput">
+        <xs:sequence>
+            <xs:group ref="tns:gAddressExt2" />
+            <xs:element name="adRegistrationNumber" type="xs:string" nillable="true" />
+            <xs:element name="adFullAddress1" type="xs:string" nillable="true" />
+            <xs:element name="adFullAddress2" type="xs:string" nillable="true" />
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

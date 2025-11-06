@@ -171,6 +171,11 @@ class tRecord
     protected $dmVODZ = null;
 
     /**
+     * @var int $specMessFlag
+     */
+    protected $specMessFlag = null;
+
+    /**
      * @param dmOrdinal $dmOrdinal
      * @param tIdDm $dmID
      * @param tIdDb $dbIDSender
@@ -204,8 +209,9 @@ class tRecord
      * @param \DateTime $dmAcceptanceTime
      * @param anonymous50 $dmType
      * @param boolean $dmVODZ
+     * @param int $specMessFlag
      */
-    public function __construct($dmOrdinal = null, $dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, $dmAmbiguousRecipient = null, $dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmMessageStatus = null, $dmAttachmentSize = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmType = null, $dmVODZ = null)
+    public function __construct($dmOrdinal = null, $dmID = null, $dbIDSender = null, $dmSender = null, $dmSenderAddress = null, $dmSenderType = null, $dmRecipient = null, $dmRecipientAddress = null, $dmAmbiguousRecipient = null, $dmSenderOrgUnit = null, $dmSenderOrgUnitNum = null, $dbIDRecipient = null, $dmRecipientOrgUnit = null, $dmRecipientOrgUnitNum = null, $dmToHands = null, $dmAnnotation = null, $dmRecipientRefNumber = null, $dmSenderRefNumber = null, $dmRecipientIdent = null, $dmSenderIdent = null, $dmLegalTitleLaw = null, $dmLegalTitleYear = null, $dmLegalTitleSect = null, $dmLegalTitlePar = null, $dmLegalTitlePoint = null, $dmPersonalDelivery = null, $dmAllowSubstDelivery = null, $dmMessageStatus = null, $dmAttachmentSize = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmType = null, $dmVODZ = null, $specMessFlag = null)
     {
         $this->dmOrdinal = $dmOrdinal;
         $this->dmID = $dmID;
@@ -240,6 +246,7 @@ class tRecord
         $this->dmAcceptanceTime = $dmAcceptanceTime ? $dmAcceptanceTime->format(\DateTime::ATOM) : null;
         $this->dmType = $dmType;
         $this->dmVODZ = $dmVODZ;
+        $this->specMessFlag = $specMessFlag;
     }
 
     /**
@@ -849,6 +856,24 @@ class tRecord
     public function setDmVODZ($dmVODZ)
     {
         $this->dmVODZ = $dmVODZ;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSpecMessFlag()
+    {
+        return $this->specMessFlag;
+    }
+
+    /**
+     * @param int $specMessFlag
+     * @return \Defr\CzechDataBox\Api\tRecord
+     */
+    public function setSpecMessFlag($specMessFlag)
+    {
+        $this->specMessFlag = $specMessFlag;
         return $this;
     }
 }

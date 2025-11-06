@@ -56,6 +56,11 @@ class dmReturnedMessage
     protected $attsNum = null;
 
     /**
+     * @var int $specMessFlag
+     */
+    protected $specMessFlag = null;
+
+    /**
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
@@ -66,8 +71,9 @@ class dmReturnedMessage
      * @param tDmType $dmType
      * @param boolean $dmVODZ
      * @param int $attsNum
+     * @param int $specMessFlag
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $dmVODZ = null, $attsNum = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $dmVODZ = null, $attsNum = null, $specMessFlag = null)
     {
         $this->dmDm = $dmDm;
         $this->dmHash = $dmHash;
@@ -79,6 +85,7 @@ class dmReturnedMessage
         $this->dmType = $dmType;
         $this->dmVODZ = $dmVODZ;
         $this->attsNum = $attsNum;
+        $this->specMessFlag = $specMessFlag;
     }
 
     /**
@@ -274,6 +281,24 @@ class dmReturnedMessage
     public function setAttsNum($attsNum)
     {
         $this->attsNum = $attsNum;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSpecMessFlag()
+    {
+        return $this->specMessFlag;
+    }
+
+    /**
+     * @param int $specMessFlag
+     * @return \Defr\CzechDataBox\Api\dmReturnedMessage
+     */
+    public function setSpecMessFlag($specMessFlag)
+    {
+        $this->specMessFlag = $specMessFlag;
         return $this;
     }
 }

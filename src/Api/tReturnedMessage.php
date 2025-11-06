@@ -46,6 +46,11 @@ class tReturnedMessage
     protected $dmType = null;
 
     /**
+     * @var int $specMessFlag
+     */
+    protected $specMessFlag = null;
+
+    /**
      * @param dmDm $dmDm
      * @param tHash $dmHash
      * @param base64Binary $dmQTimestamp
@@ -54,8 +59,9 @@ class tReturnedMessage
      * @param int $dmMessageStatus
      * @param int $dmAttachmentSize
      * @param tDmType $dmType
+     * @param int $specMessFlag
      */
-    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null)
+    public function __construct($dmDm = null, $dmHash = null, $dmQTimestamp = null, \DateTime $dmDeliveryTime = null, \DateTime $dmAcceptanceTime = null, $dmMessageStatus = null, $dmAttachmentSize = null, $dmType = null, $specMessFlag = null)
     {
         $this->dmDm = $dmDm;
         $this->dmHash = $dmHash;
@@ -65,6 +71,7 @@ class tReturnedMessage
         $this->dmMessageStatus = $dmMessageStatus;
         $this->dmAttachmentSize = $dmAttachmentSize;
         $this->dmType = $dmType;
+        $this->specMessFlag = $specMessFlag;
     }
 
     /**
@@ -224,6 +231,24 @@ class tReturnedMessage
     public function setDmType($dmType)
     {
         $this->dmType = $dmType;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSpecMessFlag()
+    {
+        return $this->specMessFlag;
+    }
+
+    /**
+     * @param int $specMessFlag
+     * @return \Defr\CzechDataBox\Api\tReturnedMessage
+     */
+    public function setSpecMessFlag($specMessFlag)
+    {
+        $this->specMessFlag = $specMessFlag;
         return $this;
     }
 }

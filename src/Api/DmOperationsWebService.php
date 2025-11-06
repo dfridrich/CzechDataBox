@@ -52,6 +52,7 @@ class DmOperationsWebService extends \SoapClient
       'tStateChangesRecord' => 'Defr\\CzechDataBox\\Api\\tStateChangesRecord',
       'tStateChangesArray' => 'Defr\\CzechDataBox\\Api\\tStateChangesArray',
       'tGetStateChangesOutput' => 'Defr\\CzechDataBox\\Api\\tGetStateChangesOutput',
+      'tDummyOutput' => 'Defr\\CzechDataBox\\Api\\tDummyOutput',
       'tGetAuthorInput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorInput',
       'tGetAuthorOutput' => 'Defr\\CzechDataBox\\Api\\tGetAuthorOutput',
       'tEraseMessageIntput' => 'Defr\\CzechDataBox\\Api\\tEraseMessageIntput',
@@ -91,6 +92,12 @@ class DmOperationsWebService extends \SoapClient
       'GetMessageAuthor2Response' => 'Defr\\CzechDataBox\\Api\\GetMessageAuthor2Response',
       'dmMessageAuthor' => 'Defr\\CzechDataBox\\Api\\dmMessageAuthor',
       'maItem' => 'Defr\\CzechDataBox\\Api\\maItem',
+      'SentMessageEnvelopeDownload' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownload',
+      'SentMessageEnvelopeDownloadResponse' => 'Defr\\CzechDataBox\\Api\\SentMessageEnvelopeDownloadResponse',
+      'SuspMessageReport' => 'Defr\\CzechDataBox\\Api\\SuspMessageReport',
+      'SuspMessageReportResponse' => 'Defr\\CzechDataBox\\Api\\SuspMessageReportResponse',
+      'ArchiveISDSDocument' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocument',
+      'ArchiveISDSDocumentResponse' => 'Defr\\CzechDataBox\\Api\\ArchiveISDSDocumentResponse',
     );
 
     /**
@@ -108,7 +115,7 @@ class DmOperationsWebService extends \SoapClient
         'features' => 1,
         ), $options);
         if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/dm_operations.wsdl';
+            $wsdl = '/var/www/html/Resources/dm_operations.wsdl';
         }
         parent::__construct($wsdl, $options);
     }
@@ -151,7 +158,7 @@ class DmOperationsWebService extends \SoapClient
 
     /**
      * @param string $parameter
-     * @return void
+     * @return tDummyOutput
      */
     public function DummyOperation($parameter)
     {

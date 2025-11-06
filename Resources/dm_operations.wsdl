@@ -1,7 +1,7 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
+﻿<?xml version = '1.0' encoding = 'UTF-8'?>
 <!--  *********************************************************************
 
-   verze: 3.03
+   verze: 3.09
    klasifikace: Veřejný dokument    
 
      WSDL pro služby
@@ -26,7 +26,7 @@
     27.06.2012 verze 2.17 - přidána WS Re-signISDSDocument
     18.09.2015 verze 2.21 - sjednocení verzí 
     14.10.2015 verze 2.22 - sjednocení verzí
-    31.01.2017 verze 2.26  - sjednocení verzí
+    31.01.2017 verze 2.26  -sjednocení verzí
     21.11.2017 verze 2.27 - sjednocení verzí
     02.09.2018 verze 2.30 - sjednocení verzí
     04.09.2018 verze 2.31 - sjednocení verzí
@@ -34,6 +34,10 @@
     25.04.2022 verze 2.35 - sjednocení verzí
     
     31.10.2022 verze 3.03 - sjednocení verzí
+    20.10.2023 verze 3.04 - sjednocení verzí
+    09.09.2024 verze 3.06 - oprava v response u DummyOperation (nepoužívaná služba)
+    21.10.2024 verze 3.07 - sjednocení verzí
+    29.07.2025 verze 3.09 - sjednocení verzí 
     
 ************************************************************************ -->
 
@@ -80,6 +84,9 @@
 
   <message name="DummyOperationRequest">
     <part name="parameter" element="tns:DummyOperation" />        
+  </message>                            
+  <message name="DummyOperationResponse">
+    <part name="parameter" element="tns:DummyOperationResponse" />        
   </message>                            
 
   <message name="MultipleMessageCreateRequest">
@@ -128,6 +135,7 @@
 
     <operation  name="DummyOperation">
       <input  message="tns:DummyOperationRequest"/>
+      <output  message="tns:DummyOperationResponse"/>
     </operation>
 
     <operation name="CreateMultipleMessage">
@@ -196,6 +204,9 @@
       <input>
         <soap:body use="literal" />
       </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
     </operation>
 
     <operation name="CreateMultipleMessage">

@@ -36,14 +36,26 @@ class dmExtFile
     protected $dmAttHash2Alg = null;
 
     /**
+     * @var string $dmFileGuid
+     */
+    protected $dmFileGuid = null;
+
+    /**
+     * @var string $dmUpFileGuid
+     */
+    protected $dmUpFileGuid = null;
+
+    /**
      * @param string $dmFileMetaType
      * @param string $dmAttID
      * @param string $dmAttHash1
      * @param string $dmAttHash1Alg
      * @param string $dmAttHash2
      * @param string $dmAttHash2Alg
+     * @param string $dmFileGuid
+     * @param string $dmUpFileGuid
      */
-    public function __construct($dmFileMetaType = null, $dmAttID = null, $dmAttHash1 = null, $dmAttHash1Alg = null, $dmAttHash2 = null, $dmAttHash2Alg = null)
+    public function __construct($dmFileMetaType = null, $dmAttID = null, $dmAttHash1 = null, $dmAttHash1Alg = null, $dmAttHash2 = null, $dmAttHash2Alg = null, $dmFileGuid = null, $dmUpFileGuid = null)
     {
         $this->dmFileMetaType = $dmFileMetaType;
         $this->dmAttID = $dmAttID;
@@ -51,6 +63,8 @@ class dmExtFile
         $this->dmAttHash1Alg = $dmAttHash1Alg;
         $this->dmAttHash2 = $dmAttHash2;
         $this->dmAttHash2Alg = $dmAttHash2Alg;
+        $this->dmFileGuid = $dmFileGuid;
+        $this->dmUpFileGuid = $dmUpFileGuid;
     }
 
     /**
@@ -158,6 +172,42 @@ class dmExtFile
     public function setDmAttHash2Alg($dmAttHash2Alg)
     {
         $this->dmAttHash2Alg = $dmAttHash2Alg;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDmFileGuid()
+    {
+        return $this->dmFileGuid;
+    }
+
+    /**
+     * @param string $dmFileGuid
+     * @return \Defr\CzechDataBox\Api\dmExtFile
+     */
+    public function setDmFileGuid($dmFileGuid)
+    {
+        $this->dmFileGuid = $dmFileGuid;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDmUpFileGuid()
+    {
+        return $this->dmUpFileGuid;
+    }
+
+    /**
+     * @param string $dmUpFileGuid
+     * @return \Defr\CzechDataBox\Api\dmExtFile
+     */
+    public function setDmUpFileGuid($dmUpFileGuid)
+    {
+        $this->dmUpFileGuid = $dmUpFileGuid;
         return $this;
     }
 }

@@ -102,6 +102,8 @@ class DataBoxSearch extends \SoapClient
       'tGetConstsOutput' => 'Defr\\CzechDataBox\\Api\\tGetConstsOutput',
       'constRecords' => 'Defr\\CzechDataBox\\Api\\constRecords',
       'tConstRecord' => 'Defr\\CzechDataBox\\Api\\tConstRecord',
+      'GetDataBoxAddress' => 'Defr\\CzechDataBox\\Api\\GetDataBoxAddress',
+      'tGetAddressOutput' => 'Defr\\CzechDataBox\\Api\\tGetAddressOutput',
     );
 
     /**
@@ -119,7 +121,7 @@ class DataBoxSearch extends \SoapClient
         'features' => 1,
         ), $options);
         if (!$wsdl) {
-            $wsdl = '/Users/dennis/sites/CzechDataBox/Resources/db_search.wsdl';
+            $wsdl = '/var/www/html/Resources/db_search.wsdl';
         }
         parent::__construct($wsdl, $options);
     }
@@ -239,5 +241,14 @@ class DataBoxSearch extends \SoapClient
     public function GetConstants(GetConstants $parameter)
     {
         return $this->__soapCall('GetConstants', array($parameter));
+    }
+
+    /**
+     * @param GetDataBoxAddress $parameter
+     * @return tGetAddressOutput
+     */
+    public function GetDataBoxAddress(GetDataBoxAddress $parameter)
+    {
+        return $this->__soapCall('GetDataBoxAddress', array($parameter));
     }
 }

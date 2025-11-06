@@ -11,11 +11,13 @@ jobs:
     run:
         runs-on: ubuntu-latest
         strategy:
+            fail-fast: false
             matrix:
                 php-versions:
-                    - 8.0
                     - 8.1
                     - 8.2
+                    - 8.3
+                    - 8.4
         name: PHP ${{ matrix.php-versions }} test
 
         steps:
@@ -38,4 +40,4 @@ jobs:
                 env:
                     DATABOX_LOGIN: ${{ secrets.DATABOX_LOGIN }}
                     DATABOX_PASSWORD: ${{ secrets.DATABOX_PASSWORD }}
-                    DATABOX_PRODUCTION: ${{ secrets.DATABOX_PRODUCTION }}
+                    DATABOX_PRODUCTION: ${{ vars.DATABOX_PRODUCTION }}

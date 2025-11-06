@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--Created with Liquid Studio 2020 (https://www.liquid-technologies.com)-->
+<!--Created with Liquid Studio (https://www.liquid-technologies.com)-->
 <!-- ************************************************************************
    XSD schema typů použitých ve WSDL pro manipulaci s datovými zprávami
 
-   verze: 3.03  (společná verze pro definice verze 2.35 i 3.02)
+   verze: 3.09       
    klasifikace: Veřejný dokument    
                        
  Změny:  
@@ -42,6 +42,13 @@
                           - nová služba GetMessageAuthor2 
     15.06.2022 verze 3.02 - sjednocení verzí                      
     31.10.2022 verze 3.03 - kompatibilní rozšíření CreateMultipleMessage o atribut s výčtem předaných osobních údajů (IdLevel)
+    12.09.2023 verze 3.04 - přidány nepovinné atributy dmFileGuid a dmUpFileGuid k elementu dmExtFile a obnovení u elementu dmFile
+    26.01.2024 verze 3.05 - u atributu dmUpFileGuid doplněna vlastnost use="optional"
+    09.06.2024 verze 3.06 - doplněna response pro DummyOperation
+    21.10.2024 verze 3.07 - přidány typy pro službu SentMessageEnvelopeDownload
+    20.12.2024 verze 3.08 - přidány typy pro službu SuspMessageReport
+                          - nový příznak u obálky zpráv "podezřelá zpráva" (specMessFlag="1") u GetListOfReceivedMessages, MessageEnvelopeDownload, MessageDownload, BigMessageDownload
+    20.02.2024 verze 3.09 - přidány typy pro službu ArchiveISDSDocument                        
     
     ******************************************************************* -->
 <xs:schema xmlns:tns="http://isds.czechpoint.cz/v20" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" elementFormDefault="qualified" targetNamespace="http://isds.czechpoint.cz/v20" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -112,7 +119,7 @@
                                     <xs:documentation>nepovinný interní identifikátor tohoto dokumentu - pro vytváření stromu závislostí dokumentů</xs:documentation>
                                 </xs:annotation>
                             </xs:attribute>
-                            <xs:attribute name="dmUpFileGuid" type="xs:string">
+                            <xs:attribute name="dmUpFileGuid" type="xs:string" use="optional">
                                 <xs:annotation>
                                     <xs:documentation>nepovinný interní identifikátor nadřízeného dokumentu (např. pro vztah soubor - podpis aj.)</xs:documentation>
                                 </xs:annotation>
@@ -504,7 +511,7 @@
             </xs:element>
             <xs:element name="dmSenderAddress" nillable="true">
                 <xs:annotation>
-                    <xs:documentation>Poštovní adresa odesílatele - požadavek ESS; doplňuje ISDS</xs:documentation>
+                    <xs:documentation>Poštovní adresa odesílatele, doplňuje ISDS</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -514,7 +521,7 @@
             </xs:element>
             <xs:element name="dmSenderType" type="xs:int">
                 <xs:annotation>
-                    <xs:documentation>hrubý typ schránky odesílatele (10=OVM,20=PO,30=PFO,40=FO)</xs:documentation>
+                    <xs:documentation>typ schránky odesílatele</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="dmRecipient" nillable="true">
@@ -597,6 +604,7 @@
             </xs:element>
         </xs:sequence>
         <xs:attribute name="dmType" type="tns:tDmType" use="optional" />
+        <xs:attribute name="specMessFlag" type="xs:integer" />
     </xs:complexType>
     <xs:complexType name="tReturnedMessageEnvelope">
         <xs:annotation>
@@ -630,6 +638,7 @@
         <xs:attribute name="dmType" type="tns:tDmType" use="optional" />
         <xs:attribute name="dmVODZ" type="xs:boolean" />
         <xs:attribute name="attsNum" type="xs:integer" />
+        <xs:attribute name="specMessFlag" type="xs:integer" />
     </xs:complexType>
     <xs:complexType name="tMessageEnvelopeSub">
         <xs:annotation>
@@ -760,6 +769,7 @@
             </xs:simpleType>
         </xs:attribute>
         <xs:attribute name="dmVODZ" type="xs:boolean" />
+        <xs:attribute name="specMessFlag" type="xs:integer" />
     </xs:complexType>
     <xs:complexType name="tRecordsArray">
         <xs:annotation>
@@ -963,6 +973,12 @@ K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně do
     </xs:complexType>
     <xs:element name="GetMessageStateChangesResponse" type="tns:tGetStateChangesOutput" />
     <xs:element name="DummyOperation" type="xs:string" nillable="true" />
+    <xs:element name="DummyOperationResponse" type="tns:tDummyOutput" />
+    <xs:complexType name="tDummyOutput">
+        <xs:sequence>
+            <xs:element name="dmStatus" type="tns:tStatus" />
+        </xs:sequence>
+    </xs:complexType>
     <xs:complexType name="tGetAuthorInput">
         <xs:sequence>
             <xs:element name="dmID" type="tns:tIdDm" />
@@ -1184,6 +1200,16 @@ K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně do
                                 <xs:attribute name="dmAttHash1Alg" type="xs:string" use="required" />
                                 <xs:attribute name="dmAttHash2" type="xs:string" use="required" />
                                 <xs:attribute name="dmAttHash2Alg" type="xs:string" use="required" />
+                                <xs:attribute name="dmFileGuid" type="xs:string" use="optional">
+                                    <xs:annotation>
+                                        <xs:documentation>nepovinný interní identifikátor tohoto dokumentu - pro vytváření stromu závislostí dokumentů</xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
+                                <xs:attribute name="dmUpFileGuid" type="xs:string" use="optional">
+                                    <xs:annotation>
+                                        <xs:documentation>nepovinný interní identifikátor nadřízeného dokumentu (např. pro vztah soubor - podpis aj.)</xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
                             </xs:complexType>
                         </xs:element>
                         <xs:element name="dmFile" minOccurs="0" maxOccurs="unbounded">
@@ -1194,6 +1220,16 @@ K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně do
                                 <xs:attribute name="dmFileMetaType" type="xs:string" use="required" />
                                 <xs:attribute name="dmFileDescr" type="xs:string" use="required" />
                                 <xs:attribute name="dmMimeType" type="xs:string" use="required" />
+                                <xs:attribute name="dmFileGuid" type="xs:string" use="optional">
+                                    <xs:annotation>
+                                        <xs:documentation>nepovinný interní identifikátor tohoto dokumentu - pro vytváření stromu závislostí dokumentů</xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
+                                <xs:attribute name="dmUpFileGuid" type="xs:string">
+                                    <xs:annotation>
+                                        <xs:documentation>nepovinný interní identifikátor nadřízeného dokumentu (např. pro vztah soubor - podpis aj.)</xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
                             </xs:complexType>
                         </xs:element>
                     </xs:sequence>
@@ -1447,6 +1483,7 @@ K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně do
                         <xs:attribute name="dmType" type="tns:tDmType" />
                         <xs:attribute name="dmVODZ" type="xs:boolean" />
                         <xs:attribute name="attsNum" type="xs:integer" />
+                        <xs:attribute name="specMessFlag" type="xs:integer" />
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="dmStatus" type="tns:tStatus" />
@@ -1469,6 +1506,56 @@ K - smluvní PDZ, O - odpovědní PDZ, G - globálně dotovaná, Z - omezeně do
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="dmStatus" type="tns:tStatus" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SentMessageEnvelopeDownload">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dmID" type="tns:tIdDm" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SentMessageEnvelopeDownloadResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dmReturnedMessageEnvelope" type="tns:tReturnedMessageEnvelope" minOccurs="0" maxOccurs="1" nillable="true" />
+                <xs:element name="dmStatus" type="tns:tStatus" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SuspMessageReport">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dmID" type="tns:tIdDm" />
+                <xs:element name="repName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                <xs:element name="repMail" type="xs:string" minOccurs="0" maxOccurs="1" />
+                <xs:element name="repTel" type="xs:string" minOccurs="0" maxOccurs="1" />
+                <xs:element name="allowComplete" type="xs:boolean" />
+                <xs:element name="note" type="xs:string" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SuspMessageReportResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dmStatus" type="tns:tStatus" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ArchiveISDSDocument">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dmMessage" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ArchiveISDSDocumentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="dmResultDoc" type="xs:base64Binary" nillable="true" xmime:expectedContentTypes="application/octet-stream" />
+                <xs:element name="nextStampTo" type="xs:date" nillable="true" />
                 <xs:element name="dmStatus" type="tns:tStatus" />
             </xs:sequence>
         </xs:complexType>

@@ -2,7 +2,7 @@
 <!--  *********************************************************************
      WSDL pro služby související s vyhledáváním DS 
 
-     verze: 3.03
+     verze: 3.09
      klasifikace: Veřejný dokument    
       *********************************************************************                    
 Seznam služeb: 
@@ -19,6 +19,7 @@ Seznam služeb:
   FindPersonalDataBox
   DTInfo
   GetConstants
+  GetDataBoxAddress
                           
  změny:
   28.4.2009 verze 1.0    
@@ -39,6 +40,11 @@ Seznam služeb:
   25.4.2022 verze 2.35 - sjednocení verzí
   15.6.2022 verze 3.02 - přidána služba GetConstants
   31.10.2022 verze 3.03 - sjednocení verzí
+  20.10.2022 verze 3.04 - sjednocení verzí
+  13.05.2024 verze 3.06 - úprava ve službě DataBoxCreditInfo a nová služba GetDataBoxAddress
+  21.10.2022 verze 3.07 - sjednocení verzí
+  29.07.2025 verze 3.09 - sjednocení verzí 
+
     
 ************************************************************************ -->
 
@@ -139,11 +145,18 @@ Seznam služeb:
     <part name="parameter" element="tns:PDZSendInfoResponse" />        
   </message>
 
-  	<message name="GetConstantsRequest">
+ 	<message name="GetConstantsRequest">
 		<part name="parameter" element="tns:GetConstants" />
 	</message>
 	<message name="GetConstantsResponse">
 		<part name="parameter" element="tns:GetConstantsResponse" />
+	</message>
+    
+ 	<message name="GetDataBoxAddressRequest">
+		<part name="parameter" element="tns:GetDataBoxAddress" />
+	</message>
+	<message name="GetDataBoxAddressResponse">
+		<part name="parameter" element="tns:GetDataBoxAddressResponse" />
 	</message>
 
 <!-- ******************************************************************* -->
@@ -208,10 +221,15 @@ Seznam služeb:
      <output message="tns:PDZSendInfoResponse"/>
    </operation>
 
-		<operation name="GetConstants">
-			<input message="tns:GetConstantsRequest" />
-			<output message="tns:GetConstantsResponse" />
-		</operation>
+	<operation name="GetConstants">
+		<input message="tns:GetConstantsRequest" />
+		<output message="tns:GetConstantsResponse" />
+	</operation>
+
+	<operation name="GetDataBoxAddress">
+		<input message="tns:GetDataBoxAddressRequest" />
+		<output message="tns:GetDataBoxAddressResponse" />
+	</operation>
 
   </portType>
 
@@ -339,14 +357,24 @@ Seznam služeb:
    </operation>
 
   	<operation name="GetConstants">
-			<soap:operation soapAction="" />
-			<input>
-				<soap:body use="literal" />
-			</input>
-			<output>
-				<soap:body use="literal" />
-			</output>
-		</operation>
+	   <soap:operation soapAction="" />
+		<input>
+			<soap:body use="literal" />
+		</input>
+		<output>
+			<soap:body use="literal" />
+		</output>
+	</operation>
+
+  	<operation name="GetDataBoxAddress">
+	   <soap:operation soapAction="" />
+		<input>
+			<soap:body use="literal" />
+		</input>
+		<output>
+			<soap:body use="literal" />
+		</output>
+	</operation>
 
   </binding>
   

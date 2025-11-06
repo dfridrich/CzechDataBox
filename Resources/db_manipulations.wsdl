@@ -2,7 +2,7 @@
 <!--  *********************************************************************
      WSDL pro služby manipulujícími s datovými schránkami 
 
-     verze: 3.03
+     verze: 3.09
      klasifikace: Veřejný dokument    
       *********************************************************************                    
 Seznam služeb: 
@@ -12,15 +12,15 @@ Seznam služeb:
   DeleteDataBox
   DeleteDataBox2
   UpdateDataBoxDescr
-  UpdateDataBoxDescr2                     
+  UpdateDataBoxDescr2  
   AddDataBoxUser
   AddDataBoxUser2
   DeleteDataBoxUser
   DeleteDataBoxUser2
   UpdateDataBoxUser
   UpdateDataBoxUser2
-  NewAccessData                                                                           
-  NewAccessData2                                                                           
+  NewAccessData 
+  NewAccessData2 
   DisableDataBoxExternally
   DisableDataBoxExternally2
   DisableOwnDataBox
@@ -34,12 +34,12 @@ Seznam služeb:
                           
  změny:
    3.2.2009  verze 0.1
-  20.3.2009  verze 1.0  - formální úpravy vyhovující WS-I Basic Profile    
+  20.3.2009  verze 1.0  - formální úpravy vyhovující WS-I Basic Profile 
   28.4.2009  verze 1.1  - přidána WS CheckDataBox    
-   3.6.2009  verze 2.0  - přidána dvojice služeb [Set|Clear]OpenAddressing                  
+   3.6.2009  verze 2.0  - přidána dvojice služeb [Set|Clear]OpenAddressing  
                         - přidána dvojice služeb [Set|Clear]EffectiveOVM
   11.6.2009  verze 2.1  - přidána WS CreateDataBoxPFOInfo
-  1.1.2010   verze 2.7  - přesunuta WS GetDataBoxUsers ze zrušeného db_supplementary.wsdl                     
+  1.1.2010   verze 2.7  - přesunuta WS GetDataBoxUsers ze zrušeného db_supplementary.wsdl 
  11.10.2010  verze 2.10 - změna URL v důsledku přechodu na Basic autentizaci
                         - přidána WS GetDataBoxList
  06.03.2012  verze 2.16 - přidána WS ChangeBoxesType   
@@ -49,10 +49,14 @@ Seznam služeb:
   24.7.2018  verze 2.29 - sjednocení verzí
    4.9.2018  verze 2.31 - změna formátů UserInfo a OwnerInfo, přidání idOVM, odebráno GetDataBoxUsers, FindDataBox a CheckDataBox přesunuty do db_search; "dvojkové" verze služeb
   13.1.2021  verze 2.32 - přidány typy schránek PFO_ZNALEC a PFO_TLUMOCNIK
-  29.7.202   verze 2.33 - sjednocení verzí
+  29.7.2021  verze 2.33 - sjednocení verzí
   25.4.2022  verze 2.35 - sjednocení verzí
     
-  31.10.2022 verze 3.03 - zjednocení verzí
+  31.10.2022 verze 3.03 - sjednocení verzí
+  20.10.2023 verze 3.04 - sjednocení verzí
+  21.10.2024 verze 3.07 - sjednocení verzí
+  29.07.2025 verze 3.09 - sjednocení verzí 
+
 ************************************************************************ -->
 
 <definitions name="ISDS_db" targetNamespace="http://isds.czechpoint.cz/v20" 
