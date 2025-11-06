@@ -4,6 +4,8 @@ parameters:
       - src
       - tests
 
+    reportUnmatchedIgnoredErrors: false
+
     ignoreErrors:
         - '#has invalid type#'
         - '#has invalid return#'
