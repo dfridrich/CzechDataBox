@@ -7,6 +7,7 @@ use Defr\CzechDataBox\DataBoxException;
 class DataBoxSearch extends \SoapClient
 {
 
+    #[\ReturnTypeWillChange]
     public function __doRequest($request, $location, $action, $version, $oneWay = false)
     {
         $response = parent::__doRequest($request, $location, $action, $version, $oneWay);
